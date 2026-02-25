@@ -360,7 +360,7 @@ def update_dashboard_data(analysis, date_str):
 
 def main():
     parser = argparse.ArgumentParser(description="고양시장 선거 뉴스 수집")
-    parser.add_argument("--type", choices=["weekly", "monthly"], required=True)
+    parser.add_argument("--type", choices=["hourly", "weekly", "monthly"], required=True)
     parser.add_argument("--date", required=True, help="YYYY-MM-DD")
     args = parser.parse_args()
 
@@ -372,7 +372,11 @@ def main():
 
     report_date = datetime.strptime(args.date, "%Y-%m-%d")
 
-    if args.type == "weekly":
+    if args.type == "hourly":
+        # hourly: 최근 24시간 기사로 대시보드 데이터만 갱신 (보고서 파일 생성 안함)
+        period_start = report_date - timedelta(days=1)
+        period_end = report_date.replace(hour=23, minute=59, second=59)
+    elif args.type == "weekly":
         period_start = report_date - timedelta(days=7)
         period_end = report_date.replace(hour=23, minute=59, second=59)
     else:
@@ -383,13 +387,23 @@ def main():
     period_start = period_start.astimezone() if period_start.tzinfo else period_start
     period_end = period_end.astimezone() if period_end.tzinfo else period_end
 
-    print(f"[정보] {args.type} 보고서 생성: {period_start.date()} ~ {period_end.date()}")
+    print(f"[정보] {args.type} {'데이터 갱신' if args.type == 'hourly' else '보고서 생성'}: {period_start.date()} ~ {period_end.date()}")
     print(f"[정보] 키워드 {len(ALL_KEYWORDS)}개로 검색 시작...")
 
     articles = collect_articles(client_id, client_secret, ALL_KEYWORDS, period_start, period_end)
     print(f"[정보] 수집 기사: {len(articles)}건")
 
     analysis = analyze_articles(articles)
+
+    # 대시보드 데이터 갱신 (매시간)
+    update_dashboard_data(analysis, args.date)
+
+    # hourly는 대시보드 데이터만 갱신하고 종료
+    if args.type == "hourly":
+        print(f"[완료] hourly 대시보드 갱신 완료 ({len(articles)}건 분석)")
+        return
+
+    # weekly/monthly는 보고서 파일도 생성
     report = build_report(args.type, args.date, period_start, period_end, articles, analysis)
 
     type_dir = os.path.join(REPORTS_DIR, args.type)
@@ -402,9 +416,6 @@ def main():
         json.dump(report, f, ensure_ascii=False, indent=2)
 
     update_manifest(args.type, args.date, filename, len(articles))
-
-    # 대시보드 데이터 갱신
-    update_dashboard_data(analysis, args.date)
 
     print(f"[완료] 보고서 저장: {filepath}")
     print(f"[완료] 매니페스트 업데이트 완료")
