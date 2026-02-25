@@ -377,6 +377,54 @@
             border-radius: 4px;
             font-weight: 600;
         }
+        /* Report Tab Styles */
+        #backToList {
+            background: none;
+            border: 1px solid var(--gray-300);
+            border-radius: 6px;
+            padding: 8px 16px;
+            font-size: 13px;
+            color: var(--gray-600);
+            cursor: pointer;
+            margin-bottom: 16px;
+            transition: all .2s;
+        }
+        #backToList:hover {
+            background: var(--gray-100);
+            color: var(--dark);
+        }
+        .report-card {
+            cursor: pointer;
+            transition: transform .2s, box-shadow .2s;
+        }
+        .report-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+        .report-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        .report-table th {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 2px solid var(--gray-200);
+            font-weight: 600;
+            color: var(--gray-600);
+            font-size: 12px;
+        }
+        .report-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .report-table a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .report-table a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -400,6 +448,7 @@
         <div class="nav-tab" data-tab="news">뉴스/여론</div>
         <div class="nav-tab" data-tab="lkh">이경혜 분석</div>
         <div class="nav-tab" data-tab="strategy">전략 제안</div>
+        <div class="nav-tab" data-tab="reports">정기 보고서</div>
     </div>
 
     <div class="main">
@@ -1364,6 +1413,49 @@
             </div>
         </div>
 
+        <!-- TAB: Reports -->
+        <div class="tab-content" id="tab-reports">
+            <!-- Report Controls -->
+            <div class="card" style="padding:16px 24px">
+                <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+                    <div class="card-title" style="margin-bottom:0">
+                        <span class="icon">📋</span> 정기 뉴스 보고서
+                    </div>
+                    <div style="display:flex;gap:8px;align-items:center">
+                        <select id="reportTypeFilter" style="padding:6px 12px;border:1px solid var(--gray-300);border-radius:6px;font-size:13px;background:white">
+                            <option value="all">전체</option>
+                            <option value="weekly">주간</option>
+                            <option value="monthly">월간</option>
+                        </select>
+                        <span id="reportCount" style="font-size:12px;color:var(--gray-400)"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Report List -->
+            <div id="reportList" class="grid-2" style="margin-top:4px"></div>
+
+            <!-- Report Detail (hidden by default) -->
+            <div id="reportDetail" style="display:none">
+                <button id="backToList">← 목록으로</button>
+                <div id="reportDetailContent"></div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="reportLoading" class="card" style="text-align:center;padding:48px;display:none">
+                <div style="font-size:16px;color:var(--gray-400)">보고서를 불러오는 중...</div>
+            </div>
+
+            <!-- Empty State -->
+            <div id="reportEmpty" class="card" style="text-align:center;padding:48px;display:none">
+                <div style="font-size:40px;margin-bottom:12px">📭</div>
+                <div style="font-size:16px;color:var(--gray-500)">아직 생성된 보고서가 없습니다</div>
+                <div style="font-size:13px;color:var(--gray-400);margin-top:8px">
+                    매주 월요일, 매월 1일 오전 10시에 자동 생성됩니다
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script>
@@ -1683,6 +1775,203 @@
                     y: { stacked: true, grid: { display: false } }
                 }
             }
+        });
+
+        // ===== Report Tab Logic =====
+        const REPORTS_BASE = 'reports/';
+        let reportsManifest = null;
+        let reportsLoaded = false;
+
+        function stripHtmlText(str) {
+            return str.replace(/<[^>]*>/g, '').replace(/&quot;/g, '"')
+                .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+        }
+
+        async function loadReportsManifest() {
+            if (reportsLoaded) return reportsManifest;
+
+            const loadingEl = document.getElementById('reportLoading');
+            const emptyEl = document.getElementById('reportEmpty');
+            const listEl = document.getElementById('reportList');
+
+            loadingEl.style.display = 'block';
+            emptyEl.style.display = 'none';
+            listEl.innerHTML = '';
+
+            try {
+                const resp = await fetch(REPORTS_BASE + 'index.json');
+                if (!resp.ok) throw new Error('No reports');
+                reportsManifest = await resp.json();
+                reportsLoaded = true;
+                loadingEl.style.display = 'none';
+
+                if (!reportsManifest.reports || reportsManifest.reports.length === 0) {
+                    emptyEl.style.display = 'block';
+                    return null;
+                }
+
+                renderReportList(reportsManifest.reports);
+                return reportsManifest;
+            } catch (e) {
+                loadingEl.style.display = 'none';
+                emptyEl.style.display = 'block';
+                return null;
+            }
+        }
+
+        function renderReportList(reports) {
+            const listEl = document.getElementById('reportList');
+            const filter = document.getElementById('reportTypeFilter').value;
+            const filtered = filter === 'all' ? reports : reports.filter(r => r.type === filter);
+
+            document.getElementById('reportCount').textContent = '총 ' + filtered.length + '건';
+
+            listEl.innerHTML = filtered.map(r => {
+                const typeLabel = r.type === 'weekly' ? '주간' : '월간';
+                const badgeClass = r.type === 'weekly' ? 'badge-positive' : 'badge-warning';
+                return '<div class="card report-card" onclick="loadReportDetail(\'' + r.file + '\')">' +
+                    '<div style="display:flex;justify-content:space-between;align-items:start">' +
+                        '<div>' +
+                            '<span class="badge ' + badgeClass + '">' + typeLabel + '</span>' +
+                            '<div style="font-size:16px;font-weight:700;margin-top:8px">' + r.date + '</div>' +
+                        '</div>' +
+                        '<div style="text-align:right">' +
+                            '<div style="font-size:28px;font-weight:800;color:var(--primary)">' + r.article_count + '</div>' +
+                            '<div style="font-size:12px;color:var(--gray-400)">수집 기사</div>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+            }).join('');
+        }
+
+        async function loadReportDetail(file) {
+            const listEl = document.getElementById('reportList');
+            const detailEl = document.getElementById('reportDetail');
+            const controlCard = document.querySelector('#tab-reports > .card:first-child');
+
+            listEl.style.display = 'none';
+            if (controlCard) controlCard.style.display = 'none';
+            detailEl.style.display = 'block';
+
+            try {
+                const resp = await fetch(REPORTS_BASE + file);
+                const report = await resp.json();
+                renderReportDetail(report);
+            } catch (e) {
+                document.getElementById('reportDetailContent').innerHTML =
+                    '<div class="card" style="text-align:center;padding:32px;color:var(--danger)">보고서를 불러올 수 없습니다.</div>';
+            }
+        }
+
+        function renderReportDetail(report) {
+            const el = document.getElementById('reportDetailContent');
+            const meta = report.meta;
+            const summary = report.summary;
+            const typeLabel = meta.type === 'weekly' ? '주간' : '월간';
+
+            // Candidate mentions chart
+            let candidateChartHtml = '';
+            if (summary.candidate_mentions && summary.candidate_mentions.length > 0) {
+                candidateChartHtml = '<div class="card">' +
+                    '<div class="card-title"><span class="icon">👤</span> 후보별 언급 빈도</div>' +
+                    '<div class="chart-container-sm"><canvas id="reportCandidateChart"></canvas></div>' +
+                '</div>';
+            }
+
+            // Top keywords
+            let keywordsHtml = '';
+            if (summary.top_keywords && summary.top_keywords.length > 0) {
+                keywordsHtml = '<div class="card">' +
+                    '<div class="card-title"><span class="icon">🔑</span> 주요 키워드 TOP 10</div>' +
+                    summary.top_keywords.map(k =>
+                        '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--gray-100)">' +
+                            '<span style="font-size:13px">' + k.keyword + '</span>' +
+                            '<span class="badge badge-neutral">' + k.count + '건</span>' +
+                        '</div>'
+                    ).join('') +
+                '</div>';
+            }
+
+            // Articles table
+            const articles = report.articles || [];
+            const articlesHtml = '<div class="card">' +
+                '<div class="card-title"><span class="icon">📰</span> 수집 기사 목록 (' + articles.length + '건)</div>' +
+                '<div style="overflow-x:auto">' +
+                '<table class="report-table">' +
+                    '<thead><tr><th>날짜</th><th>제목</th><th>관련 후보</th></tr></thead>' +
+                    '<tbody>' +
+                    articles.slice(0, 50).map(a =>
+                        '<tr>' +
+                            '<td style="white-space:nowrap">' + (a.pubDate || '').slice(0, 10) + '</td>' +
+                            '<td><a href="' + a.link + '" target="_blank" rel="noopener">' + stripHtmlText(a.title) + '</a></td>' +
+                            '<td>' + (a.candidates_mentioned || []).map(c => '<span class="tag tag-blue" style="margin:1px">' + c + '</span>').join('') + '</td>' +
+                        '</tr>'
+                    ).join('') +
+                    '</tbody>' +
+                '</table>' +
+                '</div>' +
+                (articles.length > 50 ? '<div style="text-align:center;padding:12px;font-size:12px;color:var(--gray-400)">최근 50건만 표시됩니다</div>' : '') +
+            '</div>';
+
+            el.innerHTML =
+                '<div class="card">' +
+                    '<div class="card-title"><span class="icon">📊</span> ' + typeLabel + ' 보고서 — ' + meta.date + '</div>' +
+                    '<div style="font-size:13px;color:var(--gray-500)">' +
+                        '기간: ' + meta.period_start + ' ~ ' + meta.period_end + ' | ' +
+                        '총 ' + meta.total_articles_found + '건 수집' +
+                    '</div>' +
+                '</div>' +
+                '<div class="grid-2">' + candidateChartHtml + keywordsHtml + '</div>' +
+                articlesHtml;
+
+            // Create candidate chart
+            if (summary.candidate_mentions && summary.candidate_mentions.length > 0) {
+                new Chart(document.getElementById('reportCandidateChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: summary.candidate_mentions.map(c => c.name),
+                        datasets: [{
+                            label: '언급 횟수',
+                            data: summary.candidate_mentions.map(c => c.count),
+                            backgroundColor: summary.candidate_mentions.map(c =>
+                                c.name === '이경혜' ? BLUE : GRAY
+                            ),
+                            borderRadius: 6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            x: { beginAtZero: true, grid: { display: false } },
+                            y: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+        }
+
+        // Back button
+        document.getElementById('backToList').addEventListener('click', () => {
+            const detailEl = document.getElementById('reportDetail');
+            const listEl = document.getElementById('reportList');
+            const controlCard = document.querySelector('#tab-reports > .card:first-child');
+
+            detailEl.style.display = 'none';
+            listEl.style.display = 'grid';
+            if (controlCard) controlCard.style.display = 'block';
+        });
+
+        // Filter change
+        document.getElementById('reportTypeFilter').addEventListener('change', () => {
+            if (reportsManifest) renderReportList(reportsManifest.reports);
+        });
+
+        // Lazy-load reports when tab is clicked
+        document.querySelector('[data-tab="reports"]').addEventListener('click', () => {
+            if (!reportsLoaded) loadReportsManifest();
         });
     </script>
 </body>

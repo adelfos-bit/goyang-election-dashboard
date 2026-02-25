@@ -1,0 +1,79 @@
+name: Collect News Reports
+
+on:
+  schedule:
+    # 매주 월요일 01:00 UTC (10:00 KST)
+    - cron: '0 1 * * 1'
+    # 매월 1일 01:00 UTC (10:00 KST)
+    - cron: '0 1 1 * *'
+  workflow_dispatch:
+    inputs:
+      report_type:
+        description: '보고서 유형'
+        required: true
+        default: 'weekly'
+        type: choice
+        options:
+          - weekly
+          - monthly
+
+jobs:
+  collect-news:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Determine report type and date
+        id: params
+        run: |
+          TODAY=$(TZ=Asia/Seoul date +%Y-%m-%d)
+          DAY_OF_MONTH=$(TZ=Asia/Seoul date +%d)
+          DAY_OF_WEEK=$(TZ=Asia/Seoul date +%u)
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "type=${{ github.event.inputs.report_type }}" >> $GITHUB_OUTPUT
+          elif [ "$DAY_OF_MONTH" = "01" ] && [ "$DAY_OF_WEEK" = "1" ]; then
+            echo "type=both" >> $GITHUB_OUTPUT
+          elif [ "$DAY_OF_MONTH" = "01" ]; then
+            echo "type=monthly" >> $GITHUB_OUTPUT
+          else
+            echo "type=weekly" >> $GITHUB_OUTPUT
+          fi
+          echo "date=$TODAY" >> $GITHUB_OUTPUT
+
+      - name: Create reports directory
+        run: mkdir -p reports/weekly reports/monthly
+
+      - name: Run weekly collection
+        if: steps.params.outputs.type == 'weekly' || steps.params.outputs.type == 'both'
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python scripts/collect_news.py --type weekly --date ${{ steps.params.outputs.date }}
+
+      - name: Run monthly collection
+        if: steps.params.outputs.type == 'monthly' || steps.params.outputs.type == 'both'
+        env:
+          NAVER_CLIENT_ID: ${{ secrets.NAVER_CLIENT_ID }}
+          NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
+        run: python scripts/collect_news.py --type monthly --date ${{ steps.params.outputs.date }}
+
+      - name: Commit and push reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports/
+          git diff --staged --quiet || git commit -m "chore: add news report (${{ steps.params.outputs.type }}) for ${{ steps.params.outputs.date }}"
+          git push

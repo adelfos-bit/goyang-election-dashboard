@@ -1,0 +1,90 @@
+{
+  "meta": {
+    "type": "weekly",
+    "date": "2026-02-24",
+    "period_start": "2026-02-17",
+    "period_end": "2026-02-24",
+    "generated_at": "2026-02-24T10:00:00+09:00",
+    "total_articles_found": 23,
+    "keywords_used": ["고양시장 선거", "고양시장 후보", "고양특례시장", "이경혜", "명재성"]
+  },
+  "summary": {
+    "candidate_mentions": [
+      {"name": "이동환", "count": 12},
+      {"name": "명재성", "count": 8},
+      {"name": "이재준", "count": 6},
+      {"name": "정병춘", "count": 5},
+      {"name": "이경혜", "count": 3},
+      {"name": "민경선", "count": 2}
+    ],
+    "top_keywords": [
+      {"keyword": "경기패스", "count": 9},
+      {"keyword": "신청사", "count": 7},
+      {"keyword": "민주당", "count": 6},
+      {"keyword": "경선", "count": 5},
+      {"keyword": "교통", "count": 4},
+      {"keyword": "GTX", "count": 3},
+      {"keyword": "국민의힘", "count": 3},
+      {"keyword": "일산", "count": 2},
+      {"keyword": "재개발", "count": 2},
+      {"keyword": "여론조사", "count": 1}
+    ],
+    "article_count_by_day": {
+      "2026-02-17": 2,
+      "2026-02-18": 4,
+      "2026-02-19": 3,
+      "2026-02-20": 5,
+      "2026-02-21": 3,
+      "2026-02-22": 2,
+      "2026-02-23": 3,
+      "2026-02-24": 1
+    }
+  },
+  "articles": [
+    {
+      "title": "고양시장 선거 민주당 경선 후보 난립... 12명 이상 거론",
+      "link": "https://example.com/news/1",
+      "originallink": "https://example.com/news/1",
+      "description": "2026 고양특례시장 선거를 앞두고 더불어민주당 경선 후보가 12명 이상 거론되고 있다.",
+      "pubDate": "2026-02-24T09:30:00+09:00",
+      "candidates_mentioned": ["명재성", "정병춘", "이경혜"],
+      "keywords_matched": ["고양시장 선거"]
+    },
+    {
+      "title": "경기패스 탈퇴 논란... 고양시민 분노 확산",
+      "link": "https://example.com/news/2",
+      "originallink": "https://example.com/news/2",
+      "description": "경기패스에서 고양시가 제외되면서 시민들의 반발이 거세지고 있다. 차기 시장 후보들의 교통 공약에 관심이 집중.",
+      "pubDate": "2026-02-23T14:00:00+09:00",
+      "candidates_mentioned": ["이경혜", "이동환"],
+      "keywords_matched": ["고양 경기패스"]
+    },
+    {
+      "title": "이동환 현 시장, 지지율 하락세... 차기 시장 경쟁 치열",
+      "link": "https://example.com/news/3",
+      "originallink": "https://example.com/news/3",
+      "description": "이동환 고양시장의 지지율이 하락하면서 차기 시장 선거 경쟁이 더욱 치열해지고 있다.",
+      "pubDate": "2026-02-22T10:15:00+09:00",
+      "candidates_mentioned": ["이동환"],
+      "keywords_matched": ["고양시장 후보"]
+    },
+    {
+      "title": "고양시 신청사 이전 갈등 심화... 원당 vs 백석동",
+      "link": "https://example.com/news/4",
+      "originallink": "https://example.com/news/4",
+      "description": "고양시 신청사 이전 문제가 시장 선거의 핵심 이슈로 부상하고 있다.",
+      "pubDate": "2026-02-20T16:00:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": ["고양 신청사"]
+    },
+    {
+      "title": "명재성 전 의원, 고양시장 출마 공식 선언",
+      "link": "https://example.com/news/5",
+      "originallink": "https://example.com/news/5",
+      "description": "명재성 전 국회의원이 고양시장 출마를 공식 선언하며 민주당 경선 구도가 본격화됐다.",
+      "pubDate": "2026-02-20T11:00:00+09:00",
+      "candidates_mentioned": ["명재성"],
+      "keywords_matched": ["고양시장 후보", "명재성 고양"]
+    }
+  ]
+}
