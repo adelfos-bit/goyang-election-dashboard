@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 고양특례시장 선거 분석 대시보드</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <style>
+        :root {
+            --primary: #1a56db;
+            --primary-light: #e8f0fe;
+            --danger: #dc2626;
+            --success: #16a34a;
+            --warning: #f59e0b;
+            --dark: #111827;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --blue-dem: #1a56db;
+            --red-ppp: #e02424;
+            --purple-prog: #7c3aed;
+            --shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gray-100);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #1a56db 100%);
+            color: white;
+            padding: 16px 32px;
+            z-index: 100;
+            box-shadow: var(--shadow-lg);
+        }
+        .header h1 { font-size: 22px; font-weight: 700; }
+        .header-sub { font-size: 13px; opacity: .8; margin-top: 4px; }
+        .header-meta { display: flex; gap: 20px; margin-top: 8px; font-size: 12px; opacity: .7; }
+
+        /* Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            background: white;
+            border-bottom: 2px solid var(--gray-200);
+            padding: 0 32px;
+            overflow-x: auto;
+            position: sticky;
+            top: 0;
+            z-index: 99;
+        }
+        .nav-tab {
+            padding: 14px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-500);
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            transition: all .2s;
+        }
+        .nav-tab:hover { color: var(--primary); }
+        .nav-tab.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
+
+        /* Main Content */
+        .main { max-width: 1400px; margin: 0 auto; padding: 24px 32px; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 24px;
+            margin-bottom: 20px;
+        }
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gray-800);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .card-title .icon { font-size: 20px; }
+
+        /* Grid */
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+        @media (max-width: 1024px) {
+            .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+        }
+
+        /* Stat Cards */
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        .stat-value { font-size: 32px; font-weight: 800; }
+        .stat-label { font-size: 13px; color: var(--gray-500); margin-top: 4px; }
+        .stat-change { font-size: 12px; margin-top: 6px; }
+        .stat-up { color: var(--success); }
+        .stat-down { color: var(--danger); }
+
+        /* Candidate Card */
+        .candidate-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: transform .2s, box-shadow .2s;
+            cursor: pointer;
+        }
+        .candidate-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .candidate-card .party-bar {
+            position: absolute; top: 0; left: 0; right: 0; height: 4px;
+        }
+        .party-dem { background: var(--blue-dem); }
+        .party-ppp { background: var(--red-ppp); }
+        .party-prog { background: var(--purple-prog); }
+        .candidate-name { font-size: 18px; font-weight: 700; margin-top: 8px; }
+        .candidate-party { font-size: 13px; color: var(--gray-500); }
+        .candidate-role { font-size: 12px; color: var(--gray-400); margin-top: 4px; }
+        .candidate-poll { font-size: 24px; font-weight: 800; margin-top: 12px; }
+        .candidate-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+        .tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+        .tag-blue { background: #dbeafe; color: #1e40af; }
+        .tag-green { background: #dcfce7; color: #166534; }
+        .tag-orange { background: #ffedd5; color: #9a3412; }
+        .tag-red { background: #fee2e2; color: #991b1b; }
+        .tag-purple { background: #ede9fe; color: #5b21b6; }
+
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .badge-positive { background: #dcfce7; color: #166534; }
+        .badge-negative { background: #fee2e2; color: #991b1b; }
+        .badge-neutral { background: #f3f4f6; color: #4b5563; }
+        .badge-warning { background: #fef3c7; color: #92400e; }
+
+        /* SWOT */
+        .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .swot-box { border-radius: 10px; padding: 16px; }
+        .swot-s { background: linear-gradient(135deg, #dcfce7, #f0fdf4); border: 1px solid #86efac; }
+        .swot-w { background: linear-gradient(135deg, #fee2e2, #fef2f2); border: 1px solid #fca5a5; }
+        .swot-o { background: linear-gradient(135deg, #dbeafe, #eff6ff); border: 1px solid #93c5fd; }
+        .swot-t { background: linear-gradient(135deg, #fef3c7, #fffbeb); border: 1px solid #fcd34d; }
+        .swot-title { font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+        .swot-list { list-style: none; }
+        .swot-list li { font-size: 13px; padding: 4px 0; padding-left: 16px; position: relative; }
+        .swot-list li::before { content: "•"; position: absolute; left: 0; font-weight: 700; }
+
+        /* Progress Bar */
+        .progress-bar {
+            height: 8px;
+            background: var(--gray-200);
+            border-radius: 4px;
+            overflow: hidden;
+            margin-top: 6px;
+        }
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width .8s ease;
+        }
+
+        /* Timeline */
+        .timeline-item {
+            display: flex;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .timeline-item:last-child { border-bottom: none; }
+        .timeline-date {
+            font-size: 12px;
+            color: var(--gray-400);
+            min-width: 80px;
+            white-space: nowrap;
+        }
+        .timeline-content { font-size: 13px; }
+        .timeline-source { font-size: 11px; color: var(--gray-400); margin-top: 2px; }
+
+        /* Score Meter */
+        .score-meter { text-align: center; padding: 16px; }
+        .score-circle {
+            width: 100px; height: 100px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 8px;
+            font-size: 28px; font-weight: 800;
+        }
+        .score-label { font-size: 13px; color: var(--gray-500); }
+
+        /* Table */
+        .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .data-table th {
+            background: var(--gray-50);
+            padding: 10px 12px;
+            text-align: left;
+            font-weight: 600;
+            color: var(--gray-600);
+            border-bottom: 2px solid var(--gray-200);
+        }
+        .data-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .data-table tr:hover { background: var(--gray-50); }
+
+        /* Issue Tracker */
+        .issue-item {
+            padding: 12px 16px;
+            border-left: 4px solid;
+            background: var(--gray-50);
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 8px;
+        }
+        .issue-title { font-size: 14px; font-weight: 600; }
+        .issue-desc { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
+
+        /* Radar / Comparison */
+        .comparison-row {
+            display: flex;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--gray-100);
+        }
+        .comparison-label { width: 120px; font-size: 13px; font-weight: 500; }
+        .comparison-bars { flex: 1; display: flex; gap: 4px; flex-direction: column; }
+        .comp-bar-row { display: flex; align-items: center; gap: 8px; }
+        .comp-bar-name { font-size: 11px; width: 60px; text-align: right; }
+        .comp-bar {
+            height: 18px;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            padding-left: 6px;
+            font-size: 10px;
+            color: white;
+            font-weight: 600;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        .highlight-blue { background: linear-gradient(135deg, #e8f0fe, #dbeafe); border: 1px solid #93c5fd; }
+        .highlight-red { background: linear-gradient(135deg, #fef2f2, #fee2e2); border: 1px solid #fca5a5; }
+        .highlight-green { background: linear-gradient(135deg, #f0fdf4, #dcfce7); border: 1px solid #86efac; }
+        .highlight-yellow { background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 1px solid #fcd34d; }
+
+        /* Strategy Card */
+        .strategy-card {
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border-left: 4px solid;
+        }
+        .strategy-urgent { border-color: var(--danger); background: #fef2f2; }
+        .strategy-important { border-color: var(--warning); background: #fffbeb; }
+        .strategy-normal { border-color: var(--primary); background: #eff6ff; }
+        .strategy-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+        .strategy-desc { font-size: 13px; color: var(--gray-600); }
+        .priority-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
+        .priority-high { background: #fee2e2; color: #991b1b; }
+        .priority-medium { background: #fef3c7; color: #92400e; }
+        .priority-low { background: #dbeafe; color: #1e40af; }
+
+        /* Sentiment bars */
+        .sentiment-bar-container {
+            display: flex;
+            height: 24px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 8px 0;
+        }
+        .sentiment-positive { background: #22c55e; }
+        .sentiment-neutral { background: #94a3b8; }
+        .sentiment-negative { background: #ef4444; }
+
+        /* Chart Container */
+        .chart-container { position: relative; height: 300px; }
+        .chart-container-sm { position: relative; height: 250px; }
+
+        /* Social Media Grid */
+        .social-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+        .social-item {
+            text-align: center;
+            padding: 16px 12px;
+            border-radius: 10px;
+            background: var(--gray-50);
+        }
+        .social-icon { font-size: 28px; margin-bottom: 6px; }
+        .social-platform { font-size: 12px; color: var(--gray-500); }
+        .social-status { font-size: 13px; font-weight: 600; margin-top: 4px; }
+        .status-active { color: var(--success); }
+        .status-inactive { color: var(--danger); }
+        .status-unknown { color: var(--gray-400); }
+
+        /* Tooltip */
+        .info-tip {
+            display: inline-block;
+            width: 16px; height: 16px;
+            border-radius: 50%;
+            background: var(--gray-200);
+            color: var(--gray-500);
+            font-size: 10px;
+            text-align: center;
+            line-height: 16px;
+            cursor: help;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main { padding: 16px; }
+            .swot-grid { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); }
+            .header { padding: 16px; }
+            .nav-tabs { padding: 0 16px; }
+        }
+
+        /* Animate */
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-in { animation: fadeIn .4s ease; }
+
+        /* Lee Kyunghye highlight */
+        .lkh-highlight {
+            border: 2px solid var(--primary);
+            position: relative;
+        }
+        .lkh-highlight::after {
+            content: "분석 대상";
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: var(--primary);
+            color: white;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <h1>2026 고양특례시장 선거 분석 대시보드</h1>
+        <div class="header-sub">이경혜 후보 중심 경쟁 분석 &amp; 전략 리포트</div>
+        <div class="header-meta">
+            <span>업데이트: 2026.02.25</span>
+            <span>선거일: 2026.06.03 (D-98)</span>
+            <span>유권자 수: ~89만 명</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-tabs">
+        <div class="nav-tab active" data-tab="overview">종합 현황</div>
+        <div class="nav-tab" data-tab="candidates">후보 비교</div>
+        <div class="nav-tab" data-tab="polls">여론조사</div>
+        <div class="nav-tab" data-tab="social">소셜미디어</div>
+        <div class="nav-tab" data-tab="news">뉴스/여론</div>
+        <div class="nav-tab" data-tab="lkh">이경혜 분석</div>
+        <div class="nav-tab" data-tab="strategy">전략 제안</div>
+    </div>
+
+    <div class="main">
+
+        <!-- TAB: Overview -->
+        <div class="tab-content active animate-in" id="tab-overview">
+            <!-- KPI Summary -->
+            <div class="grid-4" style="margin-bottom:20px">
+                <div class="stat-card">
+                    <div class="stat-value" style="color:var(--blue-dem)">12+</div>
+                    <div class="stat-label">민주당 후보군 수</div>
+                    <div class="stat-change stat-up">경선이 곧 본선</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color:var(--primary)">51.2%</div>
+                    <div class="stat-label">민주당 정당지지율</div>
+                    <div class="stat-change stat-up">국힘 23.0% 대비 2배+</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color:var(--warning)">59.2%</div>
+                    <div class="stat-label">유보층(아직 미정)</div>
+                    <div class="stat-change">후보 선택 미결정</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value" style="color:var(--danger)">N/A</div>
+                    <div class="stat-label">이경혜 여론조사 수치</div>
+                    <div class="stat-change stat-down">상위 항목 미포함</div>
+                </div>
+            </div>
+
+            <!-- Election Map -->
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">📊</span> 정당 지지율 현황</div>
+                    <div class="chart-container">
+                        <canvas id="partyChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">🗳️</span> 선거 구도 요약</div>
+                    <div class="highlight-blue" style="margin-bottom:12px">
+                        <div style="font-weight:700;font-size:14px;margin-bottom:8px">핵심 구도</div>
+                        <div style="font-size:13px">"<b>관리의 4년</b>(이동환 재선) vs <b>전환의 요구</b>(민주당 탈환)"</div>
+                        <div style="font-size:12px;color:var(--gray-500);margin-top:4px">민주당 경선 통과 = 사실상 당선</div>
+                    </div>
+                    <div class="highlight-yellow">
+                        <div style="font-weight:700;font-size:14px;margin-bottom:8px">고양시 5대 현안</div>
+                        <ol style="font-size:13px;padding-left:20px">
+                            <li><b>신청사 이전 갈등</b> — 원당 vs 백석동</li>
+                            <li><b>경기패스 탈퇴</b> — 고양시만 혜택 제외</li>
+                            <li><b>경제자유구역 지정 지연</b></li>
+                            <li><b>1기 신도시 노후화</b> — 재건축 수요</li>
+                            <li><b>광역교통망 확충</b> — GTX, BRT, 트램</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Insight -->
+            <div class="card">
+                <div class="card-title"><span class="icon">💡</span> 이경혜 후보 핵심 인사이트</div>
+                <div class="grid-3">
+                    <div class="highlight-green">
+                        <div style="font-weight:700;color:#166534;font-size:14px">강점</div>
+                        <ul style="font-size:13px;padding-left:16px;margin-top:6px">
+                            <li>'고양패스' 차별화 공약</li>
+                            <li>당내 네트워크(정책위 부의장)</li>
+                            <li>활발한 의정활동 기록</li>
+                            <li>취약계층 옹호 이미지</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-red">
+                        <div style="font-weight:700;color:#991b1b;font-size:14px">약점</div>
+                        <ul style="font-size:13px;padding-left:16px;margin-top:6px">
+                            <li>여론조사 상위권 미진입</li>
+                            <li>소셜미디어 채널 부재</li>
+                            <li>낮은 대중 인지도</li>
+                            <li>공약 재원 조달 의문</li>
+                        </ul>
+                    </div>
+                    <div class="highlight-yellow">
+                        <div style="font-weight:700;color:#92400e;font-size:14px">기회</div>
+                        <ul style="font-size:13px;padding-left:16px;margin-top:6px">
+                            <li>유보층 59.2%로 판도 변동 가능</li>
+                            <li>여성 후보 차별화 포인트</li>
+                            <li>교통 이슈가 시민 최대 관심사</li>
+                            <li>현 시장 부정평가 57.4%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Candidates -->
+        <div class="tab-content" id="tab-candidates">
+            <h3 style="font-size:18px;font-weight:700;margin-bottom:16px">주요 후보 프로필</h3>
+
+            <!-- 더불어민주당 -->
+            <h4 style="font-size:15px;color:var(--blue-dem);margin-bottom:12px;font-weight:600">더불어민주당 (경선 경쟁)</h4>
+            <div class="grid-3" style="margin-bottom:24px">
+                <div class="candidate-card lkh-highlight">
+                    <div class="party-bar party-dem"></div>
+                    <div class="candidate-party">더불어민주당</div>
+                    <div class="candidate-name">이경혜</div>
+                    <div class="candidate-role">경기도의원(고양4) · 기획재정위 부위원장</div>
+                    <div class="candidate-poll" style="color:var(--gray-400)">조사 미포함</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-blue">고양패스</span>
+                        <span class="tag tag-green">BRT 긴급투입</span>
+                        <span class="tag tag-orange">Eco-Bridge</span>
+                        <span class="tag tag-purple">기후행동</span>
+                    </div>
+                </div>
+                <div class="candidate-card">
+                    <div class="party-bar party-dem"></div>
+                    <div class="candidate-party">더불어민주당</div>
+                    <div class="candidate-name">명재성</div>
+                    <div class="candidate-role">경기도의원 · 전 덕양구청장 (공직 39년)</div>
+                    <div class="candidate-poll" style="color:var(--blue-dem)">15.6%</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-blue">행정 달인</span>
+                        <span class="tag tag-green">현장경험</span>
+                    </div>
+                </div>
+                <div class="candidate-card">
+                    <div class="party-bar party-dem"></div>
+                    <div class="candidate-party">더불어민주당</div>
+                    <div class="candidate-name">이재준</div>
+                    <div class="candidate-role">전 고양시장 (민선 7기)</div>
+                    <div class="candidate-poll" style="color:var(--blue-dem)">12.7%</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-blue">시정경험</span>
+                        <span class="tag tag-green">K-방역</span>
+                        <span class="tag tag-red">불통논란</span>
+                    </div>
+                </div>
+                <div class="candidate-card">
+                    <div class="party-bar party-dem"></div>
+                    <div class="candidate-party">더불어민주당</div>
+                    <div class="candidate-name">장제환</div>
+                    <div class="candidate-role">전 시의원 · 도시공학 박사</div>
+                    <div class="candidate-poll" style="color:var(--blue-dem)">10.1%</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-blue">도시공학</span>
+                        <span class="tag tag-green">상승세</span>
+                    </div>
+                </div>
+                <div class="candidate-card">
+                    <div class="party-bar party-dem"></div>
+                    <div class="candidate-party">더불어민주당</div>
+                    <div class="candidate-name">민경선</div>
+                    <div class="candidate-role">전 경기교통공사 사장 · 3선 도의원</div>
+                    <div class="candidate-poll" style="color:var(--blue-dem)">8.2%</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-blue">교통전문</span>
+                        <span class="tag tag-orange">경선패배</span>
+                    </div>
+                </div>
+                <div class="candidate-card">
+                    <div class="party-bar party-dem"></div>
+                    <div class="candidate-party">더불어민주당</div>
+                    <div class="candidate-name">정병춘</div>
+                    <div class="candidate-role">당 정책위 부의장 · 공직 40년</div>
+                    <div class="candidate-poll" style="color:var(--blue-dem)">8.3%</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-blue">6대 공약</span>
+                        <span class="tag tag-green">청년정책</span>
+                    </div>
+                </div>
+                <div class="candidate-card">
+                    <div class="party-bar party-dem"></div>
+                    <div class="candidate-party">더불어민주당</div>
+                    <div class="candidate-name">이영아</div>
+                    <div class="candidate-role">전 고양신문 대표 · 34년 언론인</div>
+                    <div class="candidate-poll" style="color:var(--blue-dem)">4.0%</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-blue">K-컬처</span>
+                        <span class="tag tag-purple">시민공론장</span>
+                    </div>
+                </div>
+                <div class="candidate-card">
+                    <div class="party-bar party-dem"></div>
+                    <div class="candidate-party">더불어민주당</div>
+                    <div class="candidate-name">최승원</div>
+                    <div class="candidate-role">전 국토부 장관 정책보좌관</div>
+                    <div class="candidate-poll" style="color:var(--blue-dem)">3.8%</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-blue">중앙부처</span>
+                        <span class="tag tag-green">네트워크</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 국민의힘 -->
+            <h4 style="font-size:15px;color:var(--red-ppp);margin-bottom:12px;font-weight:600">국민의힘</h4>
+            <div class="grid-3" style="margin-bottom:24px">
+                <div class="candidate-card">
+                    <div class="party-bar party-ppp"></div>
+                    <div class="candidate-party">국민의힘 (현직)</div>
+                    <div class="candidate-name">이동환</div>
+                    <div class="candidate-role">현 고양특례시장 · 도시공학 박사</div>
+                    <div class="candidate-poll" style="color:var(--red-ppp)">13.5%</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-green">공약이행 SA</span>
+                        <span class="tag tag-red">해외출장 논란</span>
+                        <span class="tag tag-red">신청사 갈등</span>
+                    </div>
+                </div>
+                <div class="candidate-card">
+                    <div class="party-bar party-ppp"></div>
+                    <div class="candidate-party">국민의힘</div>
+                    <div class="candidate-name">이규열</div>
+                    <div class="candidate-role">전 고양시의회 부의장</div>
+                    <div class="candidate-poll" style="color:var(--gray-400)">-</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-blue">시의회 경험</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 진보당 -->
+            <h4 style="font-size:15px;color:var(--purple-prog);margin-bottom:12px;font-weight:600">진보당</h4>
+            <div class="grid-3" style="margin-bottom:24px">
+                <div class="candidate-card">
+                    <div class="party-bar party-prog"></div>
+                    <div class="candidate-party">진보당</div>
+                    <div class="candidate-name">송영주</div>
+                    <div class="candidate-role">진보당 고양시 지역위원장 · 전 도의원</div>
+                    <div class="candidate-poll" style="color:var(--gray-400)">-</div>
+                    <div class="candidate-tags">
+                        <span class="tag tag-purple">공공은행</span>
+                        <span class="tag tag-green">노동존중</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="card">
+                <div class="card-title"><span class="icon">📋</span> 주요 후보 공약 비교</div>
+                <div style="overflow-x:auto">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>분야</th>
+                                <th style="color:var(--primary)">이경혜</th>
+                                <th>명재성</th>
+                                <th>이재준</th>
+                                <th>정병춘</th>
+                                <th style="color:var(--red-ppp)">이동환(현직)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><b>교통</b></td>
+                                <td><b>고양패스(월5만원)</b><br>긴급 BRT, BTS패키지</td>
+                                <td>행정력 기반<br>교통체계 개선</td>
+                                <td>전임 시절<br>교통 정책 계승</td>
+                                <td>경의중앙선 증차<br>고양은평선 연장<br>트램 도입</td>
+                                <td>GTX-A 개통<br>경기패스 탈퇴</td>
+                            </tr>
+                            <tr>
+                                <td><b>신청사</b></td>
+                                <td>주교동 원안<br>+덕양구 분구</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>원당 신청사 재추진</td>
+                                <td>백석동 이전 추진</td>
+                            </tr>
+                            <tr>
+                                <td><b>경제/일자리</b></td>
+                                <td>K-컬처밸리 점검<br>일산테크노밸리</td>
+                                <td>39년 행정경험<br>예산 운용 효율화</td>
+                                <td>특례시 출범 기여<br>자족도시 비전</td>
+                                <td>GTX 창릉역<br>청년창업 거점</td>
+                                <td>경제자유구역<br>벤처기업 육성</td>
+                            </tr>
+                            <tr>
+                                <td><b>환경</b></td>
+                                <td><b>Eco-Bridge</b><br>기후행동 연구회</td>
+                                <td>-</td>
+                                <td>COP26 기조연설<br>기후행동 선도</td>
+                                <td>-</td>
+                                <td>지속가능성<br>GDS-I 15위</td>
+                            </tr>
+                            <tr>
+                                <td><b>복지</b></td>
+                                <td>취약계층 예산 확보<br>유보통합 지원</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>24시간 긴급돌봄<br>고양페이 인센티브</td>
+                                <td>청년기본소득 중단</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Polls -->
+        <div class="tab-content" id="tab-polls">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">📊</span> 민주당 후보 적합도 (리얼미터 2025.12)</div>
+                    <div class="chart-container">
+                        <canvas id="demPollChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">📊</span> 민주당 후보 적합도 (데일리리서치 2026.02)</div>
+                    <div class="chart-container">
+                        <canvas id="demPollChart2"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">📊</span> 본선 가상대결 추정</div>
+                    <div class="chart-container">
+                        <canvas id="generalChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">🎯</span> 이경혜 위치 분석</div>
+                    <div class="highlight-yellow" style="margin-bottom:12px">
+                        <div style="font-weight:700;font-size:14px">현재 상황</div>
+                        <div style="font-size:13px;margin-top:6px">
+                            리얼미터/데일리리서치 두 조사 모두에서 <b>상위 보기 항목에 미포함</b>.
+                            이는 인지도 부족을 의미하며, 유보층 59.2%를 공략할 여지가 있음을 동시에 뜻합니다.
+                        </div>
+                    </div>
+                    <div class="highlight-green">
+                        <div style="font-weight:700;font-size:14px">긍정 신호</div>
+                        <ul style="font-size:13px;padding-left:16px;margin-top:6px">
+                            <li>부동층이 전체의 60% — 선거판 완전 열림</li>
+                            <li>명재성/이재준 등 선두도 10~15%대로 차이 크지 않음</li>
+                            <li>'고양패스' 공약으로 화제성 확보 시작</li>
+                            <li>2월 23일 출마 선언으로 본격 캠페인 돌입</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="icon">📈</span> 여론조사 데이터 상세</div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>후보</th>
+                            <th>소속</th>
+                            <th>리얼미터<br>(2025.12)</th>
+                            <th>데일리리서치<br>(2026.02)</th>
+                            <th>인천일보/리얼미터<br>(2026.02)</th>
+                            <th>추세</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><b>명재성</b></td>
+                            <td><span class="badge badge-neutral">민주</span></td>
+                            <td>10.7%</td>
+                            <td>6.7%</td>
+                            <td>15.6%</td>
+                            <td><span class="badge badge-warning">변동</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>이동환</b></td>
+                            <td><span class="badge" style="background:#fee2e2;color:#991b1b">국힘</span></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>13.5%</td>
+                            <td><span class="badge badge-neutral">현직</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>이재준</b></td>
+                            <td><span class="badge badge-neutral">민주</span></td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>12.7%</td>
+                            <td><span class="badge badge-neutral">전직</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>장제환</b></td>
+                            <td><span class="badge badge-neutral">민주</span></td>
+                            <td>4.9%</td>
+                            <td>10.1%</td>
+                            <td>7.0%</td>
+                            <td><span class="badge badge-positive">상승</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>정병춘</b></td>
+                            <td><span class="badge badge-neutral">민주</span></td>
+                            <td>8.3%</td>
+                            <td>6.5%</td>
+                            <td>-</td>
+                            <td><span class="badge badge-negative">하락</span></td>
+                        </tr>
+                        <tr>
+                            <td><b>민경선</b></td>
+                            <td><span class="badge badge-neutral">민주</span></td>
+                            <td>6.2%</td>
+                            <td>7.9%</td>
+                            <td>8.2%</td>
+                            <td><span class="badge badge-positive">상승</span></td>
+                        </tr>
+                        <tr style="background:#eff6ff">
+                            <td><b style="color:var(--primary)">이경혜</b></td>
+                            <td><span class="badge" style="background:var(--primary);color:white">민주</span></td>
+                            <td style="color:var(--danger)">미포함</td>
+                            <td style="color:var(--danger)">미포함</td>
+                            <td style="color:var(--danger)">미포함</td>
+                            <td><span class="badge badge-negative">인지도 부족</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- TAB: Social Media -->
+        <div class="tab-content" id="tab-social">
+            <div class="card">
+                <div class="card-title"><span class="icon">📱</span> 이경혜 소셜미디어 현황</div>
+                <div class="social-grid">
+                    <div class="social-item">
+                        <div class="social-icon">📺</div>
+                        <div class="social-platform">YouTube</div>
+                        <div class="social-status status-inactive">미확인</div>
+                        <div style="font-size:11px;color:var(--gray-400)">공식채널 없음</div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">📘</div>
+                        <div class="social-platform">Facebook</div>
+                        <div class="social-status status-inactive">미확인</div>
+                        <div style="font-size:11px;color:var(--gray-400)">공식계정 없음</div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">📷</div>
+                        <div class="social-platform">Instagram</div>
+                        <div class="social-status status-inactive">미확인</div>
+                        <div style="font-size:11px;color:var(--gray-400)">공식계정 없음</div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">🎵</div>
+                        <div class="social-platform">TikTok</div>
+                        <div class="social-status status-inactive">미확인</div>
+                        <div style="font-size:11px;color:var(--gray-400)">공식계정 없음</div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">🌐</div>
+                        <div class="social-platform">네이버 블로그</div>
+                        <div class="social-status status-unknown">미확인</div>
+                        <div style="font-size:11px;color:var(--gray-400)">검색 미발견</div>
+                    </div>
+                    <div class="social-item">
+                        <div class="social-icon">🏛️</div>
+                        <div class="social-platform">경기도의회</div>
+                        <div class="social-status status-active">활성</div>
+                        <div style="font-size:11px;color:var(--gray-400)">공식 의원 페이지</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">📊</span> 소셜미디어 활동 점수 (추정)</div>
+                    <div class="chart-container">
+                        <canvas id="socialRadar"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">⚠️</span> 디지털 소통 진단</div>
+                    <div class="strategy-card strategy-urgent">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div class="strategy-title">소셜미디어 채널 전면 부재</div>
+                            <span class="priority-tag priority-high">긴급</span>
+                        </div>
+                        <div class="strategy-desc">
+                            유튜브, 페이스북, 인스타그램, 틱톡 등 주요 플랫폼에서 공식 계정이 발견되지 않습니다.
+                            2026년 선거에서 디지털 소통은 필수이며, 즉시 채널 개설 및 콘텐츠 전략이 필요합니다.
+                        </div>
+                    </div>
+                    <div class="strategy-card strategy-important">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div class="strategy-title">경쟁 후보 대비 디지털 열세</div>
+                            <span class="priority-tag priority-medium">중요</span>
+                        </div>
+                        <div class="strategy-desc">
+                            다른 후보들은 기자회견/출판기념회 등을 통해 미디어 노출을 확보하고 있으나,
+                            이경혜 후보의 온라인 콘텐츠 유통 채널이 부족합니다.
+                        </div>
+                    </div>
+                    <div class="strategy-card strategy-normal">
+                        <div style="display:flex;justify-content:space-between;align-items:center">
+                            <div class="strategy-title">경기도의회 공식 페이지 활용</div>
+                            <span class="priority-tag priority-low">활용</span>
+                        </div>
+                        <div class="strategy-desc">
+                            현재 유일한 온라인 소통 창구는 경기도의회 공식 의원 페이지입니다.
+                            의정활동 기록을 소셜미디어로 확산시킬 수 있습니다.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="icon">🗞️</span> 이경혜 온라인 언급 타임라인</div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026.02.24</div>
+                    <div>
+                        <div class="timeline-content"><b>'고양패스' 공약 발표 및 출마 선언</b> — 월 5만원 정액 무제한 대중교통 구독</div>
+                        <div class="timeline-source">국제뉴스, 중부일보 등 다수 매체</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026.02.11</div>
+                    <div>
+                        <div class="timeline-content"><b>Eco-Bridge 전문가 간담회</b> — AI 기술+하천 생태 융합 모델 논의</div>
+                        <div class="timeline-source">중부일보</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.12.30</div>
+                    <div>
+                        <div class="timeline-content"><b>K-컬처밸리 등 4대 공공개발사업 현황 점검</b></div>
+                        <div class="timeline-source">중부시사신문, 비전21뉴스</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.12.01</div>
+                    <div>
+                        <div class="timeline-content"><b>한국항공대역 환경개선 정담회</b> — 학생/구청 참여</div>
+                        <div class="timeline-source">서울Pn</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.11</div>
+                    <div>
+                        <div class="timeline-content"><b>취약계층 예산 삭감 비판</b> — 장애인/노인 사업 예산 구조적 축소 지적</div>
+                        <div class="timeline-source">중부시사신문, 비전21뉴스</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07</div>
+                    <div>
+                        <div class="timeline-content"><b>기후행동 실천 연구회 보고회</b> — 공동주택 중심 기후행동 정책</div>
+                        <div class="timeline-source">서울Pn</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.07</div>
+                    <div>
+                        <div class="timeline-content"><b>남북교류협력 조례 개정안 본회의 통과</b></div>
+                        <div class="timeline-source">내외일보</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2025.06</div>
+                    <div>
+                        <div class="timeline-content"><b>교통약자 보호구역 제한속도 탄력 운영 토론회</b></div>
+                        <div class="timeline-source">내외일보</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: News/Sentiment -->
+        <div class="tab-content" id="tab-news">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">📰</span> 이경혜 뉴스 감성 분포</div>
+                    <div class="chart-container-sm">
+                        <canvas id="sentimentChart"></canvas>
+                    </div>
+                    <div style="font-size:12px;color:var(--gray-400);margin-top:8px">
+                        * 수집된 뉴스 기사 기반 감성 추정 (긍정/중립/부정)
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">📰</span> 주요 후보별 뉴스 감성 비교</div>
+                    <div class="chart-container-sm">
+                        <canvas id="sentimentCompare"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="icon">🔥</span> 후보별 긍정/부정 이슈 매핑</div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>후보</th>
+                            <th>긍정 키워드</th>
+                            <th>부정 키워드</th>
+                            <th>감성 점수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background:#eff6ff">
+                            <td><b style="color:var(--primary)">이경혜</b></td>
+                            <td>
+                                <span class="badge badge-positive">고양패스</span>
+                                <span class="badge badge-positive">취약계층 옹호</span>
+                                <span class="badge badge-positive">기후행동</span>
+                                <span class="badge badge-positive">Eco-Bridge</span>
+                            </td>
+                            <td>
+                                <span class="badge badge-warning">인지도 낮음</span>
+                                <span class="badge badge-warning">재원 의문</span>
+                            </td>
+                            <td>
+                                <div style="display:flex;align-items:center;gap:8px">
+                                    <div style="font-weight:700;color:var(--success)">+62</div>
+                                    <div style="font-size:11px;color:var(--gray-400)">/100</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>이동환</b></td>
+                            <td>
+                                <span class="badge badge-positive">공약이행 SA</span>
+                                <span class="badge badge-positive">GTX 개통</span>
+                            </td>
+                            <td>
+                                <span class="badge badge-negative">해외출장 34회</span>
+                                <span class="badge badge-negative">신청사 갈등</span>
+                                <span class="badge badge-negative">경기패스 탈퇴</span>
+                                <span class="badge badge-negative">시의회 고발</span>
+                            </td>
+                            <td>
+                                <div style="display:flex;align-items:center;gap:8px">
+                                    <div style="font-weight:700;color:var(--danger)">-35</div>
+                                    <div style="font-size:11px;color:var(--gray-400)">/100</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>이재준</b></td>
+                            <td>
+                                <span class="badge badge-positive">시정경험</span>
+                                <span class="badge badge-positive">K-방역</span>
+                            </td>
+                            <td>
+                                <span class="badge badge-negative">불통행정</span>
+                                <span class="badge badge-negative">이해충돌</span>
+                                <span class="badge badge-negative">재선실패</span>
+                            </td>
+                            <td>
+                                <div style="display:flex;align-items:center;gap:8px">
+                                    <div style="font-weight:700;color:var(--warning)">+15</div>
+                                    <div style="font-size:11px;color:var(--gray-400)">/100</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>명재성</b></td>
+                            <td>
+                                <span class="badge badge-positive">행정 달인</span>
+                                <span class="badge badge-positive">39년 공직</span>
+                            </td>
+                            <td>
+                                <span class="badge badge-warning">조직력 미지수</span>
+                            </td>
+                            <td>
+                                <div style="display:flex;align-items:center;gap:8px">
+                                    <div style="font-weight:700;color:var(--success)">+48</div>
+                                    <div style="font-size:11px;color:var(--gray-400)">/100</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><b>정병춘</b></td>
+                            <td>
+                                <span class="badge badge-positive">구체적 공약</span>
+                                <span class="badge badge-positive">40년 행정</span>
+                            </td>
+                            <td>
+                                <span class="badge badge-warning">인지도 부족</span>
+                            </td>
+                            <td>
+                                <div style="display:flex;align-items:center;gap:8px">
+                                    <div style="font-weight:700;color:var(--success)">+42</div>
+                                    <div style="font-size:11px;color:var(--gray-400)">/100</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><span class="icon">📌</span> 고양시 핵심 이슈별 시민 관심도</div>
+                <div class="chart-container">
+                    <canvas id="issueChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Lee Kyunghye Analysis -->
+        <div class="tab-content" id="tab-lkh">
+            <!-- Profile -->
+            <div class="card">
+                <div class="card-title"><span class="icon">👤</span> 이경혜 후보 프로필</div>
+                <div class="grid-2">
+                    <div>
+                        <table class="data-table">
+                            <tr><td style="width:120px;font-weight:600">소속</td><td>더불어민주당</td></tr>
+                            <tr><td style="font-weight:600">현직</td><td>경기도의회 기획재정위 부위원장 (고양4)</td></tr>
+                            <tr><td style="font-weight:600">학력</td><td>연세대학교 행정대학원 석사</td></tr>
+                            <tr><td style="font-weight:600">당직</td><td>중앙당 정책위 부의장, 도당 부대변인</td></tr>
+                            <tr><td style="font-weight:600">기타</td><td>한준호 국회의원 특별보좌관<br>기후행동 실천 연구회 회장</td></tr>
+                            <tr><td style="font-weight:600">출마선언</td><td>2026년 2월 23일</td></tr>
+                        </table>
+                    </div>
+                    <div>
+                        <div style="font-weight:600;margin-bottom:8px;font-size:14px">핵심 공약</div>
+                        <div class="issue-item" style="border-color:var(--primary)">
+                            <div class="issue-title">고양패스</div>
+                            <div class="issue-desc">GTX-A, 3호선, 경의중앙선, 시내버스 통합 월 5만원 무제한 구독</div>
+                        </div>
+                        <div class="issue-item" style="border-color:var(--success)">
+                            <div class="issue-title">긴급 BRT 투입</div>
+                            <div class="issue-desc">창릉~화정~킨텍스~대곡 구간 올해 안 BRT 운행</div>
+                        </div>
+                        <div class="issue-item" style="border-color:var(--warning)">
+                            <div class="issue-title">고양형 BTS 패키지</div>
+                            <div class="issue-desc">Bus + Train + Smart — AI 기반 통합환승</div>
+                        </div>
+                        <div class="issue-item" style="border-color:#7c3aed">
+                            <div class="issue-title">Eco-Bridge 모델</div>
+                            <div class="issue-desc">AI 기술+하천생태+문화예술 융합 환경정책</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SWOT -->
+            <div class="card">
+                <div class="card-title"><span class="icon">🎯</span> SWOT 분석</div>
+                <div class="swot-grid">
+                    <div class="swot-box swot-s">
+                        <div class="swot-title" style="color:#166534">S — 강점 (Strengths)</div>
+                        <ul class="swot-list">
+                            <li><b>'고양패스'</b> — 시민 체감형 교통 공약으로 높은 화제성</li>
+                            <li><b>당내 네트워크</b> — 정책위 부의장, 한준호 특보 등 중앙당 연결</li>
+                            <li><b>활발한 의정활동</b> — 토론회, 조례 발의, 행정감사 다수 실적</li>
+                            <li><b>정책 전문성</b> — 기후행동, 환경, 교통, 복지 분야 폭넓은 이해</li>
+                            <li><b>취약계층 옹호</b> — 예산 감시/비판 활동으로 복지 이미지 확보</li>
+                            <li><b>여성 후보</b> — 다수 남성 후보 속 차별화 가능</li>
+                        </ul>
+                    </div>
+                    <div class="swot-box swot-w">
+                        <div class="swot-title" style="color:#991b1b">W — 약점 (Weaknesses)</div>
+                        <ul class="swot-list">
+                            <li><b>낮은 인지도</b> — 여론조사 보기 항목에도 미포함</li>
+                            <li><b>소셜미디어 전무</b> — 유튜브/FB/인스타/틱톡 공식계정 없음</li>
+                            <li><b>조직력 미비</b> — 지역 조직/자원봉사 네트워크 검증 안됨</li>
+                            <li><b>공약 재원</b> — '고양패스' 등 파격적 공약의 재원조달 구체성 부족</li>
+                            <li><b>경선 경험</b> — 대규모 선거 캠페인 경험 미검증</li>
+                            <li><b>늦은 출마</b> — 2월 23일 선언, 타 후보 대비 출발 늦음</li>
+                        </ul>
+                    </div>
+                    <div class="swot-box swot-o">
+                        <div class="swot-title" style="color:#1e40af">O — 기회 (Opportunities)</div>
+                        <ul class="swot-list">
+                            <li><b>유보층 59.2%</b> — 아직 결정 안 한 유권자 과반</li>
+                            <li><b>교통이 최대 관심사</b> — '고양패스'가 핵심 이슈와 직결</li>
+                            <li><b>현 시장 부정평가 57.4%</b> — 변화 열망 존재</li>
+                            <li><b>민주당 경선=본선</b> — 경선만 통과하면 높은 당선 확률</li>
+                            <li><b>경기패스 탈퇴 분노</b> — 교통비 이슈로 시민 관심 급상승</li>
+                            <li><b>이재명 대통령 여당 효과</b> — 민주당 전반 유리한 환경</li>
+                        </ul>
+                    </div>
+                    <div class="swot-box swot-t">
+                        <div class="swot-title" style="color:#92400e">T — 위협 (Threats)</div>
+                        <ul class="swot-list">
+                            <li><b>인지도 높은 경쟁자</b> — 명재성(15.6%), 이재준(12.7%) 선두</li>
+                            <li><b>12명+ 다자구도</b> — 표 분산으로 인한 예측 불가</li>
+                            <li><b>경선 룰 변수</b> — 권리당원/국민여론 비율에 따라 유불리 변동</li>
+                            <li><b>네거티브 가능성</b> — 공약 실현 가능성 공격 예상</li>
+                            <li><b>비슷한 포지션</b> — 민경선(교통), 정병춘(행정) 등과 겹치는 영역</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Score Cards -->
+            <div class="card">
+                <div class="card-title"><span class="icon">📊</span> 분야별 경쟁력 평가</div>
+                <div class="chart-container">
+                    <canvas id="radarChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Detailed Analysis -->
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title"><span class="icon">✅</span> 강점 상세 분석</div>
+                    <div class="issue-item" style="border-color:var(--success)">
+                        <div class="issue-title">차별화된 교통 공약</div>
+                        <div class="issue-desc">'고양패스'는 경기패스 탈퇴로 불만이 극대화된 시점에 발표되어 타이밍이 좋음. 월 5만원이라는 구체적 숫자는 시민들이 바로 체감할 수 있는 메시지.</div>
+                    </div>
+                    <div class="issue-item" style="border-color:var(--success)">
+                        <div class="issue-title">정책 깊이와 다양성</div>
+                        <div class="issue-desc">교통(고양패스/BRT), 환경(Eco-Bridge/기후행동), 복지(취약계층), 도시개발(4대 사업 점검) 등 다양한 분야에서 구체적 활동 기록 보유.</div>
+                    </div>
+                    <div class="issue-item" style="border-color:var(--success)">
+                        <div class="issue-title">의정활동 실적</div>
+                        <div class="issue-desc">조례 발의, 행정감사 비판, 토론회 개최, 전문가 간담회 주최 등 도의원으로서 가시적 성과 다수. "일하는 정치인" 이미지 구축 가능.</div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-title"><span class="icon">⚠️</span> 약점 상세 분석</div>
+                    <div class="issue-item" style="border-color:var(--danger)">
+                        <div class="issue-title">인지도 절대 부족</div>
+                        <div class="issue-desc">2개 조사기관 모두에서 보기 항목에 포함되지 못함. 선두 그룹(10%+)과 큰 격차. 인지도를 3개월 안에 끌어올리는 것이 최우선 과제.</div>
+                    </div>
+                    <div class="issue-item" style="border-color:var(--danger)">
+                        <div class="issue-title">디지털 채널 전무</div>
+                        <div class="issue-desc">2026년 선거에서 소셜미디어 없는 캠페인은 치명적. MZ세대 유권자 접근이 불가능하며, 공약 확산 채널 부재. 즉각적인 채널 구축 필요.</div>
+                    </div>
+                    <div class="issue-item" style="border-color:var(--danger)">
+                        <div class="issue-title">재원 조달 구체성</div>
+                        <div class="issue-desc">'고양패스' 재원으로 "광역교통 분담금 환급분"을 언급했으나, 구체적 예산 규모와 지속가능성에 대한 검증이 필요. 경쟁 후보의 공격 포인트가 될 수 있음.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB: Strategy -->
+        <div class="tab-content" id="tab-strategy">
+            <div class="card">
+                <div class="card-title"><span class="icon">🚀</span> 이경혜 후보 전략 제안 — 정치적 보완점</div>
+
+                <!-- Urgent -->
+                <h4 style="color:var(--danger);margin:16px 0 12px;font-size:15px;font-weight:700">🔴 긴급 (즉시 실행)</h4>
+
+                <div class="strategy-card strategy-urgent">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                        <div class="strategy-title">1. 소셜미디어 채널 전면 개설 및 콘텐츠 폭격</div>
+                        <span class="priority-tag priority-high">D-98 긴급</span>
+                    </div>
+                    <div class="strategy-desc">
+                        <b>현황:</b> 유튜브, 인스타그램, 틱톡, 페이스북 공식 계정 제로<br>
+                        <b>조치:</b><br>
+                        ① 유튜브 채널 개설 — '고양패스' 설명 영상, 의정활동 하이라이트, 시민과의 소통 Vlog<br>
+                        ② 인스타그램/틱톡 — 30초 숏폼 콘텐츠 (교통비 비교, BRT 시뮬레이션, 시민 인터뷰)<br>
+                        ③ 페이스북 — 정책 카드뉴스, 공약 인포그래픽<br>
+                        ④ 네이버 블로그 — 의정활동 기록, 정책 심층 분석<br>
+                        <b>목표:</b> 1개월 내 총 팔로워 1만 명 확보
+                    </div>
+                </div>
+
+                <div class="strategy-card strategy-urgent">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                        <div class="strategy-title">2. 인지도 급등 캠페인 — "고양패스 챌린지"</div>
+                        <span class="priority-tag priority-high">D-98 긴급</span>
+                    </div>
+                    <div class="strategy-desc">
+                        <b>현황:</b> 여론조사 보기 항목 미포함, 인지도 최하위권<br>
+                        <b>조치:</b><br>
+                        ① "월 교통비 얼마 쓰세요?" — 시민 참여형 SNS 캠페인<br>
+                        ② 고양시 주요 역세권(대화역, 백석역, 삼송역 등) 현장 릴레이 유세<br>
+                        ③ 지역 맘카페, 커뮤니티 온라인 소통 강화<br>
+                        ④ 언론 기고/인터뷰 집중 — 주 2회 이상 언론 노출<br>
+                        <b>목표:</b> 다음 여론조사(3월)에서 5%+ 진입
+                    </div>
+                </div>
+
+                <!-- Important -->
+                <h4 style="color:var(--warning);margin:24px 0 12px;font-size:15px;font-weight:700">🟡 중요 (2주 내 실행)</h4>
+
+                <div class="strategy-card strategy-important">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                        <div class="strategy-title">3. '고양패스' 재원조달 로드맵 공개</div>
+                        <span class="priority-tag priority-medium">보완 필요</span>
+                    </div>
+                    <div class="strategy-desc">
+                        <b>리스크:</b> "포퓰리즘" 공격에 대비 필요<br>
+                        <b>조치:</b><br>
+                        ① 구체적 재원 규모 (연간 소요 예산, 광역교통 분담금 환급분 규모) 발표<br>
+                        ② 타 지자체 교통패스 사례 벤치마크 (서울 기후동행카드 등)<br>
+                        ③ 전문가 패널 검증 공개 토론회 개최<br>
+                        ④ "단계적 도입 로드맵" 공개로 실현 가능성 입증
+                    </div>
+                </div>
+
+                <div class="strategy-card strategy-important">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                        <div class="strategy-title">4. 경쟁 후보 대비 차별화 메시지 강화</div>
+                        <span class="priority-tag priority-medium">전략적</span>
+                    </div>
+                    <div class="strategy-desc">
+                        <b>문제:</b> 민경선(교통), 정병춘(행정) 등과 포지션 겹침<br>
+                        <b>조치:</b><br>
+                        ① <b>"교통+환경+복지 통합 비전"</b>으로 프레이밍 — 단순 교통이 아닌 삶의 질 전체 패키지<br>
+                        ② <b>"여성 리더십"</b> 강조 — 돌봄, 교육, 안전 분야에서 차별화<br>
+                        ③ <b>"현장형 정치인"</b> — 의정활동 실적으로 "말보다 행동" 이미지<br>
+                        ④ 신청사 이슈에서 <b>"주교동 원안 + 분구"</b> 패키지는 덕양구 표 공략 강력 무기
+                    </div>
+                </div>
+
+                <div class="strategy-card strategy-important">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                        <div class="strategy-title">5. 경기패스 탈퇴 이슈 적극 활용</div>
+                        <span class="priority-tag priority-medium">기회 포착</span>
+                    </div>
+                    <div class="strategy-desc">
+                        <b>상황:</b> 2026년 1월부터 고양시만 경기패스 혜택 제외 → 시민 불만 극대화<br>
+                        <b>조치:</b><br>
+                        ① "이동환 시장이 끊은 경기패스, 이경혜가 '고양패스'로 되돌리겠다" 메시지<br>
+                        ② 경기패스 탈퇴 전후 교통비 비교 인포그래픽 제작·배포<br>
+                        ③ 시민 교통비 부담 사례 수집 → 숏폼 콘텐츠화
+                    </div>
+                </div>
+
+                <!-- Normal -->
+                <h4 style="color:var(--primary);margin:24px 0 12px;font-size:15px;font-weight:700">🔵 전략적 (1개월 내 실행)</h4>
+
+                <div class="strategy-card strategy-normal">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                        <div class="strategy-title">6. 한준호 의원 네트워크 최대 활용</div>
+                        <span class="priority-tag priority-low">네트워크</span>
+                    </div>
+                    <div class="strategy-desc">
+                        한준호 국회의원 특별보좌관 경력을 활용하여 국회의원급 지지선언 확보.
+                        고양시 4개 지역구 민주당 의원들과의 연대 구축. 당내 경선에서 조직표 확보 핵심.
+                    </div>
+                </div>
+
+                <div class="strategy-card strategy-normal">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                        <div class="strategy-title">7. 세대별 맞춤 공약 보강</div>
+                        <span class="priority-tag priority-low">공약 보완</span>
+                    </div>
+                    <div class="strategy-desc">
+                        <b>2030 청년:</b> 청년 주거/일자리 정책 (1기 신도시 재건축 연계 청년 임대)<br>
+                        <b>4050 학부모:</b> 교육 인프라 + 돌봄 체계 (과학고/영재학교 유치 등)<br>
+                        <b>6070 시니어:</b> 노후 주거환경 개선 + 의료 접근성<br>
+                        현재 공약이 교통/환경에 편중되어 있어, 세대별 생활 밀착형 공약 보강 필요.
+                    </div>
+                </div>
+
+                <div class="strategy-card strategy-normal">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+                        <div class="strategy-title">8. 경선 전략 — 권리당원 공략</div>
+                        <span class="priority-tag priority-low">경선 대비</span>
+                    </div>
+                    <div class="strategy-desc">
+                        민주당 경선 구조상 권리당원 투표 비중이 높을 수 있음.
+                        당내 활동(정책위 부의장, 도당 부대변인) 경력을 적극 홍보하고,
+                        지역 당원 모임 순회 간담회를 통해 조직적 지지 기반 확보.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Priority Matrix -->
+            <div class="card">
+                <div class="card-title"><span class="icon">📅</span> 실행 우선순위 타임라인</div>
+                <div class="chart-container">
+                    <canvas id="timelineChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Tab Navigation
+        document.querySelectorAll('.nav-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                const target = document.getElementById('tab-' + tab.dataset.tab);
+                target.classList.add('active');
+                target.classList.add('animate-in');
+            });
+        });
+
+        // Color palette
+        const BLUE = '#1a56db';
+        const RED = '#e02424';
+        const PURPLE = '#7c3aed';
+        const GREEN = '#16a34a';
+        const ORANGE = '#f59e0b';
+        const GRAY = '#9ca3af';
+
+        // Chart 1: Party Support
+        new Chart(document.getElementById('partyChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['더불어민주당 51.2%', '국민의힘 23.0%', '개혁신당 4.7%', '조국혁신당 4.3%', '진보당 1.1%', '기타/무응답 15.7%'],
+                datasets: [{
+                    data: [51.2, 23.0, 4.7, 4.3, 1.1, 15.7],
+                    backgroundColor: [BLUE, RED, '#f97316', '#0ea5e9', PURPLE, GRAY],
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right', labels: { font: { size: 12 }, padding: 12 } }
+                }
+            }
+        });
+
+        // Chart 2: Dem Primary Poll (Realmeter)
+        new Chart(document.getElementById('demPollChart'), {
+            type: 'bar',
+            data: {
+                labels: ['명재성', '정병춘', '민경선', '장제환', '이영아', '최승원', '이경혜'],
+                datasets: [{
+                    label: '적합도 (%)',
+                    data: [10.7, 8.3, 6.2, 4.9, 4.0, 3.8, 0],
+                    backgroundColor: ['#3b82f6','#3b82f6','#3b82f6','#3b82f6','#3b82f6','#3b82f6','#ef4444'],
+                    borderRadius: 6,
+                    borderSkipped: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: ctx => ctx.raw === 0 ? '미포함' : ctx.raw + '%' } }
+                },
+                scales: {
+                    x: { beginAtZero: true, max: 15, ticks: { callback: v => v + '%' } },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Chart 3: Dem Primary Poll (DailyResearch)
+        new Chart(document.getElementById('demPollChart2'), {
+            type: 'bar',
+            data: {
+                labels: ['장제환', '민경선', '명재성', '정병춘', '이경혜'],
+                datasets: [{
+                    label: '적합도 (%)',
+                    data: [10.1, 7.9, 6.7, 6.5, 0],
+                    backgroundColor: ['#3b82f6','#3b82f6','#3b82f6','#3b82f6','#ef4444'],
+                    borderRadius: 6,
+                    borderSkipped: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: ctx => ctx.raw === 0 ? '미포함' : ctx.raw + '%' } }
+                },
+                scales: {
+                    x: { beginAtZero: true, max: 15, ticks: { callback: v => v + '%' } },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Chart 4: General election
+        new Chart(document.getElementById('generalChart'), {
+            type: 'bar',
+            data: {
+                labels: ['명재성', '이동환\n(국힘)', '이재준', '민경선', '장제환'],
+                datasets: [{
+                    label: '2026.02 여론 (%)',
+                    data: [15.6, 13.5, 12.7, 8.2, 7.0],
+                    backgroundColor: [BLUE, RED, BLUE, BLUE, BLUE],
+                    borderRadius: 6,
+                    borderSkipped: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, max: 20, ticks: { callback: v => v + '%' } },
+                    x: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Chart 5: Social Media Radar
+        new Chart(document.getElementById('socialRadar'), {
+            type: 'radar',
+            data: {
+                labels: ['YouTube', 'Facebook', 'Instagram', 'TikTok', '네이버 블로그', '언론 노출'],
+                datasets: [
+                    {
+                        label: '이경혜',
+                        data: [5, 5, 5, 5, 10, 55],
+                        backgroundColor: 'rgba(26, 86, 219, 0.15)',
+                        borderColor: BLUE,
+                        borderWidth: 2,
+                        pointRadius: 4
+                    },
+                    {
+                        label: '경쟁후보 평균 (추정)',
+                        data: [35, 40, 30, 15, 45, 50],
+                        backgroundColor: 'rgba(156, 163, 175, 0.15)',
+                        borderColor: GRAY,
+                        borderWidth: 2,
+                        pointRadius: 4,
+                        borderDash: [5,5]
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: { beginAtZero: true, max: 100, ticks: { display: false }, pointLabels: { font: { size: 11 } } }
+                },
+                plugins: { legend: { position: 'bottom', labels: { font: { size: 12 } } } }
+            }
+        });
+
+        // Chart 6: Sentiment
+        new Chart(document.getElementById('sentimentChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['긍정 60%', '중립 30%', '부정 10%'],
+                datasets: [{
+                    data: [60, 30, 10],
+                    backgroundColor: ['#22c55e', '#94a3b8', '#ef4444'],
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+
+        // Chart 7: Sentiment Compare
+        new Chart(document.getElementById('sentimentCompare'), {
+            type: 'bar',
+            data: {
+                labels: ['이경혜', '이동환', '이재준', '명재성', '정병춘'],
+                datasets: [
+                    { label: '긍정', data: [62, 30, 45, 65, 58], backgroundColor: '#22c55e', borderRadius: 4 },
+                    { label: '중립', data: [28, 15, 20, 25, 30], backgroundColor: '#94a3b8', borderRadius: 4 },
+                    { label: '부정', data: [10, 55, 35, 10, 12], backgroundColor: '#ef4444', borderRadius: 4 }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } },
+                scales: {
+                    x: { stacked: true, grid: { display: false } },
+                    y: { stacked: true, max: 100, ticks: { callback: v => v + '%' } }
+                }
+            }
+        });
+
+        // Chart 8: Issue Interest
+        new Chart(document.getElementById('issueChart'), {
+            type: 'bar',
+            data: {
+                labels: ['교통/경기패스', '신청사 이전', '경제자유구역', '1기 신도시 재건축', '교육 인프라', '환경/기후', '복지/돌봄', '일자리/경제'],
+                datasets: [{
+                    label: '시민 관심도 (추정)',
+                    data: [92, 85, 72, 78, 65, 48, 58, 70],
+                    backgroundColor: [
+                        '#1a56db', '#e02424', '#f59e0b', '#7c3aed',
+                        '#0ea5e9', '#16a34a', '#ec4899', '#f97316'
+                    ],
+                    borderRadius: 6,
+                    borderSkipped: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { beginAtZero: true, max: 100 },
+                    y: { grid: { display: false } }
+                }
+            }
+        });
+
+        // Chart 9: Radar - Competitiveness
+        new Chart(document.getElementById('radarChart'), {
+            type: 'radar',
+            data: {
+                labels: ['정책 전문성', '인지도', '조직력', '소셜미디어', '언론 노출', '공약 구체성', '당내 네트워크', '시정 경험'],
+                datasets: [
+                    {
+                        label: '이경혜',
+                        data: [80, 20, 35, 10, 45, 75, 70, 40],
+                        backgroundColor: 'rgba(26, 86, 219, 0.2)',
+                        borderColor: BLUE,
+                        borderWidth: 2
+                    },
+                    {
+                        label: '명재성 (선두)',
+                        data: [65, 60, 55, 30, 50, 50, 45, 85],
+                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                        borderColor: '#ef4444',
+                        borderWidth: 2,
+                        borderDash: [5,5]
+                    },
+                    {
+                        label: '이재준 (전직)',
+                        data: [70, 65, 60, 40, 60, 55, 55, 90],
+                        backgroundColor: 'rgba(34, 197, 94, 0.1)',
+                        borderColor: '#22c55e',
+                        borderWidth: 2,
+                        borderDash: [5,5]
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    r: {
+                        beginAtZero: true,
+                        max: 100,
+                        ticks: { display: false, stepSize: 20 },
+                        pointLabels: { font: { size: 12 } }
+                    }
+                },
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+
+        // Chart 10: Timeline
+        new Chart(document.getElementById('timelineChart'), {
+            type: 'bar',
+            data: {
+                labels: [
+                    '소셜미디어 개설',
+                    '인지도 캠페인',
+                    '재원 로드맵 공개',
+                    '차별화 메시지',
+                    '경기패스 이슈 활용',
+                    '의원 네트워크',
+                    '세대별 공약 보강',
+                    '권리당원 공략'
+                ],
+                datasets: [
+                    {
+                        label: '3월 (즉시)',
+                        data: [100, 100, 80, 60, 80, 40, 20, 30],
+                        backgroundColor: '#ef4444',
+                        borderRadius: 4
+                    },
+                    {
+                        label: '4월',
+                        data: [0, 0, 20, 40, 20, 40, 50, 40],
+                        backgroundColor: '#f59e0b',
+                        borderRadius: 4
+                    },
+                    {
+                        label: '5~6월 (경선)',
+                        data: [0, 0, 0, 0, 0, 20, 30, 30],
+                        backgroundColor: '#3b82f6',
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                indexAxis: 'y',
+                plugins: { legend: { position: 'bottom' } },
+                scales: {
+                    x: { stacked: true, max: 100, ticks: { callback: v => v + '%' }, title: { display: true, text: '실행 비중' } },
+                    y: { stacked: true, grid: { display: false } }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
