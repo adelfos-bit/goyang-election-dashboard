@@ -1479,8 +1479,64 @@
         const ORANGE = '#f59e0b';
         const GRAY = '#9ca3af';
 
+        // === 대시보드 데이터 자동 로딩 ===
+        const chartInstances = {};
+
+        async function loadDashboardData() {
+            try {
+                const resp = await fetch('data/dashboard-data.json');
+                if (!resp.ok) return null;
+                const data = await resp.json();
+                applyDashboardData(data);
+                return data;
+            } catch (e) {
+                console.log('dashboard-data.json 로드 실패, 기본값 사용');
+                return null;
+            }
+        }
+
+        function applyDashboardData(d) {
+            if (d.header) {
+                const metaEl = document.querySelector('.header-meta');
+                if (metaEl) {
+                    metaEl.innerHTML =
+                        '<span>업데이트: ' + d.header.update_date + '</span>' +
+                        '<span>선거일: 2026.06.03 (D-' + d.header.d_day + ')</span>' +
+                        '<span>유권자 수: ' + d.header.voters + '</span>';
+                }
+            }
+            if (d.sentiment && d.sentiment['이경혜']) {
+                const s = d.sentiment['이경혜'];
+                const c6 = chartInstances['sentimentChart'];
+                if (c6) {
+                    c6.data.labels = ['긍정 ' + s.positive + '%', '중립 ' + s.neutral + '%', '부정 ' + s.negative + '%'];
+                    c6.data.datasets[0].data = [s.positive, s.neutral, s.negative];
+                    c6.update();
+                }
+            }
+            if (d.sentiment) {
+                const names = ['이경혜', '이동환', '이재준', '명재성', '정병춘'];
+                const pos = [], neu = [], neg = [], valid = [];
+                names.forEach(n => { if (d.sentiment[n]) { valid.push(n); pos.push(d.sentiment[n].positive); neu.push(d.sentiment[n].neutral); neg.push(d.sentiment[n].negative); }});
+                const c7 = chartInstances['sentimentCompare'];
+                if (c7 && valid.length > 0) { c7.data.labels = valid; c7.data.datasets[0].data = pos; c7.data.datasets[1].data = neu; c7.data.datasets[2].data = neg; c7.update(); }
+            }
+            if (d.issue_interest) {
+                const c8 = chartInstances['issueChart'];
+                if (c8) { c8.data.labels = d.issue_interest.labels; c8.data.datasets[0].data = d.issue_interest.data; c8.update(); }
+            }
+            if (d.social_radar) {
+                const c5 = chartInstances['socialRadar'];
+                if (c5) { c5.data.datasets[0].data = d.social_radar['이경혜'] || [5,5,5,5,10,55]; c5.data.datasets[1].data = d.social_radar['경쟁후보_평균'] || [35,40,30,15,45,50]; c5.update(); }
+            }
+            if (d.competitiveness_radar) {
+                const c9 = chartInstances['radarChart'];
+                if (c9) { c9.data.datasets[0].data = d.competitiveness_radar['이경혜']; c9.data.datasets[1].data = d.competitiveness_radar['명재성']; c9.data.datasets[2].data = d.competitiveness_radar['이재준']; c9.update(); }
+            }
+        }
+
         // Chart 1: Party Support
-        new Chart(document.getElementById('partyChart'), {
+        chartInstances['partyChart'] = new Chart(document.getElementById('partyChart'), {
             type: 'doughnut',
             data: {
                 labels: ['더불어민주당 51.2%', '국민의힘 23.0%', '개혁신당 4.7%', '조국혁신당 4.3%', '진보당 1.1%', '기타/무응답 15.7%'],
@@ -1581,7 +1637,7 @@
         });
 
         // Chart 5: Social Media Radar
-        new Chart(document.getElementById('socialRadar'), {
+        chartInstances['socialRadar'] = new Chart(document.getElementById('socialRadar'), {
             type: 'radar',
             data: {
                 labels: ['YouTube', 'Facebook', 'Instagram', 'TikTok', '네이버 블로그', '언론 노출'],
@@ -1616,7 +1672,7 @@
         });
 
         // Chart 6: Sentiment
-        new Chart(document.getElementById('sentimentChart'), {
+        chartInstances['sentimentChart'] = new Chart(document.getElementById('sentimentChart'), {
             type: 'doughnut',
             data: {
                 labels: ['긍정 60%', '중립 30%', '부정 10%'],
@@ -1635,7 +1691,7 @@
         });
 
         // Chart 7: Sentiment Compare
-        new Chart(document.getElementById('sentimentCompare'), {
+        chartInstances['sentimentCompare'] = new Chart(document.getElementById('sentimentCompare'), {
             type: 'bar',
             data: {
                 labels: ['이경혜', '이동환', '이재준', '명재성', '정병춘'],
@@ -1657,7 +1713,7 @@
         });
 
         // Chart 8: Issue Interest
-        new Chart(document.getElementById('issueChart'), {
+        chartInstances['issueChart'] = new Chart(document.getElementById('issueChart'), {
             type: 'bar',
             data: {
                 labels: ['교통/경기패스', '신청사 이전', '경제자유구역', '1기 신도시 재건축', '교육 인프라', '환경/기후', '복지/돌봄', '일자리/경제'],
@@ -1685,7 +1741,7 @@
         });
 
         // Chart 9: Radar - Competitiveness
-        new Chart(document.getElementById('radarChart'), {
+        chartInstances['radarChart'] = new Chart(document.getElementById('radarChart'), {
             type: 'radar',
             data: {
                 labels: ['정책 전문성', '인지도', '조직력', '소셜미디어', '언론 노출', '공약 구체성', '당내 네트워크', '시정 경험'],
@@ -1776,6 +1832,9 @@
                 }
             }
         });
+
+        // === 페이지 로드 시 대시보드 데이터 자동 적용 ===
+        loadDashboardData();
 
         // ===== Report Tab Logic =====
         const REPORTS_BASE = 'reports/';
