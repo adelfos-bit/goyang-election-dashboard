@@ -4,75 +4,132 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2026 고양특례시장 선거 분석 대시보드</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <style>
         :root {
-            --primary: #1a56db;
-            --primary-light: #e8f0fe;
-            --danger: #dc2626;
-            --success: #16a34a;
+            --primary: #3b82f6;
+            --primary-light: rgba(59,130,246,0.12);
+            --danger: #ef4444;
+            --success: #22c55e;
             --warning: #f59e0b;
-            --dark: #111827;
-            --gray-50: #f9fafb;
-            --gray-100: #f3f4f6;
-            --gray-200: #e5e7eb;
-            --gray-300: #d1d5db;
-            --gray-400: #9ca3af;
-            --gray-500: #6b7280;
-            --gray-600: #4b5563;
-            --gray-700: #374151;
-            --gray-800: #1f2937;
-            --blue-dem: #1a56db;
-            --red-ppp: #e02424;
-            --purple-prog: #7c3aed;
-            --shadow: 0 1px 3px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.06);
-            --shadow-lg: 0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05);
+            --dark: #e8ecf4;
+            --gray-50: #161b27;
+            --gray-100: #1a1f2e;
+            --gray-200: #252b3b;
+            --gray-300: #333a4d;
+            --gray-400: #5f6b7a;
+            --gray-500: #8b95a5;
+            --gray-600: #a0aab8;
+            --gray-700: #c0c8d4;
+            --gray-800: #e0e5ed;
+            --blue-dem: #3b82f6;
+            --red-ppp: #ef4444;
+            --purple-prog: #a78bfa;
+            --shadow: 0 2px 8px rgba(0,0,0,.3), 0 4px 24px rgba(0,0,0,.4);
+            --shadow-lg: 0 8px 32px rgba(0,0,0,.4), 0 2px 8px rgba(0,0,0,.3);
+            --shadow-glow: 0 4px 20px rgba(59,130,246,.3);
+            --card-bg: rgba(26,31,46,0.85);
+            --card-border: rgba(255,255,255,0.06);
+            --accent-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            --header-gradient: linear-gradient(135deg, #080b14 0%, #0f172a 50%, #1e3a5f 100%);
+
+            /* Responsive Font Scale: mobile min → desktop max */
+            --fs-2xs: clamp(10px, calc(9.3px + 0.2vw), 12px);
+            --fs-xs: clamp(11px, calc(10.3px + 0.2vw), 13px);
+            --fs-sm: clamp(12px, calc(11.3px + 0.2vw), 14px);
+            --fs-base: clamp(13px, calc(12.3px + 0.2vw), 15px);
+            --fs-md: clamp(14px, calc(13.3px + 0.2vw), 16px);
+            --fs-lg: clamp(16px, calc(14.9px + 0.3vw), 19px);
+            --fs-xl: clamp(18px, calc(16.5px + 0.4vw), 22px);
+            --fs-icon: clamp(20px, calc(18.5px + 0.4vw), 24px);
+            --fs-2xl: clamp(22px, calc(19.8px + 0.6vw), 28px);
+            --fs-3xl: clamp(24px, calc(21.8px + 0.6vw), 30px);
+            --fs-4xl: clamp(28px, calc(25.8px + 0.6vw), 34px);
+            --fs-5xl: clamp(32px, calc(29px + 0.8vw), 40px);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--gray-100);
+            font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+            background: #0f1117;
             color: var(--dark);
             line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+
+        /* Modern Scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--gray-300); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--gray-400); }
 
         /* Header */
         .header {
-            background: linear-gradient(135deg, #1e3a5f 0%, #1a56db 100%);
+            background: var(--header-gradient);
             color: white;
-            padding: 16px 32px;
+            padding: 24px 32px;
             z-index: 100;
-            box-shadow: var(--shadow-lg);
+            box-shadow: 0 4px 20px rgba(15,23,42,.25);
+            position: relative;
+            overflow: hidden;
         }
-        .header h1 { font-size: 22px; font-weight: 700; }
-        .header-sub { font-size: 13px; opacity: .8; margin-top: 4px; }
-        .header-meta { display: flex; gap: 20px; margin-top: 8px; font-size: 12px; opacity: .7; }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -60%;
+            right: -5%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(99,102,241,.25) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            left: 20%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(59,130,246,.2) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .header h1 { font-size: var(--fs-2xl); font-weight: 800; letter-spacing: -0.02em; position: relative; }
+        .header-sub { font-size: var(--fs-base); opacity: .85; margin-top: 6px; position: relative; }
+        .header-meta { display: flex; gap: 20px; margin-top: 10px; font-size: var(--fs-sm); opacity: .7; position: relative; }
 
         /* Navigation Tabs */
         .nav-tabs {
             display: flex;
-            background: white;
-            border-bottom: 2px solid var(--gray-200);
-            padding: 0 32px;
+            background: rgba(15,17,23,.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-200);
+            padding: 10px 32px;
+            gap: 4px;
             overflow-x: auto;
             position: sticky;
             top: 0;
             z-index: 99;
         }
         .nav-tab {
-            padding: 14px 20px;
-            font-size: 14px;
+            padding: 8px 18px;
+            font-size: var(--fs-md);
             font-weight: 500;
             color: var(--gray-500);
             cursor: pointer;
-            border-bottom: 3px solid transparent;
+            border-radius: 8px;
             white-space: nowrap;
-            transition: all .2s;
+            transition: all .25s ease;
         }
-        .nav-tab:hover { color: var(--primary); }
-        .nav-tab.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
+        .nav-tab:hover { color: var(--primary); background: var(--primary-light); }
+        .nav-tab.active { color: white; background: var(--primary); font-weight: 600; box-shadow: var(--shadow-glow); }
 
         /* Main Content */
         .main { max-width: 1400px; margin: 0 auto; padding: 24px 32px; }
@@ -81,14 +138,21 @@
 
         /* Cards */
         .card {
-            background: white;
-            border-radius: 12px;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
             box-shadow: var(--shadow);
             padding: 24px;
             margin-bottom: 20px;
+            transition: box-shadow .3s ease, transform .3s ease;
+        }
+        .card:hover {
+            box-shadow: var(--shadow-lg);
         }
         .card-title {
-            font-size: 16px;
+            font-size: var(--fs-lg);
             font-weight: 700;
             color: var(--gray-800);
             margin-bottom: 16px;
@@ -96,7 +160,7 @@
             align-items: center;
             gap: 8px;
         }
-        .card-title .icon { font-size: 20px; }
+        .card-title .icon { font-size: var(--fs-icon); }
 
         /* Grid */
         .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -109,53 +173,73 @@
 
         /* Stat Cards */
         .stat-card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 24px 20px;
             box-shadow: var(--shadow);
             text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform .3s ease, box-shadow .3s ease;
         }
-        .stat-value { font-size: 32px; font-weight: 800; }
-        .stat-label { font-size: 13px; color: var(--gray-500); margin-top: 4px; }
-        .stat-change { font-size: 12px; margin-top: 6px; }
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: var(--accent-gradient);
+        }
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+        .stat-value { font-size: var(--fs-5xl); font-weight: 800; }
+        .stat-label { font-size: var(--fs-base); color: var(--gray-500); margin-top: 4px; }
+        .stat-change { font-size: var(--fs-sm); margin-top: 6px; }
         .stat-up { color: var(--success); }
         .stat-down { color: var(--danger); }
 
         /* Candidate Card */
         .candidate-card {
-            background: white;
-            border-radius: 12px;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
             box-shadow: var(--shadow);
             padding: 20px;
             position: relative;
             overflow: hidden;
-            transition: transform .2s, box-shadow .2s;
+            transition: transform .25s ease, box-shadow .25s ease;
             cursor: pointer;
         }
-        .candidate-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .candidate-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
         .candidate-card .party-bar {
             position: absolute; top: 0; left: 0; right: 0; height: 4px;
         }
         .party-dem { background: var(--blue-dem); }
         .party-ppp { background: var(--red-ppp); }
         .party-prog { background: var(--purple-prog); }
-        .candidate-name { font-size: 18px; font-weight: 700; margin-top: 8px; }
-        .candidate-party { font-size: 13px; color: var(--gray-500); }
-        .candidate-role { font-size: 12px; color: var(--gray-400); margin-top: 4px; }
-        .candidate-poll { font-size: 24px; font-weight: 800; margin-top: 12px; }
+        .candidate-name { font-size: var(--fs-xl); font-weight: 700; margin-top: 8px; }
+        .candidate-party { font-size: var(--fs-base); color: var(--gray-500); }
+        .candidate-role { font-size: var(--fs-sm); color: var(--gray-400); margin-top: 4px; }
+        .candidate-poll { font-size: var(--fs-3xl); font-weight: 800; margin-top: 12px; }
         .candidate-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
         .tag {
             display: inline-block;
             padding: 2px 8px;
             border-radius: 12px;
-            font-size: 11px;
+            font-size: var(--fs-xs);
             font-weight: 500;
         }
-        .tag-blue { background: #dbeafe; color: #1e40af; }
-        .tag-green { background: #dcfce7; color: #166534; }
-        .tag-orange { background: #ffedd5; color: #9a3412; }
-        .tag-red { background: #fee2e2; color: #991b1b; }
-        .tag-purple { background: #ede9fe; color: #5b21b6; }
+        .tag-blue { background: rgba(59,130,246,0.15); color: #60a5fa; }
+        .tag-green { background: rgba(34,197,94,0.15); color: #4ade80; }
+        .tag-orange { background: rgba(249,115,22,0.15); color: #fb923c; }
+        .tag-red { background: rgba(239,68,68,0.15); color: #f87171; }
+        .tag-purple { background: rgba(139,92,246,0.15); color: #a78bfa; }
 
         /* Badge */
         .badge {
@@ -164,24 +248,24 @@
             gap: 4px;
             padding: 4px 10px;
             border-radius: 20px;
-            font-size: 12px;
+            font-size: var(--fs-sm);
             font-weight: 600;
         }
-        .badge-positive { background: #dcfce7; color: #166534; }
-        .badge-negative { background: #fee2e2; color: #991b1b; }
-        .badge-neutral { background: #f3f4f6; color: #4b5563; }
-        .badge-warning { background: #fef3c7; color: #92400e; }
+        .badge-positive { background: rgba(34,197,94,0.15); color: #4ade80; }
+        .badge-negative { background: rgba(239,68,68,0.15); color: #f87171; }
+        .badge-neutral { background: rgba(148,163,184,0.15); color: #94a3b8; }
+        .badge-warning { background: rgba(245,158,11,0.15); color: #fbbf24; }
 
         /* SWOT */
         .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .swot-box { border-radius: 10px; padding: 16px; }
-        .swot-s { background: linear-gradient(135deg, #dcfce7, #f0fdf4); border: 1px solid #86efac; }
-        .swot-w { background: linear-gradient(135deg, #fee2e2, #fef2f2); border: 1px solid #fca5a5; }
-        .swot-o { background: linear-gradient(135deg, #dbeafe, #eff6ff); border: 1px solid #93c5fd; }
-        .swot-t { background: linear-gradient(135deg, #fef3c7, #fffbeb); border: 1px solid #fcd34d; }
-        .swot-title { font-weight: 700; font-size: 14px; margin-bottom: 8px; }
+        .swot-box { border-radius: 14px; padding: 18px; }
+        .swot-s { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.25); }
+        .swot-w { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); }
+        .swot-o { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.25); }
+        .swot-t { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25); }
+        .swot-title { font-weight: 700; font-size: var(--fs-md); margin-bottom: 8px; }
         .swot-list { list-style: none; }
-        .swot-list li { font-size: 13px; padding: 4px 0; padding-left: 16px; position: relative; }
+        .swot-list li { font-size: var(--fs-base); padding: 4px 0; padding-left: 16px; position: relative; }
         .swot-list li::before { content: "•"; position: absolute; left: 0; font-weight: 700; }
 
         /* Progress Bar */
@@ -195,7 +279,7 @@
         .progress-fill {
             height: 100%;
             border-radius: 4px;
-            transition: width .8s ease;
+            transition: width 1s cubic-bezier(.4,0,.2,1);
         }
 
         /* Timeline */
@@ -207,13 +291,13 @@
         }
         .timeline-item:last-child { border-bottom: none; }
         .timeline-date {
-            font-size: 12px;
+            font-size: var(--fs-sm);
             color: var(--gray-400);
             min-width: 80px;
             white-space: nowrap;
         }
-        .timeline-content { font-size: 13px; }
-        .timeline-source { font-size: 11px; color: var(--gray-400); margin-top: 2px; }
+        .timeline-content { font-size: var(--fs-base); }
+        .timeline-source { font-size: var(--fs-xs); color: var(--gray-400); margin-top: 2px; }
 
         /* Score Meter */
         .score-meter { text-align: center; padding: 16px; }
@@ -222,12 +306,12 @@
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
             margin: 0 auto 8px;
-            font-size: 28px; font-weight: 800;
+            font-size: var(--fs-4xl); font-weight: 800;
         }
-        .score-label { font-size: 13px; color: var(--gray-500); }
+        .score-label { font-size: var(--fs-base); color: var(--gray-500); }
 
         /* Table */
-        .data-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .data-table { width: 100%; border-collapse: collapse; font-size: var(--fs-base); }
         .data-table th {
             background: var(--gray-50);
             padding: 10px 12px;
@@ -250,8 +334,8 @@
             border-radius: 0 8px 8px 0;
             margin-bottom: 8px;
         }
-        .issue-title { font-size: 14px; font-weight: 600; }
-        .issue-desc { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
+        .issue-title { font-size: var(--fs-md); font-weight: 600; }
+        .issue-desc { font-size: var(--fs-sm); color: var(--gray-500); margin-top: 4px; }
 
         /* Radar / Comparison */
         .comparison-row {
@@ -260,48 +344,50 @@
             padding: 8px 0;
             border-bottom: 1px solid var(--gray-100);
         }
-        .comparison-label { width: 120px; font-size: 13px; font-weight: 500; }
+        .comparison-label { width: 120px; font-size: var(--fs-base); font-weight: 500; }
         .comparison-bars { flex: 1; display: flex; gap: 4px; flex-direction: column; }
         .comp-bar-row { display: flex; align-items: center; gap: 8px; }
-        .comp-bar-name { font-size: 11px; width: 60px; text-align: right; }
+        .comp-bar-name { font-size: var(--fs-xs); width: 60px; text-align: right; }
         .comp-bar {
             height: 18px;
             border-radius: 3px;
             display: flex;
             align-items: center;
             padding-left: 6px;
-            font-size: 10px;
+            font-size: var(--fs-2xs);
             color: white;
             font-weight: 600;
         }
 
         /* Highlight Box */
         .highlight-box {
-            border-radius: 10px;
+            border-radius: 14px;
             padding: 20px;
             margin-bottom: 16px;
         }
-        .highlight-blue { background: linear-gradient(135deg, #e8f0fe, #dbeafe); border: 1px solid #93c5fd; }
-        .highlight-red { background: linear-gradient(135deg, #fef2f2, #fee2e2); border: 1px solid #fca5a5; }
-        .highlight-green { background: linear-gradient(135deg, #f0fdf4, #dcfce7); border: 1px solid #86efac; }
-        .highlight-yellow { background: linear-gradient(135deg, #fffbeb, #fef3c7); border: 1px solid #fcd34d; }
+        .highlight-blue { background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.25); }
+        .highlight-red { background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25); }
+        .highlight-green { background: rgba(34,197,94,0.08); border: 1px solid rgba(34,197,94,0.25); }
+        .highlight-yellow { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.25); }
 
         /* Strategy Card */
         .strategy-card {
-            border-radius: 10px;
-            padding: 16px;
+            border-radius: 14px;
+            padding: 18px;
             margin-bottom: 12px;
             border-left: 4px solid;
+            transition: transform .2s ease;
         }
-        .strategy-urgent { border-color: var(--danger); background: #fef2f2; }
-        .strategy-important { border-color: var(--warning); background: #fffbeb; }
-        .strategy-normal { border-color: var(--primary); background: #eff6ff; }
-        .strategy-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
-        .strategy-desc { font-size: 13px; color: var(--gray-600); }
-        .priority-tag { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 4px; }
-        .priority-high { background: #fee2e2; color: #991b1b; }
-        .priority-medium { background: #fef3c7; color: #92400e; }
-        .priority-low { background: #dbeafe; color: #1e40af; }
+        .strategy-card:hover { transform: translateX(4px); }
+        .strategy-urgent { border-color: var(--danger); background: rgba(239,68,68,0.08); }
+        .strategy-important { border-color: var(--warning); background: rgba(245,158,11,0.08); }
+        .strategy-normal { border-color: var(--primary); background: rgba(59,130,246,0.08); }
+        .strategy-title { font-size: var(--fs-md); font-weight: 700; margin-bottom: 4px; }
+        .strategy-desc { font-size: var(--fs-base); color: var(--gray-600); }
+        .priority-tag { font-size: var(--fs-xs); font-weight: 600; padding: 2px 8px; border-radius: 4px; }
+        .priority-high { background: rgba(239,68,68,0.15); color: #f87171; }
+        .priority-medium { background: rgba(245,158,11,0.15); color: #fbbf24; }
+        .priority-low { background: rgba(59,130,246,0.15); color: #60a5fa; }
 
         /* Sentiment bars */
         .sentiment-bar-container {
@@ -312,7 +398,7 @@
             margin: 8px 0;
         }
         .sentiment-positive { background: #22c55e; }
-        .sentiment-neutral { background: #94a3b8; }
+        .sentiment-neutral { background: #64748b; }
         .sentiment-negative { background: #ef4444; }
 
         /* Chart Container */
@@ -324,12 +410,15 @@
         .social-item {
             text-align: center;
             padding: 16px 12px;
-            border-radius: 10px;
+            border-radius: 14px;
             background: var(--gray-50);
+            border: 1px solid var(--gray-100);
+            transition: transform .2s ease, box-shadow .2s ease;
         }
-        .social-icon { font-size: 28px; margin-bottom: 6px; }
-        .social-platform { font-size: 12px; color: var(--gray-500); }
-        .social-status { font-size: 13px; font-weight: 600; margin-top: 4px; }
+        .social-item:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+        .social-icon { font-size: var(--fs-4xl); margin-bottom: 6px; }
+        .social-platform { font-size: var(--fs-sm); color: var(--gray-500); }
+        .social-status { font-size: var(--fs-base); font-weight: 600; margin-top: 4px; }
         .status-active { color: var(--success); }
         .status-inactive { color: var(--danger); }
         .status-unknown { color: var(--gray-400); }
@@ -341,7 +430,7 @@
             border-radius: 50%;
             background: var(--gray-200);
             color: var(--gray-500);
-            font-size: 10px;
+            font-size: var(--fs-2xs);
             text-align: center;
             line-height: 16px;
             cursor: help;
@@ -357,24 +446,25 @@
         }
 
         /* Animate */
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-in { animation: fadeIn .4s ease; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-in { animation: fadeIn .5s cubic-bezier(.4,0,.2,1); }
 
         /* Lee Kyunghye highlight */
         .lkh-highlight {
             border: 2px solid var(--primary);
             position: relative;
+            box-shadow: var(--shadow-glow);
         }
         .lkh-highlight::after {
             content: "분석 대상";
             position: absolute;
             top: 8px;
             right: 8px;
-            background: var(--primary);
+            background: var(--accent-gradient);
             color: white;
-            font-size: 10px;
-            padding: 2px 8px;
-            border-radius: 4px;
+            font-size: var(--fs-2xs);
+            padding: 3px 10px;
+            border-radius: 6px;
             font-weight: 600;
         }
         /* Report Tab Styles */
@@ -383,28 +473,30 @@
             border: 1px solid var(--gray-300);
             border-radius: 6px;
             padding: 8px 16px;
-            font-size: 13px;
+            font-size: var(--fs-base);
             color: var(--gray-600);
             cursor: pointer;
             margin-bottom: 16px;
             transition: all .2s;
         }
         #backToList:hover {
-            background: var(--gray-100);
+            background: var(--gray-50);
             color: var(--dark);
         }
         .report-card {
             cursor: pointer;
-            transition: transform .2s, box-shadow .2s;
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            transition: transform .25s ease, box-shadow .25s ease;
         }
         .report-card:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-lg);
         }
         .report-table {
             width: 100%;
             border-collapse: collapse;
-            font-size: 13px;
+            font-size: var(--fs-base);
         }
         .report-table th {
             text-align: left;
@@ -412,7 +504,7 @@
             border-bottom: 2px solid var(--gray-200);
             font-weight: 600;
             color: var(--gray-600);
-            font-size: 12px;
+            font-size: var(--fs-sm);
         }
         .report-table td {
             padding: 10px 12px;
@@ -490,13 +582,13 @@
                 <div class="card">
                     <div class="card-title"><span class="icon">🗳️</span> 선거 구도 요약</div>
                     <div class="highlight-blue" style="margin-bottom:12px">
-                        <div style="font-weight:700;font-size:14px;margin-bottom:8px">핵심 구도</div>
-                        <div style="font-size:13px">"<b>관리의 4년</b>(이동환 재선) vs <b>전환의 요구</b>(민주당 탈환)"</div>
-                        <div style="font-size:12px;color:var(--gray-500);margin-top:4px">민주당 경선 통과 = 사실상 당선</div>
+                        <div style="font-weight:700;font-size:var(--fs-md);margin-bottom:8px">핵심 구도</div>
+                        <div style="font-size:var(--fs-base)">"<b>관리의 4년</b>(이동환 재선) vs <b>전환의 요구</b>(민주당 탈환)"</div>
+                        <div style="font-size:var(--fs-sm);color:var(--gray-500);margin-top:4px">민주당 경선 통과 = 사실상 당선</div>
                     </div>
                     <div class="highlight-yellow">
-                        <div style="font-weight:700;font-size:14px;margin-bottom:8px">고양시 5대 현안</div>
-                        <ol style="font-size:13px;padding-left:20px">
+                        <div style="font-weight:700;font-size:var(--fs-md);margin-bottom:8px">고양시 5대 현안</div>
+                        <ol style="font-size:var(--fs-base);padding-left:20px">
                             <li><b>신청사 이전 갈등</b> — 원당 vs 백석동</li>
                             <li><b>경기패스 탈퇴</b> — 고양시만 혜택 제외</li>
                             <li><b>경제자유구역 지정 지연</b></li>
@@ -512,8 +604,8 @@
                 <div class="card-title"><span class="icon">💡</span> 이경혜 후보 핵심 인사이트</div>
                 <div class="grid-3">
                     <div class="highlight-green">
-                        <div style="font-weight:700;color:#166534;font-size:14px">강점</div>
-                        <ul style="font-size:13px;padding-left:16px;margin-top:6px">
+                        <div style="font-weight:700;color:#4ade80;font-size:var(--fs-md)">강점</div>
+                        <ul style="font-size:var(--fs-base);padding-left:16px;margin-top:6px">
                             <li>'고양패스' 차별화 공약</li>
                             <li>당내 네트워크(정책위 부의장)</li>
                             <li>활발한 의정활동 기록</li>
@@ -521,8 +613,8 @@
                         </ul>
                     </div>
                     <div class="highlight-red">
-                        <div style="font-weight:700;color:#991b1b;font-size:14px">약점</div>
-                        <ul style="font-size:13px;padding-left:16px;margin-top:6px">
+                        <div style="font-weight:700;color:#f87171;font-size:var(--fs-md)">약점</div>
+                        <ul style="font-size:var(--fs-base);padding-left:16px;margin-top:6px">
                             <li>여론조사 상위권 미진입</li>
                             <li>소셜미디어 채널 부재</li>
                             <li>낮은 대중 인지도</li>
@@ -530,8 +622,8 @@
                         </ul>
                     </div>
                     <div class="highlight-yellow">
-                        <div style="font-weight:700;color:#92400e;font-size:14px">기회</div>
-                        <ul style="font-size:13px;padding-left:16px;margin-top:6px">
+                        <div style="font-weight:700;color:#fbbf24;font-size:var(--fs-md)">기회</div>
+                        <ul style="font-size:var(--fs-base);padding-left:16px;margin-top:6px">
                             <li>유보층 59.2%로 판도 변동 가능</li>
                             <li>여성 후보 차별화 포인트</li>
                             <li>교통 이슈가 시민 최대 관심사</li>
@@ -544,10 +636,10 @@
 
         <!-- TAB: Candidates -->
         <div class="tab-content" id="tab-candidates">
-            <h3 style="font-size:18px;font-weight:700;margin-bottom:16px">주요 후보 프로필</h3>
+            <h3 style="font-size:var(--fs-xl);font-weight:700;margin-bottom:16px">주요 후보 프로필</h3>
 
             <!-- 더불어민주당 -->
-            <h4 style="font-size:15px;color:var(--blue-dem);margin-bottom:12px;font-weight:600">더불어민주당 (경선 경쟁)</h4>
+            <h4 style="font-size:var(--fs-lg);color:var(--blue-dem);margin-bottom:12px;font-weight:600">더불어민주당 (경선 경쟁)</h4>
             <div class="grid-3" style="margin-bottom:24px">
                 <div class="candidate-card lkh-highlight">
                     <div class="party-bar party-dem"></div>
@@ -643,7 +735,7 @@
             </div>
 
             <!-- 국민의힘 -->
-            <h4 style="font-size:15px;color:var(--red-ppp);margin-bottom:12px;font-weight:600">국민의힘</h4>
+            <h4 style="font-size:var(--fs-lg);color:var(--red-ppp);margin-bottom:12px;font-weight:600">국민의힘</h4>
             <div class="grid-3" style="margin-bottom:24px">
                 <div class="candidate-card">
                     <div class="party-bar party-ppp"></div>
@@ -670,7 +762,7 @@
             </div>
 
             <!-- 진보당 -->
-            <h4 style="font-size:15px;color:var(--purple-prog);margin-bottom:12px;font-weight:600">진보당</h4>
+            <h4 style="font-size:var(--fs-lg);color:var(--purple-prog);margin-bottom:12px;font-weight:600">진보당</h4>
             <div class="grid-3" style="margin-bottom:24px">
                 <div class="candidate-card">
                     <div class="party-bar party-prog"></div>
@@ -774,15 +866,15 @@
                 <div class="card">
                     <div class="card-title"><span class="icon">🎯</span> 이경혜 위치 분석</div>
                     <div class="highlight-yellow" style="margin-bottom:12px">
-                        <div style="font-weight:700;font-size:14px">현재 상황</div>
-                        <div style="font-size:13px;margin-top:6px">
+                        <div style="font-weight:700;font-size:var(--fs-md)">현재 상황</div>
+                        <div style="font-size:var(--fs-base);margin-top:6px">
                             리얼미터/데일리리서치 두 조사 모두에서 <b>상위 보기 항목에 미포함</b>.
                             이는 인지도 부족을 의미하며, 유보층 59.2%를 공략할 여지가 있음을 동시에 뜻합니다.
                         </div>
                     </div>
                     <div class="highlight-green">
-                        <div style="font-weight:700;font-size:14px">긍정 신호</div>
-                        <ul style="font-size:13px;padding-left:16px;margin-top:6px">
+                        <div style="font-weight:700;font-size:var(--fs-md)">긍정 신호</div>
+                        <ul style="font-size:var(--fs-base);padding-left:16px;margin-top:6px">
                             <li>부동층이 전체의 60% — 선거판 완전 열림</li>
                             <li>명재성/이재준 등 선두도 10~15%대로 차이 크지 않음</li>
                             <li>'고양패스' 공약으로 화제성 확보 시작</li>
@@ -816,7 +908,7 @@
                         </tr>
                         <tr>
                             <td><b>이동환</b></td>
-                            <td><span class="badge" style="background:#fee2e2;color:#991b1b">국힘</span></td>
+                            <td><span class="badge" style="background:rgba(239,68,68,0.15);color:#f87171">국힘</span></td>
                             <td>-</td>
                             <td>-</td>
                             <td>13.5%</td>
@@ -854,7 +946,7 @@
                             <td>8.2%</td>
                             <td><span class="badge badge-positive">상승</span></td>
                         </tr>
-                        <tr style="background:#eff6ff">
+                        <tr style="background:rgba(59,130,246,0.06)">
                             <td><b style="color:var(--primary)">이경혜</b></td>
                             <td><span class="badge" style="background:var(--primary);color:white">민주</span></td>
                             <td style="color:var(--danger)">미포함</td>
@@ -876,37 +968,37 @@
                         <div class="social-icon">📺</div>
                         <div class="social-platform">YouTube</div>
                         <div class="social-status status-inactive">미확인</div>
-                        <div style="font-size:11px;color:var(--gray-400)">공식채널 없음</div>
+                        <div style="font-size:var(--fs-xs);color:var(--gray-400)">공식채널 없음</div>
                     </div>
                     <div class="social-item">
                         <div class="social-icon">📘</div>
                         <div class="social-platform">Facebook</div>
                         <div class="social-status status-inactive">미확인</div>
-                        <div style="font-size:11px;color:var(--gray-400)">공식계정 없음</div>
+                        <div style="font-size:var(--fs-xs);color:var(--gray-400)">공식계정 없음</div>
                     </div>
                     <div class="social-item">
                         <div class="social-icon">📷</div>
                         <div class="social-platform">Instagram</div>
                         <div class="social-status status-inactive">미확인</div>
-                        <div style="font-size:11px;color:var(--gray-400)">공식계정 없음</div>
+                        <div style="font-size:var(--fs-xs);color:var(--gray-400)">공식계정 없음</div>
                     </div>
                     <div class="social-item">
                         <div class="social-icon">🎵</div>
                         <div class="social-platform">TikTok</div>
                         <div class="social-status status-inactive">미확인</div>
-                        <div style="font-size:11px;color:var(--gray-400)">공식계정 없음</div>
+                        <div style="font-size:var(--fs-xs);color:var(--gray-400)">공식계정 없음</div>
                     </div>
                     <div class="social-item">
                         <div class="social-icon">🌐</div>
                         <div class="social-platform">네이버 블로그</div>
                         <div class="social-status status-unknown">미확인</div>
-                        <div style="font-size:11px;color:var(--gray-400)">검색 미발견</div>
+                        <div style="font-size:var(--fs-xs);color:var(--gray-400)">검색 미발견</div>
                     </div>
                     <div class="social-item">
                         <div class="social-icon">🏛️</div>
                         <div class="social-platform">경기도의회</div>
                         <div class="social-status status-active">활성</div>
-                        <div style="font-size:11px;color:var(--gray-400)">공식 의원 페이지</div>
+                        <div style="font-size:var(--fs-xs);color:var(--gray-400)">공식 의원 페이지</div>
                     </div>
                 </div>
             </div>
@@ -1022,7 +1114,7 @@
                     <div class="chart-container-sm">
                         <canvas id="sentimentChart"></canvas>
                     </div>
-                    <div style="font-size:12px;color:var(--gray-400);margin-top:8px">
+                    <div style="font-size:var(--fs-sm);color:var(--gray-400);margin-top:8px">
                         * 수집된 뉴스 기사 기반 감성 추정 (긍정/중립/부정)
                     </div>
                 </div>
@@ -1046,7 +1138,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr style="background:#eff6ff">
+                        <tr style="background:rgba(59,130,246,0.06)">
                             <td><b style="color:var(--primary)">이경혜</b></td>
                             <td>
                                 <span class="badge badge-positive">고양패스</span>
@@ -1061,7 +1153,7 @@
                             <td>
                                 <div style="display:flex;align-items:center;gap:8px">
                                     <div style="font-weight:700;color:var(--success)">+62</div>
-                                    <div style="font-size:11px;color:var(--gray-400)">/100</div>
+                                    <div style="font-size:var(--fs-xs);color:var(--gray-400)">/100</div>
                                 </div>
                             </td>
                         </tr>
@@ -1080,7 +1172,7 @@
                             <td>
                                 <div style="display:flex;align-items:center;gap:8px">
                                     <div style="font-weight:700;color:var(--danger)">-35</div>
-                                    <div style="font-size:11px;color:var(--gray-400)">/100</div>
+                                    <div style="font-size:var(--fs-xs);color:var(--gray-400)">/100</div>
                                 </div>
                             </td>
                         </tr>
@@ -1098,7 +1190,7 @@
                             <td>
                                 <div style="display:flex;align-items:center;gap:8px">
                                     <div style="font-weight:700;color:var(--warning)">+15</div>
-                                    <div style="font-size:11px;color:var(--gray-400)">/100</div>
+                                    <div style="font-size:var(--fs-xs);color:var(--gray-400)">/100</div>
                                 </div>
                             </td>
                         </tr>
@@ -1114,7 +1206,7 @@
                             <td>
                                 <div style="display:flex;align-items:center;gap:8px">
                                     <div style="font-weight:700;color:var(--success)">+48</div>
-                                    <div style="font-size:11px;color:var(--gray-400)">/100</div>
+                                    <div style="font-size:var(--fs-xs);color:var(--gray-400)">/100</div>
                                 </div>
                             </td>
                         </tr>
@@ -1130,7 +1222,7 @@
                             <td>
                                 <div style="display:flex;align-items:center;gap:8px">
                                     <div style="font-weight:700;color:var(--success)">+42</div>
-                                    <div style="font-size:11px;color:var(--gray-400)">/100</div>
+                                    <div style="font-size:var(--fs-xs);color:var(--gray-400)">/100</div>
                                 </div>
                             </td>
                         </tr>
@@ -1163,7 +1255,7 @@
                         </table>
                     </div>
                     <div>
-                        <div style="font-weight:600;margin-bottom:8px;font-size:14px">핵심 공약</div>
+                        <div style="font-weight:600;margin-bottom:8px;font-size:var(--fs-md)">핵심 공약</div>
                         <div class="issue-item" style="border-color:var(--primary)">
                             <div class="issue-title">고양패스</div>
                             <div class="issue-desc">GTX-A, 3호선, 경의중앙선, 시내버스 통합 월 5만원 무제한 구독</div>
@@ -1189,7 +1281,7 @@
                 <div class="card-title"><span class="icon">🎯</span> SWOT 분석</div>
                 <div class="swot-grid">
                     <div class="swot-box swot-s">
-                        <div class="swot-title" style="color:#166534">S — 강점 (Strengths)</div>
+                        <div class="swot-title" style="color:#4ade80">S — 강점 (Strengths)</div>
                         <ul class="swot-list">
                             <li><b>'고양패스'</b> — 시민 체감형 교통 공약으로 높은 화제성</li>
                             <li><b>당내 네트워크</b> — 정책위 부의장, 한준호 특보 등 중앙당 연결</li>
@@ -1200,7 +1292,7 @@
                         </ul>
                     </div>
                     <div class="swot-box swot-w">
-                        <div class="swot-title" style="color:#991b1b">W — 약점 (Weaknesses)</div>
+                        <div class="swot-title" style="color:#f87171">W — 약점 (Weaknesses)</div>
                         <ul class="swot-list">
                             <li><b>낮은 인지도</b> — 여론조사 보기 항목에도 미포함</li>
                             <li><b>소셜미디어 전무</b> — 유튜브/FB/인스타/틱톡 공식계정 없음</li>
@@ -1211,7 +1303,7 @@
                         </ul>
                     </div>
                     <div class="swot-box swot-o">
-                        <div class="swot-title" style="color:#1e40af">O — 기회 (Opportunities)</div>
+                        <div class="swot-title" style="color:#60a5fa">O — 기회 (Opportunities)</div>
                         <ul class="swot-list">
                             <li><b>유보층 59.2%</b> — 아직 결정 안 한 유권자 과반</li>
                             <li><b>교통이 최대 관심사</b> — '고양패스'가 핵심 이슈와 직결</li>
@@ -1222,7 +1314,7 @@
                         </ul>
                     </div>
                     <div class="swot-box swot-t">
-                        <div class="swot-title" style="color:#92400e">T — 위협 (Threats)</div>
+                        <div class="swot-title" style="color:#fbbf24">T — 위협 (Threats)</div>
                         <ul class="swot-list">
                             <li><b>인지도 높은 경쟁자</b> — 명재성(15.6%), 이재준(12.7%) 선두</li>
                             <li><b>12명+ 다자구도</b> — 표 분산으로 인한 예측 불가</li>
@@ -1283,7 +1375,7 @@
                 <div class="card-title"><span class="icon">🚀</span> 이경혜 후보 전략 제안 — 정치적 보완점</div>
 
                 <!-- Urgent -->
-                <h4 style="color:var(--danger);margin:16px 0 12px;font-size:15px;font-weight:700">🔴 긴급 (즉시 실행)</h4>
+                <h4 style="color:var(--danger);margin:16px 0 12px;font-size:var(--fs-lg);font-weight:700">🔴 긴급 (즉시 실행)</h4>
 
                 <div class="strategy-card strategy-urgent">
                     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
@@ -1318,7 +1410,7 @@
                 </div>
 
                 <!-- Important -->
-                <h4 style="color:var(--warning);margin:24px 0 12px;font-size:15px;font-weight:700">🟡 중요 (2주 내 실행)</h4>
+                <h4 style="color:var(--warning);margin:24px 0 12px;font-size:var(--fs-lg);font-weight:700">🟡 중요 (2주 내 실행)</h4>
 
                 <div class="strategy-card strategy-important">
                     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
@@ -1365,7 +1457,7 @@
                 </div>
 
                 <!-- Normal -->
-                <h4 style="color:var(--primary);margin:24px 0 12px;font-size:15px;font-weight:700">🔵 전략적 (1개월 내 실행)</h4>
+                <h4 style="color:var(--primary);margin:24px 0 12px;font-size:var(--fs-lg);font-weight:700">🔵 전략적 (1개월 내 실행)</h4>
 
                 <div class="strategy-card strategy-normal">
                     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
@@ -1422,12 +1514,12 @@
                         <span class="icon">📋</span> 정기 뉴스 보고서
                     </div>
                     <div style="display:flex;gap:8px;align-items:center">
-                        <select id="reportTypeFilter" style="padding:6px 12px;border:1px solid var(--gray-300);border-radius:6px;font-size:13px;background:white">
+                        <select id="reportTypeFilter" style="padding:6px 12px;border:1px solid var(--gray-300);border-radius:6px;font-size:var(--fs-base);background:var(--gray-100);color:var(--dark)">
                             <option value="all">전체</option>
                             <option value="weekly">주간</option>
                             <option value="monthly">월간</option>
                         </select>
-                        <span id="reportCount" style="font-size:12px;color:var(--gray-400)"></span>
+                        <span id="reportCount" style="font-size:var(--fs-sm);color:var(--gray-400)"></span>
                     </div>
                 </div>
             </div>
@@ -1443,14 +1535,14 @@
 
             <!-- Loading State -->
             <div id="reportLoading" class="card" style="text-align:center;padding:48px;display:none">
-                <div style="font-size:16px;color:var(--gray-400)">보고서를 불러오는 중...</div>
+                <div style="font-size:var(--fs-lg);color:var(--gray-400)">보고서를 불러오는 중...</div>
             </div>
 
             <!-- Empty State -->
             <div id="reportEmpty" class="card" style="text-align:center;padding:48px;display:none">
                 <div style="font-size:40px;margin-bottom:12px">📭</div>
-                <div style="font-size:16px;color:var(--gray-500)">아직 생성된 보고서가 없습니다</div>
-                <div style="font-size:13px;color:var(--gray-400);margin-top:8px">
+                <div style="font-size:var(--fs-lg);color:var(--gray-500)">아직 생성된 보고서가 없습니다</div>
+                <div style="font-size:var(--fs-base);color:var(--gray-400);margin-top:8px">
                     매주 월요일, 매월 1일 오전 10시에 자동 생성됩니다
                 </div>
             </div>
@@ -1468,16 +1560,45 @@
                 const target = document.getElementById('tab-' + tab.dataset.tab);
                 target.classList.add('active');
                 target.classList.add('animate-in');
+                // Lazy-init charts for tabs that were hidden at page load
+                const tabName = tab.dataset.tab;
+                if (deferredCharts[tabName]) {
+                    // Replace canvas elements with fresh ones (hidden canvases can be corrupted)
+                    target.querySelectorAll('canvas').forEach(c => {
+                        const fresh = document.createElement('canvas');
+                        fresh.id = c.id;
+                        c.replaceWith(fresh);
+                    });
+                    requestAnimationFrame(() => {
+                        deferredCharts[tabName]();
+                        delete deferredCharts[tabName];
+                    });
+                }
             });
         });
 
+        // Deferred chart initialization for hidden tabs
+        const deferredCharts = {};
+
         // Color palette
-        const BLUE = '#1a56db';
-        const RED = '#e02424';
-        const PURPLE = '#7c3aed';
-        const GREEN = '#16a34a';
+        const BLUE = '#3b82f6';
+        const RED = '#ef4444';
+        const PURPLE = '#a78bfa';
+        const GREEN = '#22c55e';
         const ORANGE = '#f59e0b';
-        const GRAY = '#9ca3af';
+        const GRAY = '#64748b';
+
+        // Chart.js dark theme defaults
+        Chart.defaults.color = '#8b95a5';
+        Chart.defaults.borderColor = 'rgba(255,255,255,0.06)';
+        Chart.defaults.plugins.legend.labels.color = '#8b95a5';
+        Chart.defaults.plugins.tooltip.backgroundColor = 'rgba(15,17,23,0.95)';
+        Chart.defaults.plugins.tooltip.borderColor = 'rgba(255,255,255,0.1)';
+        Chart.defaults.plugins.tooltip.borderWidth = 1;
+        Chart.defaults.plugins.tooltip.titleColor = '#e0e5ed';
+        Chart.defaults.plugins.tooltip.bodyColor = '#8b95a5';
+        Chart.defaults.scale.grid = { color: 'rgba(255,255,255,0.06)' };
+        Chart.defaults.scale.ticks = { color: '#8b95a5' };
 
         // === 대시보드 데이터 자동 로딩 ===
         const chartInstances = {};
@@ -1535,7 +1656,7 @@
             }
         }
 
-        // Chart 1: Party Support
+        // Chart 1: Party Support (overview tab - visible at init)
         chartInstances['partyChart'] = new Chart(document.getElementById('partyChart'), {
             type: 'doughnut',
             data: {
@@ -1544,7 +1665,7 @@
                     data: [51.2, 23.0, 4.7, 4.3, 1.1, 15.7],
                     backgroundColor: [BLUE, RED, '#f97316', '#0ea5e9', PURPLE, GRAY],
                     borderWidth: 2,
-                    borderColor: '#fff'
+                    borderColor: '#1a1f2e'
                 }]
             },
             options: {
@@ -1556,282 +1677,170 @@
             }
         });
 
-        // Chart 2: Dem Primary Poll (Realmeter)
-        new Chart(document.getElementById('demPollChart'), {
-            type: 'bar',
-            data: {
-                labels: ['명재성', '정병춘', '민경선', '장제환', '이영아', '최승원', '이경혜'],
-                datasets: [{
-                    label: '적합도 (%)',
-                    data: [10.7, 8.3, 6.2, 4.9, 4.0, 3.8, 0],
-                    backgroundColor: ['#3b82f6','#3b82f6','#3b82f6','#3b82f6','#3b82f6','#3b82f6','#ef4444'],
-                    borderRadius: 6,
-                    borderSkipped: false
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                indexAxis: 'y',
-                plugins: {
-                    legend: { display: false },
-                    tooltip: { callbacks: { label: ctx => ctx.raw === 0 ? '미포함' : ctx.raw + '%' } }
+        // Charts 2-4: Polls tab (deferred - created when tab first shown)
+        deferredCharts['polls'] = () => {
+            new Chart(document.getElementById('demPollChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['명재성', '정병춘', '민경선', '장제환', '이영아', '최승원', '이경혜'],
+                    datasets: [{
+                        label: '적합도 (%)',
+                        data: [10.7, 8.3, 6.2, 4.9, 4.0, 3.8, 0],
+                        backgroundColor: ['#3b82f6','#3b82f6','#3b82f6','#3b82f6','#3b82f6','#3b82f6','#ef4444'],
+                        borderRadius: 6,
+                        borderSkipped: false
+                    }]
                 },
-                scales: {
-                    x: { beginAtZero: true, max: 15, ticks: { callback: v => v + '%' } },
-                    y: { grid: { display: false } }
-                }
-            }
-        });
-
-        // Chart 3: Dem Primary Poll (DailyResearch)
-        new Chart(document.getElementById('demPollChart2'), {
-            type: 'bar',
-            data: {
-                labels: ['장제환', '민경선', '명재성', '정병춘', '이경혜'],
-                datasets: [{
-                    label: '적합도 (%)',
-                    data: [10.1, 7.9, 6.7, 6.5, 0],
-                    backgroundColor: ['#3b82f6','#3b82f6','#3b82f6','#3b82f6','#ef4444'],
-                    borderRadius: 6,
-                    borderSkipped: false
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                indexAxis: 'y',
-                plugins: {
-                    legend: { display: false },
-                    tooltip: { callbacks: { label: ctx => ctx.raw === 0 ? '미포함' : ctx.raw + '%' } }
-                },
-                scales: {
-                    x: { beginAtZero: true, max: 15, ticks: { callback: v => v + '%' } },
-                    y: { grid: { display: false } }
-                }
-            }
-        });
-
-        // Chart 4: General election
-        new Chart(document.getElementById('generalChart'), {
-            type: 'bar',
-            data: {
-                labels: ['명재성', '이동환\n(국힘)', '이재준', '민경선', '장제환'],
-                datasets: [{
-                    label: '2026.02 여론 (%)',
-                    data: [15.6, 13.5, 12.7, 8.2, 7.0],
-                    backgroundColor: [BLUE, RED, BLUE, BLUE, BLUE],
-                    borderRadius: 6,
-                    borderSkipped: false
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: {
-                    y: { beginAtZero: true, max: 20, ticks: { callback: v => v + '%' } },
-                    x: { grid: { display: false } }
-                }
-            }
-        });
-
-        // Chart 5: Social Media Radar
-        chartInstances['socialRadar'] = new Chart(document.getElementById('socialRadar'), {
-            type: 'radar',
-            data: {
-                labels: ['YouTube', 'Facebook', 'Instagram', 'TikTok', '네이버 블로그', '언론 노출'],
-                datasets: [
-                    {
-                        label: '이경혜',
-                        data: [5, 5, 5, 5, 10, 55],
-                        backgroundColor: 'rgba(26, 86, 219, 0.15)',
-                        borderColor: BLUE,
-                        borderWidth: 2,
-                        pointRadius: 4
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { label: ctx => ctx.raw === 0 ? '미포함' : ctx.raw + '%' } }
                     },
-                    {
-                        label: '경쟁후보 평균 (추정)',
-                        data: [35, 40, 30, 15, 45, 50],
-                        backgroundColor: 'rgba(156, 163, 175, 0.15)',
-                        borderColor: GRAY,
-                        borderWidth: 2,
-                        pointRadius: 4,
-                        borderDash: [5,5]
+                    scales: {
+                        x: { beginAtZero: true, max: 15, ticks: { callback: v => v + '%' } },
+                        y: { grid: { display: false } }
                     }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    r: { beginAtZero: true, max: 100, ticks: { display: false }, pointLabels: { font: { size: 11 } } }
+                }
+            });
+            new Chart(document.getElementById('demPollChart2'), {
+                type: 'bar',
+                data: {
+                    labels: ['장제환', '민경선', '명재성', '정병춘', '이경혜'],
+                    datasets: [{
+                        label: '적합도 (%)',
+                        data: [10.1, 7.9, 6.7, 6.5, 0],
+                        backgroundColor: ['#3b82f6','#3b82f6','#3b82f6','#3b82f6','#ef4444'],
+                        borderRadius: 6,
+                        borderSkipped: false
+                    }]
                 },
-                plugins: { legend: { position: 'bottom', labels: { font: { size: 12 } } } }
-            }
-        });
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { callbacks: { label: ctx => ctx.raw === 0 ? '미포함' : ctx.raw + '%' } }
+                    },
+                    scales: {
+                        x: { beginAtZero: true, max: 15, ticks: { callback: v => v + '%' } },
+                        y: { grid: { display: false } }
+                    }
+                }
+            });
+            new Chart(document.getElementById('generalChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['명재성', '이동환\n(국힘)', '이재준', '민경선', '장제환'],
+                    datasets: [{
+                        label: '2026.02 여론 (%)',
+                        data: [15.6, 13.5, 12.7, 8.2, 7.0],
+                        backgroundColor: [BLUE, RED, BLUE, BLUE, BLUE],
+                        borderRadius: 6,
+                        borderSkipped: false
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, max: 20, ticks: { callback: v => v + '%' } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        };
 
-        // Chart 6: Sentiment
-        chartInstances['sentimentChart'] = new Chart(document.getElementById('sentimentChart'), {
-            type: 'doughnut',
-            data: {
-                labels: ['긍정 60%', '중립 30%', '부정 10%'],
-                datasets: [{
-                    data: [60, 30, 10],
-                    backgroundColor: ['#22c55e', '#94a3b8', '#ef4444'],
-                    borderWidth: 2,
-                    borderColor: '#fff'
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { position: 'bottom' } }
-            }
-        });
+        // Chart 5: Social Media Radar (deferred)
+        deferredCharts['social'] = () => {
+            chartInstances['socialRadar'] = new Chart(document.getElementById('socialRadar'), {
+                type: 'radar',
+                data: {
+                    labels: ['YouTube', 'Facebook', 'Instagram', 'TikTok', '네이버 블로그', '언론 노출'],
+                    datasets: [
+                        { label: '이경혜', data: [5, 5, 5, 5, 10, 55], backgroundColor: 'rgba(59, 130, 246, 0.2)', borderColor: BLUE, borderWidth: 2, pointRadius: 4 },
+                        { label: '경쟁후보 평균 (추정)', data: [35, 40, 30, 15, 45, 50], backgroundColor: 'rgba(156, 163, 175, 0.15)', borderColor: GRAY, borderWidth: 2, pointRadius: 4, borderDash: [5,5] }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { r: { beginAtZero: true, max: 100, ticks: { display: false }, pointLabels: { font: { size: 11 } } } },
+                    plugins: { legend: { position: 'bottom', labels: { font: { size: 12 } } } }
+                }
+            });
+        };
 
-        // Chart 7: Sentiment Compare
-        chartInstances['sentimentCompare'] = new Chart(document.getElementById('sentimentCompare'), {
-            type: 'bar',
-            data: {
-                labels: ['이경혜', '이동환', '이재준', '명재성', '정병춘'],
-                datasets: [
+        // Charts 6-8: News tab (deferred)
+        deferredCharts['news'] = () => {
+            chartInstances['sentimentChart'] = new Chart(document.getElementById('sentimentChart'), {
+                type: 'doughnut',
+                data: { labels: ['긍정 60%', '중립 30%', '부정 10%'], datasets: [{ data: [60, 30, 10], backgroundColor: ['#22c55e', '#94a3b8', '#ef4444'], borderWidth: 2, borderColor: '#1a1f2e' }] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
+            });
+            chartInstances['sentimentCompare'] = new Chart(document.getElementById('sentimentCompare'), {
+                type: 'bar',
+                data: { labels: ['이경혜', '이동환', '이재준', '명재성', '정병춘'], datasets: [
                     { label: '긍정', data: [62, 30, 45, 65, 58], backgroundColor: '#22c55e', borderRadius: 4 },
                     { label: '중립', data: [28, 15, 20, 25, 30], backgroundColor: '#94a3b8', borderRadius: 4 },
                     { label: '부정', data: [10, 55, 35, 10, 12], backgroundColor: '#ef4444', borderRadius: 4 }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } },
-                scales: {
-                    x: { stacked: true, grid: { display: false } },
-                    y: { stacked: true, max: 100, ticks: { callback: v => v + '%' } }
-                }
-            }
-        });
+                ] },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } },
+                    scales: { x: { stacked: true, grid: { display: false } }, y: { stacked: true, max: 100, ticks: { callback: v => v + '%' } } } }
+            });
+            chartInstances['issueChart'] = new Chart(document.getElementById('issueChart'), {
+                type: 'bar',
+                data: { labels: ['교통/경기패스', '신청사 이전', '경제자유구역', '1기 신도시 재건축', '교육 인프라', '환경/기후', '복지/돌봄', '일자리/경제'],
+                    datasets: [{ label: '시민 관심도 (추정)', data: [92, 85, 72, 78, 65, 48, 58, 70],
+                        backgroundColor: ['#3b82f6', '#ef4444', '#f59e0b', '#a78bfa', '#06b6d4', '#22c55e', '#ec4899', '#f97316'],
+                        borderRadius: 6, borderSkipped: false }] },
+                options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } },
+                    scales: { x: { beginAtZero: true, max: 100 }, y: { grid: { display: false } } } }
+            });
+        };
 
-        // Chart 8: Issue Interest
-        chartInstances['issueChart'] = new Chart(document.getElementById('issueChart'), {
-            type: 'bar',
-            data: {
-                labels: ['교통/경기패스', '신청사 이전', '경제자유구역', '1기 신도시 재건축', '교육 인프라', '환경/기후', '복지/돌봄', '일자리/경제'],
-                datasets: [{
-                    label: '시민 관심도 (추정)',
-                    data: [92, 85, 72, 78, 65, 48, 58, 70],
-                    backgroundColor: [
-                        '#1a56db', '#e02424', '#f59e0b', '#7c3aed',
-                        '#0ea5e9', '#16a34a', '#ec4899', '#f97316'
-                    ],
-                    borderRadius: 6,
-                    borderSkipped: false
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                indexAxis: 'y',
-                plugins: { legend: { display: false } },
-                scales: {
-                    x: { beginAtZero: true, max: 100 },
-                    y: { grid: { display: false } }
-                }
-            }
-        });
-
-        // Chart 9: Radar - Competitiveness
-        chartInstances['radarChart'] = new Chart(document.getElementById('radarChart'), {
-            type: 'radar',
-            data: {
-                labels: ['정책 전문성', '인지도', '조직력', '소셜미디어', '언론 노출', '공약 구체성', '당내 네트워크', '시정 경험'],
-                datasets: [
-                    {
-                        label: '이경혜',
-                        data: [80, 20, 35, 10, 45, 75, 70, 40],
-                        backgroundColor: 'rgba(26, 86, 219, 0.2)',
-                        borderColor: BLUE,
-                        borderWidth: 2
-                    },
-                    {
-                        label: '명재성 (선두)',
-                        data: [65, 60, 55, 30, 50, 50, 45, 85],
-                        backgroundColor: 'rgba(239, 68, 68, 0.1)',
-                        borderColor: '#ef4444',
-                        borderWidth: 2,
-                        borderDash: [5,5]
-                    },
-                    {
-                        label: '이재준 (전직)',
-                        data: [70, 65, 60, 40, 60, 55, 55, 90],
-                        backgroundColor: 'rgba(34, 197, 94, 0.1)',
-                        borderColor: '#22c55e',
-                        borderWidth: 2,
-                        borderDash: [5,5]
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    r: {
-                        beginAtZero: true,
-                        max: 100,
-                        ticks: { display: false, stepSize: 20 },
-                        pointLabels: { font: { size: 12 } }
-                    }
+        // Chart 9: LKH Radar (deferred)
+        deferredCharts['lkh'] = () => {
+            chartInstances['radarChart'] = new Chart(document.getElementById('radarChart'), {
+                type: 'radar',
+                data: {
+                    labels: ['정책 전문성', '인지도', '조직력', '소셜미디어', '언론 노출', '공약 구체성', '당내 네트워크', '시정 경험'],
+                    datasets: [
+                        { label: '이경혜', data: [80, 20, 35, 10, 45, 75, 70, 40], backgroundColor: 'rgba(59, 130, 246, 0.25)', borderColor: BLUE, borderWidth: 2 },
+                        { label: '명재성 (선두)', data: [65, 60, 55, 30, 50, 50, 45, 85], backgroundColor: 'rgba(239, 68, 68, 0.1)', borderColor: '#ef4444', borderWidth: 2, borderDash: [5,5] },
+                        { label: '이재준 (전직)', data: [70, 65, 60, 40, 60, 55, 55, 90], backgroundColor: 'rgba(34, 197, 94, 0.1)', borderColor: '#22c55e', borderWidth: 2, borderDash: [5,5] }
+                    ]
                 },
-                plugins: { legend: { position: 'bottom' } }
-            }
-        });
-
-        // Chart 10: Timeline
-        new Chart(document.getElementById('timelineChart'), {
-            type: 'bar',
-            data: {
-                labels: [
-                    '소셜미디어 개설',
-                    '인지도 캠페인',
-                    '재원 로드맵 공개',
-                    '차별화 메시지',
-                    '경기패스 이슈 활용',
-                    '의원 네트워크',
-                    '세대별 공약 보강',
-                    '권리당원 공략'
-                ],
-                datasets: [
-                    {
-                        label: '3월 (즉시)',
-                        data: [100, 100, 80, 60, 80, 40, 20, 30],
-                        backgroundColor: '#ef4444',
-                        borderRadius: 4
-                    },
-                    {
-                        label: '4월',
-                        data: [0, 0, 20, 40, 20, 40, 50, 40],
-                        backgroundColor: '#f59e0b',
-                        borderRadius: 4
-                    },
-                    {
-                        label: '5~6월 (경선)',
-                        data: [0, 0, 0, 0, 0, 20, 30, 30],
-                        backgroundColor: '#3b82f6',
-                        borderRadius: 4
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                indexAxis: 'y',
-                plugins: { legend: { position: 'bottom' } },
-                scales: {
-                    x: { stacked: true, max: 100, ticks: { callback: v => v + '%' }, title: { display: true, text: '실행 비중' } },
-                    y: { stacked: true, grid: { display: false } }
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { r: { beginAtZero: true, max: 100, ticks: { display: false, stepSize: 20 }, pointLabels: { font: { size: 12 } } } },
+                    plugins: { legend: { position: 'bottom' } }
                 }
-            }
-        });
+            });
+        };
+
+        // Chart 10: Strategy Timeline (deferred)
+        deferredCharts['strategy'] = () => {
+            new Chart(document.getElementById('timelineChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['소셜미디어 개설', '인지도 캠페인', '재원 로드맵 공개', '차별화 메시지', '경기패스 이슈 활용', '의원 네트워크', '세대별 공약 보강', '권리당원 공략'],
+                    datasets: [
+                        { label: '3월 (즉시)', data: [100, 100, 80, 60, 80, 40, 20, 30], backgroundColor: '#ef4444', borderRadius: 4 },
+                        { label: '4월', data: [0, 0, 20, 40, 20, 40, 50, 40], backgroundColor: '#f59e0b', borderRadius: 4 },
+                        { label: '5~6월 (경선)', data: [0, 0, 0, 0, 0, 20, 30, 30], backgroundColor: '#3b82f6', borderRadius: 4 }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false, indexAxis: 'y',
+                    plugins: { legend: { position: 'bottom' } },
+                    scales: { x: { stacked: true, max: 100, ticks: { callback: v => v + '%' }, title: { display: true, text: '실행 비중' } }, y: { stacked: true, grid: { display: false } } }
+                }
+            });
+        };
 
         // === 페이지 로드 시 대시보드 데이터 자동 적용 ===
         loadDashboardData();
@@ -1892,11 +1901,11 @@
                     '<div style="display:flex;justify-content:space-between;align-items:start">' +
                         '<div>' +
                             '<span class="badge ' + badgeClass + '">' + typeLabel + '</span>' +
-                            '<div style="font-size:16px;font-weight:700;margin-top:8px">' + r.date + '</div>' +
+                            '<div style="font-size:var(--fs-lg);font-weight:700;margin-top:8px">' + r.date + '</div>' +
                         '</div>' +
                         '<div style="text-align:right">' +
-                            '<div style="font-size:28px;font-weight:800;color:var(--primary)">' + r.article_count + '</div>' +
-                            '<div style="font-size:12px;color:var(--gray-400)">수집 기사</div>' +
+                            '<div style="font-size:var(--fs-4xl);font-weight:800;color:var(--primary)">' + r.article_count + '</div>' +
+                            '<div style="font-size:var(--fs-sm);color:var(--gray-400)">수집 기사</div>' +
                         '</div>' +
                     '</div>' +
                 '</div>';
@@ -1944,7 +1953,7 @@
                     '<div class="card-title"><span class="icon">🔑</span> 주요 키워드 TOP 10</div>' +
                     summary.top_keywords.map(k =>
                         '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--gray-100)">' +
-                            '<span style="font-size:13px">' + k.keyword + '</span>' +
+                            '<span style="font-size:var(--fs-base)">' + k.keyword + '</span>' +
                             '<span class="badge badge-neutral">' + k.count + '건</span>' +
                         '</div>'
                     ).join('') +
@@ -1969,13 +1978,13 @@
                     '</tbody>' +
                 '</table>' +
                 '</div>' +
-                (articles.length > 50 ? '<div style="text-align:center;padding:12px;font-size:12px;color:var(--gray-400)">최근 50건만 표시됩니다</div>' : '') +
+                (articles.length > 50 ? '<div style="text-align:center;padding:12px;font-size:var(--fs-sm);color:var(--gray-400)">최근 50건만 표시됩니다</div>' : '') +
             '</div>';
 
             el.innerHTML =
                 '<div class="card">' +
                     '<div class="card-title"><span class="icon">📊</span> ' + typeLabel + ' 보고서 — ' + meta.date + '</div>' +
-                    '<div style="font-size:13px;color:var(--gray-500)">' +
+                    '<div style="font-size:var(--fs-base);color:var(--gray-500)">' +
                         '기간: ' + meta.period_start + ' ~ ' + meta.period_end + ' | ' +
                         '총 ' + meta.total_articles_found + '건 수집' +
                     '</div>' +
