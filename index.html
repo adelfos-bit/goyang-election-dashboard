@@ -133,8 +133,8 @@
 
         /* Main Content */
         .main { max-width: 1400px; margin: 0 auto; padding: 24px 32px; position: relative; }
-        .tab-content { position: absolute; top: 0; left: 0; right: 0; opacity: 0; pointer-events: none; z-index: -1; }
-        .tab-content.active { position: relative; top: auto; opacity: 1; pointer-events: auto; z-index: 0; }
+        .tab-content { position: absolute; top: 0; left: 0; right: 0; visibility: hidden; pointer-events: none; z-index: -1; }
+        .tab-content.active { position: relative; top: auto; visibility: visible; pointer-events: auto; z-index: 0; }
 
         /* Cards */
         .card {
@@ -447,7 +447,7 @@
 
         /* Animate */
         @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
-        .animate-in { animation: fadeIn .5s cubic-bezier(.4,0,.2,1); }
+        .animate-in { animation: fadeIn .5s cubic-bezier(.4,0,.2,1) forwards; }
 
         /* Lee Kyunghye highlight */
         .lkh-highlight {
@@ -546,7 +546,7 @@
     <div class="main">
 
         <!-- TAB: Overview -->
-        <div class="tab-content active animate-in" id="tab-overview">
+        <div class="tab-content active" id="tab-overview">
             <!-- KPI Summary -->
             <div class="grid-4" style="margin-bottom:20px">
                 <div class="stat-card">
@@ -1558,7 +1558,7 @@
                 document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
                 tab.classList.add('active');
                 var target = document.getElementById('tab-' + tab.dataset.tab);
-                target.classList.add('active', 'animate-in');
+                target.classList.add('active');
                 // Resize and update all charts in the newly active tab
                 setTimeout(function() {
                     target.querySelectorAll('canvas').forEach(function(c) {
@@ -1631,7 +1631,7 @@
                 const c7 = chartInstances['sentimentCompare'];
                 if (c7 && valid.length > 0) { c7.data.labels = valid; c7.data.datasets[0].data = pos; c7.data.datasets[1].data = neu; c7.data.datasets[2].data = neg; c7.update(); }
             }
-            if (d.issue_interest) {
+            if (d.issue_interest && d.issue_interest.data && d.issue_interest.data.some(function(v) { return v > 0; })) {
                 const c8 = chartInstances['issueChart'];
                 if (c8) { c8.data.labels = d.issue_interest.labels; c8.data.datasets[0].data = d.issue_interest.data; c8.update(); }
             }
