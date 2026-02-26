@@ -132,9 +132,9 @@
         .nav-tab.active { color: white; background: var(--primary); font-weight: 600; box-shadow: var(--shadow-glow); }
 
         /* Main Content */
-        .main { max-width: 1400px; margin: 0 auto; padding: 24px 32px; }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
+        .main { max-width: 1400px; margin: 0 auto; padding: 24px 32px; position: relative; }
+        .tab-content { position: absolute; top: 0; left: 0; right: 0; opacity: 0; pointer-events: none; z-index: -1; }
+        .tab-content.active { position: relative; top: auto; opacity: 1; pointer-events: auto; z-index: 0; }
 
         /* Cards */
         .card {
@@ -1552,33 +1552,22 @@
 
     <script>
         // Tab Navigation
-        document.querySelectorAll('.nav-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.nav-tab').forEach(function(tab) {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.nav-tab').forEach(function(t) { t.classList.remove('active'); });
+                document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
                 tab.classList.add('active');
-                const target = document.getElementById('tab-' + tab.dataset.tab);
-                target.classList.add('active');
-                target.classList.add('animate-in');
-                // Lazy-init charts for tabs that were hidden at page load
-                const tabName = tab.dataset.tab;
-                if (deferredCharts[tabName]) {
-                    // Replace canvas elements with fresh ones (hidden canvases can be corrupted)
-                    target.querySelectorAll('canvas').forEach(c => {
-                        const fresh = document.createElement('canvas');
-                        fresh.id = c.id;
-                        c.replaceWith(fresh);
+                var target = document.getElementById('tab-' + tab.dataset.tab);
+                target.classList.add('active', 'animate-in');
+                // Resize and update all charts in the newly active tab
+                setTimeout(function() {
+                    target.querySelectorAll('canvas').forEach(function(c) {
+                        var ch = Chart.getChart(c);
+                        if (ch) { ch.resize(); ch.update(); }
                     });
-                    requestAnimationFrame(() => {
-                        deferredCharts[tabName]();
-                        delete deferredCharts[tabName];
-                    });
-                }
+                }, 0);
             });
         });
-
-        // Deferred chart initialization for hidden tabs
-        const deferredCharts = {};
 
         // Color palette
         const BLUE = '#3b82f6';
@@ -1597,8 +1586,8 @@
         Chart.defaults.plugins.tooltip.borderWidth = 1;
         Chart.defaults.plugins.tooltip.titleColor = '#e0e5ed';
         Chart.defaults.plugins.tooltip.bodyColor = '#8b95a5';
-        Chart.defaults.scale.grid = { color: 'rgba(255,255,255,0.06)' };
-        Chart.defaults.scale.ticks = { color: '#8b95a5' };
+        Chart.defaults.scale.grid.color = 'rgba(255,255,255,0.06)';
+        Chart.defaults.scale.ticks.color = '#8b95a5';
 
         // === 대시보드 데이터 자동 로딩 ===
         const chartInstances = {};
@@ -1677,8 +1666,8 @@
             }
         });
 
-        // Charts 2-4: Polls tab (deferred - created when tab first shown)
-        deferredCharts['polls'] = () => {
+        // Charts 2-4: Polls tab
+        (function() {
             new Chart(document.getElementById('demPollChart'), {
                 type: 'bar',
                 data: {
@@ -1753,10 +1742,10 @@
                     }
                 }
             });
-        };
+        })();
 
-        // Chart 5: Social Media Radar (deferred)
-        deferredCharts['social'] = () => {
+        // Chart 5: Social Media Radar
+        (function() {
             chartInstances['socialRadar'] = new Chart(document.getElementById('socialRadar'), {
                 type: 'radar',
                 data: {
@@ -1772,10 +1761,10 @@
                     plugins: { legend: { position: 'bottom', labels: { font: { size: 12 } } } }
                 }
             });
-        };
+        })();
 
-        // Charts 6-8: News tab (deferred)
-        deferredCharts['news'] = () => {
+        // Charts 6-8: News tab
+        (function() {
             chartInstances['sentimentChart'] = new Chart(document.getElementById('sentimentChart'), {
                 type: 'doughnut',
                 data: { labels: ['긍정 60%', '중립 30%', '부정 10%'], datasets: [{ data: [60, 30, 10], backgroundColor: ['#22c55e', '#94a3b8', '#ef4444'], borderWidth: 2, borderColor: '#1a1f2e' }] },
@@ -1800,10 +1789,10 @@
                 options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y', plugins: { legend: { display: false } },
                     scales: { x: { beginAtZero: true, max: 100 }, y: { grid: { display: false } } } }
             });
-        };
+        })();
 
-        // Chart 9: LKH Radar (deferred)
-        deferredCharts['lkh'] = () => {
+        // Chart 9: LKH Radar
+        (function() {
             chartInstances['radarChart'] = new Chart(document.getElementById('radarChart'), {
                 type: 'radar',
                 data: {
@@ -1820,10 +1809,10 @@
                     plugins: { legend: { position: 'bottom' } }
                 }
             });
-        };
+        })();
 
-        // Chart 10: Strategy Timeline (deferred)
-        deferredCharts['strategy'] = () => {
+        // Chart 10: Strategy Timeline
+        (function() {
             new Chart(document.getElementById('timelineChart'), {
                 type: 'bar',
                 data: {
@@ -1840,7 +1829,7 @@
                     scales: { x: { stacked: true, max: 100, ticks: { callback: v => v + '%' }, title: { display: true, text: '실행 비중' } }, y: { stacked: true, grid: { display: false } } }
                 }
             });
-        };
+        })();
 
         // === 페이지 로드 시 대시보드 데이터 자동 적용 ===
         loadDashboardData();
