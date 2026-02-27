@@ -56,6 +56,38 @@
       "score": 42
     }
   },
+  "sentiment_details": {
+    "이경혜": {
+      "positive": 60,
+      "neutral": 30,
+      "negative": 10,
+      "score": 62,
+      "sample_positive": ["고양패스 공약 호평", "취약계층 예산 확보 성과", "기후행동 연구회 활동"],
+      "sample_negative": ["인지도 부족 지적"],
+      "article_count": 0,
+      "weighted_score": 58
+    },
+    "이동환": {
+      "positive": 30,
+      "neutral": 15,
+      "negative": 55,
+      "score": -35,
+      "sample_positive": ["공약이행 SA등급"],
+      "sample_negative": ["해외출장 논란", "신청사 갈등", "경기패스 탈퇴 비판"],
+      "article_count": 0,
+      "weighted_score": -30
+    },
+    "명재성": {
+      "positive": 65,
+      "neutral": 25,
+      "negative": 10,
+      "score": 48,
+      "sample_positive": ["행정경험 39년 호평", "현장경험 강점"],
+      "sample_negative": ["혁신성 부족 지적"],
+      "article_count": 0,
+      "weighted_score": 45
+    }
+  },
   "issue_interest": {
     "labels": [
       "교통/경기패스",
@@ -82,10 +114,10 @@
   "social_radar": {
     "이경혜": [
       5,
-      5,
-      5,
-      5,
-      10,
+      30,
+      22,
+      0,
+      90,
       45
     ],
     "경쟁후보_평균": [
@@ -102,7 +134,7 @@
       80,
       20,
       35,
-      10,
+      29,
       45,
       75,
       70,
@@ -128,5 +160,386 @@
       55,
       90
     ]
+  },
+  "candidates": {
+    "민주당": [
+      {
+        "name": "이경혜",
+        "party": "더불어민주당",
+        "role": "경기도의원(고양4) · 기획재정위 부위원장",
+        "highlight": true,
+        "poll_value": null,
+        "poll_display": "조사 미포함",
+        "tags": [
+          {"text": "고양패스", "color": "blue"},
+          {"text": "BRT 긴급투입", "color": "green"},
+          {"text": "Eco-Bridge", "color": "orange"},
+          {"text": "기후행동", "color": "purple"}
+        ],
+        "status": "active"
+      },
+      {
+        "name": "명재성",
+        "party": "더불어민주당",
+        "role": "경기도의원 · 전 덕양구청장 (공직 39년)",
+        "highlight": false,
+        "poll_value": 15.6,
+        "poll_display": "15.6%",
+        "tags": [
+          {"text": "행정 달인", "color": "blue"},
+          {"text": "현장경험", "color": "green"}
+        ],
+        "status": "active"
+      },
+      {
+        "name": "이재준",
+        "party": "더불어민주당",
+        "role": "전 고양시장 (민선 7기)",
+        "highlight": false,
+        "poll_value": 12.7,
+        "poll_display": "12.7%",
+        "tags": [
+          {"text": "시정경험", "color": "blue"},
+          {"text": "K-방역", "color": "green"},
+          {"text": "불통논란", "color": "red"}
+        ],
+        "status": "active"
+      },
+      {
+        "name": "장제환",
+        "party": "더불어민주당",
+        "role": "전 시의원 · 도시공학 박사",
+        "highlight": false,
+        "poll_value": 10.1,
+        "poll_display": "10.1%",
+        "tags": [
+          {"text": "도시공학", "color": "blue"},
+          {"text": "상승세", "color": "green"}
+        ],
+        "status": "active"
+      },
+      {
+        "name": "민경선",
+        "party": "더불어민주당",
+        "role": "전 경기교통공사 사장 · 3선 도의원",
+        "highlight": false,
+        "poll_value": 8.2,
+        "poll_display": "8.2%",
+        "tags": [
+          {"text": "교통전문", "color": "blue"},
+          {"text": "경선패배", "color": "orange"}
+        ],
+        "status": "active"
+      },
+      {
+        "name": "정병춘",
+        "party": "더불어민주당",
+        "role": "당 정책위 부의장 · 공직 40년",
+        "highlight": false,
+        "poll_value": 8.3,
+        "poll_display": "8.3%",
+        "tags": [
+          {"text": "6대 공약", "color": "blue"},
+          {"text": "청년정책", "color": "green"}
+        ],
+        "status": "active"
+      },
+      {
+        "name": "이영아",
+        "party": "더불어민주당",
+        "role": "전 고양신문 대표 · 34년 언론인",
+        "highlight": false,
+        "poll_value": 4.0,
+        "poll_display": "4.0%",
+        "tags": [
+          {"text": "K-컬처", "color": "blue"},
+          {"text": "시민공론장", "color": "purple"}
+        ],
+        "status": "active"
+      },
+      {
+        "name": "최승원",
+        "party": "더불어민주당",
+        "role": "전 국토부 장관 정책보좌관",
+        "highlight": false,
+        "poll_value": 3.8,
+        "poll_display": "3.8%",
+        "tags": [
+          {"text": "중앙부처", "color": "blue"},
+          {"text": "네트워크", "color": "green"}
+        ],
+        "status": "active"
+      }
+    ],
+    "국민의힘": [
+      {
+        "name": "이동환",
+        "party": "국민의힘 (현직)",
+        "role": "현 고양특례시장 · 도시공학 박사",
+        "highlight": false,
+        "poll_value": 13.5,
+        "poll_display": "13.5%",
+        "tags": [
+          {"text": "공약이행 SA", "color": "green"},
+          {"text": "해외출장 논란", "color": "red"},
+          {"text": "신청사 갈등", "color": "red"}
+        ],
+        "status": "active"
+      },
+      {
+        "name": "이규열",
+        "party": "국민의힘",
+        "role": "전 고양시의회 부의장",
+        "highlight": false,
+        "poll_value": null,
+        "poll_display": "-",
+        "tags": [
+          {"text": "시의회 경험", "color": "blue"}
+        ],
+        "status": "active"
+      }
+    ],
+    "진보당": [
+      {
+        "name": "송영주",
+        "party": "진보당",
+        "role": "진보당 고양시 지역위원장 · 전 도의원",
+        "highlight": false,
+        "poll_value": null,
+        "poll_display": "-",
+        "tags": [
+          {"text": "공공은행", "color": "purple"},
+          {"text": "노동존중", "color": "green"}
+        ],
+        "status": "active"
+      }
+    ]
+  },
+  "polls": {
+    "surveys": [
+      {
+        "id": "realmeter-2025-12",
+        "source": "리얼미터",
+        "date": "2025-12",
+        "type": "dem_primary",
+        "label": "민주당 후보 적합도 (리얼미터 2025.12)",
+        "data": {
+          "명재성": 10.7,
+          "정병춘": 8.3,
+          "민경선": 6.2,
+          "장제환": 4.9,
+          "이영아": 4.0,
+          "최승원": 3.8,
+          "이경혜": 0
+        }
+      },
+      {
+        "id": "dailyresearch-2026-02",
+        "source": "데일리리서치",
+        "date": "2026-02",
+        "type": "dem_primary",
+        "label": "민주당 후보 적합도 (데일리리서치 2026.02)",
+        "data": {
+          "장제환": 10.1,
+          "민경선": 7.9,
+          "명재성": 6.7,
+          "정병춘": 6.5,
+          "이경혜": 0
+        }
+      },
+      {
+        "id": "realmeter-general-2026-02",
+        "source": "인천일보/리얼미터",
+        "date": "2026-02",
+        "type": "general",
+        "label": "본선 가상대결 추정",
+        "data": {
+          "명재성": 15.6,
+          "이동환(국힘)": 13.5,
+          "이재준": 12.7,
+          "민경선": 8.2,
+          "장제환": 7.0
+        }
+      }
+    ],
+    "detail_table": [
+      {
+        "name": "명재성",
+        "party": "민주",
+        "party_color": "neutral",
+        "realmeter_dec": "10.7%",
+        "daily_feb": "6.7%",
+        "realmeter_feb": "15.6%",
+        "trend": "변동",
+        "trend_class": "warning"
+      },
+      {
+        "name": "이동환",
+        "party": "국힘",
+        "party_color": "red",
+        "realmeter_dec": "-",
+        "daily_feb": "-",
+        "realmeter_feb": "13.5%",
+        "trend": "현직",
+        "trend_class": "neutral"
+      },
+      {
+        "name": "이재준",
+        "party": "민주",
+        "party_color": "neutral",
+        "realmeter_dec": "-",
+        "daily_feb": "-",
+        "realmeter_feb": "12.7%",
+        "trend": "전직",
+        "trend_class": "neutral"
+      },
+      {
+        "name": "장제환",
+        "party": "민주",
+        "party_color": "neutral",
+        "realmeter_dec": "4.9%",
+        "daily_feb": "10.1%",
+        "realmeter_feb": "7.0%",
+        "trend": "상승",
+        "trend_class": "positive"
+      },
+      {
+        "name": "정병춘",
+        "party": "민주",
+        "party_color": "neutral",
+        "realmeter_dec": "8.3%",
+        "daily_feb": "6.5%",
+        "realmeter_feb": "-",
+        "trend": "하락",
+        "trend_class": "negative"
+      },
+      {
+        "name": "민경선",
+        "party": "민주",
+        "party_color": "neutral",
+        "realmeter_dec": "6.2%",
+        "daily_feb": "7.9%",
+        "realmeter_feb": "8.2%",
+        "trend": "상승",
+        "trend_class": "positive"
+      },
+      {
+        "name": "이경혜",
+        "party": "민주",
+        "party_color": "primary",
+        "realmeter_dec": "미포함",
+        "daily_feb": "미포함",
+        "realmeter_feb": "미포함",
+        "trend": "인지도 부족",
+        "trend_class": "negative",
+        "highlight": true
+      }
+    ]
+  },
+  "comparison_table": {
+    "headers": ["분야", "이경혜", "명재성", "이재준", "정병춘", "이동환(현직)"],
+    "rows": [
+      ["교통", "고양패스(월5만원)\n긴급 BRT, BTS패키지", "행정력 기반\n교통체계 개선", "전임 시절\n교통 정책 계승", "경의중앙선 증차\n고양은평선 연장\n트램 도입", "GTX-A 개통\n경기패스 탈퇴"],
+      ["신청사", "주교동 원안\n+덕양구 분구", "-", "-", "원당 신청사 재추진", "백석동 이전 추진"],
+      ["경제/일자리", "K-컬처밸리 점검\n일산테크노밸리", "39년 행정경험\n예산 운용 효율화", "특례시 출범 기여\n자족도시 비전", "GTX 창릉역\n청년창업 거점", "경제자유구역\n벤처기업 육성"],
+      ["환경", "Eco-Bridge\n기후행동 연구회", "-", "COP26 기조연설\n기후행동 선도", "-", "지속가능성\nGDS-I 15위"],
+      ["복지", "취약계층 예산 확보\n유보통합 지원", "-", "-", "24시간 긴급돌봄\n고양페이 인센티브", "청년기본소득 중단"]
+    ]
+  },
+  "collection_status": {
+    "news_last_success": null,
+    "social_last_success": "2026-02-27T09:14:44",
+    "news_articles_collected": 0,
+    "errors": []
+  },
+  "social_media": {
+    "platforms": {
+      "youtube": {
+        "status": "개설완료",
+        "subscribers": 0,
+        "videos": 0,
+        "last_upload": null,
+        "recent_videos": [],
+        "score": 5
+      },
+      "facebook": {
+        "status": "활성",
+        "followers": 6000,
+        "recent_posts": [],
+        "score": 30
+      },
+      "instagram": {
+        "status": "활성",
+        "followers": 302,
+        "posts": 64,
+        "score": 22
+      },
+      "tiktok": {
+        "status": "미확인",
+        "score": 0
+      },
+      "blog": {
+        "status": "활성",
+        "posts": 50,
+        "last_post": "2026-02-22",
+        "recent_posts": [
+          {
+            "title": "제387회 제4차 기획재정위원회(2025.12.22. 월요일)",
+            "date": "2026-02-22",
+            "url": "https://blog.naver.com/lee1065/224191885499?fromRss=true&trackingCode=rss"
+          },
+          {
+            "title": "제387회 제2차 기획재정위원회(2025.11.24. 월요일)",
+            "date": "2026-02-22",
+            "url": "https://blog.naver.com/lee1065/224191885214?fromRss=true&trackingCode=rss"
+          },
+          {
+            "title": "2025년도 기획재정위원회행정사무감사(2025.11.14. 금요일)",
+            "date": "2026-02-22",
+            "url": "https://blog.naver.com/lee1065/224191884857?fromRss=true&trackingCode=rss"
+          },
+          {
+            "title": "2025년도 기획재정위원회행정사무감사(2025.11.12. 수요일)",
+            "date": "2026-02-22",
+            "url": "https://blog.naver.com/lee1065/224191884446?fromRss=true&trackingCode=rss"
+          },
+          {
+            "title": "2025년도 기획재정위원회행정사무감사(2025.11.11. 화요일)",
+            "date": "2026-02-22",
+            "url": "https://blog.naver.com/lee1065/224191884090?fromRss=true&trackingCode=rss"
+          }
+        ],
+        "score": 90
+      }
+    },
+    "recent_posts": [
+      {
+        "platform": "blog",
+        "title": "제387회 제4차 기획재정위원회(2025.12.22. 월요일)",
+        "date": "2026-02-22",
+        "url": "https://blog.naver.com/lee1065/224191885499?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
+      {
+        "platform": "blog",
+        "title": "제387회 제2차 기획재정위원회(2025.11.24. 월요일)",
+        "date": "2026-02-22",
+        "url": "https://blog.naver.com/lee1065/224191885214?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
+      {
+        "platform": "blog",
+        "title": "2025년도 기획재정위원회행정사무감사(2025.11.14. 금요일)",
+        "date": "2026-02-22",
+        "url": "https://blog.naver.com/lee1065/224191884857?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      }
+    ],
+    "sentiment": {
+      "positive": 55,
+      "neutral": 30,
+      "negative": 15
+    },
+    "collected_at": "2026-02-27T09:14:44.438135"
   }
 }

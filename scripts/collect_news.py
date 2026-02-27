@@ -273,16 +273,19 @@ def update_manifest(report_type, date_str, filename, article_count):
 
 
 def update_dashboard_data(analysis, date_str):
-    """data/dashboard-data.json 갱신 — 뉴스 분석 결과 반영"""
+    """data/dashboard-data.json 갱신 — 뉴스 분석 결과 반영 (기존 키 보존)"""
     data_path = os.path.join(DATA_DIR, "dashboard-data.json")
     os.makedirs(DATA_DIR, exist_ok=True)
 
-    # 기존 데이터 로드
+    # 기존 데이터 로드 (새 키들 보존을 위해 전체 로드)
     if os.path.exists(data_path):
         with open(data_path, "r", encoding="utf-8") as f:
             dashboard = json.load(f)
     else:
         dashboard = {}
+
+    # 보존할 키 목록 (이 함수가 관리하지 않는 키들)
+    # candidates, polls, comparison_table, collection_status, social_media 등은 건드리지 않음
 
     # D-day 계산
     today = datetime.strptime(date_str, "%Y-%m-%d")
@@ -351,6 +354,38 @@ def update_dashboard_data(analysis, date_str):
             "이재준": [70, 65, 60, 40, 60, 55, 55, 90]
         }
     dashboard["competitiveness_radar"]["이경혜"][4] = lkh_exposure
+
+    # collection_status 업데이트
+    if "collection_status" not in dashboard:
+        dashboard["collection_status"] = {}
+    dashboard["collection_status"]["news_last_success"] = datetime.now().isoformat()
+    dashboard["collection_status"]["news_articles_collected"] = sum(
+        m["count"] for m in analysis["candidate_mentions"]
+    )
+
+    # sentiment_details 업데이트 (가중치 감성 상세)
+    if "sentiment_details" not in dashboard:
+        dashboard["sentiment_details"] = {}
+    for name in CANDIDATE_NAMES:
+        s = analysis["candidate_sentiment"][name]
+        if s["total"] > 0:
+            pos_pct = round(s["pos"] / s["total"] * 100)
+            neg_pct = round(s["neg"] / s["total"] * 100)
+            details = dashboard["sentiment_details"].get(name, {})
+            details.update({
+                "positive": pos_pct,
+                "neutral": max(0, 100 - pos_pct - neg_pct),
+                "negative": neg_pct,
+                "score": pos_pct - neg_pct,
+                "article_count": s["total"],
+                "weighted_score": pos_pct - neg_pct
+            })
+            # sample_positive/negative는 기존 값 유지 (수동 관리)
+            if "sample_positive" not in details:
+                details["sample_positive"] = []
+            if "sample_negative" not in details:
+                details["sample_negative"] = []
+            dashboard["sentiment_details"][name] = details
 
     with open(data_path, "w", encoding="utf-8") as f:
         json.dump(dashboard, f, ensure_ascii=False, indent=2)

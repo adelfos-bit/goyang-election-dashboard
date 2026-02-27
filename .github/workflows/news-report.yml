@@ -64,6 +64,9 @@ jobs:
           NAVER_CLIENT_SECRET: ${{ secrets.NAVER_CLIENT_SECRET }}
         run: python scripts/collect_news.py --type hourly --date ${{ steps.params.outputs.date }}
 
+      - name: Collect social media data
+        run: python scripts/collect_social.py --date ${{ steps.params.outputs.date }}
+
       - name: Run weekly report
         if: steps.params.outputs.type == 'weekly' || steps.params.outputs.type == 'both'
         env:
