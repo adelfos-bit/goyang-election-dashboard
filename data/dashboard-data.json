@@ -601,8 +601,8 @@
     ]
   },
   "collection_status": {
-    "news_last_success": "2026-03-02T08:41:55.290058",
-    "social_last_success": "2026-03-02T08:41:57.887344",
+    "news_last_success": "2026-03-02T09:46:40.254192",
+    "social_last_success": "2026-03-02T09:46:43.022733",
     "news_articles_collected": 0,
     "errors": []
   },
@@ -638,6 +638,21 @@
         "last_post": "2026-03-02",
         "recent_posts": [
           {
+            "title": "\"고양시민 교통비 절반으로\" — 고양패스",
+            "date": "2026-03-02",
+            "url": "https://blog.naver.com/lee1065/224201523376?fromRss=true&trackingCode=rss"
+          },
+          {
+            "title": "\"국가 철도 터미널 전략 — 고양을 출발지로\"",
+            "date": "2026-03-02",
+            "url": "https://blog.naver.com/lee1065/224201522649?fromRss=true&trackingCode=rss"
+          },
+          {
+            "title": "\"강남은 K-뷰티, 고양은 K-메디컬\" — 고양 메디컬시티",
+            "date": "2026-03-02",
+            "url": "https://blog.naver.com/lee1065/224201506147?fromRss=true&trackingCode=rss"
+          },
+          {
             "title": "고양시청사 원안 건립 + 덕양구 분구",
             "date": "2026-03-02",
             "url": "https://blog.naver.com/lee1065/224201470915?fromRss=true&trackingCode=rss"
@@ -646,21 +661,6 @@
             "title": "고양특례시장 출마 선언문 (전문)",
             "date": "2026-03-02",
             "url": "https://blog.naver.com/lee1065/224201459861?fromRss=true&trackingCode=rss"
-          },
-          {
-            "title": "교통약자 보호구역 내 제한속도의 탄력적 운영 필요성",
-            "date": "2026-02-27",
-            "url": "https://blog.naver.com/lee1065/224198277119?fromRss=true&trackingCode=rss"
-          },
-          {
-            "title": "지속 가능한 경기도를 위한 기후행동 실천",
-            "date": "2026-02-27",
-            "url": "https://blog.naver.com/lee1065/224198272264?fromRss=true&trackingCode=rss"
-          },
-          {
-            "title": "저출생 극복을 위한 난임부부 지원 확대 요구",
-            "date": "2026-02-27",
-            "url": "https://blog.naver.com/lee1065/224198265216?fromRss=true&trackingCode=rss"
           }
         ],
         "score": 90
@@ -669,23 +669,23 @@
     "recent_posts": [
       {
         "platform": "blog",
-        "title": "고양시청사 원안 건립 + 덕양구 분구",
+        "title": "\"고양시민 교통비 절반으로\" — 고양패스",
         "date": "2026-03-02",
-        "url": "https://blog.naver.com/lee1065/224201470915?fromRss=true&trackingCode=rss",
+        "url": "https://blog.naver.com/lee1065/224201523376?fromRss=true&trackingCode=rss",
         "metrics": {}
       },
       {
         "platform": "blog",
-        "title": "고양특례시장 출마 선언문 (전문)",
+        "title": "\"국가 철도 터미널 전략 — 고양을 출발지로\"",
         "date": "2026-03-02",
-        "url": "https://blog.naver.com/lee1065/224201459861?fromRss=true&trackingCode=rss",
+        "url": "https://blog.naver.com/lee1065/224201522649?fromRss=true&trackingCode=rss",
         "metrics": {}
       },
       {
         "platform": "blog",
-        "title": "교통약자 보호구역 내 제한속도의 탄력적 운영 필요성",
-        "date": "2026-02-27",
-        "url": "https://blog.naver.com/lee1065/224198277119?fromRss=true&trackingCode=rss",
+        "title": "\"강남은 K-뷰티, 고양은 K-메디컬\" — 고양 메디컬시티",
+        "date": "2026-03-02",
+        "url": "https://blog.naver.com/lee1065/224201506147?fromRss=true&trackingCode=rss",
         "metrics": {}
       }
     ],
@@ -694,6 +694,6 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-02T08:41:57.886871"
+    "collected_at": "2026-03-02T09:46:43.022247"
   }
 }
