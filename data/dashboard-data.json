@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-02",
+  "last_updated": "2026-03-03",
   "election_date": "2026-06-03",
   "header": {
-    "update_date": "2026.03.02",
-    "d_day": 93,
+    "update_date": "2026.03.03",
+    "d_day": 92,
     "voters": "~89만 명"
   },
   "party_support": {
@@ -601,8 +601,8 @@
     ]
   },
   "collection_status": {
-    "news_last_success": "2026-03-02T14:54:00.428934",
-    "social_last_success": "2026-03-02T14:54:03.390934",
+    "news_last_success": "2026-03-02T15:40:26.507718",
+    "social_last_success": "2026-03-02T15:40:29.487137",
     "news_articles_collected": 0,
     "errors": []
   },
@@ -694,6 +694,6 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-02T14:54:03.390433"
+    "collected_at": "2026-03-02T15:40:29.486762"
   }
 }
