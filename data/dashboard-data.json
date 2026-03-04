@@ -601,8 +601,8 @@
     ]
   },
   "collection_status": {
-    "news_last_success": "2026-03-04T13:57:32.513305",
-    "social_last_success": "2026-03-04T13:57:35.624125",
+    "news_last_success": "2026-03-04T14:40:20.891343",
+    "social_last_success": "2026-03-04T14:40:23.469732",
     "news_articles_collected": 0,
     "errors": []
   },
@@ -694,6 +694,6 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-04T13:57:35.623816"
+    "collected_at": "2026-03-04T14:40:23.469273"
   }
 }
