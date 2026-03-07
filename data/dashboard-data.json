@@ -601,8 +601,8 @@
     ]
   },
   "collection_status": {
-    "news_last_success": "2026-03-07T12:42:50.690400",
-    "social_last_success": "2026-03-07T12:42:53.977024",
+    "news_last_success": "2026-03-07T13:37:25.363949",
+    "social_last_success": "2026-03-07T13:37:28.197462",
     "news_articles_collected": 0,
     "errors": []
   },
@@ -635,8 +635,18 @@
       "blog": {
         "status": "활성",
         "posts": 50,
-        "last_post": "2026-03-02",
+        "last_post": "2026-03-07",
         "recent_posts": [
+          {
+            "title": "이경혜 고양특례시장 예비후보 3대 핵심공약",
+            "date": "2026-03-07",
+            "url": "https://blog.naver.com/lee1065/224208194262?fromRss=true&trackingCode=rss"
+          },
+          {
+            "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
+            "date": "2026-03-07",
+            "url": "https://blog.naver.com/lee1065/224208189438?fromRss=true&trackingCode=rss"
+          },
           {
             "title": "\"고양시민 교통비 절반으로\" — 고양패스",
             "date": "2026-03-02",
@@ -648,19 +658,9 @@
             "url": "https://blog.naver.com/lee1065/224201522649?fromRss=true&trackingCode=rss"
           },
           {
-            "title": "\"강남은 K-뷰티, 고양은 K-메디컬\" — 고양 메디컬시티",
+            "title": "\"K-의료도시, 고양\"",
             "date": "2026-03-02",
             "url": "https://blog.naver.com/lee1065/224201506147?fromRss=true&trackingCode=rss"
-          },
-          {
-            "title": "고양시청사 원안 건립 + 덕양구 분구",
-            "date": "2026-03-02",
-            "url": "https://blog.naver.com/lee1065/224201470915?fromRss=true&trackingCode=rss"
-          },
-          {
-            "title": "고양특례시장 출마 선언문 (전문)",
-            "date": "2026-03-02",
-            "url": "https://blog.naver.com/lee1065/224201459861?fromRss=true&trackingCode=rss"
           }
         ],
         "score": 90
@@ -669,23 +669,23 @@
     "recent_posts": [
       {
         "platform": "blog",
+        "title": "이경혜 고양특례시장 예비후보 3대 핵심공약",
+        "date": "2026-03-07",
+        "url": "https://blog.naver.com/lee1065/224208194262?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
+      {
+        "platform": "blog",
+        "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
+        "date": "2026-03-07",
+        "url": "https://blog.naver.com/lee1065/224208189438?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
+      {
+        "platform": "blog",
         "title": "\"고양시민 교통비 절반으로\" — 고양패스",
         "date": "2026-03-02",
         "url": "https://blog.naver.com/lee1065/224201523376?fromRss=true&trackingCode=rss",
-        "metrics": {}
-      },
-      {
-        "platform": "blog",
-        "title": "\"국가 철도 터미널 전략 — 고양을 출발지로\"",
-        "date": "2026-03-02",
-        "url": "https://blog.naver.com/lee1065/224201522649?fromRss=true&trackingCode=rss",
-        "metrics": {}
-      },
-      {
-        "platform": "blog",
-        "title": "\"강남은 K-뷰티, 고양은 K-메디컬\" — 고양 메디컬시티",
-        "date": "2026-03-02",
-        "url": "https://blog.naver.com/lee1065/224201506147?fromRss=true&trackingCode=rss",
         "metrics": {}
       }
     ],
@@ -694,6 +694,6 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-07T12:42:53.976757"
+    "collected_at": "2026-03-07T13:37:28.196995"
   }
 }
