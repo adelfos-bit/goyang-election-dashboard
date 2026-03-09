@@ -1700,16 +1700,24 @@
             // 데이터 신선도 인디케이터
             if (d.collection_status) {
                 var metaEl = document.querySelector('.header-meta');
-                if (metaEl && d.collection_status.news_last_success) {
-                    var lastUpdate = new Date(d.collection_status.news_last_success);
-                    var hoursAgo = Math.floor((Date.now() - lastUpdate) / 3600000);
-                    var indicator = hoursAgo <= 2 ? '🟢' : hoursAgo <= 6 ? '🟡' : '🔴';
+                if (metaEl) {
                     var existingSpans = metaEl.querySelectorAll('span');
                     var hasIndicator = false;
                     existingSpans.forEach(function(s) { if (s.textContent.includes('데이터')) hasIndicator = true; });
                     if (!hasIndicator) {
                         var span = document.createElement('span');
-                        span.textContent = indicator + ' 데이터 ' + hoursAgo + '시간 전';
+                        var status = d.collection_status.news_status;
+                        if (status === 'api_error') {
+                            span.textContent = '🔴 뉴스 API 키 만료';
+                            span.title = 'NAVER API 키를 갱신하세요 → developers.naver.com';
+                        } else if (d.collection_status.news_last_success) {
+                            var lastUpdate = new Date(d.collection_status.news_last_success);
+                            var hoursAgo = Math.floor((Date.now() - lastUpdate) / 3600000);
+                            var indicator = hoursAgo <= 2 ? '🟢' : hoursAgo <= 6 ? '🟡' : '🔴';
+                            span.textContent = indicator + ' 데이터 ' + hoursAgo + '시간 전';
+                        } else {
+                            span.textContent = '🟡 수집 대기 중';
+                        }
                         metaEl.appendChild(span);
                     }
                 }
@@ -2086,24 +2094,31 @@
             emptyEl.style.display = 'none';
             listEl.innerHTML = '';
 
-            try {
-                const resp = await fetch(REPORTS_BASE + 'index.json');
-                if (!resp.ok) throw new Error('No reports');
-                reportsManifest = await resp.json();
-                reportsLoaded = true;
-                loadingEl.style.display = 'none';
+            const maxRetries = 2;
+            for (let attempt = 0; attempt <= maxRetries; attempt++) {
+                try {
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 5000);
+                    const resp = await fetch(REPORTS_BASE + 'index.json?t=' + Date.now(), { signal: controller.signal });
+                    clearTimeout(timeoutId);
+                    if (!resp.ok) throw new Error('No reports');
+                    reportsManifest = await resp.json();
+                    reportsLoaded = true;
+                    loadingEl.style.display = 'none';
 
-                if (!reportsManifest.reports || reportsManifest.reports.length === 0) {
+                    if (!reportsManifest.reports || reportsManifest.reports.length === 0) {
+                        emptyEl.style.display = 'block';
+                        return null;
+                    }
+
+                    renderReportList(reportsManifest.reports);
+                    return reportsManifest;
+                } catch (e) {
+                    if (attempt < maxRetries) { await new Promise(r => setTimeout(r, 500)); continue; }
+                    loadingEl.style.display = 'none';
                     emptyEl.style.display = 'block';
                     return null;
                 }
-
-                renderReportList(reportsManifest.reports);
-                return reportsManifest;
-            } catch (e) {
-                loadingEl.style.display = 'none';
-                emptyEl.style.display = 'block';
-                return null;
             }
         }
 

@@ -103,6 +103,12 @@ def search_naver_news(client_id, client_secret, query, display=100, start=1):
         "sort": "date",
     }
     resp = requests.get(NAVER_API_URL, headers=headers, params=params, timeout=10)
+    if resp.status_code == 401:
+        raise PermissionError(
+            "네이버 API 인증 실패 (401). API 키가 만료되었거나 잘못되었습니다.\n"
+            "→ https://developers.naver.com/apps/ 에서 키를 확인/재발급하세요.\n"
+            "→ .env 파일의 NAVER_CLIENT_ID, NAVER_CLIENT_SECRET 을 업데이트하세요."
+        )
     resp.raise_for_status()
     return resp.json()
 
@@ -123,6 +129,9 @@ def collect_articles(client_id, client_secret, keywords, period_start, period_en
     for keyword in keywords:
         try:
             data = search_naver_news(client_id, client_secret, keyword)
+        except PermissionError as e:
+            print(f"[오류] {e}", file=sys.stderr)
+            return articles  # API 키 문제 시 즉시 중단
         except Exception as e:
             print(f"[경고] '{keyword}' 검색 실패: {e}", file=sys.stderr)
             time.sleep(0.1)
@@ -458,10 +467,14 @@ def update_dashboard_data(analysis, date_str):
     # collection_status 업데이트
     if "collection_status" not in dashboard:
         dashboard["collection_status"] = {}
-    dashboard["collection_status"]["news_last_success"] = datetime.now().isoformat()
-    dashboard["collection_status"]["news_articles_collected"] = sum(
-        m["count"] for m in analysis["candidate_mentions"]
-    )
+    dashboard["collection_status"]["news_last_run"] = datetime.now().isoformat()
+    total_collected = sum(m["count"] for m in analysis["candidate_mentions"])
+    dashboard["collection_status"]["news_articles_collected"] = total_collected
+    if total_collected > 0:
+        dashboard["collection_status"]["news_last_success"] = datetime.now().isoformat()
+        dashboard["collection_status"]["news_status"] = "ok"
+    else:
+        dashboard["collection_status"]["news_status"] = "no_articles"
 
     # sentiment_details 업데이트 (가중치 감성 상세)
     if "sentiment_details" not in dashboard:
