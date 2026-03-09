@@ -679,8 +679,8 @@
     ]
   },
   "collection_status": {
-    "news_last_success": "2026-03-09T11:13:42.025049",
-    "social_last_success": "2026-03-09T11:13:55.621519",
+    "news_last_success": "2026-03-09T02:23:17.157877",
+    "social_last_success": "2026-03-09T02:23:25.100371",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -704,13 +704,13 @@
             "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
-            "views": 953
+            "views": 958
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 민주평화통일자문회의 1차 정기회의 현장",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
-            "views": 1059
+            "views": 1061
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 경기1자동차매매사업조합 지부장 이·취임식 현장",
@@ -737,8 +737,8 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6112,
-        "likes": 6112,
+        "followers": 6113,
+        "likes": 6113,
         "talking_about": 642,
         "recent_posts": [],
         "score": 70,
@@ -846,7 +846,7 @@
         "date": "2026-03-08",
         "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
         "metrics": {
-          "views": 953
+          "views": 958
         }
       },
       {
@@ -855,7 +855,7 @@
         "date": "2026-03-08",
         "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
         "metrics": {
-          "views": 1059
+          "views": 1061
         }
       },
       {
@@ -894,6 +894,6 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-09T11:13:55.620592"
+    "collected_at": "2026-03-09T02:23:25.100001"
   }
 }
