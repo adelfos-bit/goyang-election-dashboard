@@ -706,7 +706,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-09T20:18:20.630908",
-    "social_last_success": "2026-03-09T11:33:39.573561",
+    "social_last_success": "2026-03-09T12:59:03.582169",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -717,14 +717,14 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-09T11:33:32.448804",
+    "news_last_run": "2026-03-09T12:58:54.712321",
     "news_status": "no_articles"
   },
   "social_media": {
     "platforms": {
       "youtube": {
         "status": "활성",
-        "subscribers": 96,
+        "subscribers": 97,
         "videos": 26,
         "last_upload": "2026-03-09",
         "recent_videos": [
@@ -732,7 +732,7 @@
             "title": "고양특례시장 예비후보 이경혜의 고양 금륜사 방문 현장 #shorts #이경혜 #고양시장 #예비후보 #금륜사 #고양금륜사",
             "date": "2026-03-09",
             "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
-            "views": 113
+            "views": 114
           },
           {
             "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
@@ -757,126 +757,6 @@
             "date": "2026-03-07",
             "url": "https://www.youtube.com/watch?v=7BszmGc12ZI",
             "views": 2015
-          },
-          {
-            "title": "고양시 생선구이 맛집!🐟 겉바속촉 비주얼 대박",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=BEUp4MDzEK4",
-            "views": 2061
-          },
-          {
-            "title": "삼성스토어에는 무슨 일로~?😯이경혜 후보의 내돈내산!💳",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=HNHf821Ngnc",
-            "views": 1051
-          },
-          {
-            "title": "[북콘서트 축하 영상] 김성회 의원이 말하는 &#39;이경혜의 시간, 그리고 꿈&#39;📖",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=pnVkJ3ngbLk",
-            "views": 36
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 고양시 아레나 살리기, K-컬처밸리의 미래를 위한 고민의 시간..",
-            "date": "2026-03-06",
-            "url": "https://www.youtube.com/watch?v=_Cl6i_pn7z4",
-            "views": 2199
-          },
-          {
-            "title": "&quot;고양시 교통비 절반, 이경혜가 약속합니다!&quot;",
-            "date": "2026-03-06",
-            "url": "https://www.youtube.com/watch?v=2eYOxqY2SRA",
-            "views": 1338
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 빵바라밤~📯제13대 고양문화원장 취임식 하이라이트✨",
-            "date": "2026-03-06",
-            "url": "https://www.youtube.com/watch?v=G7d_uf60ZJ0",
-            "views": 1737
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 한준호국회의원 의정보고회 현장 스케치✒️",
-            "date": "2026-03-05",
-            "url": "https://www.youtube.com/watch?v=QZjkrb14dLM",
-            "views": 1575
-          },
-          {
-            "title": "점심 맛있게 드셨나요? 쌓여있는 설거짓거리들처럼 막막하고 답답했던 여러분의 마음을 이경혜가 시원하게 닦아드리겠습니다🫧  #고양시 #고양시장 #예비후보 #이경혜 #말보다행동 #화이팅",
-            "date": "2026-03-05",
-            "url": "https://www.youtube.com/watch?v=ul4EFMbfXBI",
-            "views": 1070
-          },
-          {
-            "title": "파이팅 넘치는 이경혜의 고양 새로고침! 오케이 가보자고🔥🔥🔥 #shorts #고양시 #고양특례시 #이경혜 #시장후보 #예비후보 #고양새로고침 #소통 #열정 #응원합니다",
-            "date": "2026-03-05",
-            "url": "https://www.youtube.com/watch?v=o5jGWv-uayE",
-            "views": 1151
-          },
-          {
-            "title": "지식과 학력은 1등, 삶의 질은? 고양시의 변화, 이경혜가 약속합니다. #shorts #고양시 #고양시장 #예비후보 #이경혜 #지역발전 #청년정책 #노인복지",
-            "date": "2026-03-04",
-            "url": "https://www.youtube.com/watch?v=1KFR74U0Eaw",
-            "views": 1130
-          },
-          {
-            "title": "이경혜, 고양시장 예비후보 등록 마쳤습니다! #shorts #고양특례시 #고양시장예비후보 #예비후보등록 #이경혜 #준비된시장 #고양시변화",
-            "date": "2026-03-04",
-            "url": "https://www.youtube.com/watch?v=5IPR7ONNgKQ",
-            "views": 992
-          },
-          {
-            "title": "이경혜 경기도의원에서 고양시장 예비후보가 되었습니다. #shorts #고양시 #고양시장 #경기도의원 #이경혜 #일잘하는도의원 #새로운고양 #고양시민과함께",
-            "date": "2026-03-04",
-            "url": "https://www.youtube.com/watch?v=WvNuS5nzLGk",
-            "views": 551
-          },
-          {
-            "title": "김남희 더불어민주당 경기도당 여성위원장의 이경혜 북콘서트 축하 영상입니다.",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=4d8ZHUUk7ZI",
-            "views": 18
-          },
-          {
-            "title": "김승원 더불어민주당 경기도당 위원장 이경혜 북콘서트를 응원해주셨습니다,",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=TPvL764HEAI",
-            "views": 42
-          },
-          {
-            "title": "유은혜 경기도교육감 후보가 이경혜 북콘서트를 축하하고 응원합니다",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=GjGSRzcYo8M",
-            "views": 75
-          },
-          {
-            "title": "고맙습니다. 이경혜 북콘서트 잘 마쳤습니다",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=ryOhxQs1SUI",
-            "views": 582
-          },
-          {
-            "title": "이경혜 북콘서트",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=-TfkquzYFSk",
-            "views": 253
-          },
-          {
-            "title": "한준호가 응원하는 이경혜 고양시장 출마예정자 북콘서트",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=3v1nqRoAAxw",
-            "views": 47
-          },
-          {
-            "title": "2026년 3월 2일",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=pjxEHu7cd2o",
-            "views": 1400
-          },
-          {
-            "title": "￼추미애가 이경혜 고양시장 출마예정자의 북콘서트를 응원합니다",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=wt5Dtv7m-m4",
-            "views": 1072
           }
         ],
         "score": 79,
@@ -885,9 +765,9 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6115,
-        "likes": 6115,
-        "talking_about": 636,
+        "followers": 6116,
+        "likes": 6116,
+        "talking_about": 648,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -994,7 +874,7 @@
         "date": "2026-03-09",
         "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
         "metrics": {
-          "views": 113
+          "views": 114
         }
       },
       {
@@ -1042,6 +922,6 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-09T11:33:39.573187"
+    "collected_at": "2026-03-09T12:59:03.581732"
   }
 }
