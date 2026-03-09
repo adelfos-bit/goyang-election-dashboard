@@ -187,8 +187,8 @@
         "party": "더불어민주당",
         "role": "경기도의원(고양4) · 기획재정위 부위원장",
         "highlight": true,
-        "poll_value": null,
-        "poll_display": "조사 미포함",
+        "poll_value": 2.6,
+        "poll_display": "2.6% (민주 6위)",
         "tags": [
           {
             "text": "고양대전환",
@@ -218,8 +218,8 @@
         "party": "더불어민주당",
         "role": "전 덕양구청장 · 전 경기도의원",
         "highlight": false,
-        "poll_value": 8.0,
-        "poll_display": "8.0%",
+        "poll_value": 12.0,
+        "poll_display": "12.0% (민주 2위)",
         "tags": [
           {
             "text": "행정 달인",
@@ -242,7 +242,7 @@
         "role": "전 고양시장 (민선 7기)",
         "highlight": false,
         "poll_value": 7.5,
-        "poll_display": "7.5%",
+        "poll_display": "7.5% (여야통합, 복당불허 상태)",
         "tags": [
           {
             "text": "시정경험",
@@ -257,15 +257,16 @@
             "color": "red"
           }
         ],
-        "status": "active"
+        "status": "uncertain",
+        "status_note": "복당 불허 (3.11 최종결정 예정)"
       },
       {
         "name": "장제환",
         "party": "더불어민주당",
         "role": "전 시의원 · 도시공학 박사",
         "highlight": false,
-        "poll_value": 13.7,
-        "poll_display": "13.7%",
+        "poll_value": 13.4,
+        "poll_display": "13.4% (민주 1위)",
         "tags": [
           {
             "text": "도시공학",
@@ -283,8 +284,8 @@
         "party": "더불어민주당",
         "role": "전 경기교통공사 사장 · 3선 도의원",
         "highlight": false,
-        "poll_value": 5.3,
-        "poll_display": "5.3%",
+        "poll_value": 7.6,
+        "poll_display": "7.6% (민주 3위)",
         "tags": [
           {
             "text": "교통전문",
@@ -321,8 +322,8 @@
         "party": "더불어민주당",
         "role": "전 고양신문 대표 · 34년 언론인",
         "highlight": false,
-        "poll_value": 4.0,
-        "poll_display": "4.0%",
+        "poll_value": 6.4,
+        "poll_display": "6.4% (민주 4위)",
         "tags": [
           {
             "text": "K-컬처",
@@ -338,7 +339,7 @@
       {
         "name": "최승원",
         "party": "더불어민주당",
-        "role": "전 국토부 장관 정책보좌관",
+        "role": "전 국토부 장관정책보좌관 · 전 경기도의원",
         "highlight": false,
         "poll_value": 5.5,
         "poll_display": "5.5%",
@@ -353,6 +354,27 @@
           }
         ],
         "status": "active"
+      },
+      {
+        "name": "백수회",
+        "party": "더불어민주당",
+        "role": "전 행정안전부 고문변호사",
+        "highlight": false,
+        "poll_value": 1.3,
+        "poll_display": "1.3% (민주 7위)",
+        "tags": [],
+        "status": "active"
+      },
+      {
+        "name": "윤종은",
+        "party": "더불어민주당",
+        "role": "예비후보",
+        "highlight": false,
+        "poll_value": null,
+        "poll_display": "조사 미포함",
+        "tags": [],
+        "status": "active",
+        "status_note": "선거사무소 개소"
       }
     ],
     "국민의힘": [
@@ -518,7 +540,11 @@
         "data": {
           "장제환": 13.4,
           "명재성": 12.0,
-          "이경혜": 0
+          "민경선": 7.6,
+          "이영아": 6.4,
+          "최승원": 5.0,
+          "이경혜": 2.6,
+          "백수회": 1.3
         }
       }
     ],
@@ -602,11 +628,11 @@
         "realmeter_dec": "미포함",
         "daily_feb": "미포함",
         "realmeter_feb": "미포함",
-        "trend": "인지도 부족",
-        "trend_class": "negative",
+        "trend": "2.6%",
+        "trend_class": "neutral",
         "highlight": true,
-        "joongboo_mar": "미포함",
-        "joongboo_general_mar": "미포함"
+        "joongboo_mar": "2.6%",
+        "joongboo_general_mar": "-"
       }
     ]
   },
