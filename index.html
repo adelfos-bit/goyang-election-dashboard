@@ -443,21 +443,26 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .main { padding: 16px; }
+            .main { padding: 12px; }
             .header { padding: 16px; }
-            .header-meta { flex-wrap: wrap; gap: 8px 16px; }
-            .nav-tabs { padding: 8px 12px; gap: 2px; }
-            .nav-tab { padding: 6px 12px; font-size: var(--fs-sm); }
+            .header-meta { flex-wrap: wrap; gap: 6px 12px; font-size: var(--fs-xs); }
+            .nav-tabs { padding: 8px 12px; gap: 2px; overflow-x: auto; -webkit-overflow-scrolling: touch; flex-wrap: nowrap; scrollbar-width: none; }
+            .nav-tabs::-webkit-scrollbar { display: none; }
+            .nav-tab { padding: 6px 12px; font-size: var(--fs-sm); white-space: nowrap; flex-shrink: 0; }
             .card { padding: 16px; margin-bottom: 14px; border-radius: 12px; }
             .chart-container { height: 260px; }
             .chart-container-sm { height: 220px; }
             .swot-grid { grid-template-columns: 1fr; }
+            .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+            .data-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
         }
         @media (max-width: 480px) {
             .header h1 { font-size: var(--fs-xl); }
             .header-sub { font-size: var(--fs-sm); }
-            .stat-value { font-size: var(--fs-3xl); }
-            .stat-card { padding: 16px 12px; border-radius: 12px; }
+            .stat-value { font-size: var(--fs-2xl); }
+            .stat-label { font-size: var(--fs-xs); }
+            .stat-change { font-size: var(--fs-xs); }
+            .stat-card { padding: 12px 8px; border-radius: 12px; }
             .card-title { font-size: var(--fs-md); }
             .chart-container { height: 220px; }
             .chart-container-sm { height: 180px; }
@@ -465,6 +470,9 @@
             .data-table { font-size: var(--fs-sm); }
             .data-table th, .data-table td { padding: 8px 6px; }
             .badge { font-size: var(--fs-xs); padding: 3px 7px; margin: 1px 1px; }
+            .grid-2 { gap: 12px; }
+            .grid-4 { gap: 8px; }
+            .candidate-card { padding: 14px; }
         }
         /* Landscape phone */
         @media (max-height: 500px) and (orientation: landscape) {
