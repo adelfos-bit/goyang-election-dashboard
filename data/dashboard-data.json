@@ -706,7 +706,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-09T20:18:20.630908",
-    "social_last_success": "2026-03-09T12:59:03.582169",
+    "social_last_success": "2026-03-09T14:09:38.678915",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -717,7 +717,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-09T12:58:54.712321",
+    "news_last_run": "2026-03-09T14:09:29.924357",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -732,25 +732,25 @@
             "title": "고양특례시장 예비후보 이경혜의 고양 금륜사 방문 현장 #shorts #이경혜 #고양시장 #예비후보 #금륜사 #고양금륜사",
             "date": "2026-03-09",
             "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
-            "views": 114
+            "views": 121
           },
           {
             "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
-            "views": 991
+            "views": 994
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 민주평화통일자문회의 1차 정기회의 현장",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
-            "views": 1083
+            "views": 1087
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 경기1자동차매매사업조합 지부장 이·취임식 현장",
             "date": "2026-03-07",
             "url": "https://www.youtube.com/watch?v=dwfpdZB-28o",
-            "views": 970
+            "views": 978
           },
           {
             "title": "레알 급작 이경혜 삼행시",
@@ -760,13 +760,13 @@
           }
         ],
         "score": 79,
-        "total_views": 21301,
+        "total_views": 21406,
         "source": "api"
       },
       "facebook": {
         "status": "활성",
-        "followers": 6116,
-        "likes": 6116,
+        "followers": 6117,
+        "likes": 6117,
         "talking_about": 648,
         "recent_posts": [],
         "score": 70,
@@ -874,7 +874,7 @@
         "date": "2026-03-09",
         "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
         "metrics": {
-          "views": 114
+          "views": 121
         }
       },
       {
@@ -883,7 +883,7 @@
         "date": "2026-03-08",
         "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
         "metrics": {
-          "views": 991
+          "views": 994
         }
       },
       {
@@ -892,7 +892,7 @@
         "date": "2026-03-08",
         "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
         "metrics": {
-          "views": 1083
+          "views": 1087
         }
       },
       {
@@ -922,6 +922,6 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-09T12:59:03.581732"
+    "collected_at": "2026-03-09T14:09:38.678535"
   }
 }
