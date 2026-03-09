@@ -35,17 +35,33 @@ CANDIDATE_NAMES = [
 
 ELECTION_DATE = datetime(2026, 6, 3)
 
-# 감성분석용 키워드 사전
-POSITIVE_WORDS = [
-    "성과", "확대", "지원", "개선", "혁신", "추진", "발전", "강화", "협력", "합의",
-    "기대", "호평", "성공", "약속", "비전", "공약", "계획", "도약", "상승", "선두",
-    "지지", "환영", "긍정", "돌파", "활성화", "투자", "유치", "개통", "착공", "완공"
-]
-NEGATIVE_WORDS = [
-    "논란", "비판", "실패", "갈등", "반발", "의혹", "문제", "위기", "우려", "지적",
-    "반대", "거부", "파문", "사퇴", "고발", "기소", "수사", "부정", "비리", "하락",
-    "폭로", "규탄", "항의", "불만", "좌절", "지연", "무산", "철회", "중단", "파행"
-]
+# 감성분석용 키워드 사전 (가중치: 2=강한, 1=일반)
+POSITIVE_WORDS = {
+    # 강한 긍정 (가중치 2)
+    "성과": 2, "성공": 2, "혁신": 2, "도약": 2, "선두": 2, "압승": 2,
+    "돌파": 2, "쾌거": 2, "약진": 2, "호평": 2, "찬사": 2,
+    # 일반 긍정 (가중치 1)
+    "확대": 1, "지원": 1, "개선": 1, "추진": 1, "발전": 1, "강화": 1,
+    "협력": 1, "합의": 1, "기대": 1, "약속": 1, "비전": 1, "공약": 1,
+    "계획": 1, "상승": 1, "지지": 1, "환영": 1, "긍정": 1, "활성화": 1,
+    "투자": 1, "유치": 1, "개통": 1, "착공": 1, "완공": 1, "출마선언": 1,
+    "차별화": 1, "전략": 1, "준비": 1, "행보": 1, "의지": 1, "소신": 1,
+    "현장": 1, "공감": 1, "열정": 1, "신뢰": 1, "경험": 1, "전문성": 1,
+    "역량": 1, "리더십": 1, "소통": 1, "변화": 1, "개혁": 1
+}
+NEGATIVE_WORDS = {
+    # 강한 부정 (가중치 2)
+    "비리": 2, "기소": 2, "구속": 2, "파문": 2, "폭로": 2, "규탄": 2,
+    "부정": 2, "위법": 2, "탄핵": 2, "사퇴": 2, "파행": 2,
+    # 일반 부정 (가중치 1)
+    "논란": 1, "비판": 1, "실패": 1, "갈등": 1, "반발": 1, "의혹": 1,
+    "문제": 1, "위기": 1, "우려": 1, "지적": 1, "반대": 1, "거부": 1,
+    "고발": 1, "수사": 1, "하락": 1, "항의": 1, "불만": 1, "좌절": 1,
+    "지연": 1, "무산": 1, "철회": 1, "중단": 1, "갈등": 1, "불화": 1,
+    "경고": 1, "난항": 1, "혼란": 1, "분열": 1, "탈당": 1, "불출마": 1,
+    "사생활": 1, "의문": 1, "부실": 1, "허위": 1, "과대": 1
+}
+CONTEXT_WINDOW = 80  # 후보명 주변 문맥 감성 분석 범위 (글자 수)
 
 # 이슈 카테고리 매핑
 ISSUE_CATEGORIES = {
@@ -147,17 +163,38 @@ def collect_articles(client_id, client_secret, keywords, period_start, period_en
 
 
 def analyze_sentiment(text):
-    """키워드 기반 감성분석 — 긍정/부정/중립 점수 반환"""
-    pos_count = sum(1 for w in POSITIVE_WORDS if w in text)
-    neg_count = sum(1 for w in NEGATIVE_WORDS if w in text)
-    total = pos_count + neg_count
+    """가중치 키워드 기반 감성분석 — 긍정/부정/중립 점수 반환"""
+    pos_score = sum(weight for word, weight in POSITIVE_WORDS.items() if word in text)
+    neg_score = sum(weight for word, weight in NEGATIVE_WORDS.items() if word in text)
+    total = pos_score + neg_score
     if total == 0:
-        return {"positive": 0, "negative": 0, "neutral": 1}
+        return {"positive": 0, "negative": 0, "neutral": 1, "score": 0}
     return {
-        "positive": pos_count / total,
-        "negative": neg_count / total,
-        "neutral": 0
+        "positive": pos_score / total,
+        "negative": neg_score / total,
+        "neutral": 0,
+        "score": pos_score - neg_score
     }
+
+
+def analyze_sentiment_context(text, candidate_name):
+    """문맥 기반 감성분석 — 후보명 주변 텍스트만 분석"""
+    contexts = []
+    idx = 0
+    while True:
+        pos = text.find(candidate_name, idx)
+        if pos == -1:
+            break
+        start = max(0, pos - CONTEXT_WINDOW)
+        end = min(len(text), pos + len(candidate_name) + CONTEXT_WINDOW)
+        contexts.append(text[start:end])
+        idx = pos + 1
+
+    if not contexts:
+        return analyze_sentiment(text)
+
+    combined = " ".join(contexts)
+    return analyze_sentiment(combined)
 
 
 def analyze_articles(articles):
@@ -172,17 +209,46 @@ def analyze_articles(articles):
     # 이슈별 기사 수
     issue_counter = {cat: 0 for cat in ISSUE_CATEGORIES}
 
+    # 일별 감성 트렌드
+    daily_sentiment = {}  # { "2026-03-09": {"pos": n, "neg": n, "total": n} }
+
+    # 기사별 감성 결과
+    article_sentiments = []
+
     for article in articles:
         text = article["title"] + " " + article["description"]
+        pub_date = article.get("pubDate", "")[:10]  # YYYY-MM-DD
+
+        # 기사 전체 감성
+        article_sent = analyze_sentiment(text)
 
         # 후보 언급 카운팅
         for name in article["candidates_mentioned"]:
             candidate_counter[name] += 1
-            # 감성분석
-            sent = analyze_sentiment(text)
+            # 문맥 기반 감성분석
+            sent = analyze_sentiment_context(text, name)
             candidate_sentiment[name]["pos"] += sent["positive"]
             candidate_sentiment[name]["neg"] += sent["negative"]
             candidate_sentiment[name]["total"] += 1
+
+        # 일별 감성 트렌드 집계
+        if pub_date:
+            if pub_date not in daily_sentiment:
+                daily_sentiment[pub_date] = {"pos": 0, "neg": 0, "total": 0}
+            daily_sentiment[pub_date]["pos"] += article_sent["positive"]
+            daily_sentiment[pub_date]["neg"] += article_sent["negative"]
+            daily_sentiment[pub_date]["total"] += 1
+
+        # 기사별 감성 저장 (최근 20건만)
+        if len(article_sentiments) < 20:
+            label = "긍정" if article_sent["score"] > 0 else ("부정" if article_sent["score"] < 0 else "중립")
+            article_sentiments.append({
+                "title": article["title"][:60],
+                "date": pub_date,
+                "sentiment": label,
+                "score": article_sent["score"],
+                "candidates": article["candidates_mentioned"][:3]
+            })
 
         # 키워드 카운팅
         for kw in ["경기패스", "신청사", "GTX", "교통", "일산", "킨텍스",
@@ -213,12 +279,25 @@ def analyze_articles(articles):
 
     article_count_by_day = dict(sorted(daily_counter.items()))
 
+    # 일별 감성 트렌드 정리
+    sentiment_trend = {}
+    for day in sorted(daily_sentiment.keys()):
+        ds = daily_sentiment[day]
+        if ds["total"] > 0:
+            sentiment_trend[day] = {
+                "positive": round(ds["pos"] / ds["total"] * 100),
+                "negative": round(ds["neg"] / ds["total"] * 100),
+                "count": ds["total"]
+            }
+
     return {
         "candidate_mentions": candidate_mentions,
         "top_keywords": top_keywords,
         "article_count_by_day": article_count_by_day,
         "candidate_sentiment": candidate_sentiment,
         "issue_counter": issue_counter,
+        "daily_sentiment_trend": sentiment_trend,
+        "article_sentiments": article_sentiments,
     }
 
 
@@ -407,6 +486,21 @@ def update_dashboard_data(analysis, date_str):
             if "sample_negative" not in details:
                 details["sample_negative"] = []
             dashboard["sentiment_details"][name] = details
+
+    # 일별 감성 트렌드 저장
+    if analysis.get("daily_sentiment_trend"):
+        existing_trend = dashboard.get("sentiment_trend", {})
+        existing_trend.update(analysis["daily_sentiment_trend"])
+        # 최근 30일만 유지
+        sorted_days = sorted(existing_trend.keys())
+        if len(sorted_days) > 30:
+            for old_day in sorted_days[:-30]:
+                del existing_trend[old_day]
+        dashboard["sentiment_trend"] = existing_trend
+
+    # 기사별 감성 결과 저장 (최근 20건)
+    if analysis.get("article_sentiments"):
+        dashboard["article_sentiments"] = analysis["article_sentiments"]
 
     with open(data_path, "w", encoding="utf-8") as f:
         json.dump(dashboard, f, ensure_ascii=False, indent=2)
