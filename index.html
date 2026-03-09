@@ -589,9 +589,9 @@
                     <div class="stat-change stat-up">경선이 곧 본선</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-value" style="color:var(--primary)">51.2%</div>
+                    <div class="stat-value" style="color:var(--primary)">61.3%</div>
                     <div class="stat-label">민주당 정당지지율</div>
-                    <div class="stat-change stat-up">국힘 23.0% 대비 2배+</div>
+                    <div class="stat-change stat-up">국힘 26.8% 대비 2.3배</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-value" style="color:var(--warning)">59.2%</div>
@@ -807,7 +807,7 @@
                         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
                             <span style="font-size:1.2em">📘</span>
                             <b style="color:var(--blue-400)">Facebook</b>
-                            <span style="font-size:var(--fs-xs);color:var(--gray-400);margin-left:auto">팔로워 6,000명</span>
+                            <span id="fb-follower-count" style="font-size:var(--fs-xs);color:var(--gray-400);margin-left:auto">친구 4,783명</span>
                         </div>
                         <div style="display:flex;flex-direction:column;gap:10px">
                             <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:12px">
@@ -831,7 +831,7 @@
                         <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
                             <span style="font-size:1.2em">📷</span>
                             <b style="color:#a855f7">Instagram</b>
-                            <span style="font-size:var(--fs-xs);color:var(--gray-400);margin-left:auto">게시물 64개 · 팔로워 302명</span>
+                            <span id="ig-follower-count" style="font-size:var(--fs-xs);color:var(--gray-400);margin-left:auto">게시물 64개 · 팔로워 302명</span>
                         </div>
                         <div style="display:flex;flex-direction:column;gap:10px">
                             <div style="background:rgba(255,255,255,0.03);border-radius:8px;padding:12px">
@@ -1087,6 +1087,7 @@
                             <td>
                                 <span class="badge badge-positive">행정 달인</span>
                                 <span class="badge badge-positive">39년 공직</span>
+                                <span class="badge badge-positive">3.4 출마선언</span>
                             </td>
                             <td>
                                 <span class="badge badge-warning">조직력 미지수</span>
@@ -1572,7 +1573,16 @@
             }
             if (d.social_radar) {
                 const c5 = chartInstances['socialRadar'];
-                if (c5) { c5.data.datasets[0].data = d.social_radar['이경혜'] || [5,5,5,5,10,55]; c5.data.datasets[1].data = d.social_radar['경쟁후보_평균'] || [35,40,30,15,45,50]; c5.update(); }
+                if (c5) {
+                    var lkhData = d.social_radar['이경혜'] || [5,5,5,5,5,10,45];
+                    var compData = d.social_radar['경쟁후보_평균'] || [35,40,30,15,20,45,50];
+                    // 6개 배열 → 7개로 보정 (기존 데이터 호환)
+                    if (lkhData.length === 6) { lkhData = lkhData.slice(0,4).concat([0], [lkhData[4]], [lkhData[5]]); }
+                    if (compData.length === 6) { compData = compData.slice(0,4).concat([20], [compData[4]], [compData[5]]); }
+                    c5.data.datasets[0].data = lkhData;
+                    c5.data.datasets[1].data = compData;
+                    c5.update();
+                }
             }
             if (d.competitiveness_radar) {
                 const c9 = chartInstances['radarChart'];
@@ -1587,13 +1597,14 @@
                         youtube: { selector: '.social-item:nth-child(1)', label: 'YouTube' },
                         facebook: { selector: '.social-item:nth-child(2)', label: 'Facebook' },
                         instagram: { selector: '.social-item:nth-child(3)', label: 'Instagram' },
-                        blog: { selector: '.social-item:nth-child(5)', label: '네이버 블로그' }
+                        twitter: { selector: '.social-item:nth-child(5)', label: 'X (Twitter)' },
+                        blog: { selector: '.social-item:nth-child(6)', label: '네이버 블로그' }
                     };
                     Object.keys(platformMap).forEach(function(key) {
                         const p = sm.platforms[key];
                         if (!p) return;
                         const items = document.querySelectorAll('#tab-social .social-item');
-                        const idx = {youtube:0, facebook:1, instagram:2, tiktok:3, x:4, blog:5}[key];
+                        const idx = {youtube:0, facebook:1, instagram:2, tiktok:3, twitter:4, blog:5}[key];
                         const el = items[idx];
                         if (!el) return;
                         const statusEl = el.querySelector('.social-status');
@@ -1603,7 +1614,18 @@
                         }
                     });
                 }
-                // 2) sentimentDonut 차트 업데이트
+                // 2) Facebook/Instagram 팔로워 수 자동 갱신
+                if (sm.platforms) {
+                    if (sm.platforms.facebook) {
+                        var fbEl = document.getElementById('fb-follower-count');
+                        if (fbEl) fbEl.textContent = '친구 ' + (sm.platforms.facebook.followers || 0).toLocaleString() + '명';
+                    }
+                    if (sm.platforms.instagram) {
+                        var igEl = document.getElementById('ig-follower-count');
+                        if (igEl) igEl.textContent = '게시물 ' + (sm.platforms.instagram.posts || 0) + '개 · 팔로워 ' + (sm.platforms.instagram.followers || 0).toLocaleString() + '명';
+                    }
+                }
+                // 3) sentimentDonut 차트 업데이트
                 if (sm.sentiment) {
                     const cSD = chartInstances['sentimentDonut'];
                     if (cSD) {
@@ -1667,9 +1689,9 @@
         chartInstances['partyChart'] = new Chart(document.getElementById('partyChart'), {
             type: 'doughnut',
             data: {
-                labels: ['더불어민주당 51.2%', '국민의힘 23.0%', '개혁신당 4.7%', '조국혁신당 4.3%', '진보당 1.1%', '기타/무응답 15.7%'],
+                labels: ['더불어민주당 61.3%', '국민의힘 26.8%', '개혁신당 4.7%', '조국혁신당 4.3%', '진보당 1.1%', '기타/무응답 1.8%'],
                 datasets: [{
-                    data: [51.2, 23.0, 4.7, 4.3, 1.1, 15.7],
+                    data: [61.3, 26.8, 4.7, 4.3, 1.1, 1.8],
                     backgroundColor: [BLUE, RED, '#f97316', '#0ea5e9', PURPLE, GRAY],
                     borderWidth: 2,
                     borderColor: '#1a1f2e'
@@ -1880,7 +1902,7 @@
                 data: {
                     labels: ['YouTube', 'Facebook', 'Instagram', 'TikTok', 'X (Twitter)', '네이버 블로그', '언론 노출'],
                     datasets: [
-                        { label: '이경혜', data: [5, 35, 15, 10, 10, 15, 55], backgroundColor: 'rgba(59, 130, 246, 0.2)', borderColor: BLUE, borderWidth: 2, pointRadius: 4 },
+                        { label: '이경혜', data: [79, 70, 26, 40, 5, 100, 45], backgroundColor: 'rgba(59, 130, 246, 0.2)', borderColor: BLUE, borderWidth: 2, pointRadius: 4 },
                         { label: '경쟁후보 평균 (추정)', data: [35, 40, 30, 15, 20, 45, 50], backgroundColor: 'rgba(156, 163, 175, 0.15)', borderColor: GRAY, borderWidth: 2, pointRadius: 4, borderDash: [5,5] }
                     ]
                 },

@@ -16,12 +16,12 @@
       "기타/무응답"
     ],
     "data": [
-      51.2,
-      23.0,
+      61.3,
+      26.8,
       4.7,
       4.3,
       1.1,
-      15.7
+      1.8
     ]
   },
   "sentiment": {
@@ -130,11 +130,12 @@
   "media_exposure": {},
   "social_radar": {
     "이경혜": [
-      5,
-      30,
-      22,
+      79,
+      70,
+      26,
+      40,
       0,
-      90,
+      95,
       45
     ],
     "경쟁후보_평균": [
@@ -142,6 +143,7 @@
       40,
       30,
       15,
+      20,
       45,
       50
     ]
@@ -151,7 +153,7 @@
       80,
       20,
       35,
-      29,
+      51,
       45,
       75,
       70,
@@ -214,14 +216,18 @@
       {
         "name": "명재성",
         "party": "더불어민주당",
-        "role": "경기도의원 · 전 덕양구청장 (공직 39년)",
+        "role": "전 덕양구청장 · 전 경기도의원",
         "highlight": false,
-        "poll_value": 15.6,
-        "poll_display": "15.6%",
+        "poll_value": 8.0,
+        "poll_display": "8.0%",
         "tags": [
           {
             "text": "행정 달인",
             "color": "blue"
+          },
+          {
+            "text": "3.4 출마선언",
+            "color": "green"
           },
           {
             "text": "현장경험",
@@ -235,8 +241,8 @@
         "party": "더불어민주당",
         "role": "전 고양시장 (민선 7기)",
         "highlight": false,
-        "poll_value": 12.7,
-        "poll_display": "12.7%",
+        "poll_value": 7.5,
+        "poll_display": "7.5%",
         "tags": [
           {
             "text": "시정경험",
@@ -258,15 +264,15 @@
         "party": "더불어민주당",
         "role": "전 시의원 · 도시공학 박사",
         "highlight": false,
-        "poll_value": 10.1,
-        "poll_display": "10.1%",
+        "poll_value": 13.7,
+        "poll_display": "13.7%",
         "tags": [
           {
             "text": "도시공학",
             "color": "blue"
           },
           {
-            "text": "상승세",
+            "text": "1위 급부상",
             "color": "green"
           }
         ],
@@ -277,8 +283,8 @@
         "party": "더불어민주당",
         "role": "전 경기교통공사 사장 · 3선 도의원",
         "highlight": false,
-        "poll_value": 8.2,
-        "poll_display": "8.2%",
+        "poll_value": 5.3,
+        "poll_display": "5.3%",
         "tags": [
           {
             "text": "교통전문",
@@ -334,8 +340,8 @@
         "party": "더불어민주당",
         "role": "전 국토부 장관 정책보좌관",
         "highlight": false,
-        "poll_value": 3.8,
-        "poll_display": "3.8%",
+        "poll_value": 5.5,
+        "poll_display": "5.5%",
         "tags": [
           {
             "text": "중앙부처",
@@ -355,20 +361,50 @@
         "party": "국민의힘 (현직)",
         "role": "현 고양특례시장 · 도시공학 박사",
         "highlight": false,
-        "poll_value": 13.5,
-        "poll_display": "13.5%",
+        "poll_value": 11.2,
+        "poll_display": "11.2%",
         "tags": [
           {
             "text": "공약이행 SA",
             "color": "green"
           },
           {
-            "text": "해외출장 논란",
+            "text": "부정평가 57%",
             "color": "red"
           },
           {
             "text": "신청사 갈등",
             "color": "red"
+          }
+        ],
+        "status": "active"
+      },
+      {
+        "name": "오준환",
+        "party": "국민의힘",
+        "role": "경기도의원",
+        "highlight": false,
+        "poll_value": 7.0,
+        "poll_display": "7.0%",
+        "tags": [
+          {
+            "text": "도의원",
+            "color": "blue"
+          }
+        ],
+        "status": "active"
+      },
+      {
+        "name": "곽미숙",
+        "party": "국민의힘",
+        "role": "경기도의원",
+        "highlight": false,
+        "poll_value": 6.5,
+        "poll_display": "6.5%",
+        "tags": [
+          {
+            "text": "도의원",
+            "color": "blue"
           }
         ],
         "status": "active"
@@ -456,6 +492,34 @@
           "민경선": 8.2,
           "장제환": 7.0
         }
+      },
+      {
+        "id": "joongboo-general-2026-03",
+        "source": "중부일보/데일리리서치",
+        "date": "2026-03",
+        "type": "general",
+        "label": "여야 통합 적합도 (중부일보 2026.03)",
+        "data": {
+          "장제환": 13.7,
+          "이동환(국힘)": 11.2,
+          "명재성": 8.0,
+          "이재준": 7.5,
+          "오준환(국힘)": 7.0,
+          "최승원": 5.5,
+          "민경선": 5.3
+        }
+      },
+      {
+        "id": "joongboo-dem-2026-03",
+        "source": "중부일보/데일리리서치",
+        "date": "2026-03",
+        "type": "dem_primary",
+        "label": "민주당 후보 적합도 (중부일보 2026.03)",
+        "data": {
+          "장제환": 13.4,
+          "명재성": 12.0,
+          "이경혜": 0
+        }
       }
     ],
     "detail_table": [
@@ -466,8 +530,10 @@
         "realmeter_dec": "10.7%",
         "daily_feb": "6.7%",
         "realmeter_feb": "15.6%",
-        "trend": "변동",
-        "trend_class": "warning"
+        "trend": "출마선언",
+        "trend_class": "positive",
+        "joongboo_mar": "12.0%",
+        "joongboo_general_mar": "8.0%"
       },
       {
         "name": "이동환",
@@ -477,7 +543,9 @@
         "daily_feb": "-",
         "realmeter_feb": "13.5%",
         "trend": "현직",
-        "trend_class": "neutral"
+        "trend_class": "neutral",
+        "joongboo_mar": "-",
+        "joongboo_general_mar": "11.2%"
       },
       {
         "name": "이재준",
@@ -487,7 +555,9 @@
         "daily_feb": "-",
         "realmeter_feb": "12.7%",
         "trend": "전직",
-        "trend_class": "neutral"
+        "trend_class": "neutral",
+        "joongboo_mar": "-",
+        "joongboo_general_mar": "7.5%"
       },
       {
         "name": "장제환",
@@ -496,8 +566,10 @@
         "realmeter_dec": "4.9%",
         "daily_feb": "10.1%",
         "realmeter_feb": "7.0%",
-        "trend": "상승",
-        "trend_class": "positive"
+        "trend": "1위 급부상",
+        "trend_class": "positive",
+        "joongboo_mar": "13.4%",
+        "joongboo_general_mar": "13.7%"
       },
       {
         "name": "정병춘",
@@ -507,7 +579,9 @@
         "daily_feb": "6.5%",
         "realmeter_feb": "-",
         "trend": "하락",
-        "trend_class": "negative"
+        "trend_class": "negative",
+        "joongboo_mar": "-",
+        "joongboo_general_mar": "-"
       },
       {
         "name": "민경선",
@@ -517,7 +591,9 @@
         "daily_feb": "7.9%",
         "realmeter_feb": "8.2%",
         "trend": "상승",
-        "trend_class": "positive"
+        "trend_class": "positive",
+        "joongboo_mar": "-",
+        "joongboo_general_mar": "5.3%"
       },
       {
         "name": "이경혜",
@@ -528,7 +604,9 @@
         "realmeter_feb": "미포함",
         "trend": "인지도 부족",
         "trend_class": "negative",
-        "highlight": true
+        "highlight": true,
+        "joongboo_mar": "미포함",
+        "joongboo_general_mar": "미포함"
       }
     ]
   },
@@ -601,36 +679,95 @@
     ]
   },
   "collection_status": {
-    "news_last_success": "2026-03-09T01:59:51.037985",
-    "social_last_success": "2026-03-09T01:59:42.810273",
+    "news_last_success": "2026-03-09T11:13:42.025049",
+    "social_last_success": "2026-03-09T11:13:55.621519",
     "news_articles_collected": 0,
-    "errors": []
+    "errors": [],
+    "social_sources": {
+      "youtube": "api",
+      "facebook": "scrape",
+      "instagram": "scrape",
+      "tiktok": "scrape",
+      "twitter": "scrape",
+      "blog": "rss"
+    }
   },
   "social_media": {
     "platforms": {
       "youtube": {
-        "status": "개설완료",
-        "subscribers": 0,
-        "videos": 0,
-        "last_upload": null,
-        "recent_videos": [],
-        "score": 5
+        "status": "활성",
+        "subscribers": 92,
+        "videos": 25,
+        "last_upload": "2026-03-08",
+        "recent_videos": [
+          {
+            "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
+            "date": "2026-03-08",
+            "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
+            "views": 953
+          },
+          {
+            "title": "[이경혜가 간다🏃🏻‍♀️] 민주평화통일자문회의 1차 정기회의 현장",
+            "date": "2026-03-08",
+            "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
+            "views": 1059
+          },
+          {
+            "title": "[이경혜가 간다🏃🏻‍♀️] 경기1자동차매매사업조합 지부장 이·취임식 현장",
+            "date": "2026-03-07",
+            "url": "https://www.youtube.com/watch?v=dwfpdZB-28o",
+            "views": 951
+          },
+          {
+            "title": "레알 급작 이경혜 삼행시",
+            "date": "2026-03-07",
+            "url": "https://www.youtube.com/watch?v=7BszmGc12ZI",
+            "views": 2009
+          },
+          {
+            "title": "고양시 생선구이 맛집!🐟 겉바속촉 비주얼 대박",
+            "date": "2026-03-07",
+            "url": "https://www.youtube.com/watch?v=BEUp4MDzEK4",
+            "views": 2057
+          }
+        ],
+        "score": 79,
+        "total_views": 21156,
+        "source": "api"
       },
       "facebook": {
         "status": "활성",
-        "followers": 6000,
+        "followers": 6112,
+        "likes": 6112,
+        "talking_about": 642,
         "recent_posts": [],
-        "score": 30
+        "score": 70,
+        "source": "scrape"
       },
       "instagram": {
         "status": "활성",
-        "followers": 302,
-        "posts": 64,
-        "score": 22
+        "followers": 316,
+        "posts": 79,
+        "following": 27,
+        "score": 26,
+        "source": "scrape"
       },
       "tiktok": {
-        "status": "미확인",
-        "score": 0
+        "status": "활성",
+        "followers": 0,
+        "following": 0,
+        "likes": 0,
+        "videos": 10,
+        "score": 40,
+        "source": "scrape"
+      },
+      "twitter": {
+        "status": "개설완료",
+        "followers": 0,
+        "following": 0,
+        "tweets": 0,
+        "score": 0,
+        "source": "scrape"
       },
       "blog": {
         "status": "활성",
@@ -640,33 +777,96 @@
           {
             "title": "이경혜 고양특례시장 예비후보 3대 핵심공약",
             "date": "2026-03-07",
-            "url": "https://blog.naver.com/lee1065/224208194262?fromRss=true&trackingCode=rss"
+            "url": "https://blog.naver.com/lee1065/224208194262?fromRss=true&trackingCode=rss",
+            "summary": "① 교통혁명 – 교통비 절반, 고양 이동혁명 고양 시민의 가장 큰 불편은 교통입니다. 서울로 출퇴근하는 시민들이 매달 10만~15만 원의 교통비를 부담하고 있습니다. 저는 **“고"
           },
           {
             "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
             "date": "2026-03-07",
-            "url": "https://blog.naver.com/lee1065/224208189438?fromRss=true&trackingCode=rss"
+            "url": "https://blog.naver.com/lee1065/224208189438?fromRss=true&trackingCode=rss",
+            "summary": "1. 교통비 절반 도시 – “고양이 패스” GTX·지하철·버스를 하나로 묶는 월 5~6만원 정액 교통카드를 도입해 고양 시민의 교통비를 절반으로 줄이겠습니다. BRT 즉시 도입과 "
           },
           {
             "title": "\"고양시민 교통비 절반으로\" — 고양패스",
             "date": "2026-03-02",
-            "url": "https://blog.naver.com/lee1065/224201523376?fromRss=true&trackingCode=rss"
+            "url": "https://blog.naver.com/lee1065/224201523376?fromRss=true&trackingCode=rss",
+            "summary": "2-1. \"고양시민 교통비 절반으로\" — 고양패스 왜 센세이션인가: GTX-A 요금이 비싸다는 불만이 엄청나고 있다. 서울 출퇴근 시민에게 교통비는 매달 체감하는 가장 큰 지출 중"
           },
           {
             "title": "\"국가 철도 터미널 전략 — 고양을 출발지로\"",
             "date": "2026-03-02",
-            "url": "https://blog.naver.com/lee1065/224201522649?fromRss=true&trackingCode=rss"
+            "url": "https://blog.naver.com/lee1065/224201522649?fromRss=true&trackingCode=rss",
+            "summary": "존경하는 106만 고양특례시민 여러분, 저는 오늘, 고양시의 미래를 더 높은 곳에서 더 멀리 보자는 말씀을 드리고자 이 자리에 섰습니다. 고 김대중 대통령은 IMF의 국난 속에서도"
           },
           {
             "title": "\"K-의료도시, 고양\"",
             "date": "2026-03-02",
-            "url": "https://blog.naver.com/lee1065/224201506147?fromRss=true&trackingCode=rss"
+            "url": "https://blog.naver.com/lee1065/224201506147?fromRss=true&trackingCode=rss",
+            "summary": "왜 센세이션인가: 106만 특례시에 상급종합병원 1곳(국립암센터), 종합병원 6곳(건보일산병원·백병원·동국대병원·차병원·명지병원, 더자인), 대학 바이오메디캠퍼스가 반경 10km "
+          },
+          {
+            "title": "고양시청사 원안 건립 + 덕양구 분구",
+            "date": "2026-03-02",
+            "url": "https://blog.naver.com/lee1065/224201470915?fromRss=true&trackingCode=rss",
+            "summary": "1. 행정 정상화 + 행정구역 대개편 — 멈춘 시계를 돌리고, 구청을 가깝게 행정이 멀면 시민은 불편합니다. 갈등과 지연은 끝내야 합니다. 시청사 위치 싸움만 4년. 시민의 세금으"
+          },
+          {
+            "title": "고양특례시장 출마 선언문 (전문)",
+            "date": "2026-03-02",
+            "url": "https://blog.naver.com/lee1065/224201459861?fromRss=true&trackingCode=rss",
+            "summary": "이 경 혜 경기도 도의원 (더불어민주당, 고양시 제4선거구) 존경하는 106만 고양특례시민 여러분, 저는 오늘, 고양시의 미래를 더 높은 곳에서 더 멀리 보자는 말씀을 드리고자 이"
+          },
+          {
+            "title": "교통약자 보호구역 내 제한속도의 탄력적 운영 필요성",
+            "date": "2026-02-27",
+            "url": "https://blog.naver.com/lee1065/224198277119?fromRss=true&trackingCode=rss",
+            "summary": ""
+          },
+          {
+            "title": "지속 가능한 경기도를 위한 기후행동 실천",
+            "date": "2026-02-27",
+            "url": "https://blog.naver.com/lee1065/224198272264?fromRss=true&trackingCode=rss",
+            "summary": ""
+          },
+          {
+            "title": "저출생 극복을 위한 난임부부 지원 확대 요구",
+            "date": "2026-02-27",
+            "url": "https://blog.naver.com/lee1065/224198265216?fromRss=true&trackingCode=rss",
+            "summary": ""
           }
         ],
-        "score": 90
+        "score": 95,
+        "source": "rss"
       }
     },
     "recent_posts": [
+      {
+        "platform": "youtube",
+        "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
+        "date": "2026-03-08",
+        "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
+        "metrics": {
+          "views": 953
+        }
+      },
+      {
+        "platform": "youtube",
+        "title": "[이경혜가 간다🏃🏻‍♀️] 민주평화통일자문회의 1차 정기회의 현장",
+        "date": "2026-03-08",
+        "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
+        "metrics": {
+          "views": 1059
+        }
+      },
+      {
+        "platform": "youtube",
+        "title": "[이경혜가 간다🏃🏻‍♀️] 경기1자동차매매사업조합 지부장 이·취임식 현장",
+        "date": "2026-03-07",
+        "url": "https://www.youtube.com/watch?v=dwfpdZB-28o",
+        "metrics": {
+          "views": 951
+        }
+      },
       {
         "platform": "blog",
         "title": "이경혜 고양특례시장 예비후보 3대 핵심공약",
@@ -694,6 +894,6 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-09T01:59:42.809878"
+    "collected_at": "2026-03-09T11:13:55.620592"
   }
 }

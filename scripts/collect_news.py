@@ -338,13 +338,34 @@ def update_dashboard_data(analysis, date_str):
     }
 
     # 소셜미디어 레이더 — 언론노출 값만 갱신 (나머지는 유지)
+    # 순서: [YouTube(0), Facebook(1), Instagram(2), TikTok(3), X(4), 블로그(5), 언론노출(6)]
     if "social_radar" not in dashboard:
         dashboard["social_radar"] = {
-            "이경혜": [5, 5, 5, 5, 10, 45],
-            "경쟁후보_평균": [35, 40, 30, 15, 45, 50]
+            "이경혜": [5, 5, 5, 5, 5, 10, 45],
+            "경쟁후보_평균": [35, 40, 30, 15, 20, 45, 50]
         }
+    # 기존 6개 배열 → 7개로 확장
+    lkh_radar = dashboard["social_radar"]["이경혜"]
+    if len(lkh_radar) < 7:
+        if len(lkh_radar) == 6:
+            old_blog = lkh_radar[4]
+            old_news = lkh_radar[5]
+            lkh_radar = lkh_radar[:4] + [0, old_blog, old_news]
+        else:
+            lkh_radar = lkh_radar + [0] * (7 - len(lkh_radar))
+        dashboard["social_radar"]["이경혜"] = lkh_radar
+    comp_radar = dashboard["social_radar"].get("경쟁후보_평균", [35, 40, 30, 15, 45, 50])
+    if len(comp_radar) < 7:
+        if len(comp_radar) == 6:
+            old_blog = comp_radar[4]
+            old_news = comp_radar[5]
+            comp_radar = comp_radar[:4] + [20, old_blog, old_news]
+        else:
+            comp_radar = comp_radar + [0] * (7 - len(comp_radar))
+        dashboard["social_radar"]["경쟁후보_평균"] = comp_radar
+
     lkh_exposure = dashboard["media_exposure"].get("이경혜", 45)
-    dashboard["social_radar"]["이경혜"][5] = lkh_exposure
+    dashboard["social_radar"]["이경혜"][6] = lkh_exposure  # 인덱스 6 = 언론 노출
 
     # 경쟁력 레이더 — 언론노출 값만 갱신
     if "competitiveness_radar" not in dashboard:
