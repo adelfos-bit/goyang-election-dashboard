@@ -705,8 +705,8 @@
     ]
   },
   "collection_status": {
-    "news_last_success": "2026-03-09T02:23:17.157877",
-    "social_last_success": "2026-03-09T02:23:25.100371",
+    "news_last_success": "2026-03-09T04:24:46.479663",
+    "social_last_success": "2026-03-09T04:24:53.832621",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -730,19 +730,19 @@
             "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
-            "views": 958
+            "views": 959
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 민주평화통일자문회의 1차 정기회의 현장",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
-            "views": 1061
+            "views": 1062
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 경기1자동차매매사업조합 지부장 이·취임식 현장",
             "date": "2026-03-07",
             "url": "https://www.youtube.com/watch?v=dwfpdZB-28o",
-            "views": 951
+            "views": 952
           },
           {
             "title": "레알 급작 이경혜 삼행시",
@@ -765,7 +765,7 @@
         "status": "활성",
         "followers": 6113,
         "likes": 6113,
-        "talking_about": 642,
+        "talking_about": 644,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -872,7 +872,7 @@
         "date": "2026-03-08",
         "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
         "metrics": {
-          "views": 958
+          "views": 959
         }
       },
       {
@@ -881,7 +881,7 @@
         "date": "2026-03-08",
         "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
         "metrics": {
-          "views": 1061
+          "views": 1062
         }
       },
       {
@@ -890,7 +890,7 @@
         "date": "2026-03-07",
         "url": "https://www.youtube.com/watch?v=dwfpdZB-28o",
         "metrics": {
-          "views": 951
+          "views": 952
         }
       },
       {
@@ -920,6 +920,6 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-09T02:23:25.100001"
+    "collected_at": "2026-03-09T04:24:53.832255"
   }
 }
