@@ -2203,17 +2203,27 @@
                 '</div>';
             }
 
-            // Top keywords
-            let keywordsHtml = '';
-            if (summary.top_keywords && summary.top_keywords.length > 0) {
-                keywordsHtml = '<div class="card">' +
-                    '<div class="card-title"><span class="icon">🔑</span> 주요 키워드 TOP 10</div>' +
-                    summary.top_keywords.map(k =>
-                        '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--gray-100)">' +
-                            '<span style="font-size:var(--fs-base)">' + k.keyword + '</span>' +
-                            '<span class="badge badge-neutral">' + k.count + '건</span>' +
+            // 이경혜 vs 경쟁자 언급 비율
+            let mentionRatioHtml = '';
+            if (summary.candidate_mentions && summary.candidate_mentions.length > 0) {
+                const lkhCount = summary.candidate_mentions.find(c => c.name === '이경혜');
+                const lkhVal = lkhCount ? lkhCount.count : 0;
+                const totalMentions = summary.candidate_mentions.reduce((s, c) => s + c.count, 0);
+                const lkhPct = totalMentions > 0 ? Math.round(lkhVal / totalMentions * 100) : 0;
+                mentionRatioHtml = '<div class="card">' +
+                    '<div class="card-title"><span class="icon">📊</span> 이경혜 언론 노출 비중</div>' +
+                    '<div class="chart-container-sm"><canvas id="reportMentionPie"></canvas></div>' +
+                    '<div style="text-align:center;margin-top:8px;font-size:var(--fs-sm);color:var(--gray-400)">' +
+                        '전체 ' + totalMentions + '건 중 이경혜 ' + lkhVal + '건 (' + lkhPct + '%)' +
+                    '</div>' +
+                    '<div style="margin-top:12px">' +
+                    summary.candidate_mentions.map(c =>
+                        '<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--gray-100)">' +
+                            '<span style="font-size:var(--fs-base);' + (c.name === '이경혜' ? 'color:var(--blue);font-weight:700' : '') + '">' + c.name + '</span>' +
+                            '<span class="badge ' + (c.name === '이경혜' ? 'badge-blue' : 'badge-neutral') + '">' + c.count + '건 (' + Math.round(c.count / totalMentions * 100) + '%)</span>' +
                         '</div>'
                     ).join('') +
+                    '</div>' +
                 '</div>';
             }
 
@@ -2242,7 +2252,7 @@
                         '총 ' + meta.total_articles_found + '건 수집' +
                     '</div>' +
                 '</div>' +
-                '<div class="grid-2">' + candidateChartHtml + keywordsHtml + '</div>' +
+                '<div class="grid-2">' + candidateChartHtml + mentionRatioHtml + '</div>' +
                 articlesHtml;
 
             // Create candidate chart
@@ -2268,6 +2278,34 @@
                         scales: {
                             x: { beginAtZero: true, grid: { display: false } },
                             y: { grid: { display: false } }
+                        }
+                    }
+                });
+            }
+
+            // 이경혜 언론 노출 비중 파이차트
+            if (summary.candidate_mentions && summary.candidate_mentions.length > 0 && document.getElementById('reportMentionPie')) {
+                const mentions = summary.candidate_mentions;
+                const pieColors = mentions.map(c => c.name === '이경혜' ? '#3b82f6' :
+                    c.name === '이동환' ? '#ef4444' : c.name === '명재성' ? '#22c55e' :
+                    c.name === '이재준' ? '#eab308' : c.name === '민경선' ? '#a855f7' :
+                    c.name === '정병춘' ? '#ec4899' : c.name === '최승원' ? '#f97316' :
+                    c.name === '장제환' ? '#06b6d4' : '#6b7280');
+                new Chart(document.getElementById('reportMentionPie'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: mentions.map(c => c.name),
+                        datasets: [{
+                            data: mentions.map(c => c.count),
+                            backgroundColor: pieColors,
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12 } }
                         }
                     }
                 });
