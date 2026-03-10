@@ -1157,11 +1157,8 @@ def update_dashboard_data(social_data, date_str):
             comp_radar = comp_radar + [0] * (7 - len(comp_radar))
         dashboard["social_radar"]["경쟁후보_평균"] = comp_radar
 
-    # 소셜 수집 점수 반영 (0~5번 인덱스: YouTube, FB, IG, TikTok, X, 블로그)
-    scores = calculate_social_radar(social_data["platforms"])  # 6개 반환
-    for i in range(len(scores)):  # 0~5
-        dashboard["social_radar"]["이경혜"][i] = scores[i]
-    # 인덱스 6 (언론 노출)은 collect_news.py에서 갱신하므로 건드리지 않음
+    # social_radar 점수는 수동 관리 (자동 수집으로 덮어쓰지 않음)
+    # 타 후보 포함 전체 점수는 index.html 및 dashboard-data.json에서 직접 관리
 
     # 경쟁력 레이더 소셜미디어 축 갱신
     if "competitiveness_radar" not in dashboard:

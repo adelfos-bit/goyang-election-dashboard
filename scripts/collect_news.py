@@ -452,8 +452,8 @@ def update_dashboard_data(analysis, date_str):
             comp_radar = comp_radar + [0] * (7 - len(comp_radar))
         dashboard["social_radar"]["경쟁후보_평균"] = comp_radar
 
-    lkh_exposure = dashboard["media_exposure"].get("이경혜", 45)
-    dashboard["social_radar"]["이경혜"][6] = lkh_exposure  # 인덱스 6 = 언론 노출
+    # social_radar 점수는 수동 관리 (자동 수집으로 덮어쓰지 않음)
+    # 언론 노출 점수도 media_exposure에만 저장하고, social_radar는 건드리지 않음
 
     # 경쟁력 레이더 — 언론노출 값만 갱신
     if "competitiveness_radar" not in dashboard:
