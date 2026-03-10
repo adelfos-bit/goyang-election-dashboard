@@ -547,8 +547,11 @@ def main():
         period_start = period_start.replace(day=1)
         period_end = report_date.replace(hour=23, minute=59, second=59)
 
-    period_start = period_start.astimezone() if period_start.tzinfo else period_start
-    period_end = period_end.astimezone() if period_end.tzinfo else period_end
+    # naive datetime을 로컬 시간대(KST)로 변환
+    if not period_start.tzinfo:
+        period_start = period_start.astimezone()
+    if not period_end.tzinfo:
+        period_end = period_end.astimezone()
 
     print(f"[정보] {args.type} {'데이터 갱신' if args.type == 'hourly' else '보고서 생성'}: {period_start.date()} ~ {period_end.date()}")
     print(f"[정보] 키워드 {len(ALL_KEYWORDS)}개로 검색 시작...")

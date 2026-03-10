@@ -1,6 +1,12 @@
 {
-  "last_updated": "2026-03-09T01:59:51.039336",
+  "last_updated": "2026-03-10T11:37:58.546987",
   "reports": [
+    {
+      "type": "weekly",
+      "date": "2026-03-10",
+      "file": "weekly/2026-03-10.json",
+      "article_count": 440
+    },
     {
       "type": "weekly",
       "date": "2026-03-09",
@@ -12,6 +18,12 @@
       "date": "2026-03-02",
       "file": "weekly/2026-03-02.json",
       "article_count": 0
+    },
+    {
+      "type": "monthly",
+      "date": "2026-03-01",
+      "file": "monthly/2026-03-01.json",
+      "article_count": 288
     },
     {
       "type": "weekly",

@@ -26,42 +26,66 @@
   },
   "sentiment": {
     "이경혜": {
-      "positive": 60,
-      "neutral": 30,
-      "negative": 10,
-      "score": 62
-    },
-    "이동환": {
-      "positive": 30,
-      "neutral": 15,
-      "negative": 55,
-      "score": -35
-    },
-    "이재준": {
-      "positive": 45,
-      "neutral": 20,
-      "negative": 35,
-      "score": 15
+      "positive": 28,
+      "neutral": 70,
+      "negative": 2,
+      "score": 26
     },
     "명재성": {
-      "positive": 65,
-      "neutral": 25,
-      "negative": 10,
-      "score": 48
+      "positive": 29,
+      "neutral": 47,
+      "negative": 24,
+      "score": 5
     },
     "정병춘": {
-      "positive": 58,
-      "neutral": 30,
-      "negative": 12,
+      "positive": 50,
+      "neutral": 50,
+      "negative": 0,
+      "score": 50
+    },
+    "이재준": {
+      "positive": 49,
+      "neutral": 45,
+      "negative": 6,
+      "score": 43
+    },
+    "이동환": {
+      "positive": 41,
+      "neutral": 53,
+      "negative": 6,
+      "score": 35
+    },
+    "민경선": {
+      "positive": 61,
+      "neutral": 25,
+      "negative": 14,
+      "score": 47
+    },
+    "장제환": {
+      "positive": 50,
+      "neutral": 50,
+      "negative": 0,
+      "score": 50
+    },
+    "이영아": {
+      "positive": 46,
+      "neutral": 50,
+      "negative": 4,
       "score": 42
+    },
+    "최승원": {
+      "positive": 8,
+      "neutral": 92,
+      "negative": 0,
+      "score": 8
     }
   },
   "sentiment_details": {
     "이경혜": {
-      "positive": 60,
-      "neutral": 30,
-      "negative": 10,
-      "score": 62,
+      "positive": 28,
+      "neutral": 70,
+      "negative": 2,
+      "score": 26,
       "sample_positive": [
         "고양패스 공약 호평",
         "취약계층 예산 확보 성과",
@@ -70,14 +94,14 @@
       "sample_negative": [
         "인지도 부족 지적"
       ],
-      "article_count": 0,
-      "weighted_score": 58
+      "article_count": 30,
+      "weighted_score": 26
     },
     "이동환": {
-      "positive": 30,
-      "neutral": 15,
-      "negative": 55,
-      "score": -35,
+      "positive": 41,
+      "neutral": 53,
+      "negative": 6,
+      "score": 35,
       "sample_positive": [
         "공약이행 SA등급"
       ],
@@ -86,14 +110,14 @@
         "신청사 갈등",
         "경기패스 탈퇴 비판"
       ],
-      "article_count": 0,
-      "weighted_score": -30
+      "article_count": 17,
+      "weighted_score": 35
     },
     "명재성": {
-      "positive": 65,
-      "neutral": 25,
-      "negative": 10,
-      "score": 48,
+      "positive": 29,
+      "neutral": 47,
+      "negative": 24,
+      "score": 5,
       "sample_positive": [
         "행정경험 39년 호평",
         "현장경험 강점"
@@ -101,8 +125,68 @@
       "sample_negative": [
         "혁신성 부족 지적"
       ],
-      "article_count": 0,
-      "weighted_score": 45
+      "article_count": 47,
+      "weighted_score": 5
+    },
+    "정병춘": {
+      "positive": 50,
+      "neutral": 50,
+      "negative": 0,
+      "score": 50,
+      "article_count": 18,
+      "weighted_score": 50,
+      "sample_positive": [],
+      "sample_negative": []
+    },
+    "이재준": {
+      "positive": 49,
+      "neutral": 45,
+      "negative": 6,
+      "score": 43,
+      "article_count": 47,
+      "weighted_score": 43,
+      "sample_positive": [],
+      "sample_negative": []
+    },
+    "민경선": {
+      "positive": 61,
+      "neutral": 25,
+      "negative": 14,
+      "score": 47,
+      "article_count": 60,
+      "weighted_score": 47,
+      "sample_positive": [],
+      "sample_negative": []
+    },
+    "장제환": {
+      "positive": 50,
+      "neutral": 50,
+      "negative": 0,
+      "score": 50,
+      "article_count": 22,
+      "weighted_score": 50,
+      "sample_positive": [],
+      "sample_negative": []
+    },
+    "이영아": {
+      "positive": 46,
+      "neutral": 50,
+      "negative": 4,
+      "score": 42,
+      "article_count": 6,
+      "weighted_score": 42,
+      "sample_positive": [],
+      "sample_negative": []
+    },
+    "최승원": {
+      "positive": 8,
+      "neutral": 92,
+      "negative": 0,
+      "score": 8,
+      "article_count": 12,
+      "weighted_score": 8,
+      "sample_positive": [],
+      "sample_negative": []
     }
   },
   "issue_interest": {
@@ -130,12 +214,12 @@
   "media_exposure": {},
   "social_radar": {
     "이경혜": [
-      79,
+      80,
       70,
       26,
       42,
       0,
-      95,
+      85,
       45
     ],
     "경쟁후보_평균": [
@@ -153,7 +237,7 @@
       80,
       20,
       35,
-      52,
+      50,
       45,
       75,
       70,
@@ -705,8 +789,8 @@
     ]
   },
   "collection_status": {
-    "news_last_success": "2026-03-09T20:18:20.630908",
-    "social_last_success": "2026-03-09T19:35:12.689617",
+    "news_last_success": "2026-03-10T11:37:06.094518",
+    "social_last_success": "2026-03-10T11:38:04.061174",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -716,13 +800,15 @@
       "tiktok": "scrape",
       "twitter": "scrape",
       "blog": "rss"
-    }
+    },
+    "news_last_run": "2026-03-10T11:37:58.542880",
+    "news_status": "no_articles"
   },
   "social_media": {
     "platforms": {
       "youtube": {
         "status": "활성",
-        "subscribers": 96,
+        "subscribers": 101,
         "videos": 26,
         "last_upload": "2026-03-09",
         "recent_videos": [
@@ -730,42 +816,42 @@
             "title": "고양특례시장 예비후보 이경혜의 고양 금륜사 방문 현장 #shorts #이경혜 #고양시장 #예비후보 #금륜사 #고양금륜사",
             "date": "2026-03-09",
             "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
-            "views": 99
+            "views": 137
           },
           {
             "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
-            "views": 990
+            "views": 998
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 민주평화통일자문회의 1차 정기회의 현장",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
-            "views": 1083
+            "views": 1095
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 경기1자동차매매사업조합 지부장 이·취임식 현장",
             "date": "2026-03-07",
             "url": "https://www.youtube.com/watch?v=dwfpdZB-28o",
-            "views": 965
+            "views": 983
           },
           {
             "title": "레알 급작 이경혜 삼행시",
             "date": "2026-03-07",
             "url": "https://www.youtube.com/watch?v=7BszmGc12ZI",
-            "views": 2010
+            "views": 2017
           }
         ],
-        "score": 79,
-        "total_views": 21301,
+        "score": 80,
+        "total_views": 21406,
         "source": "api"
       },
       "facebook": {
         "status": "활성",
-        "followers": 6115,
-        "likes": 6115,
-        "talking_about": 642,
+        "followers": 6120,
+        "likes": 6120,
+        "talking_about": 658,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -780,7 +866,7 @@
       },
       "tiktok": {
         "status": "활성",
-        "followers": 3,
+        "followers": 4,
         "following": 3,
         "likes": 22,
         "videos": 11,
@@ -861,7 +947,7 @@
             "summary": ""
           }
         ],
-        "score": 95,
+        "score": 85,
         "source": "rss"
       }
     },
@@ -872,7 +958,7 @@
         "date": "2026-03-09",
         "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
         "metrics": {
-          "views": 99
+          "views": 137
         }
       },
       {
@@ -881,7 +967,7 @@
         "date": "2026-03-08",
         "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
         "metrics": {
-          "views": 990
+          "views": 998
         }
       },
       {
@@ -890,7 +976,7 @@
         "date": "2026-03-08",
         "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
         "metrics": {
-          "views": 1083
+          "views": 1095
         }
       },
       {
@@ -920,6 +1006,336 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-09T19:35:12.688598"
-  }
+    "collected_at": "2026-03-10T11:38:04.060317"
+  },
+  "sentiment_trend": {
+    "2026-03-03": {
+      "positive": 50,
+      "negative": 0,
+      "count": 12
+    },
+    "2026-03-04": {
+      "positive": 36,
+      "negative": 12,
+      "count": 37
+    },
+    "2026-03-05": {
+      "positive": 41,
+      "negative": 17,
+      "count": 58
+    },
+    "2026-03-06": {
+      "positive": 59,
+      "negative": 7,
+      "count": 99
+    },
+    "2026-03-07": {
+      "positive": 44,
+      "negative": 0,
+      "count": 25
+    },
+    "2026-03-08": {
+      "positive": 58,
+      "negative": 10,
+      "count": 47
+    },
+    "2026-03-09": {
+      "positive": 70,
+      "negative": 11,
+      "count": 121
+    },
+    "2026-03-10": {
+      "positive": 62,
+      "negative": 11,
+      "count": 41
+    },
+    "2026-02-08": {
+      "positive": 86,
+      "negative": 0,
+      "count": 7
+    },
+    "2026-02-09": {
+      "positive": 71,
+      "negative": 0,
+      "count": 7
+    },
+    "2026-02-10": {
+      "positive": 65,
+      "negative": 10,
+      "count": 4
+    },
+    "2026-02-11": {
+      "positive": 11,
+      "negative": 0,
+      "count": 9
+    },
+    "2026-02-12": {
+      "positive": 29,
+      "negative": 6,
+      "count": 17
+    },
+    "2026-02-13": {
+      "positive": 13,
+      "negative": 10,
+      "count": 13
+    },
+    "2026-02-14": {
+      "positive": 60,
+      "negative": 0,
+      "count": 5
+    },
+    "2026-02-15": {
+      "positive": 69,
+      "negative": 6,
+      "count": 4
+    },
+    "2026-02-16": {
+      "positive": 38,
+      "negative": 0,
+      "count": 8
+    },
+    "2026-02-17": {
+      "positive": 50,
+      "negative": 0,
+      "count": 2
+    },
+    "2026-02-18": {
+      "positive": 32,
+      "negative": 28,
+      "count": 5
+    },
+    "2026-02-19": {
+      "positive": 29,
+      "negative": 17,
+      "count": 28
+    },
+    "2026-02-20": {
+      "positive": 50,
+      "negative": 8,
+      "count": 19
+    },
+    "2026-02-21": {
+      "positive": 43,
+      "negative": 0,
+      "count": 7
+    },
+    "2026-02-22": {
+      "positive": 35,
+      "negative": 27,
+      "count": 8
+    },
+    "2026-02-23": {
+      "positive": 47,
+      "negative": 32,
+      "count": 19
+    },
+    "2026-02-24": {
+      "positive": 56,
+      "negative": 18,
+      "count": 27
+    },
+    "2026-02-25": {
+      "positive": 75,
+      "negative": 14,
+      "count": 9
+    },
+    "2026-02-26": {
+      "positive": 69,
+      "negative": 18,
+      "count": 23
+    },
+    "2026-02-27": {
+      "positive": 54,
+      "negative": 8,
+      "count": 13
+    },
+    "2026-02-28": {
+      "positive": 33,
+      "negative": 0,
+      "count": 6
+    },
+    "2026-03-01": {
+      "positive": 47,
+      "negative": 28,
+      "count": 8
+    }
+  },
+  "article_sentiments": [
+    {
+      "title": "최승원 “사람 중심 ‘고양’ 만들겠다”… 국회의장·중앙정치권 총집...",
+      "date": "2026-03-01",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": [
+        "최승원"
+      ]
+    },
+    {
+      "title": "이경혜 경기도의원, 고양시장 출마 출판기념회 성료",
+      "date": "2026-03-01",
+      "sentiment": "긍정",
+      "score": 2,
+      "candidates": [
+        "이경혜"
+      ]
+    },
+    {
+      "title": "민경선 예비후보·항단연 \"소녀상 모욕은 역사 부정 범죄\"",
+      "date": "2026-03-01",
+      "sentiment": "부정",
+      "score": -2,
+      "candidates": [
+        "민경선"
+      ]
+    },
+    {
+      "title": "명재성 고양특례시장 예비후보, 4일 김대중 대통령 일산 사저서 출마 선...",
+      "date": "2026-03-01",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": [
+        "명재성"
+      ]
+    },
+    {
+      "title": "\"함께 그려갈 고양의 미래\"... 이경혜 경기도의원, 북콘서트 열어",
+      "date": "2026-03-01",
+      "sentiment": "긍정",
+      "score": 1,
+      "candidates": [
+        "이경혜"
+      ]
+    },
+    {
+      "title": "민경선 예비후보 \"소녀상 모욕은 역사 부정 범죄… 김병헌 즉각 구속하...",
+      "date": "2026-03-01",
+      "sentiment": "부정",
+      "score": -7,
+      "candidates": [
+        "민경선"
+      ]
+    },
+    {
+      "title": "전 국토부 최승원 정핵보좌관, 출판기념회 개최...3천 인파 몰려 고양 정...",
+      "date": "2026-03-01",
+      "sentiment": "긍정",
+      "score": 4,
+      "candidates": [
+        "최승원"
+      ]
+    },
+    {
+      "title": "최승원 전 국토부 정책보좌관, 킨텍스서 출판기념회 개최",
+      "date": "2026-03-01",
+      "sentiment": "긍정",
+      "score": 1,
+      "candidates": [
+        "명재성",
+        "이재준",
+        "민경선"
+      ]
+    },
+    {
+      "title": "'30년 숙원' 고양은평선 화수역 신설 발대식... 주민 400명 결집",
+      "date": "2026-02-28",
+      "sentiment": "긍정",
+      "score": 1,
+      "candidates": [
+        "이재준"
+      ]
+    },
+    {
+      "title": "고양시장 전초전...이동환·최승원, 같은 날 출판기념회 ‘세 과시’",
+      "date": "2026-02-28",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": [
+        "이동환",
+        "최승원"
+      ]
+    },
+    {
+      "title": "[D리그] ‘조재우-신지원-이근준’ 사이좋게 더블더블...제공권 앞세운...",
+      "date": "2026-02-28",
+      "sentiment": "긍정",
+      "score": 1,
+      "candidates": []
+    },
+    {
+      "title": "[D리그] '부상 복귀' 변준형 \"다음 경기 엔트리에는 들어가지 않을까 생...",
+      "date": "2026-02-28",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": []
+    },
+    {
+      "title": "[D리그] 변준형 복귀 신호탄! 2위 싸움에 더해질 마지막 한 조각",
+      "date": "2026-02-28",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": []
+    },
+    {
+      "title": "민경선 고양시장 예비후보, 경기도의원 때 조례제정한 '교복 2.0' 정부 전...",
+      "date": "2026-02-28",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": [
+        "민경선"
+      ]
+    },
+    {
+      "title": "명재성 예비후보, K-컬처밸리 정상화 위한 민·관 간담회 개최",
+      "date": "2026-02-27",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": [
+        "명재성"
+      ]
+    },
+    {
+      "title": "고양시 예비후보 22명 등록… 민주당 18명 '초강세'",
+      "date": "2026-02-27",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": [
+        "명재성",
+        "민경선"
+      ]
+    },
+    {
+      "title": "“베드타운 고양, 이대로는 미래 없다”... 도시공학 박사가 던진 ‘산...",
+      "date": "2026-02-27",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": [
+        "장제환"
+      ]
+    },
+    {
+      "title": "[D리그] ‘박정현 골밑 지배+김선우 3점 폭발’ LG, 한국가스공사에 역...",
+      "date": "2026-02-27",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": []
+    },
+    {
+      "title": "명재성, 고양 K-컬처밸리 준공 지연 해법 모색 민'관 간담회 개최",
+      "date": "2026-02-27",
+      "sentiment": "부정",
+      "score": -1,
+      "candidates": [
+        "명재성"
+      ]
+    },
+    {
+      "title": "정부의 정장형 교복 생활복 전환 대책에, 지역 정치권도 화답",
+      "date": "2026-02-27",
+      "sentiment": "긍정",
+      "score": 1,
+      "candidates": [
+        "민경선"
+      ]
+    }
+  ]
 }
