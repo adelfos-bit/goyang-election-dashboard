@@ -1604,13 +1604,14 @@
             if (d.social_radar) {
                 const c5 = chartInstances['socialRadar'];
                 if (c5) {
-                    var lkhData = d.social_radar['이경혜'] || [5,5,5,5,5,10,45];
-                    var compData = d.social_radar['경쟁후보_평균'] || [35,40,30,15,20,45,50];
-                    // 6개 배열 → 7개로 보정 (기존 데이터 호환)
-                    if (lkhData.length === 6) { lkhData = lkhData.slice(0,4).concat([0], [lkhData[4]], [lkhData[5]]); }
-                    if (compData.length === 6) { compData = compData.slice(0,4).concat([20], [compData[4]], [compData[5]]); }
-                    c5.data.datasets[0].data = lkhData;
-                    c5.data.datasets[1].data = compData;
+                    var radarNames = ['이경혜','장제환','명재성','이동환','민경선','정병춘','이영아','이재준'];
+                    radarNames.forEach(function(name, i) {
+                        if (d.social_radar[name] && c5.data.datasets[i]) {
+                            var arr = d.social_radar[name];
+                            if (arr.length === 6) { arr = arr.slice(0,4).concat([0], [arr[4]], [arr[5]]); }
+                            c5.data.datasets[i].data = arr;
+                        }
+                    });
                     c5.update();
                 }
             }
@@ -1959,21 +1960,42 @@
             container.innerHTML = html;
         }
 
-        // Chart 5: Social Media Radar
+        // Chart 5: Social Media Radar (개별 후보)
         (function() {
+            var radarColors = [
+                { bg: 'rgba(59,130,246,0.2)', border: '#3b82f6' },   // 이경혜 (파랑)
+                { bg: 'rgba(239,68,68,0.1)', border: '#ef4444' },     // 장제환 (빨강)
+                { bg: 'rgba(34,197,94,0.1)', border: '#22c55e' },     // 명재성 (초록)
+                { bg: 'rgba(249,115,22,0.1)', border: '#f97316' },    // 이동환 (주황)
+                { bg: 'rgba(168,85,247,0.1)', border: '#a855f7' },    // 민경선 (보라)
+                { bg: 'rgba(236,72,153,0.1)', border: '#ec4899' },    // 정병춘 (핑크)
+                { bg: 'rgba(6,182,212,0.1)', border: '#06b6d4' },     // 이영아 (시안)
+                { bg: 'rgba(234,179,8,0.1)', border: '#eab308' }      // 이재준 (노랑)
+            ];
+            var radarCandidates = ['이경혜','장제환','명재성','이동환','민경선','정병춘','이영아','이재준'];
+            var defaultData = {
+                '이경혜': [10,55,20,5,2,45,40], '장제환': [5,25,5,0,0,5,65],
+                '명재성': [55,50,25,0,0,15,70], '이동환': [45,55,10,0,0,40,85],
+                '민경선': [0,0,0,0,0,0,0], '정병춘': [0,0,0,0,0,0,0],
+                '이영아': [0,0,0,0,0,0,0], '이재준': [0,0,0,0,0,0,0]
+            };
+            var datasets = radarCandidates.map(function(name, i) {
+                var d = defaultData[name];
+                var isLKH = name === '이경혜';
+                return {
+                    label: name, data: d,
+                    backgroundColor: radarColors[i].bg, borderColor: radarColors[i].border,
+                    borderWidth: isLKH ? 2.5 : 1.5, pointRadius: isLKH ? 4 : 2,
+                    borderDash: isLKH ? [] : [4,4]
+                };
+            });
             chartInstances['socialRadar'] = new Chart(document.getElementById('socialRadar'), {
                 type: 'radar',
-                data: {
-                    labels: ['YouTube', 'Facebook', 'Instagram', 'TikTok', 'X (Twitter)', '네이버 블로그', '언론 노출'],
-                    datasets: [
-                        { label: '이경혜', data: [79, 70, 26, 40, 5, 100, 45], backgroundColor: 'rgba(59, 130, 246, 0.2)', borderColor: BLUE, borderWidth: 2, pointRadius: 4 },
-                        { label: '경쟁후보 평균 (추정)', data: [35, 40, 30, 15, 20, 45, 50], backgroundColor: 'rgba(156, 163, 175, 0.15)', borderColor: GRAY, borderWidth: 2, pointRadius: 4, borderDash: [5,5] }
-                    ]
-                },
+                data: { labels: ['YouTube', 'Facebook', 'Instagram', 'TikTok', 'X (Twitter)', '네이버 블로그', '언론 노출'], datasets: datasets },
                 options: {
                     responsive: true, maintainAspectRatio: false,
                     scales: { r: { beginAtZero: true, max: 100, ticks: { display: false }, pointLabels: { font: { size: 11 } } } },
-                    plugins: { legend: { position: 'bottom', labels: { font: { size: 12 } } } }
+                    plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12 } } }
                 }
             });
         })();
