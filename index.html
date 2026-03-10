@@ -2217,26 +2217,22 @@
                 '</div>';
             }
 
-            // Articles table
+            // Articles with candidate tabs
             const articles = report.articles || [];
+            const candidateNames = ['전체', '이경혜', '이동환', '명재성', '이재준', '민경선', '장제환', '정병춘', '최승원', '이영아', '기타'];
+            const candidateTabs = candidateNames.map((name, i) => {
+                const count = name === '전체' ? articles.length :
+                    name === '기타' ? articles.filter(a => !(a.candidates_mentioned || []).length).length :
+                    articles.filter(a => (a.candidates_mentioned || []).includes(name)).length;
+                if (count === 0 && name !== '전체') return '';
+                return '<button class="report-cand-tab' + (i === 0 ? ' active' : '') + '" data-cand="' + name + '" style="padding:6px 14px;border:1px solid var(--gray-300);border-radius:20px;background:' + (i === 0 ? 'var(--blue)' : 'var(--gray-100)') + ';color:' + (i === 0 ? '#fff' : 'var(--dark)') + ';cursor:pointer;font-size:13px;white-space:nowrap">' + name + ' <span style="opacity:0.7">(' + count + ')</span></button>';
+            }).filter(Boolean).join('');
             const articlesHtml = '<div class="card">' +
                 '<div class="card-title"><span class="icon">📰</span> 수집 기사 목록 (' + articles.length + '건)</div>' +
-                '<div style="overflow-x:auto">' +
-                '<table class="report-table">' +
-                    '<thead><tr><th>날짜</th><th>제목</th><th>관련 후보</th></tr></thead>' +
-                    '<tbody>' +
-                    articles.slice(0, 50).map(a =>
-                        '<tr>' +
-                            '<td style="white-space:nowrap">' + (a.pubDate || '').slice(0, 10) + '</td>' +
-                            '<td><a href="' + a.link + '" target="_blank" rel="noopener">' + stripHtmlText(a.title) + '</a></td>' +
-                            '<td>' + (a.candidates_mentioned || []).map(c => '<span class="tag tag-blue" style="margin:1px">' + c + '</span>').join('') + '</td>' +
-                        '</tr>'
-                    ).join('') +
-                    '</tbody>' +
-                '</table>' +
-                '</div>' +
-                (articles.length > 50 ? '<div style="text-align:center;padding:12px;font-size:var(--fs-sm);color:var(--gray-400)">최근 50건만 표시됩니다</div>' : '') +
+                '<div id="reportCandTabs" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px">' + candidateTabs + '</div>' +
+                '<div id="reportArticlesBody" style="overflow-x:auto"></div>' +
             '</div>';
+            window._reportArticles = articles;
 
             el.innerHTML =
                 '<div class="card">' +
@@ -2276,6 +2272,54 @@
                     }
                 });
             }
+
+            // Render initial articles (전체)
+            renderReportArticles('전체');
+
+            // Candidate tab click events
+            document.getElementById('reportCandTabs').addEventListener('click', function(e) {
+                const btn = e.target.closest('.report-cand-tab');
+                if (!btn) return;
+                document.querySelectorAll('.report-cand-tab').forEach(b => {
+                    b.style.background = 'var(--gray-100)';
+                    b.style.color = 'var(--dark)';
+                    b.classList.remove('active');
+                });
+                btn.style.background = 'var(--blue)';
+                btn.style.color = '#fff';
+                btn.classList.add('active');
+                renderReportArticles(btn.dataset.cand);
+            });
+        }
+
+        function renderReportArticles(candFilter) {
+            const body = document.getElementById('reportArticlesBody');
+            if (!body || !window._reportArticles) return;
+            const articles = window._reportArticles;
+            let filtered;
+            if (candFilter === '전체') {
+                filtered = articles;
+            } else if (candFilter === '기타') {
+                filtered = articles.filter(a => !(a.candidates_mentioned || []).length);
+            } else {
+                filtered = articles.filter(a => (a.candidates_mentioned || []).includes(candFilter));
+            }
+            body.innerHTML =
+                '<table class="report-table">' +
+                    '<thead><tr><th>날짜</th><th>제목</th><th>관련 후보</th></tr></thead>' +
+                    '<tbody>' +
+                    filtered.map(a =>
+                        '<tr>' +
+                            '<td style="white-space:nowrap">' + (a.pubDate || '').slice(0, 10) + '</td>' +
+                            '<td><a href="' + a.link + '" target="_blank" rel="noopener">' + stripHtmlText(a.title) + '</a></td>' +
+                            '<td>' + (a.candidates_mentioned || []).map(c => '<span class="tag tag-blue" style="margin:1px">' + c + '</span>').join('') + '</td>' +
+                        '</tr>'
+                    ).join('') +
+                    '</tbody>' +
+                '</table>' +
+                '<div style="text-align:center;padding:8px;font-size:var(--fs-sm);color:var(--gray-400)">' +
+                    (candFilter === '전체' ? '' : candFilter + ' 관련 ') + '총 ' + filtered.length + '건' +
+                '</div>';
         }
 
         // Back button
