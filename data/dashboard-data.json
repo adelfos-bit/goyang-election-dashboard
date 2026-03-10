@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-09",
+  "last_updated": "2026-03-10",
   "election_date": "2026-06-03",
   "header": {
-    "update_date": "2026.03.09",
-    "d_day": 86,
+    "update_date": "2026.03.10",
+    "d_day": 85,
     "voters": "~89만 명"
   },
   "party_support": {
@@ -790,7 +790,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-10T11:37:06.094518",
-    "social_last_success": "2026-03-10T11:38:04.061174",
+    "social_last_success": "2026-03-10T04:08:31.955144",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -801,7 +801,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-10T11:37:58.542880",
+    "news_last_run": "2026-03-10T04:08:23.363541",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -816,31 +816,31 @@
             "title": "고양특례시장 예비후보 이경혜의 고양 금륜사 방문 현장 #shorts #이경혜 #고양시장 #예비후보 #금륜사 #고양금륜사",
             "date": "2026-03-09",
             "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
-            "views": 137
+            "views": 138
           },
           {
             "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
-            "views": 998
+            "views": 1003
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 민주평화통일자문회의 1차 정기회의 현장",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
-            "views": 1095
+            "views": 1105
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 경기1자동차매매사업조합 지부장 이·취임식 현장",
             "date": "2026-03-07",
             "url": "https://www.youtube.com/watch?v=dwfpdZB-28o",
-            "views": 983
+            "views": 986
           },
           {
             "title": "레알 급작 이경혜 삼행시",
             "date": "2026-03-07",
             "url": "https://www.youtube.com/watch?v=7BszmGc12ZI",
-            "views": 2017
+            "views": 2021
           }
         ],
         "score": 80,
@@ -849,9 +849,9 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6120,
-        "likes": 6120,
-        "talking_about": 658,
+        "followers": 6121,
+        "likes": 6121,
+        "talking_about": 648,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -958,7 +958,7 @@
         "date": "2026-03-09",
         "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
         "metrics": {
-          "views": 137
+          "views": 138
         }
       },
       {
@@ -967,7 +967,7 @@
         "date": "2026-03-08",
         "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
         "metrics": {
-          "views": 998
+          "views": 1003
         }
       },
       {
@@ -976,7 +976,7 @@
         "date": "2026-03-08",
         "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
         "metrics": {
-          "views": 1095
+          "views": 1105
         }
       },
       {
@@ -1006,7 +1006,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-10T11:38:04.060317"
+    "collected_at": "2026-03-10T04:08:31.954658"
   },
   "sentiment_trend": {
     "2026-03-03": {
