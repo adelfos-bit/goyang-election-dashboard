@@ -14,6 +14,16 @@ from urllib.parse import quote
 
 import requests
 
+# .env 파일 자동 로드 (독립 실행 시에도 환경변수 사용 가능)
+_env_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '.env')
+if os.path.exists(_env_path):
+    with open(_env_path, encoding="utf-8") as _f:
+        for _line in _f:
+            _line = _line.strip()
+            if _line and '=' in _line and not _line.startswith('#'):
+                _key, _val = _line.split('=', 1)
+                os.environ[_key.strip()] = _val.strip()
+
 NAVER_API_URL = "https://openapi.naver.com/v1/search/news.json"
 
 PRIMARY_KEYWORDS = [
@@ -462,6 +472,7 @@ def update_dashboard_data(analysis, date_str):
             "명재성": [65, 60, 55, 30, 50, 50, 45, 85],
             "이재준": [70, 65, 60, 40, 60, 55, 55, 90]
         }
+    lkh_exposure = dashboard.get("media_exposure", {}).get("이경혜", 0)
     dashboard["competitiveness_radar"]["이경혜"][4] = lkh_exposure
 
     # collection_status 업데이트

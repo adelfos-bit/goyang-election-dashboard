@@ -18,7 +18,7 @@ if os.path.exists(env_path):
             line = line.strip()
             if line and '=' in line and not line.startswith('#'):
                 key, val = line.split('=', 1)
-                os.environ.setdefault(key.strip(), val.strip())
+                os.environ[key.strip()] = val.strip()
 
 PORT = 3000
 SCRIPTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'scripts')
@@ -200,7 +200,7 @@ social_thread.start()
 report_thread.start()
 
 handler = http.server.SimpleHTTPRequestHandler
-with socketserver.TCPServer(("", PORT), handler) as httpd:
+with socketserver.TCPServer(("127.0.0.1", PORT), handler) as httpd:
     print(f"Serving at http://127.0.0.1:{PORT}")
     print(f"[자동수집] 소셜미디어: 3시간 간격 | 뉴스: 6시간 간격 (API 키 필요)")
     print(f"[자동생성] 주간 보고서: 매주 월요일 | 월간 보고서: 매월 1일")

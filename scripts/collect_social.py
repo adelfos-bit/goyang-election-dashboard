@@ -25,7 +25,7 @@ if os.path.exists(_env_path):
             _line = _line.strip()
             if _line and "=" in _line and not _line.startswith("#"):
                 _k, _v = _line.split("=", 1)
-                os.environ.setdefault(_k.strip(), _v.strip())
+                os.environ[_k.strip()] = _v.strip()
 
 # 소셜미디어 계정 정보
 ACCOUNTS = {
@@ -1165,6 +1165,8 @@ def update_dashboard_data(social_data, date_str):
         dashboard["competitiveness_radar"] = {
             "이경혜": [80, 20, 35, 10, 45, 75, 70, 40]
         }
+    # 소셜 6개 채널 점수 평균 (언론노출 제외)
+    scores = lkh_radar[:6]  # YouTube, FB, IG, TikTok, X, 블로그
     avg_social = sum(scores) // max(len(scores), 1)
     dashboard["competitiveness_radar"]["이경혜"][3] = avg_social
 

@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-09",
+  "last_updated": "2026-03-11",
   "election_date": "2026-06-03",
   "header": {
-    "update_date": "2026.03.09",
-    "d_day": 86,
+    "update_date": "2026.03.11",
+    "d_day": 84,
     "voters": "~89만 명"
   },
   "party_support": {
@@ -26,66 +26,60 @@
   },
   "sentiment": {
     "이경혜": {
-      "positive": 28,
-      "neutral": 70,
-      "negative": 2,
-      "score": 26
+      "positive": 50,
+      "neutral": 50,
+      "negative": 0,
+      "score": 50
     },
     "명재성": {
-      "positive": 29,
-      "neutral": 47,
-      "negative": 24,
-      "score": 5
+      "positive": 0,
+      "neutral": 0,
+      "negative": 100,
+      "score": -100
     },
     "정병춘": {
       "positive": 50,
-      "neutral": 50,
-      "negative": 0,
-      "score": 50
+      "neutral": 0,
+      "negative": 50,
+      "score": 0
     },
     "이재준": {
-      "positive": 49,
-      "neutral": 45,
-      "negative": 6,
-      "score": 43
+      "positive": 12,
+      "neutral": 76,
+      "negative": 12,
+      "score": 0
     },
     "이동환": {
-      "positive": 41,
-      "neutral": 53,
-      "negative": 6,
-      "score": 35
+      "positive": 70,
+      "neutral": 27,
+      "negative": 3,
+      "score": 67
     },
     "민경선": {
-      "positive": 61,
-      "neutral": 25,
-      "negative": 14,
-      "score": 47
-    },
-    "장제환": {
       "positive": 50,
-      "neutral": 50,
-      "negative": 0,
-      "score": 50
+      "neutral": 0,
+      "negative": 50,
+      "score": 0
     },
     "이영아": {
-      "positive": 46,
-      "neutral": 50,
-      "negative": 4,
-      "score": 42
+      "positive": 0,
+      "neutral": 0,
+      "negative": 100,
+      "score": -100
     },
     "최승원": {
-      "positive": 8,
-      "neutral": 92,
+      "positive": 100,
+      "neutral": 0,
       "negative": 0,
-      "score": 8
+      "score": 100
     }
   },
   "sentiment_details": {
     "이경혜": {
-      "positive": 28,
-      "neutral": 70,
-      "negative": 2,
-      "score": 26,
+      "positive": 50,
+      "neutral": 50,
+      "negative": 0,
+      "score": 50,
       "sample_positive": [
         "고양패스 공약 호평",
         "취약계층 예산 확보 성과",
@@ -94,14 +88,14 @@
       "sample_negative": [
         "인지도 부족 지적"
       ],
-      "article_count": 30,
-      "weighted_score": 26
+      "article_count": 4,
+      "weighted_score": 50
     },
     "이동환": {
-      "positive": 41,
-      "neutral": 53,
-      "negative": 6,
-      "score": 35,
+      "positive": 70,
+      "neutral": 27,
+      "negative": 3,
+      "score": 67,
       "sample_positive": [
         "공약이행 SA등급"
       ],
@@ -110,14 +104,14 @@
         "신청사 갈등",
         "경기패스 탈퇴 비판"
       ],
-      "article_count": 17,
-      "weighted_score": 35
+      "article_count": 60,
+      "weighted_score": 67
     },
     "명재성": {
-      "positive": 29,
-      "neutral": 47,
-      "negative": 24,
-      "score": 5,
+      "positive": 0,
+      "neutral": 0,
+      "negative": 100,
+      "score": -100,
       "sample_positive": [
         "행정경험 39년 호평",
         "현장경험 강점"
@@ -125,36 +119,36 @@
       "sample_negative": [
         "혁신성 부족 지적"
       ],
-      "article_count": 47,
-      "weighted_score": 5
+      "article_count": 2,
+      "weighted_score": -100
     },
     "정병춘": {
       "positive": 50,
-      "neutral": 50,
-      "negative": 0,
-      "score": 50,
-      "article_count": 18,
-      "weighted_score": 50,
+      "neutral": 0,
+      "negative": 50,
+      "score": 0,
+      "article_count": 2,
+      "weighted_score": 0,
       "sample_positive": [],
       "sample_negative": []
     },
     "이재준": {
-      "positive": 49,
-      "neutral": 45,
-      "negative": 6,
-      "score": 43,
-      "article_count": 47,
-      "weighted_score": 43,
+      "positive": 12,
+      "neutral": 76,
+      "negative": 12,
+      "score": 0,
+      "article_count": 4,
+      "weighted_score": 0,
       "sample_positive": [],
       "sample_negative": []
     },
     "민경선": {
-      "positive": 61,
-      "neutral": 25,
-      "negative": 14,
-      "score": 47,
-      "article_count": 60,
-      "weighted_score": 47,
+      "positive": 50,
+      "neutral": 0,
+      "negative": 50,
+      "score": 0,
+      "article_count": 2,
+      "weighted_score": 0,
       "sample_positive": [],
       "sample_negative": []
     },
@@ -169,22 +163,22 @@
       "sample_negative": []
     },
     "이영아": {
-      "positive": 46,
-      "neutral": 50,
-      "negative": 4,
-      "score": 42,
-      "article_count": 6,
-      "weighted_score": 42,
+      "positive": 0,
+      "neutral": 0,
+      "negative": 100,
+      "score": -100,
+      "article_count": 1,
+      "weighted_score": -100,
       "sample_positive": [],
       "sample_negative": []
     },
     "최승원": {
-      "positive": 8,
-      "neutral": 92,
+      "positive": 100,
+      "neutral": 0,
       "negative": 0,
-      "score": 8,
-      "article_count": 12,
-      "weighted_score": 8,
+      "score": 100,
+      "article_count": 3,
+      "weighted_score": 100,
       "sample_positive": [],
       "sample_negative": []
     }
@@ -201,17 +195,26 @@
       "일자리/경제"
     ],
     "data": [
+      14,
+      4,
+      18,
+      41,
+      2,
+      100,
       0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
+      25
     ]
   },
-  "media_exposure": {},
+  "media_exposure": {
+    "이경혜": 7,
+    "명재성": 3,
+    "정병춘": 3,
+    "이재준": 7,
+    "이동환": 100,
+    "민경선": 3,
+    "이영아": 2,
+    "최승원": 5
+  },
   "social_radar": {
     "이경혜": [
       10,
@@ -327,8 +330,8 @@
       80,
       20,
       35,
-      50,
-      45,
+      22,
+      7,
       75,
       70,
       40
@@ -879,9 +882,9 @@
     ]
   },
   "collection_status": {
-    "news_last_success": "2026-03-10T11:37:06.094518",
-    "social_last_success": "2026-03-10T14:40:46.659664",
-    "news_articles_collected": 0,
+    "news_last_success": "2026-03-11T11:18:13.858055",
+    "social_last_success": "2026-03-11T11:15:33.335606",
+    "news_articles_collected": 78,
     "errors": [],
     "social_sources": {
       "youtube": "api",
@@ -891,67 +894,67 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-10T14:40:39.215049",
-    "news_status": "no_articles"
+    "news_last_run": "2026-03-11T11:18:13.858044",
+    "news_status": "ok"
   },
   "social_media": {
     "platforms": {
       "youtube": {
         "status": "활성",
-        "subscribers": 102,
-        "videos": 27,
+        "subscribers": 109,
+        "videos": 28,
         "last_upload": "2026-03-10",
         "recent_videos": [
           {
-            "title": "고양시 교통비 50% 절감! &#39;고양이패스&#39;와 BRT 도입, 가능합니다!",
+            "title": "[이경혜 고양시장 예비후보정책] 고양시 K-의료벨트 구축! 의료벤처타운 &amp; 공공의료대학 유치",
+            "date": "2026-03-10",
+            "url": "https://www.youtube.com/watch?v=arhkZbXD59s",
+            "views": 312
+          },
+          {
+            "title": "[이경혜 고양시장 예비후보정책] 고양시 교통비 50% 절감! &#39;고양이패스&#39;와 BRT 도입, 가능합니다!",
             "date": "2026-03-10",
             "url": "https://www.youtube.com/watch?v=7EE6FKivWcs",
-            "views": 105
+            "views": 1530
           },
           {
             "title": "고양특례시장 예비후보 이경혜의 고양 금륜사 방문 현장 #shorts #이경혜 #고양시장 #예비후보 #금륜사 #고양금륜사",
             "date": "2026-03-09",
             "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
-            "views": 141
+            "views": 172
           },
           {
             "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
-            "views": 1005
+            "views": 1036
           },
           {
             "title": "[이경혜가 간다🏃🏻‍♀️] 민주평화통일자문회의 1차 정기회의 현장",
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
-            "views": 1103
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 경기1자동차매매사업조합 지부장 이·취임식 현장",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=dwfpdZB-28o",
-            "views": 990
+            "views": 1130
           }
         ],
         "score": 80,
-        "total_views": 21406,
+        "total_views": 23905,
         "source": "api"
       },
       "facebook": {
         "status": "활성",
-        "followers": 6121,
-        "likes": 6121,
-        "talking_about": 658,
+        "followers": 6123,
+        "likes": 6123,
+        "talking_about": 737,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
       },
       "instagram": {
         "status": "활성",
-        "followers": 316,
-        "posts": 79,
+        "followers": 318,
+        "posts": 80,
         "following": 27,
-        "score": 26,
+        "score": 27,
         "source": "scrape"
       },
       "tiktok": {
@@ -974,81 +977,111 @@
       "blog": {
         "status": "활성",
         "posts": 50,
-        "last_post": "2026-03-07",
+        "last_post": "2026-03-11",
         "recent_posts": [
+          {
+            "title": "분야별·대상별·지역별 정책을 준비하고 있습니다",
+            "date": "2026-03-11",
+            "url": "https://blog.naver.com/lee1065/224211949030?fromRss=true&trackingCode=rss",
+            "summary": "기타 공약 — 앞서 발표한 10대 핵심 공약과 함께 시민의 삶을 더욱 세밀하게 바꾸는 추가 정책들도 준비하고 있습니다. 도시 정책은 몇 가지 큰 공약만으로 완성되지 않습니다. 시민"
+          },
+          {
+            "title": "10. 호수공원 2.0 — 일산호수공원을 다시 만들겠습니다",
+            "date": "2026-03-11",
+            "url": "https://blog.naver.com/lee1065/224211941908?fromRss=true&trackingCode=rss",
+            "summary": "[공약 ⑩] 호수공원 2.0 — 일산호수공원을 다시 만들겠습니다 일산호수공원은 고양의 상징이자 시민의 자부심입니다. 30년 전, 고양은 미래를 내다보며 도심 속 호수공원이라는 선택"
+          },
+          {
+            "title": "9. 통합돌봄 시스템 — 건강·일자리·돌봄이 함께 돌아가는 도시",
+            "date": "2026-03-11",
+            "url": "https://blog.naver.com/lee1065/224211937710?fromRss=true&trackingCode=rss",
+            "summary": "[공약 ⑨] 통합돌봄 시스템 — 건강·일자리·돌봄이 함께 돌아가는 도시 삶은 하나로 이어져 있습니다. 건강이 흔들리면 일상이 무너지고, 일자리가 불안하면 돌봄도 흔들립니다. 그래서"
+          },
+          {
+            "title": "8. 한강 평화 에너지 조망벨트 — 접경의 제약을 고양의 상징으로 바꾸겠습니다",
+            "date": "2026-03-11",
+            "url": "https://blog.naver.com/lee1065/224211934873?fromRss=true&trackingCode=rss",
+            "summary": "[공약 ⑧] 한강 평화 에너지 조망벨트 — 접경의 제약을 고양의 상징으로 바꾸겠습니다 한강변 철책을 논쟁의 대상이 아니라 시민의 자산으로 바꾸겠습니다. 접경도시라는 조건을 더 이상"
+          },
+          {
+            "title": "7. K-의료도시 고양 — 치료의 도시를 넘어 의료 혁신의 도시로",
+            "date": "2026-03-11",
+            "url": "https://blog.naver.com/lee1065/224211929119?fromRss=true&trackingCode=rss",
+            "summary": "[공약 ⑦] K-의료도시 고양 — 치료의 도시를 넘어 의료 혁신의 도시로 고양을 치료만 받으러 오는 도시가 아니라 의료 혁신이 만들어지는 도시로 바꾸겠습니다. 고양에는 이미 전국 "
+          },
+          {
+            "title": "6. K-스튜디오 고양 + 고양 아트센터 — 문화 자산을 산업으로 연결하겠습니다",
+            "date": "2026-03-11",
+            "url": "https://blog.naver.com/lee1065/224211925328?fromRss=true&trackingCode=rss",
+            "summary": "[공약 ⑥] K-스튜디오 고양 + 고양 아트센터 — 문화 자산을 산업으로 연결하겠습니다 고양에는 이미 많은 문화 자산이 있습니다. 하지만 아직 하나의 산업으로 연결되지는 못했습니다"
+          },
+          {
+            "title": "5. 산업벨트 재정렬 — 글로벌 전시·콘텐츠 허브",
+            "date": "2026-03-10",
+            "url": "https://blog.naver.com/lee1065/224211821277?fromRss=true&trackingCode=rss",
+            "summary": "[공약 ⑤] 전시하는 도시에서, 세계가 머무는 도시로 지금 고양은 중요한 기회의 문 앞에 서 있습니다. 킨텍스 제3전시장, K-컬처밸리, 일산테크노밸리, 방송영상밸리, K-스튜디오"
+          },
+          {
+            "title": "4.“연 2,500억 세수”… 과천 경마공원 이전, 답은 고양입니다",
+            "date": "2026-03-10",
+            "url": "https://blog.naver.com/lee1065/224211804913?fromRss=true&trackingCode=rss",
+            "summary": "[공약 ⑥] 과천 경마공원 이전, 고양이 가장 준비된 도시입니다 지금 정부는 과천 경마공원을 경기도 내로 이전하는 방안을 추진하고 있습니다. 이미 전국 10여 개 지자체가 유치 경"
+          },
+          {
+            "title": "1. 행정 정상화 + 행정구역 대개편                                             — 멈춘 시계를 돌리고, 구청을 가깝게",
+            "date": "2026-03-10",
+            "url": "https://blog.naver.com/lee1065/224211793342?fromRss=true&trackingCode=rss",
+            "summary": "[공약 ①] 멈춘 행정을 다시 움직이겠습니다 — 행정 정상화와 행정구역 개편 행정이 멀면 시민은 불편합니다. 갈등과 지연이 길어질수록 피해는 결국 시민에게 돌아갑니다. 저 이경혜는"
+          },
           {
             "title": "이경혜 고양특례시장 예비후보 3대 핵심공약",
             "date": "2026-03-07",
             "url": "https://blog.naver.com/lee1065/224208194262?fromRss=true&trackingCode=rss",
             "summary": "① 교통혁명 – 교통비 절반, 고양 이동혁명 고양 시민의 가장 큰 불편은 교통입니다. 서울로 출퇴근하는 시민들이 매달 10만~15만 원의 교통비를 부담하고 있습니다. 저는 **“고"
-          },
-          {
-            "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
-            "date": "2026-03-07",
-            "url": "https://blog.naver.com/lee1065/224208189438?fromRss=true&trackingCode=rss",
-            "summary": "1. 교통비 절반 도시 – “고양이 패스” GTX·지하철·버스를 하나로 묶는 월 5~6만원 정액 교통카드를 도입해 고양 시민의 교통비를 절반으로 줄이겠습니다. BRT 즉시 도입과 "
-          },
-          {
-            "title": "\"고양시민 교통비 절반으로\" — 고양패스",
-            "date": "2026-03-02",
-            "url": "https://blog.naver.com/lee1065/224201523376?fromRss=true&trackingCode=rss",
-            "summary": "2-1. \"고양시민 교통비 절반으로\" — 고양패스 왜 센세이션인가: GTX-A 요금이 비싸다는 불만이 엄청나고 있다. 서울 출퇴근 시민에게 교통비는 매달 체감하는 가장 큰 지출 중"
-          },
-          {
-            "title": "\"국가 철도 터미널 전략 — 고양을 출발지로\"",
-            "date": "2026-03-02",
-            "url": "https://blog.naver.com/lee1065/224201522649?fromRss=true&trackingCode=rss",
-            "summary": "존경하는 106만 고양특례시민 여러분, 저는 오늘, 고양시의 미래를 더 높은 곳에서 더 멀리 보자는 말씀을 드리고자 이 자리에 섰습니다. 고 김대중 대통령은 IMF의 국난 속에서도"
-          },
-          {
-            "title": "\"K-의료도시, 고양\"",
-            "date": "2026-03-02",
-            "url": "https://blog.naver.com/lee1065/224201506147?fromRss=true&trackingCode=rss",
-            "summary": "왜 센세이션인가: 106만 특례시에 상급종합병원 1곳(국립암센터), 종합병원 6곳(건보일산병원·백병원·동국대병원·차병원·명지병원, 더자인), 대학 바이오메디캠퍼스가 반경 10km "
-          },
-          {
-            "title": "고양시청사 원안 건립 + 덕양구 분구",
-            "date": "2026-03-02",
-            "url": "https://blog.naver.com/lee1065/224201470915?fromRss=true&trackingCode=rss",
-            "summary": "1. 행정 정상화 + 행정구역 대개편 — 멈춘 시계를 돌리고, 구청을 가깝게 행정이 멀면 시민은 불편합니다. 갈등과 지연은 끝내야 합니다. 시청사 위치 싸움만 4년. 시민의 세금으"
-          },
-          {
-            "title": "고양특례시장 출마 선언문 (전문)",
-            "date": "2026-03-02",
-            "url": "https://blog.naver.com/lee1065/224201459861?fromRss=true&trackingCode=rss",
-            "summary": "이 경 혜 경기도 도의원 (더불어민주당, 고양시 제4선거구) 존경하는 106만 고양특례시민 여러분, 저는 오늘, 고양시의 미래를 더 높은 곳에서 더 멀리 보자는 말씀을 드리고자 이"
-          },
-          {
-            "title": "교통약자 보호구역 내 제한속도의 탄력적 운영 필요성",
-            "date": "2026-02-27",
-            "url": "https://blog.naver.com/lee1065/224198277119?fromRss=true&trackingCode=rss",
-            "summary": ""
-          },
-          {
-            "title": "지속 가능한 경기도를 위한 기후행동 실천",
-            "date": "2026-02-27",
-            "url": "https://blog.naver.com/lee1065/224198272264?fromRss=true&trackingCode=rss",
-            "summary": ""
-          },
-          {
-            "title": "저출생 극복을 위한 난임부부 지원 확대 요구",
-            "date": "2026-02-27",
-            "url": "https://blog.naver.com/lee1065/224198265216?fromRss=true&trackingCode=rss",
-            "summary": ""
           }
         ],
-        "score": 85,
+        "score": 100,
         "source": "rss"
       }
     },
     "recent_posts": [
       {
+        "platform": "blog",
+        "title": "분야별·대상별·지역별 정책을 준비하고 있습니다",
+        "date": "2026-03-11",
+        "url": "https://blog.naver.com/lee1065/224211949030?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
+      {
+        "platform": "blog",
+        "title": "10. 호수공원 2.0 — 일산호수공원을 다시 만들겠습니다",
+        "date": "2026-03-11",
+        "url": "https://blog.naver.com/lee1065/224211941908?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
+      {
+        "platform": "blog",
+        "title": "9. 통합돌봄 시스템 — 건강·일자리·돌봄이 함께 돌아가는 도시",
+        "date": "2026-03-11",
+        "url": "https://blog.naver.com/lee1065/224211937710?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
+      {
         "platform": "youtube",
-        "title": "고양시 교통비 50% 절감! &#39;고양이패스&#39;와 BRT 도입, 가능합니다!",
+        "title": "[이경혜 고양시장 예비후보정책] 고양시 K-의료벨트 구축! 의료벤처타운 &amp; 공공의료대학 유치",
+        "date": "2026-03-10",
+        "url": "https://www.youtube.com/watch?v=arhkZbXD59s",
+        "metrics": {
+          "views": 312
+        }
+      },
+      {
+        "platform": "youtube",
+        "title": "[이경혜 고양시장 예비후보정책] 고양시 교통비 50% 절감! &#39;고양이패스&#39;와 BRT 도입, 가능합니다!",
         "date": "2026-03-10",
         "url": "https://www.youtube.com/watch?v=7EE6FKivWcs",
         "metrics": {
-          "views": 105
+          "views": 1530
         }
       },
       {
@@ -1057,38 +1090,8 @@
         "date": "2026-03-09",
         "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
         "metrics": {
-          "views": 141
+          "views": 172
         }
-      },
-      {
-        "platform": "youtube",
-        "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
-        "date": "2026-03-08",
-        "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
-        "metrics": {
-          "views": 1005
-        }
-      },
-      {
-        "platform": "blog",
-        "title": "이경혜 고양특례시장 예비후보 3대 핵심공약",
-        "date": "2026-03-07",
-        "url": "https://blog.naver.com/lee1065/224208194262?fromRss=true&trackingCode=rss",
-        "metrics": {}
-      },
-      {
-        "platform": "blog",
-        "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
-        "date": "2026-03-07",
-        "url": "https://blog.naver.com/lee1065/224208189438?fromRss=true&trackingCode=rss",
-        "metrics": {}
-      },
-      {
-        "platform": "blog",
-        "title": "\"고양시민 교통비 절반으로\" — 고양패스",
-        "date": "2026-03-02",
-        "url": "https://blog.naver.com/lee1065/224201523376?fromRss=true&trackingCode=rss",
-        "metrics": {}
       }
     ],
     "sentiment": {
@@ -1096,7 +1099,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-10T14:40:46.640759"
+    "collected_at": "2026-03-11T11:15:33.334063"
   },
   "sentiment_trend": {
     "2026-03-03": {
@@ -1136,13 +1139,8 @@
     },
     "2026-03-10": {
       "positive": 62,
-      "negative": 11,
-      "count": 41
-    },
-    "2026-02-08": {
-      "positive": 86,
-      "negative": 0,
-      "count": 7
+      "negative": 8,
+      "count": 126
     },
     "2026-02-09": {
       "positive": 71,
@@ -1248,184 +1246,165 @@
       "positive": 47,
       "negative": 28,
       "count": 8
+    },
+    "2026-03-11": {
+      "positive": 32,
+      "negative": 1,
+      "count": 36
     }
   },
   "article_sentiments": [
     {
-      "title": "최승원 “사람 중심 ‘고양’ 만들겠다”… 국회의장·중앙정치권 총집...",
-      "date": "2026-03-01",
+      "title": "DX KOREA 2026, 세계 최초 '예비전력 특별관' 신설… \"예비군도 과학화 시...",
+      "date": "2026-03-11",
+      "sentiment": "긍정",
+      "score": 1,
+      "candidates": []
+    },
+    {
+      "title": "[위클리오늘] 고양시, BTS 공연·꽃박람회 대비 '위생업소 안전관리' 총...",
+      "date": "2026-03-11",
       "sentiment": "중립",
       "score": 0,
+      "candidates": []
+    },
+    {
+      "title": "'李대통령 최측근' 김용, 지선 앞두고 광폭행보…'친명 후보' 감별사?",
+      "date": "2026-03-11",
+      "sentiment": "긍정",
+      "score": 1,
       "candidates": [
         "최승원"
       ]
     },
     {
-      "title": "이경혜 경기도의원, 고양시장 출마 출판기념회 성료",
-      "date": "2026-03-01",
+      "title": "고양시, BTS 공연·꽃박람회 대비 위생업소 안전관리 총력",
+      "date": "2026-03-11",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": []
+    },
+    {
+      "title": "이동환표 관광 안전관리, BTS 공연·꽃박람회 대비 점검 본격 가동",
+      "date": "2026-03-11",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": [
+        "이동환"
+      ]
+    },
+    {
+      "title": "고양특례시, BTS 공연·꽃박람회 대비 위생 안전관리 강화",
+      "date": "2026-03-11",
       "sentiment": "긍정",
-      "score": 2,
+      "score": 1,
+      "candidates": []
+    },
+    {
+      "title": "고양시, BTS 공연·꽃박람회 대비 '위생업소 안전관리' 총력",
+      "date": "2026-03-11",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": []
+    },
+    {
+      "title": "\"봄에만 붐비는 공원은 끝내겠다\"…이경혜, '호수공원 2.0' 승부수",
+      "date": "2026-03-11",
+      "sentiment": "긍정",
+      "score": 1,
       "candidates": [
         "이경혜"
       ]
     },
     {
-      "title": "민경선 예비후보·항단연 \"소녀상 모욕은 역사 부정 범죄\"",
-      "date": "2026-03-01",
-      "sentiment": "부정",
-      "score": -2,
-      "candidates": [
-        "민경선"
-      ]
-    },
-    {
-      "title": "명재성 고양특례시장 예비후보, 4일 김대중 대통령 일산 사저서 출마 선...",
-      "date": "2026-03-01",
+      "title": "고양시, BTS 공연·꽃박람회 대비 ‘위생업소 안전관리’ 총력",
+      "date": "2026-03-11",
       "sentiment": "중립",
       "score": 0,
-      "candidates": [
-        "명재성"
-      ]
+      "candidates": []
     },
     {
-      "title": "\"함께 그려갈 고양의 미래\"... 이경혜 경기도의원, 북콘서트 열어",
-      "date": "2026-03-01",
+      "title": "'연 2000억' 레저세 잡아라…과천 경마장 이전 발표에 경기 지자체 '들썩...",
+      "date": "2026-03-11",
       "sentiment": "긍정",
       "score": 1,
+      "candidates": []
+    },
+    {
+      "title": "SGA솔루션즈, eGISEC서 N2SF·제로 트러스트 실전 해법 제시",
+      "date": "2026-03-11",
+      "sentiment": "긍정",
+      "score": 1,
+      "candidates": []
+    },
+    {
+      "title": "일산호수공원, 4계절 콘텐츠 도시공원으로 '전환'",
+      "date": "2026-03-11",
+      "sentiment": "중립",
+      "score": 0,
       "candidates": [
         "이경혜"
       ]
     },
     {
-      "title": "민경선 예비후보 \"소녀상 모욕은 역사 부정 범죄… 김병헌 즉각 구속하...",
-      "date": "2026-03-01",
-      "sentiment": "부정",
-      "score": -7,
-      "candidates": [
-        "민경선"
-      ]
-    },
-    {
-      "title": "전 국토부 최승원 정핵보좌관, 출판기념회 개최...3천 인파 몰려 고양 정...",
-      "date": "2026-03-01",
-      "sentiment": "긍정",
-      "score": 4,
-      "candidates": [
-        "최승원"
-      ]
-    },
-    {
-      "title": "최승원 전 국토부 정책보좌관, 킨텍스서 출판기념회 개최",
-      "date": "2026-03-01",
-      "sentiment": "긍정",
-      "score": 1,
-      "candidates": [
-        "명재성",
-        "이재준",
-        "민경선"
-      ]
-    },
-    {
-      "title": "'30년 숙원' 고양은평선 화수역 신설 발대식... 주민 400명 결집",
-      "date": "2026-02-28",
-      "sentiment": "긍정",
-      "score": 1,
-      "candidates": [
-        "이재준"
-      ]
-    },
-    {
-      "title": "고양시장 전초전...이동환·최승원, 같은 날 출판기념회 ‘세 과시’",
-      "date": "2026-02-28",
-      "sentiment": "중립",
-      "score": 0,
-      "candidates": [
-        "이동환",
-        "최승원"
-      ]
-    },
-    {
-      "title": "[D리그] ‘조재우-신지원-이근준’ 사이좋게 더블더블...제공권 앞세운...",
-      "date": "2026-02-28",
-      "sentiment": "긍정",
-      "score": 1,
-      "candidates": []
-    },
-    {
-      "title": "[D리그] '부상 복귀' 변준형 \"다음 경기 엔트리에는 들어가지 않을까 생...",
-      "date": "2026-02-28",
+      "title": "고양시, 대형 행사 대비 위생업소 안전관리 '총력'",
+      "date": "2026-03-11",
       "sentiment": "중립",
       "score": 0,
       "candidates": []
     },
     {
-      "title": "[D리그] 변준형 복귀 신호탄! 2위 싸움에 더해질 마지막 한 조각",
-      "date": "2026-02-28",
-      "sentiment": "중립",
-      "score": 0,
-      "candidates": []
-    },
-    {
-      "title": "민경선 고양시장 예비후보, 경기도의원 때 조례제정한 '교복 2.0' 정부 전...",
-      "date": "2026-02-28",
+      "title": "고양시, BTS 공연·꽃박람회 대비 ‘위생업소 안전관리’ 총력",
+      "date": "2026-03-11",
       "sentiment": "중립",
       "score": 0,
       "candidates": [
-        "민경선"
+        "이동환"
       ]
     },
     {
-      "title": "명재성 예비후보, K-컬처밸리 정상화 위한 민·관 간담회 개최",
-      "date": "2026-02-27",
+      "title": "고양시, BTS 월드투어'와 '고양국제꽃박람회' 등 대형 행사 앞두고 위생...",
+      "date": "2026-03-11",
       "sentiment": "중립",
       "score": 0,
       "candidates": [
-        "명재성"
+        "이동환"
       ]
     },
     {
-      "title": "고양시 예비후보 22명 등록… 민주당 18명 '초강세'",
-      "date": "2026-02-27",
-      "sentiment": "중립",
-      "score": 0,
-      "candidates": [
-        "명재성",
-        "민경선"
-      ]
-    },
-    {
-      "title": "“베드타운 고양, 이대로는 미래 없다”... 도시공학 박사가 던진 ‘산...",
-      "date": "2026-02-27",
-      "sentiment": "중립",
-      "score": 0,
-      "candidates": [
-        "장제환"
-      ]
-    },
-    {
-      "title": "[D리그] ‘박정현 골밑 지배+김선우 3점 폭발’ LG, 한국가스공사에 역...",
-      "date": "2026-02-27",
-      "sentiment": "중립",
-      "score": 0,
-      "candidates": []
-    },
-    {
-      "title": "명재성, 고양 K-컬처밸리 준공 지연 해법 모색 민'관 간담회 개최",
-      "date": "2026-02-27",
-      "sentiment": "부정",
-      "score": -1,
-      "candidates": [
-        "명재성"
-      ]
-    },
-    {
-      "title": "정부의 정장형 교복 생활복 전환 대책에, 지역 정치권도 화답",
-      "date": "2026-02-27",
+      "title": "고양시, BTS 공연·꽃박람회 대비 위생·안전 강화",
+      "date": "2026-03-11",
       "sentiment": "긍정",
       "score": 1,
-      "candidates": [
-        "민경선"
-      ]
+      "candidates": []
+    },
+    {
+      "title": "LH, 올해 건설·매입임대주택 3만7천호 입주자 모집",
+      "date": "2026-03-11",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": []
+    },
+    {
+      "title": "고양시산림조합 '나무상설판매장' 개장",
+      "date": "2026-03-11",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": []
+    },
+    {
+      "title": "LH, 올해 건설·매입임대주택 3만7000호 입주자 모집",
+      "date": "2026-03-11",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": []
+    },
+    {
+      "title": "고양특례시, BTS 공연·꽃박람회 앞두고 위생 점검",
+      "date": "2026-03-11",
+      "sentiment": "중립",
+      "score": 0,
+      "candidates": []
     }
   ]
 }
