@@ -874,7 +874,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-11T11:18:13.858055",
-    "social_last_success": "2026-03-11T05:47:18.938422",
+    "social_last_success": "2026-03-11T06:51:26.989306",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -885,28 +885,34 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-11T05:47:11.912054",
+    "news_last_run": "2026-03-11T06:51:19.527050",
     "news_status": "no_articles"
   },
   "social_media": {
     "platforms": {
       "youtube": {
         "status": "활성",
-        "subscribers": 109,
-        "videos": 28,
-        "last_upload": "2026-03-10",
+        "subscribers": 110,
+        "videos": 29,
+        "last_upload": "2026-03-11",
         "recent_videos": [
           {
-            "title": "[이경혜 고양시장 예비후보정책] 고양시 K-의료벨트 구축! 의료벤처타운 &amp; 공공의료대학 유치",
-            "date": "2026-03-10",
-            "url": "https://www.youtube.com/watch?v=arhkZbXD59s",
-            "views": 420
+            "title": "[이경혜 고양시장 예비후보정책 세번째] &#39;과천 경마공원 유치&#39; #정책공약",
+            "date": "2026-03-11",
+            "url": "https://www.youtube.com/watch?v=FrmXVuGSLDM",
+            "views": 443
           },
           {
-            "title": "[이경혜 고양시장 예비후보정책] 고양시 교통비 50% 절감! &#39;고양이패스&#39;와 BRT 도입, 가능합니다!",
+            "title": "[이경혜 고양시장 예비후보정책 두번째] 고양시 K-의료벨트 구축! 의료벤처타운 &amp; 공공의료대학 유치",
+            "date": "2026-03-10",
+            "url": "https://www.youtube.com/watch?v=arhkZbXD59s",
+            "views": 436
+          },
+          {
+            "title": "[이경혜 고양시장 예비후보정책 첫번째] 고양시 교통비 50% 절감! &#39;고양이패스&#39;와 BRT 도입, 가능합니다!",
             "date": "2026-03-10",
             "url": "https://www.youtube.com/watch?v=7EE6FKivWcs",
-            "views": 1569
+            "views": 1582
           },
           {
             "title": "고양특례시장 예비후보 이경혜의 고양 금륜사 방문 현장 #shorts #이경혜 #고양시장 #예비후보 #금륜사 #고양금륜사",
@@ -919,143 +925,17 @@
             "date": "2026-03-08",
             "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
             "views": 1039
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 민주평화통일자문회의 1차 정기회의 현장",
-            "date": "2026-03-08",
-            "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
-            "views": 1135
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 경기1자동차매매사업조합 지부장 이·취임식 현장",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=dwfpdZB-28o",
-            "views": 1015
-          },
-          {
-            "title": "레알 급작 이경혜 삼행시",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=7BszmGc12ZI",
-            "views": 2034
-          },
-          {
-            "title": "고양시 생선구이 맛집!🐟 겉바속촉 비주얼 대박",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=BEUp4MDzEK4",
-            "views": 2085
-          },
-          {
-            "title": "삼성스토어에는 무슨 일로~?😯이경혜 후보의 내돈내산!💳",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=HNHf821Ngnc",
-            "views": 1077
-          },
-          {
-            "title": "[북콘서트 축하 영상] 김성회 의원이 말하는 &#39;이경혜의 시간, 그리고 꿈&#39;📖",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=pnVkJ3ngbLk",
-            "views": 53
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 고양시 아레나 살리기, K-컬처밸리의 미래를 위한 고민의 시간..",
-            "date": "2026-03-06",
-            "url": "https://www.youtube.com/watch?v=_Cl6i_pn7z4",
-            "views": 2222
-          },
-          {
-            "title": "&quot;고양시 교통비 절반, 이경혜가 약속합니다!&quot;",
-            "date": "2026-03-06",
-            "url": "https://www.youtube.com/watch?v=2eYOxqY2SRA",
-            "views": 1360
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 빵바라밤~📯제13대 고양문화원장 취임식 하이라이트✨",
-            "date": "2026-03-06",
-            "url": "https://www.youtube.com/watch?v=G7d_uf60ZJ0",
-            "views": 1755
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 한준호국회의원 의정보고회 현장 스케치✒️",
-            "date": "2026-03-05",
-            "url": "https://www.youtube.com/watch?v=QZjkrb14dLM",
-            "views": 1595
-          },
-          {
-            "title": "점심 맛있게 드셨나요? 쌓여있는 설거짓거리들처럼 막막하고 답답했던 여러분의 마음을 이경혜가 시원하게 닦아드리겠습니다🫧  #고양시 #고양시장 #예비후보 #이경혜 #말보다행동 #화이팅",
-            "date": "2026-03-05",
-            "url": "https://www.youtube.com/watch?v=ul4EFMbfXBI",
-            "views": 1079
-          },
-          {
-            "title": "파이팅 넘치는 이경혜의 고양 새로고침! 오케이 가보자고🔥🔥🔥 #shorts #고양시 #고양특례시 #이경혜 #시장후보 #예비후보 #고양새로고침 #소통 #열정 #응원합니다",
-            "date": "2026-03-05",
-            "url": "https://www.youtube.com/watch?v=o5jGWv-uayE",
-            "views": 1170
-          },
-          {
-            "title": "지식과 학력은 1등, 삶의 질은? 고양시의 변화, 이경혜가 약속합니다. #shorts #고양시 #고양시장 #예비후보 #이경혜 #지역발전 #청년정책 #노인복지",
-            "date": "2026-03-04",
-            "url": "https://www.youtube.com/watch?v=1KFR74U0Eaw",
-            "views": 1152
-          },
-          {
-            "title": "이경혜, 고양시장 예비후보 등록 마쳤습니다! #shorts #고양특례시 #고양시장예비후보 #예비후보등록 #이경혜 #준비된시장 #고양시변화",
-            "date": "2026-03-04",
-            "url": "https://www.youtube.com/watch?v=5IPR7ONNgKQ",
-            "views": 1005
-          },
-          {
-            "title": "이경혜 경기도의원에서 고양시장 예비후보가 되었습니다. #shorts #고양시 #고양시장 #경기도의원 #이경혜 #일잘하는도의원 #새로운고양 #고양시민과함께",
-            "date": "2026-03-04",
-            "url": "https://www.youtube.com/watch?v=WvNuS5nzLGk",
-            "views": 565
-          },
-          {
-            "title": "김남희 더불어민주당 경기도당 여성위원장의 이경혜 북콘서트 축하 영상입니다.",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=4d8ZHUUk7ZI",
-            "views": 26
-          },
-          {
-            "title": "김승원 더불어민주당 경기도당 위원장 이경혜 북콘서트를 응원해주셨습니다,",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=TPvL764HEAI",
-            "views": 49
-          },
-          {
-            "title": "유은혜 경기도교육감 후보가 이경혜 북콘서트를 축하하고 응원합니다",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=GjGSRzcYo8M",
-            "views": 81
-          },
-          {
-            "title": "고맙습니다. 이경혜 북콘서트 잘 마쳤습니다",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=ryOhxQs1SUI",
-            "views": 600
-          },
-          {
-            "title": "이경혜 북콘서트",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=-TfkquzYFSk",
-            "views": 281
-          },
-          {
-            "title": "한준호가 응원하는 이경혜 고양시장 출마예정자 북콘서트",
-            "date": "2026-03-02",
-            "url": "https://www.youtube.com/watch?v=3v1nqRoAAxw",
-            "views": 53
           }
         ],
-        "score": 80,
+        "score": 81,
         "total_views": 24743,
         "source": "api"
       },
       "facebook": {
         "status": "활성",
-        "followers": 6123,
-        "likes": 6123,
-        "talking_about": 760,
+        "followers": 6122,
+        "likes": 6122,
+        "talking_about": 763,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -1157,6 +1037,15 @@
     },
     "recent_posts": [
       {
+        "platform": "youtube",
+        "title": "[이경혜 고양시장 예비후보정책 세번째] &#39;과천 경마공원 유치&#39; #정책공약",
+        "date": "2026-03-11",
+        "url": "https://www.youtube.com/watch?v=FrmXVuGSLDM",
+        "metrics": {
+          "views": 443
+        }
+      },
+      {
         "platform": "blog",
         "title": "분야별·대상별·지역별 정책을 준비하고 있습니다",
         "date": "2026-03-11",
@@ -1179,29 +1068,20 @@
       },
       {
         "platform": "youtube",
-        "title": "[이경혜 고양시장 예비후보정책] 고양시 K-의료벨트 구축! 의료벤처타운 &amp; 공공의료대학 유치",
+        "title": "[이경혜 고양시장 예비후보정책 두번째] 고양시 K-의료벨트 구축! 의료벤처타운 &amp; 공공의료대학 유치",
         "date": "2026-03-10",
         "url": "https://www.youtube.com/watch?v=arhkZbXD59s",
         "metrics": {
-          "views": 420
+          "views": 436
         }
       },
       {
         "platform": "youtube",
-        "title": "[이경혜 고양시장 예비후보정책] 고양시 교통비 50% 절감! &#39;고양이패스&#39;와 BRT 도입, 가능합니다!",
+        "title": "[이경혜 고양시장 예비후보정책 첫번째] 고양시 교통비 50% 절감! &#39;고양이패스&#39;와 BRT 도입, 가능합니다!",
         "date": "2026-03-10",
         "url": "https://www.youtube.com/watch?v=7EE6FKivWcs",
         "metrics": {
-          "views": 1569
-        }
-      },
-      {
-        "platform": "youtube",
-        "title": "고양특례시장 예비후보 이경혜의 고양 금륜사 방문 현장 #shorts #이경혜 #고양시장 #예비후보 #금륜사 #고양금륜사",
-        "date": "2026-03-09",
-        "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
-        "metrics": {
-          "views": 174
+          "views": 1582
         }
       }
     ],
@@ -1210,7 +1090,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-11T05:47:18.937844"
+    "collected_at": "2026-03-11T06:51:26.988773"
   },
   "sentiment_trend": {
     "2026-03-03": {
