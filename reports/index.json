@@ -1,6 +1,18 @@
 {
-  "last_updated": "2026-03-10T14:40:39.219132",
+  "last_updated": "2026-03-12T10:06:13.993038",
   "reports": [
+    {
+      "type": "weekly",
+      "date": "2026-03-12",
+      "file": "weekly/2026-03-12.json",
+      "article_count": 467
+    },
+    {
+      "type": "weekly",
+      "date": "2026-03-11",
+      "file": "weekly/2026-03-11.json",
+      "article_count": 485
+    },
     {
       "type": "weekly",
       "date": "2026-03-10",
@@ -11,13 +23,13 @@
       "type": "weekly",
       "date": "2026-03-09",
       "file": "weekly/2026-03-09.json",
-      "article_count": 0
+      "article_count": 307
     },
     {
       "type": "weekly",
       "date": "2026-03-02",
       "file": "weekly/2026-03-02.json",
-      "article_count": 0
+      "article_count": 116
     },
     {
       "type": "monthly",
@@ -29,7 +41,7 @@
       "type": "weekly",
       "date": "2026-02-25",
       "file": "weekly/2026-02-25.json",
-      "article_count": 0
+      "article_count": 103
     },
     {
       "type": "weekly",

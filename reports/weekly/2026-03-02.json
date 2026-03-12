@@ -4,8 +4,8 @@
     "date": "2026-03-02",
     "period_start": "2026-02-23",
     "period_end": "2026-03-02",
-    "generated_at": "2026-03-02T01:58:16.269637",
-    "total_articles_found": 0,
+    "generated_at": "2026-03-11T17:42:22.342603",
+    "total_articles_found": 116,
     "keywords_used": [
       "고양시장 선거",
       "고양시장 후보",
@@ -24,9 +24,1548 @@
     ]
   },
   "summary": {
-    "candidate_mentions": [],
-    "top_keywords": [],
-    "article_count_by_day": {}
+    "candidate_mentions": [
+      {
+        "name": "민경선",
+        "count": 29
+      },
+      {
+        "name": "명재성",
+        "count": 18
+      },
+      {
+        "name": "장제환",
+        "count": 11
+      },
+      {
+        "name": "최승원",
+        "count": 11
+      },
+      {
+        "name": "이재준",
+        "count": 10
+      },
+      {
+        "name": "이경혜",
+        "count": 6
+      },
+      {
+        "name": "이동환",
+        "count": 3
+      },
+      {
+        "name": "정병춘",
+        "count": 2
+      },
+      {
+        "name": "이영아",
+        "count": 2
+      }
+    ],
+    "top_keywords": [
+      {
+        "keyword": "민주당",
+        "count": 37
+      },
+      {
+        "keyword": "경선",
+        "count": 30
+      },
+      {
+        "keyword": "신청사",
+        "count": 17
+      },
+      {
+        "keyword": "교통",
+        "count": 17
+      },
+      {
+        "keyword": "일산",
+        "count": 15
+      },
+      {
+        "keyword": "킨텍스",
+        "count": 5
+      },
+      {
+        "keyword": "국민의힘",
+        "count": 5
+      },
+      {
+        "keyword": "GTX",
+        "count": 1
+      },
+      {
+        "keyword": "고양패스",
+        "count": 1
+      },
+      {
+        "keyword": "여론조사",
+        "count": 1
+      }
+    ],
+    "article_count_by_day": {
+      "2026-02-23": 16,
+      "2026-02-24": 27,
+      "2026-02-25": 9,
+      "2026-02-26": 23,
+      "2026-02-27": 13,
+      "2026-02-28": 6,
+      "2026-03-01": 8,
+      "2026-03-02": 14
+    }
   },
-  "articles": []
+  "articles": [
+    {
+      "title": "장제환 예비후보, \"정책협업회의는 고양특례시 도시 정체성 재정의하는...",
+      "link": "https://www.tournews21.com/news/articleView.html?idxno=130830",
+      "originallink": "https://www.tournews21.com/news/articleView.html?idxno=130830",
+      "description": "장제환 고양시장 예비후보가 '글로벌 고양 선언'을 내걸고 고양시의 구조적 한계 극복을 위한 정책협업 전략회의를 캠프에서 2일 개최했다. 이번 회의는 단순한 선거 구호를 넘어, 주거도시 중심의 성장 모델을...",
+      "pubDate": "2026-03-02T22:46:00+09:00",
+      "candidates_mentioned": [
+        "장제환"
+      ],
+      "keywords_matched": [
+        "장제환 고양"
+      ]
+    },
+    {
+      "title": "[D리그] 첫 두자릿수 득점 올린 서동원 “나는 무언가를 계속 하면서 시...",
+      "link": "https://m.sports.naver.com/basketball/article/065/0000293743",
+      "originallink": "https://m.sports.naver.com/basketball/article/065/0000293743",
+      "description": "고양 소노는 2일 경희대 국제캠퍼스 선승관에서 열린 2025~2026 KBL D리그 서울 SK와의 경기에서 69-74로 졌다.... 그러나 서동원은 “패스를 받았을 때 좀 더 폭발력 있게 넣었으면 어땠을까 하는 아쉬움이 있다. 단순히...",
+      "pubDate": "2026-03-02T22:37:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "최승원 출마예정자 출판기념회, ‘중앙 거물급’ 집결… 3천여 명 성황",
+      "link": "http://www.breaknews.com/1188483",
+      "originallink": "http://www.breaknews.com/1188483",
+      "description": "향후 고양특례시장 선거 구도에 적지 않은 변수가 될 것”이라고 전망했다. 한편, 출판기념회를 마친 최 전 보좌관은 ‘현장에 답이 있다’는 철학 아래 고양시...",
+      "pubDate": "2026-03-02T20:02:00+09:00",
+      "candidates_mentioned": [
+        "최승원"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "김동연 \"명심(明心)으로 최선 다하겠다\"…민주당 결집 호소",
+      "link": "https://news.ifm.kr/news/articleView.html?idxno=465883",
+      "originallink": "https://news.ifm.kr/news/articleView.html?idxno=465883",
+      "description": "경기도지사 출마를 선언한 양기대 전 의원도 자리에 함께했으며, 한준호(고양을) 의원도 \"이재명 정부의... 기초단체장 중에서는 정명근 화성시장, 이재준 수원시장, 김보라 안성시장, 김경일 파주시장, 박승원 광명시장...",
+      "pubDate": "2026-03-02T20:02:00+09:00",
+      "candidates_mentioned": [
+        "이재준"
+      ],
+      "keywords_matched": [
+        "이재준 고양"
+      ]
+    },
+    {
+      "title": "‘베드타운’ 고양, 글로벌 계약 플랫폼으로 체질 바꾼다",
+      "link": "https://www.g-enews.com/view.php?ud=202603021744469766f0f3e23044_1",
+      "originallink": "https://www.g-enews.com/view.php?ud=202603021744469766f0f3e23044_1",
+      "description": "2일 경기 고양시 덕양구에 위치한 장제환 고양특례시장 예비후보 선거사무소에서는 고양시의 구조적 한계를 극복하고 미래 먹거리를 발굴하기 위한 ‘글로벌 고양 선언’ 정책 협업 회의가 열렸다. 이번 회의는 당초...",
+      "pubDate": "2026-03-02T19:46:00+09:00",
+      "candidates_mentioned": [
+        "장제환"
+      ],
+      "keywords_matched": [
+        "장제환 고양"
+      ]
+    },
+    {
+      "title": "김동연, 선거 D-3 '큰절'로 재선 포문…경기지사 경선 5파전 점화",
+      "link": "https://www.etoday.co.kr/news/view/2560985",
+      "originallink": "https://www.etoday.co.kr/news/view/2560985",
+      "description": "한준호 고양을 의원은 경선 후보 확정 직후 SNS를 통해 쐐기를 박았다. \"이번 경선은 이재명 정부의 성공을... 경기도 기초단체장으로는 이재준 수원시장·정명근 화성시장·김보라 안성시장·김병일 파주시장·박승원...",
+      "pubDate": "2026-03-02T18:36:00+09:00",
+      "candidates_mentioned": [
+        "이재준"
+      ],
+      "keywords_matched": [
+        "이재준 고양"
+      ]
+    },
+    {
+      "title": "[영상] \"명심(明心)으로 최선 다할 것\"… 김동연 출판기념회 3만명 운집",
+      "link": "https://www.joongboo.com/news/articleView.html?idxno=363718539",
+      "originallink": "https://www.joongboo.com/news/articleView.html?idxno=363718539",
+      "description": "(용인갑)·이소영(의왕과천)·이학영(군포)·추미애(하남갑)·한준호(고양을)·홍기원(평택갑) 의원, 김진경 경기도의회 의장, 이재준 수원시장, 정명근 화성시장 등을 비롯한 주최 추산 내외빈 약 3만 명이 자리했다.",
+      "pubDate": "2026-03-02T18:28:00+09:00",
+      "candidates_mentioned": [
+        "이재준"
+      ],
+      "keywords_matched": [
+        "이재준 고양"
+      ]
+    },
+    {
+      "title": "김동연, 민주당원 향해 큰절 “명심으로 최선 다할 것”… 경기지사 재...",
+      "link": "https://www.kyeongin.com/article/1759637",
+      "originallink": "https://www.kyeongin.com/article/1759637",
+      "description": "한준호(고양을) 의원은 김 지사에게 축하 인사를 건넨 후 본인의 SNS를 통해 “지금 경기도는 더 큰 책임 앞에... 화성시장·이재준 수원시장·김보라 안성시장·김병일 파주시장·박승원 광명시장·임병택 시흥시장·정장선...",
+      "pubDate": "2026-03-02T18:08:00+09:00",
+      "candidates_mentioned": [
+        "이재준"
+      ],
+      "keywords_matched": [
+        "이재준 고양"
+      ]
+    },
+    {
+      "title": "장제환 예비후보, '글로벌고양 선언' 정책협업회의 개최",
+      "link": "https://www.newspim.com/news/view/20260302000207",
+      "originallink": "https://www.newspim.com/news/view/20260302000207",
+      "description": "장제환 고양특례시장 예비후보가 예정된 정책설명회를 중앙선거관리위원회의 유권해석에 따라 취소했다고 2일 밝혔다. 장 예비후보는 공직선거법 준수를 최우선 원칙으로 삼아 공개 행사를 취소하는 대신, 덕양구에...",
+      "pubDate": "2026-03-02T17:32:00+09:00",
+      "candidates_mentioned": [
+        "장제환"
+      ],
+      "keywords_matched": [
+        "장제환 고양"
+      ]
+    },
+    {
+      "title": "고양시장 출마예정자들, 잇단 출판기념회 및 기자회견 개최",
+      "link": "https://www.kgnews.co.kr/news/article.html?no=885986",
+      "originallink": "https://www.kgnews.co.kr/news/article.html?no=885986",
+      "description": "이날 그는 ▲주교동 원안 중심 고양시 신청사 건립 추진 ▲경기북부 5대 허브(도시재생·교통·복지·AI·문화) ▲친환경 첨단산업단지 유치 및 평화경제특구와 G-컬처 추진 통한 완전 자족형 도시 실현 등의 공약을 발표했다....",
+      "pubDate": "2026-03-02T17:22:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "민경선 예비후보 \"소녀상 모욕은 시대양심 대한 도전\"",
+      "link": "https://www.newspim.com/news/view/20260302000205",
+      "originallink": "https://www.newspim.com/news/view/20260302000205",
+      "description": "민경선 고양시장 예비후보는 함세웅 신부가 회장을 맡고 있는 항일독립선열선양단체연합(이하 항단연)과 함께 최근 평화의 소녀상을 대상으로 반복되고 있는 모욕 행위를 강력히 규탄하고 3·1 독립 정신을...",
+      "pubDate": "2026-03-02T17:20:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "최승원 전 보좌관 출판기념회, 고양시장 선거판 흔드나…중앙 인맥 대거...",
+      "link": "https://www.incheonilbo.com/news/articleView.html?idxno=1318009",
+      "originallink": "https://www.incheonilbo.com/news/articleView.html?idxno=1318009",
+      "description": "▲ 최승원 전 국토부장관 정책보좌관이 28일 킨텍스에서 열린 출판기념회를 찾은 김윤덕 국토교통부장관이 \"어떤일이던 믿고 밑길수 있는 사람\"이라며 격려했다 고양시장 선거 출마를 공식화한 최승원 전 국토교통부 장관...",
+      "pubDate": "2026-03-02T16:40:00+09:00",
+      "candidates_mentioned": [
+        "최승원"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "경기도 청년기본소득 1분기 신청 내달 1일까지 접수",
+      "link": "https://www.newspim.com/news/view/20260302000069",
+      "originallink": "https://www.newspim.com/news/view/20260302000069",
+      "description": "경기도청 광교 신청사 전경. [사진=뉴스핌 DB] 2일 도에 따르면 1분기 신청 대상은 1월 1일 기준 24세(2001년 1월... 다만, 외국인과 거주불명자, 청년기본소득 조례를 폐지한 성남시와 올해 관련 예산을 편성하지 않은 고양...",
+      "pubDate": "2026-03-02T10:33:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "\"젊은 도시 고양의 미래, 시민과 함께 그려나가겠다\"",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87774",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87774",
+      "description": "영상 상영 후 마이크를 잡은 이경혜 도의원은 책에 실린, AI 도움을 받아 그린 10여 장의 일러스트를 화면에 띄워놓고 \"이경혜가 상상하는 고양의 미래\"를 설명했다. 미래의 고양에서는 ▲호수공원과 경의로를 잇는...",
+      "pubDate": "2026-03-02T10:30:00+09:00",
+      "candidates_mentioned": [
+        "이경혜"
+      ],
+      "keywords_matched": [
+        "이경혜 고양"
+      ]
+    },
+    {
+      "title": "최승원 “사람 중심 ‘고양’ 만들겠다”… 국회의장·중앙정치권 총집...",
+      "link": "https://m.skyedaily.com/news_view.html?ID=299382",
+      "originallink": "https://m.skyedaily.com/news_view.html?ID=299382",
+      "description": "스카이데일리 김진강기자 = 고양시장 출사표 “배드타운 아닌 자족도시로” ▲ [사진=최승원 예비후보] 경기 고양특례시 시장 선거에 출사표를 던진 최승원 전 국토교통부 장관 정책보좌관은 “그동안 쌓아온 전문가의...",
+      "pubDate": "2026-03-01T22:52:00+09:00",
+      "candidates_mentioned": [
+        "최승원"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "이경혜 경기도의원, 고양시장 출마 출판기념회 성료",
+      "link": "https://www.job-post.co.kr/news/articleView.html?idxno=208964",
+      "originallink": "https://www.job-post.co.kr/news/articleView.html?idxno=208964",
+      "description": "28일 이경혜 경기도의원이 고양특례시장 출마를 앞두고 정책 비전과 공약을 담은 책을 출간하며 출판기념회를 개최했다. 이 의원은 책에서 고양의 장기 현안으로 꼽혀온 신청사 갈등과 베드타운 구조를 '행정 구조 개혁...",
+      "pubDate": "2026-03-01T15:42:00+09:00",
+      "candidates_mentioned": [
+        "이경혜"
+      ],
+      "keywords_matched": [
+        "이경혜 고양"
+      ]
+    },
+    {
+      "title": "민경선 예비후보·항단연 \"소녀상 모욕은 역사 부정 범죄\"",
+      "link": "https://n.news.naver.com/mnews/article/047/0002506417?sid=100",
+      "originallink": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003210981&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+      "description": "민경선 고양시장 예비후보와 (사)항일독립선열선양단체연합(회장 함세웅 신부, 아래 항단연)은 최근 평화의 소녀상을 대상으로 반복적인 모욕 행위를 일삼고 시위 재개를 선포한 '위안부법폐지국민행동' 김병헌 대표를...",
+      "pubDate": "2026-03-01T14:21:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "명재성 고양특례시장 예비후보, 4일 김대중 대통령 일산 사저서 출마 선...",
+      "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=378612",
+      "originallink": "https://www.fntoday.co.kr/news/articleView.html?idxno=378612",
+      "description": "고양특례시장 예비후보인 명재성이 오는 4일 출마를 공식 선언한다. 명 예비후보는 오는 4일 오전 11시, 김대중 대통령 일산 사저에서 언론인을 대상으로 고양특례시장 출마 기자회견을 개최한다. 명재성 기자회견 홍보...",
+      "pubDate": "2026-03-01T13:28:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "\"함께 그려갈 고양의 미래\"... 이경혜 경기도의원, 북콘서트 열어",
+      "link": "https://n.news.naver.com/mnews/article/047/0002506404?sid=100",
+      "originallink": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003210947&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+      "description": "젊음의 도시 고양을 그리겠습니다.\" 이경혜 경기도의원의 지나온 삶의 궤적과 앞으로의 비전을 담은 출판기념회 겸 북콘서트가 열렸다. 지난 2월 28일(토) 오후 2시, 고양시 YMCA 국제청소년문화센터 B1 글로벌홀에서...",
+      "pubDate": "2026-03-01T11:41:00+09:00",
+      "candidates_mentioned": [
+        "이경혜"
+      ],
+      "keywords_matched": [
+        "이경혜 고양"
+      ]
+    },
+    {
+      "title": "민경선 예비후보 \"소녀상 모욕은 역사 부정 범죄… 김병헌 즉각 구속하...",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87764",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87764",
+      "description": "민경선 고양시장 예비후보와 (사)항일독립선열선양단체연합(이하 항단연, 회장 함세웅 신부)은 1일 공동성명을 내고, '위안부법폐지국민행동' 김병헌 대표를 강력히 규탄하며 경찰의 철저한 수사와 엄벌을 촉구했다. 민...",
+      "pubDate": "2026-03-01T11:20:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "전 국토부 최승원 정핵보좌관, 출판기념회 개최...3천 인파 몰려 고양 정...",
+      "link": "http://www.metroseoul.co.kr/article/20260301500011",
+      "originallink": "http://www.metroseoul.co.kr/article/20260301500011",
+      "description": "나섰다는 점에서 향후 고양특례시장 선거 구도에 적지 않은 파장을 일으킬 것\"이라고 전망했다. 한편 최 전 보좌관은 출판기념회를 계기로 '현장 중심' 행보를 강화하며 고양시 발전 구상을 시민들과 공유해 나갈 방침이다.",
+      "pubDate": "2026-03-01T11:00:00+09:00",
+      "candidates_mentioned": [
+        "최승원"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "최승원 전 국토부 정책보좌관, 킨텍스서 출판기념회 개최",
+      "link": "https://n.news.naver.com/mnews/article/047/0002506383?sid=100",
+      "originallink": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003210836&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+      "description": "더불어민주당 고양시장 예비후보로 등록한 민경선, 명재성, 이재준, 이상성 후보가 참석해 출판기념회를 축하했다. ▲  축사하는 이기헌 국회의원 ⓒ 김재환 '현장에 답이 있다'… 고양의 새로운 지도를 그리는 설계도 최...",
+      "pubDate": "2026-03-01T10:26:00+09:00",
+      "candidates_mentioned": [
+        "명재성",
+        "이재준",
+        "민경선",
+        "최승원"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "'30년 숙원' 고양은평선 화수역 신설 발대식... 주민 400명 결집",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87760",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87760",
+      "description": "이재준 출마예정자는 \"고양은평선 B/C값이 확보된 만큼 화수역 신설을 전면 재검토하고 추진하겠다\"고 답했다. 권순영 고양시갑 당협위원장이 인사말을 하고 있다.김영식 예비후보는 \"창릉신도시 재원을 활용해 화수역...",
+      "pubDate": "2026-02-28T22:44:00+09:00",
+      "candidates_mentioned": [
+        "이재준"
+      ],
+      "keywords_matched": [
+        "이재준 고양"
+      ]
+    },
+    {
+      "title": "고양시장 전초전...이동환·최승원, 같은 날 출판기념회 ‘세 과시’",
+      "link": "https://n.news.naver.com/mnews/article/666/0000097666?sid=100",
+      "originallink": "https://www.kyeonggi.com/article/20260228580162",
+      "description": "국민의힘 소속 현직 고양시장과 비중있는 더불어민주당 소속 출마 예정자가 같은 날 출판기념회를 열고 세몰이에 나서면서 고양시장 선거 열기가 한층 고조되고 있다. 이동환 고양특례시장은 28일 오후 3시 고양꽃전시관...",
+      "pubDate": "2026-02-28T21:01:00+09:00",
+      "candidates_mentioned": [
+        "이동환",
+        "최승원"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "[D리그] ‘조재우-신지원-이근준’ 사이좋게 더블더블...제공권 앞세운...",
+      "link": "https://m.sports.naver.com/basketball/article/065/0000293692",
+      "originallink": "https://m.sports.naver.com/basketball/article/065/0000293692",
+      "description": "고양 소노는 28일 경희대 국제캠퍼스 선승관에서 펼쳐진 2025-2026 KBL D리그 부산 KCC와의 경기에서 78-64로... 벌어놓은 점수는 있었지만 경기의 온도는 조금씩 낮아졌다. 한편 소노는 패스의 결이 매끄러웠다. 끊김 없는...",
+      "pubDate": "2026-02-28T16:51:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "[D리그] '부상 복귀' 변준형 \"다음 경기 엔트리에는 들어가지 않을까 생...",
+      "link": "https://m.sports.naver.com/basketball/article/065/0000293691",
+      "originallink": "https://m.sports.naver.com/basketball/article/065/0000293691",
+      "description": "수비 리바운드 이후 공격 진영까지 끌고 온 공을 바운드 패스로 표승빈에게 건넸고, 이는 그대로 득점으로... 아마도 다음 경기(3월 5일 vs 고양 소노) 엔트리에는 들어가지 않을까 생각한다. 안 되면 그 후에 복귀하지...",
+      "pubDate": "2026-02-28T15:35:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "[D리그] 변준형 복귀 신호탄! 2위 싸움에 더해질 마지막 한 조각",
+      "link": "https://m.sports.naver.com/basketball/article/065/0000293688",
+      "originallink": "https://m.sports.naver.com/basketball/article/065/0000293688",
+      "description": "지난 18일 유도훈 감독은 변준형에 대해 “D리그를 예정대로 소화하면 3월 5일 고양 소노전부터 1군 일정도... 몸은 완전하지 않았지만 경기 감각은 서서히 살아나는 모양새였다. 그의 패스는 외곽을 깨웠다. 표승빈의...",
+      "pubDate": "2026-02-28T14:44:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보, 경기도의원 때 조례제정한 '교복 2.0' 정부 전...",
+      "link": "https://www.incheonilbo.com/news/articleView.html?idxno=1317946",
+      "originallink": "https://www.incheonilbo.com/news/articleView.html?idxno=1317946",
+      "description": "▲ 민경선 고양시장 예비후보가 출판기념회서 인사말을 하고 있다. 교육부가 지난 26~27일 발표한 '교복 가격 안정화 대책'에 민경선 고양시장 예비후보의 '교복 복지 2.0' 모델이 반영됐다. 교육부는 정장형 교복 폐지를...",
+      "pubDate": "2026-02-28T10:36:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "명재성 예비후보, K-컬처밸리 정상화 위한 민·관 간담회 개최",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87759",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87759",
+      "description": "명재성 예비후보는 고양시 덕양구청장, 일산서구청장, 기획조정실장 등을 역임한 행정 전문가로, 경기도의회 의원과 더불어민주당 당대표 특별보좌역 등을 거치며 행정과 정치를 두루 섭렵했다는 평가를 받고 있다.",
+      "pubDate": "2026-02-27T20:32:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "고양시 예비후보 22명 등록… 민주당 18명 '초강세'",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87758",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87758",
+      "description": "선거 종류별로는 고양시장 선거에 가장 많은 9명이 출사표를 던졌다. 이 중 7명이 더불어민주당 소속으로 당내 경선부터 치열한 경쟁을 예고하고 있다. 민주당에서는 명재성 전 덕양구청장(63세), 민경선 전...",
+      "pubDate": "2026-02-27T20:28:00+09:00",
+      "candidates_mentioned": [
+        "명재성",
+        "민경선"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "“베드타운 고양, 이대로는 미래 없다”... 도시공학 박사가 던진 ‘산...",
+      "link": "https://www.g-enews.com/view.php?ud=202602271655123779f0f3e23044_1",
+      "originallink": "https://www.g-enews.com/view.php?ud=202602271655123779f0f3e23044_1",
+      "description": "장제환 더불어민주당 고양시장 예비후보는 지난 26일 고양시의회에서 기자회견을 열고, 단순한 행정가 역할을 넘어선 ‘도시 설계자’로서의 출마를 공식화했다. 장 예비후보가 진단한 고양시의 현주소는 냉혹하다. 서울...",
+      "pubDate": "2026-02-27T17:04:00+09:00",
+      "candidates_mentioned": [
+        "장제환"
+      ],
+      "keywords_matched": [
+        "장제환 고양"
+      ]
+    },
+    {
+      "title": "[D리그] ‘박정현 골밑 지배+김선우 3점 폭발’ LG, 한국가스공사에 역...",
+      "link": "https://m.sports.naver.com/basketball/article/351/0000085185",
+      "originallink": "https://basketkorea.com/news/newsview.php?ncode=1065599912471810",
+      "description": "26일 고양 소노전과 동일했다. 다만, LG와 한국가스공사 모두 26일에 경기를 치렀기에, 두 팀의 에너지는... LG는 경기 시작 3분 39초 만에 동점(7-7)을 만들었다. 박정현의 킥 아웃 패스와 배병준(189cm, G)의 3점이...",
+      "pubDate": "2026-02-27T17:04:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "명재성, 고양 K-컬처밸리 준공 지연 해법 모색 민'관 간담회 개최",
+      "link": "https://www.cnbnews.com/news/article.html?no=780973",
+      "originallink": "https://www.cnbnews.com/news/article.html?no=780973",
+      "description": "K-컬처밸리 정상화 논의(사진=명재성 예비후보) 더불어민주당 명재성 고양시장 예비후보가 고양 K-컬처밸리 사업과 관련해 민·관 간담회를 열고 기본협약의 완성도를 높이는 점검과 안전 확보, 준공 일정 단축 방안을...",
+      "pubDate": "2026-02-27T15:56:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "정부의 정장형 교복 생활복 전환 대책에, 지역 정치권도 화답",
+      "link": "https://n.news.naver.com/mnews/article/047/0002506284?sid=102",
+      "originallink": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003210520&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+      "description": "제8·9·10대 3선 경기도의원이자 교육위원장을 지낸 민경선 고양시장 예비후보는 27일 보도자료를 내고 정부의 교복 가격 안정화 대책을 지지했다. 민 예비후보는 교육부의 이번 발표가 자신이 선도적으로 제안했던 '교복...",
+      "pubDate": "2026-02-27T15:21:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "안병용 의정부시장 예비후보, 과천경마공원 의정부 유치 선언",
+      "link": "https://www.newscj.com/news/articleView.html?idxno=3379506",
+      "originallink": "https://www.newscj.com/news/articleView.html?idxno=3379506",
+      "description": "안 예비후보는 과천경마장 이전과 관련해 화성·안산 등 경기 남부와 고양·양주·포천·동두천 등 경기북부... 안병용,의정부시장선거,과천경마공원,경마장유치,의정부재정,지방선거공약,지역개발,한국마사회,정치기사...",
+      "pubDate": "2026-02-27T15:16:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "\"과천 경마장 고양으로\" 이동환 시장·민경선 등 여야 '한목소리'",
+      "link": "https://n.news.naver.com/mnews/article/047/0002506258?sid=100",
+      "originallink": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003210502&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+      "description": "더불어민주당 민경선 고양시장 예비후보는 26일 보도자료를 통해 고양시의 경마장 유치 도전에 대해 \"방향은 맞다\"고 인정하며 힘을 실었다. 다만 민 후보는 현재 시의 계획에 구체적 재정 효과와 시민 혜택 설계가 보이지...",
+      "pubDate": "2026-02-27T14:06:00+09:00",
+      "candidates_mentioned": [
+        "이동환",
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "도시공학 박사 장제환 \"고양을 새롭게 리셋하겠다\"",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87755",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87755",
+      "description": "'고양특례시 리셋(reset) 버튼을 누르다' 라는 슬로건으로 장제환 고양시장 예비후보가 26일 출마기자회견을 열었다. 재정비 넘어 '도시 운영체제' 전면재설계 킨텍스 '글로벌 계약 허브'로 격상시킬 것 김성회 의원...",
+      "pubDate": "2026-02-27T12:22:00+09:00",
+      "candidates_mentioned": [
+        "장제환"
+      ],
+      "keywords_matched": [
+        "장제환 고양"
+      ]
+    },
+    {
+      "title": "윤종은 전 부위원장 \"고양시를 한반도 성장동력 중심으로\"",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87747",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87747",
+      "description": "▲주교동 원안을 중심으로 하는 고양시 신청사 건립의 합리적 추진 ▲경기북부 5대 허브(도시재생·교통·복지·AI·문화) ▲AI·드론 찬환경 첨단산업단지 유치 평화경제특구와 G-컬처 추진으로 완전 자족형 도시 실현 등이...",
+      "pubDate": "2026-02-27T12:18:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "19~20세 청년 문화생활에 15만원 쏜다…고양시 '문화예술패스' 접수 돌입",
+      "link": "https://n.news.naver.com/mnews/article/031/0001009001?sid=102",
+      "originallink": "http://www.inews24.com/view/1943528",
+      "description": "경기도 고양시는 청년들의 활발한 문화활동을 위한 '청년 문화예술패스' 접수를 시작했다. 청년들의 문화 향유 기회를 확대하고 문화 소비 주체로 성장할 수 있도록 지원하는 사업이다. 1인당 15만원을 지원하며 △연극...",
+      "pubDate": "2026-02-27T09:51:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "장제환 고양특례시장 출마…\"문화·예술로 365일 행복한 고양 만들 것\"",
+      "link": "https://www.tournews21.com/news/articleView.html?idxno=130672",
+      "originallink": "https://www.tournews21.com/news/articleView.html?idxno=130672",
+      "description": "장제환 민주당 고양시장 예비후보가 김성회 국회의원, 도·시의원, 지지자 등 100여명이 시의회 영상회의실에서 고양시장 출마 기자회견을 26일 열었다. 장제환 예비후보는 \"위대한 도시는 우연히 만들어지지 않느다....",
+      "pubDate": "2026-02-27T01:34:00+09:00",
+      "candidates_mentioned": [
+        "장제환"
+      ],
+      "keywords_matched": [
+        "장제환 고양"
+      ]
+    },
+    {
+      "title": "장제환“ 도시 리셋해 자족도시 완성” 고양시장 출마 선언",
+      "link": "https://n.news.naver.com/mnews/article/005/0001834203?sid=102",
+      "originallink": "https://www.kmib.co.kr/article/view.asp?arcid=0029450887&code=61122013&cp=nv",
+      "description": "장제환 더불어민주당 고양시장 예비후보가 26일 고양시의회 영상회의실에서 기자회견을 열고 도시공학적 전문성을 바탕으로 고양시를 생산과 수출이 중심이 되는 자족도시로 완전히 리셋하겠다며 출마를 공식 선언했다....",
+      "pubDate": "2026-02-27T01:25:00+09:00",
+      "candidates_mentioned": [
+        "장제환"
+      ],
+      "keywords_matched": [
+        "장제환 고양"
+      ]
+    },
+    {
+      "title": "'경제 전략가' 윤종은, 고양특례시장 출마 선언… \"30년 고양의 뿌리로...",
+      "link": "https://www.dailysportshankook.co.kr/news/articleView.html?idxno=424864",
+      "originallink": "https://www.dailysportshankook.co.kr/news/articleView.html?idxno=424864",
+      "description": "계획된 '주교동 신청사 건립 원안'을 강력히 추진하겠다는 승부수를 던졌다. 행정의 연속성과 시민의 신뢰를 회복하는 것이 급선무라는 판단이다. 이어 고양시의 미래 먹거리로 '경기북부 5대 허브(도시재생·교통·복지·AI...",
+      "pubDate": "2026-02-26T21:26:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "[6·3 지방선거] 30년 고양의 뿌리, 경제전문가 윤종은...고양특례시장...",
+      "link": "https://www.polinews.co.kr/news/articleView.html?idxno=724083",
+      "originallink": "https://www.polinews.co.kr/news/articleView.html?idxno=724083",
+      "description": "핵심 공약으로는 현 시장이 추진 중인 신청사 백석 이전안을 전면 재검토하고, 주교동 원안을 중심으로 시민과 전문가가 참여하는 '신청사 건립 재추진단'을 발족하겠다고 약속했다. 또한 고양시의 미래 비전으로 AI·드론...",
+      "pubDate": "2026-02-26T20:52:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "장제환 고양특례시장 출마…\"고양특례시 지금은 리셋이 필요한 때\"",
+      "link": "https://www.kmaeil.com/news/articleView.html?idxno=631205",
+      "originallink": "https://www.kmaeil.com/news/articleView.html?idxno=631205",
+      "description": "2월 26일, 장제환 더불어민주당 고양특례시장 예비후보가고양특례시의회 영상회의실에서 김성회 국회의원, 도·시의원, 지지자 등 100여명이 모인가운데 고양특례시장 출마기자회견을 열었다. 먼저 장제환 예비후보는...",
+      "pubDate": "2026-02-26T18:00:00+09:00",
+      "candidates_mentioned": [
+        "장제환"
+      ],
+      "keywords_matched": [
+        "장제환 고양"
+      ]
+    },
+    {
+      "title": "[D리그] 3점을 만든 김선우, 3점을 꽂은 김선우",
+      "link": "https://m.sports.naver.com/basketball/article/351/0000085171",
+      "originallink": "https://basketkorea.com/news/newsview.php?ncode=1065599572394020",
+      "description": "그리고 배병준에게 깔끔하게 패스. 배병준의 3점을 또 한 번 이끌었다. 의미 있었다. LG가 59-57로 역전했기 때문이다. 김선우는 형들에게 의존하지 않았다. 경기 종료 2분 12초 전 노 마크 찬스를 획득. 71-67로...",
+      "pubDate": "2026-02-26T17:35:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "명재성 고양시장 예비후보 \"K-컬처밸리사업 준공 최대한 앞당겨야\"",
+      "link": "https://n.news.naver.com/mnews/article/629/0000476349?sid=102",
+      "originallink": "https://news.tf.co.kr/read/national/2296863.htm",
+      "description": "입주민대표·경기도·GH 등과 간담회 진행…상황 공유·대책 논의 명재성 \"협약 체결 선행돼야…임시공연장 설립 TF 구성하자\" 오는 6.3 지방선거에서 경기 고양시장에 도전하는 명재성 예비후보(더불어민주당)가 25일 고양 K...",
+      "pubDate": "2026-02-26T17:18:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "[D리그] 이근준의 두 번째 3점, 소노 추격의 기폭제",
+      "link": "https://m.sports.naver.com/basketball/article/351/0000085169",
+      "originallink": "https://basketkorea.com/news/newsview.php?ncode=1065599524659242",
+      "description": "그런 이유로, 이근준의 퍼포먼스가 이번 D리그 경기에서 중요하다. 이근준은 스타팅 라인업에 포함됐다. 수비 리바운드로 신지원(197cm, F)과 조재우(200cm, C)의 부담을 덜어줬다. 그리고 볼 운반과 빠른 패스로 김도은...",
+      "pubDate": "2026-02-26T17:05:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "명재성 고양특례시장 예비후보, 'K-컬처밸리사업 준공지연' 민·관 간담...",
+      "link": "https://www.kmaeil.com/news/articleView.html?idxno=631179",
+      "originallink": "https://www.kmaeil.com/news/articleView.html?idxno=631179",
+      "description": "더불어민주당 명재성 고양특례시장 예비후보는 지난 25일, 고양 K-컬처밸리사업의 준공 지연과 관련한 민·관 간담회를 개최했다. 간담회는 명재성 예비후보의 양방향 소통행보로 입주민 대표·경기도청·GH...",
+      "pubDate": "2026-02-26T16:44:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "고양시, 청년문화예술패스 1인당 15만원 지원",
+      "link": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160288625870419",
+      "originallink": "https://www.siminilbo.co.kr/news/newsview.php?ncode=1160288625870419",
+      "description": "경기 고양시가 청년들의 활발한 문화활동을 위한 ‘청년 문화예술패스’ 접수를 시작했다고 26일 밝혔다. 청년 문화예술패스는 청년들의 문화향유 기회를 확대하고 문화소비 주체로 성장할 수 있도록 지원하는...",
+      "pubDate": "2026-02-26T16:33:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "[6·3 이사람] 민경선 고양시장 예비후보 \"과천 경마장 유치, 행동으로 ...",
+      "link": "https://www.kgnews.co.kr/news/article.html?no=885789",
+      "originallink": "https://www.kgnews.co.kr/news/article.html?no=885789",
+      "description": "올해 6·3 지방선거에 도전하는 더불어민주당 소속 민경선 고양시장 예비후보는 26일 경기도 내 지자체간 과열되고 있는 과천 경마장 유치 경쟁과 관련해 \"보여주기식 행정을 끝내고 시민이 체감하는 성과로 증명해야 한다...",
+      "pubDate": "2026-02-26T16:08:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "명재성, ‘K-컬처밸리사업 준공지연’ 민·관 간담회",
+      "link": "https://n.news.naver.com/mnews/article/005/0001834092?sid=102",
+      "originallink": "https://www.kmib.co.kr/article/view.asp?arcid=0029448999&code=61122013&cp=nv",
+      "description": "명재성 더불어민주당 고양시장 예비후보는 지난 25일 고양 K-컬처밸리사업의 준공 지연과 관련한 민·관 간담회를 개최했다고 26일 밝혔다. 이날 간담회는 명 예비후보의 양방향 소통행보로 입주민 대표·경기도청·GH...",
+      "pubDate": "2026-02-26T15:56:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보, 과천 경마장 유치 의지",
+      "link": "https://www.newspim.com/news/view/20260226001019",
+      "originallink": "https://www.newspim.com/news/view/20260226001019",
+      "description": "민경선 고양시장 예비후보. [사진=민경선 사무소] 2026.02.26 atbodo@newspim.com 고양시의 경마장 유치 의사 표명에 대해 \"방향은 맞지만, 구체적 재정 효과와 시민 혜택 설계가 보이지 않는다\"고 지적하면서 \"기관 하나...",
+      "pubDate": "2026-02-26T15:28:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "명재성 고양특례시장 예비후보, 'K-컬처밸리사업 준공지연' 대책 민·관...",
+      "link": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2196674",
+      "originallink": "http://www.shinailbo.co.kr/news/articleView.html?idxno=2196674",
+      "description": "명재성 더불어민주당 경기도 고양특례시장 예비후보는 지난 25일 고양 K-컬처밸리사업의 준공 지연과 관련한 민·관 간담회를 개최했다고 26일 밝혔다. 이날 간담회는 명 예비후보의 양방향 소통행보로 입주민 대표...",
+      "pubDate": "2026-02-26T15:16:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "고양특례시, 19~20세 청년에게 문화예술 지원금 15만 원 지급…'청년 문...",
+      "link": "http://www.breaknews.com/1187819",
+      "originallink": "http://www.breaknews.com/1187819",
+      "description": "고양시 관계자는 \"청년 문화예술패스가 청년들에게 일상 속 문화적 즐거움을... for them to grow into respectable, cultural citizens.\" 원본 기사 보기:브레이크뉴스 경기서부",
+      "pubDate": "2026-02-26T15:10:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보 \"경마장 유치, 말이 아닌 행동으로\"",
+      "link": "https://n.news.naver.com/mnews/article/421/0008795686?sid=102",
+      "originallink": "https://www.news1.kr/local/gyeonggi/6084091",
+      "description": "올해 6·3지방선거 경기 고양시장 출마를 준비 중인 민경선 예비후보(55)는 최근 가열되고 있는 과천 경마장 유치 경쟁과 관련, \"이제는 보여주기식 행정을 끝내고, 시민이 체감하는 성과로 증명해야 한다\"며 고양시 유치를...",
+      "pubDate": "2026-02-26T14:47:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보 “과천 경마장 유치, 시민 환원형 모델로 설...",
+      "link": "https://n.news.naver.com/mnews/article/011/0004593848?sid=102",
+      "originallink": "https://www.sedaily.com/article/20013103?ref=naver",
+      "description": "민경선 더불어민주당 고양시장 예비후보가 과천 경마장 이전 유치와 관련해 ‘시민 환원형 개발 모델’을 제시하며 실행 중심 행정을 강조했다. 민 후보는 경기도 내 일부 시·군과 후보들이 경마장 유치 경쟁에 나선 것에...",
+      "pubDate": "2026-02-26T14:09:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "명재성 고양특례시장 예비후보, ‘K-컬처밸리사업 준공지연’ 관련 민·...",
+      "link": "http://www.metroseoul.co.kr/article/20260226500277",
+      "originallink": "http://www.metroseoul.co.kr/article/20260226500277",
+      "description": "더불어민주당 명재성 고양특례시장 예비후보가 25일 고양 K-컬처밸리사업의 준공 지연과 관련한 민·관 간담회를 개최했다고 26일 밝혔다. 이날 간담회는 명재성 예비후보의 양방향 소통행보로 입주민 대표·경기도청·GH...",
+      "pubDate": "2026-02-26T13:18:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "민경선, 과천 경마장 고양 유치 ‘시민 환원형 개발 모델’ 제시",
+      "link": "https://n.news.naver.com/mnews/article/005/0001834053?sid=102",
+      "originallink": "https://www.kmib.co.kr/article/view.asp?arcid=0029447891&code=61122013&cp=nv",
+      "description": "민경선 더불어민주당 고양시장 예비후보는 과천 경마장 이전과 관련해 경기도 내 일부 시·군과 후보들이 유치 경쟁에 나선 것에 대해 “그동안 행정은 발표와 계획은 많았지만 시민이 실제로 체감할 성과는 부족했다”며...",
+      "pubDate": "2026-02-26T12:55:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "명재성 고양시장 예비후보 “K컬처밸리 지역 핵심 인프라…더는 혼란 없...",
+      "link": "https://n.news.naver.com/mnews/article/011/0004593796?sid=102",
+      "originallink": "https://www.sedaily.com/article/20013037?ref=naver",
+      "description": "명재성 더불어민주당 고양시장 예비후보가 고양 K컬처밸리사업의 준공 지연과 관련해 민·관 간담회를 열고, 후속 대책을 논의했다. 26일 명 예비후보 측에 따르면 전날 입주민대표·경기도청·경기주택도시공사(GH)와 함께...",
+      "pubDate": "2026-02-26T11:56:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "[전격시사] 이준석 개혁신당 대표 - 부정선거 무제한 토론 “내가 왜 중...",
+      "link": "https://n.news.naver.com/mnews/article/056/0012131605?sid=100",
+      "originallink": "https://news.kbs.co.kr/news/pc/view/view.do?ncd=8494340&ref=A",
+      "description": "오세훈 시장 쪽에 장소 제공을 요구했다는 전한길 씨의 얘기를 하셨는데 앞서서 지금 경기 고양시 킨텍스에서... 서문시장에도 방문한다고 하고 또 일부 보도지만 그쪽에서 확인해 준 건 아니지만 대구시장 선거가 어느...",
+      "pubDate": "2026-02-26T11:24:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "길바닥에 버리는 월 200만 원, 거리가 계급이고 시간이 자산이다",
+      "link": "https://slownews.kr/155075",
+      "originallink": "https://slownews.kr/155075",
+      "description": "‘4+4 전략’: 일자리 분산이 만드는 시간 회복 그래서 서울시장 선거 입후보예정자로서 내가 제안하는... 서북권(은평·상암)은 경기 고양과 연계한 ‘영상·미디어 메가 클러스터’가 될 것이다. 상암 DMC의 방송 인프라와...",
+      "pubDate": "2026-02-26T11:00:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "고양특례시 '청년 문화예술패스' 접수 시작",
+      "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1233883",
+      "originallink": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1233883",
+      "description": "청년 문화예술패스 신청 안내문. 경기 고양특례시는 청년들의 활발한 문화활동을 위한 '청년 문화예술패스'접수를 시작했다고 26일 밝혔다. 청년 문화예술패스는 청년들의 문화향유 기회를 확대하고, 문화소비 주체로...",
+      "pubDate": "2026-02-26T10:56:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 경기패스"
+      ]
+    },
+    {
+      "title": "서용주 \"아끼는 김재섭, 정원오 의혹 제기 빠져라\"[한판승부]",
+      "link": "https://n.news.naver.com/mnews/article/079/0004119070?sid=100",
+      "originallink": "https://www.nocutnews.co.kr/news/6476563?utm_source=naver&utm_medium=article&utm_campaign=20260226073043",
+      "description": "그리고 그분이 추경호 대구시장 선거 캠프의 좌장 역할을 하고 있다 이런 얘기가 있어요. 그러니까 추경호... 고양하고 합쳐지는. 김포하고. 제가 고양에 살기 때문에 알고 있는데 사실은 이게 서울이나 고양시는 바로 붙어...",
+      "pubDate": "2026-02-26T07:31:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "[박병환 칼럼] '외국인 지방참정권' 개편, 주저할 이유 없다",
+      "link": "https://www.ajunews.com/view/20260225080313159",
+      "originallink": "https://www.ajunews.com/view/20260225080313159",
+      "description": "따라서 굳이 현행 제도를 바꿀 필요가 없고, 폐지하게 되면 아시아 최초로 이 제도를 도입하면서 고양된... 2021년 서울시장 선거 때 더불어민주당이 중국 국적 영주권자들에게 투표를 독려한 것은 그들이 차지하는 비중에...",
+      "pubDate": "2026-02-26T06:02:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "민경선 \"시장직통 민원체계 구축 등 시장실 문턱 없애겠다\"",
+      "link": "https://www.thereport.co.kr/news/articleView.html?idxno=84711",
+      "originallink": "https://www.thereport.co.kr/news/articleView.html?idxno=84711",
+      "description": "민경선 고양시장 예비후보가 현장 중심의 '민생 경청 투어'를 이어가며 시민 밀착형 정책 발굴을 서두르고 있다. 민경선 예비후보는 25일 오전 일산 한솔코아에서 고양시 내 사회적 경제 조직 및 지역 상인 대표들과 함께...",
+      "pubDate": "2026-02-25T23:26:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "국힘 창원·김해시 ‘중앙당 공천’… 예비주자 긴장",
+      "link": "http://www.knnews.co.kr/news/articleView.php?idxno=1482834",
+      "originallink": "http://www.knnews.co.kr/news/articleView.php?idxno=1482834",
+      "description": "지난 20일부터 시장 선거 예비후보 등록이 시작된 가운데, 국민의힘 창원시장에는 강기윤 전 한국남동발전... 창원을 비롯해 경기 수원·고양·용인·화성시 등 특례시 5곳도 대상이다. 국민의힘은 내달 1~4일 공천 신청...",
+      "pubDate": "2026-02-25T21:20:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "[6·3 이사람] 윤종은 더불어민주당 고양시장 예비후보",
+      "link": "https://www.kgnews.co.kr/news/article.html?no=885620",
+      "originallink": "https://www.kgnews.co.kr/news/article.html?no=885620",
+      "description": "다음 그는 “각종 규제로 재산권 행사와 개발이 제한되고, 침체를 거듭하고 있는 시정 난맥을 해결하기 위한 공약”으로 신청사 건립의 합리적 추진, 친환경 노후도시 재생과 제2판교 유치, 복지혜택 대폭 확대(고양기본소...",
+      "pubDate": "2026-02-25T16:18:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "홍재기, 고양병 당협위원장 출사표… \"당 기강, 환경 문제 바로잡겠다\"",
+      "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=378219",
+      "originallink": "https://www.fntoday.co.kr/news/articleView.html?idxno=378219",
+      "description": "▲고양시청 앞 공용주차장(덕양구 주교동 206-1번지 등 신청사 부지 7만 3,096㎡)에 1995년부터 10만 톤 이상 폐기물이 매립된 의혹 ▲덕양구 강매동 시유지 포함 약 2만 평의 땅속에 묻혀있는 폐기물 ▲일산서구 킨텍스 C4...",
+      "pubDate": "2026-02-25T13:56:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "대통령 띄운 ‘교복값’ 문제, 해법찾기 경쟁",
+      "link": "https://www.naeil.com/news/read/579153?ref=naver",
+      "originallink": "https://www.naeil.com/news/read/579153?ref=naver",
+      "description": "고양시장 출마를 준비중인 민경선 전 경기교통공사 사장은 주요 행사용 교복은 ‘대여’하고 실제 매일 입는 ‘생활복’은 무상 지원하는 방식을 제안했다. 그는 “변화된 학교문화를 반영해 접근 방식을 바꿔야 한다”며...",
+      "pubDate": "2026-02-25T13:08:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보, 첫 행보로 'DJ 사저 개방' 선언",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87724",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87724",
+      "description": "민경선 고양시장 예비후보가 24일 예비후보 등록을 마친 뒤 첫 행보로 일산동구에 위치한 '김대중 대통령 사저 기념관'을 방문해, 시장 당선 시 '제1호 결재'로 사저의 전면 개방을 단행하겠다고 선언했다. 민 예비후보는...",
+      "pubDate": "2026-02-25T10:34:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "지방선거를 위한 '고양빛의연대' 출범 임박",
+      "link": "https://n.news.naver.com/mnews/article/047/0002505929?sid=100",
+      "originallink": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003209658&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+      "description": "이날 간담회에는 정당에서 더불어민주당 장제환, 민경선, 이영아 고양시장 예비후보, 진보당 송영주 고양시장 예비후보, 함윤희 고양시의원 예비후보가 참여하였고, 고양시민회, 고양여성민우회, 고양YWCA, 민주노총...",
+      "pubDate": "2026-02-25T09:56:00+09:00",
+      "candidates_mentioned": [
+        "민경선",
+        "장제환",
+        "이영아"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보, 김대중 대통령 사저 전면 개방 추진",
+      "link": "https://www.incheonilbo.com/news/articleView.html?idxno=1317729",
+      "originallink": "https://www.incheonilbo.com/news/articleView.html?idxno=1317729",
+      "description": "▲ 민경선 더불어민주당 고양시장 예비후보가 굳게 닫힌 김대중 대통령 사전 기념관을 찾아 고양시장 당선 시 제1호 결재로 김대중 사저 개방을 선언하고 있다. /사진제공=민경선 예비후보 민경선 더불어민주당 고양시장...",
+      "pubDate": "2026-02-25T09:50:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보 \"김대중 전 대통령 사저 기념관 전면 개방하...",
+      "link": "https://www.thereport.co.kr/news/articleView.html?idxno=84631",
+      "originallink": "https://www.thereport.co.kr/news/articleView.html?idxno=84631",
+      "description": "민경선 고양시장 예비후보가 24일 고양시 일산동구 정발산동에 있는 '김대중 대통령 사저 기념관' 전면 개방을 후보 등록 후 첫 공약으로 내걸며 본격적인 선거 행보의 포문을 열었다. 민경선 예비후보는 후보 등록을 마친...",
+      "pubDate": "2026-02-25T02:02:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보 “1호 결재는 김대중 사저 개방”",
+      "link": "https://n.news.naver.com/mnews/article/005/0001833703?sid=102",
+      "originallink": "https://www.kmib.co.kr/article/view.asp?arcid=0029438903&code=61122013&cp=nv",
+      "description": "민경선 더불어민주당 고양시장 예비후보는 24일 후보 등록 후 첫 행보로 ‘김대중 대통령 사저 기념관’을 방문해 시장 당선 시 ‘제1호 결재’로 사저 전면 개방을 단행하겠다고 선언했다. 3선 경기도의원 출신으로...",
+      "pubDate": "2026-02-24T22:26:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "'고양패스' 꺼내들다...이경혜 고양시장 출마 선언",
+      "link": "https://www.gukjenews.com/news/articleView.html?idxno=3513000",
+      "originallink": "https://www.gukjenews.com/news/articleView.html?idxno=3513000",
+      "description": "6·3 지방선거 경기 고양시장에 출마하는 이경혜 예 비후보가 고양패스 '월 5만 원이면 GTX·버스 무제한'을 공약으로 내걸었다. 24일 이경혜 예비후보에 따르면 \"고양은평선이 오기까지 7년을 그냥 기다리라는 건 답이...",
+      "pubDate": "2026-02-24T21:36:00+09:00",
+      "candidates_mentioned": [
+        "이경혜"
+      ],
+      "keywords_matched": [
+        "이경혜 고양"
+      ]
+    },
+    {
+      "title": "명재성 고양시장 예비후보, 사회복지연대와 정책간담회",
+      "link": "https://n.news.naver.com/mnews/article/005/0001833697?sid=102",
+      "originallink": "https://www.kmib.co.kr/article/view.asp?arcid=0029438802&code=61122013&cp=nv",
+      "description": "명재성 더불어민주당 경기 고양시장 예비후보는 23일 고양시 사회복지연대와 정책간담회를 개최했다. 이날 일산1동 사회복지연대 사무실에서 개최된 정책간담회는 분야별 현업 종사자·활동가의 현장 이야기를 듣고 가장...",
+      "pubDate": "2026-02-24T21:36:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "[6·3 지방선거] D-100 與野, 공천 경쟁 본격화…전국 광역단체장 '출마...",
+      "link": "https://www.polinews.co.kr/news/articleView.html?idxno=723782",
+      "originallink": "https://www.polinews.co.kr/news/articleView.html?idxno=723782",
+      "description": "당 공관위가 직접 공천을 관할하는 지역은 경기 수원·고양·용인·화성, 경남 창원 등 특례시 5곳과 경기... 인천시장, 국힘 유정복 3선 도전…민주, 박찬대·김교흥·박남춘 탈환 노려 인천시장 선거는 국민의힘 소속...",
+      "pubDate": "2026-02-24T18:41:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "이동환 고양시장, 28일 일산 호수공원서 북콘서트 개최",
+      "link": "https://www.nspna.com/news/?mode=view&newsid=804054",
+      "originallink": "https://www.nspna.com/news/?mode=view&newsid=804054",
+      "description": "또 이 시장은 지난 2022년 고양시장 취임 당시 최성·이재준 전 고양시장 등이 택지개발 위주로 집만 지어온 고양시의 과거를 ‘뼈대 없는 비만’으로 규정하고 ‘경제축’과 ‘경관축’이라는 두 개의 기둥을 재건하는 데...",
+      "pubDate": "2026-02-24T18:32:00+09:00",
+      "candidates_mentioned": [
+        "이재준",
+        "이동환"
+      ],
+      "keywords_matched": [
+        "이재준 고양"
+      ]
+    },
+    {
+      "title": "최승원 전 보좌관, 고양특례시장 출마 선언",
+      "link": "https://n.news.naver.com/mnews/article/047/0002505901?sid=100",
+      "originallink": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003209638&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+      "description": "ⓒ 박상준 이재명 정부 국토교통부 장관정책보좌관을 지낸 최승원 전 보좌관이 고양특례시장 선거 출마를 선언했다. 최 전 보좌관은 24일 오전 10시 30분 고양시의회 영상회의실에서 출마 기자회견을 열고 \"중앙에서 진짜...",
+      "pubDate": "2026-02-24T18:06:00+09:00",
+      "candidates_mentioned": [
+        "최승원"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "멈춰선 고양아레나... 이영아 예비후보 \"고양 K-컬쳐밸리사업단 구성\" 1...",
+      "link": "https://n.news.naver.com/mnews/article/047/0002505898?sid=100",
+      "originallink": "https://www.ohmynews.com/NWS_Web/View/at_pg.aspx?CNTN_CD=A0003209623&CMPT_CD=P0010&utm_source=naver&utm_medium=newsearch&utm_campaign=naver_news",
+      "description": "회원 970여 명이 참여하는 단톡방인 '고양 아레나 살리기 고양시민 모임'은 23일 오전 9시 수원시 경기도청 신청사 앞에 경기도의 행정을 규탄하는 근조화환 50여 개를 설치했다. 화환에는 '고양시민 염원 일산아레나 건설...",
+      "pubDate": "2026-02-24T17:51:00+09:00",
+      "candidates_mentioned": [
+        "이영아"
+      ],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "39년 행정가 출신 명재성, 복지 현장서 '양방향 소통 행정' 시동",
+      "link": "https://www.fntoday.co.kr/news/articleView.html?idxno=378123",
+      "originallink": "https://www.fntoday.co.kr/news/articleView.html?idxno=378123",
+      "description": "행정 실무 능력과 정무적 감각을 고루 갖춘 '준비된 행정전문가'라는 평가를 내놓고 있다. 현장의 목소리를 정책으로 연결하는 명 예비후보의 이번 행보가 향후 고양시장 선거 판세에 어떤 영향을 미칠지 귀추가 주목된다.",
+      "pubDate": "2026-02-24T17:12:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보, '1호 결재'로 김대중 사저 개방 선언",
+      "link": "https://www.newspim.com/news/view/20260224001075",
+      "originallink": "https://www.newspim.com/news/view/20260224001075",
+      "description": "민경선 고양시장 예비후보가 후보 등록을 마친 직후 일산 김대중 대통령 사저 기념관을 방문해 전면 개방을 첫 공약으로 선언하며 본격적인 선거 캠페인을 시작했다. 24일 민 예비후보는 일산동구 정발산동에 위치한...",
+      "pubDate": "2026-02-24T17:11:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보, ‘1호 결재’로 김대중 사저 전면 개방 선언",
+      "link": "http://www.breaknews.com/1187145",
+      "originallink": "http://www.breaknews.com/1187145",
+      "description": "민경선 고양시장 예비후보가 후보 등록을 마친 직후 첫 행보로 일산 소재 김대중 대통령 사저 기념관을 방문해, 당선 시 '제1호 결재'로 기념관을 전면 개방하겠다고...",
+      "pubDate": "2026-02-24T16:42:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "“K-컬처밸리 완공 또 지연?\"…고양시민모임 근조화환시위",
+      "link": "https://n.news.naver.com/mnews/article/666/0000097212?sid=102",
+      "originallink": "https://www.kyeonggi.com/article/20260224580268",
+      "description": "경기도청 신청사 앞에 50여개의 근조화환을 설치하는 시위를 펼쳤다. 모임 측은 이날 설치한 근조화환이 10년 넘게 기다려 온 고양 시민들의 숙원 사업을 벼랑 끝으로 내몬 경기도 행정의 사망을 의미한다고 강조했다....",
+      "pubDate": "2026-02-24T16:11:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "민경선 전 경기교통공사사장, 고양시장 예비후보 공식 등록",
+      "link": "https://www.newspim.com/news/view/20260224000935",
+      "originallink": "https://www.newspim.com/news/view/20260224000935",
+      "description": "2026.02.24 atbodo@newspim.com 민경선 예비후보는 출마 선언에서 현 고양시정에 대한 날카로운 비판을 쏟아냈다. 그는 \"지금 고양시는 시민보다 행정이 앞서는 거꾸로 된 시정\"이라며 \"시민이 주인인 정상적인 도시로...",
+      "pubDate": "2026-02-24T15:51:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "최승원 전 국토부 정책보좌관, 고양시장 출마 선언…\"일자리 도시 만들...",
+      "link": "https://news.ifm.kr/news/articleView.html?idxno=465466",
+      "originallink": "https://news.ifm.kr/news/articleView.html?idxno=465466",
+      "description": "최승원 전 국토교통부 장관 정책보좌관이 오늘(24일) 고양시의회에서 더불어민주당 소속으로 고양특례시장 선거 출마를 공식 선언했습니다. 최 전 보좌관은 국회와 이재명 정부 국토교통부 등에서 활동하며 쌓아온 탄탄한...",
+      "pubDate": "2026-02-24T15:30:00+09:00",
+      "candidates_mentioned": [
+        "최승원"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "최승원 전 정책보좌관 \"이재명 정부 대표 성공도시 만들 것\"",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87706",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87706",
+      "description": "최승원 고양시장 출마예정자(전 국토부장관 정책보좌관) 최승원 전 국토교통부장관 정책보좌관이 24일 오전 시의회 영상회의실에서 기자회견을 열고 차기 고양시장 선거 출마를 공식 선언했다. 이날 현장에는 고양시병...",
+      "pubDate": "2026-02-24T15:22:00+09:00",
+      "candidates_mentioned": [
+        "최승원"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "민경선 고양시장 예비후보, 당선 후 1호 결재로 '김대중 사저 개방' 선언",
+      "link": "https://n.news.naver.com/mnews/article/421/0008790355?sid=102",
+      "originallink": "https://www.news1.kr/local/gyeonggi/6081327",
+      "description": "올해 6·3지방선거를 앞두고 민경선 고양시장 예비후보(55)가 24일, 예비후보 등록을 마친 후 첫 공약으로 일산 '김대중 대통령 사저 기념관' 전면 개방을 선언하며 본격적인 선거 행보에 나섰다. 민 예비후보는 이날...",
+      "pubDate": "2026-02-24T15:16:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "이경혜 도의원 \"과천 경마공원 유치로 세수 2500억원 확보하겠다\"",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87707",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87707",
+      "description": "시민 삶 변화시킬 10가지 정책 제시 '거꾸로 간 4년 정상화, 원당신청사 건립\" 반값 교통비, 대곡역을 국제철도로 격상 [고양신문] 이경혜 경기도의원(더불어민주당)은 23일 고양시의회 영상회의실에서 기자회견을 열고...",
+      "pubDate": "2026-02-24T15:14:00+09:00",
+      "candidates_mentioned": [
+        "이경혜"
+      ],
+      "keywords_matched": [
+        "이경혜 고양"
+      ]
+    },
+    {
+      "title": "경기도 지방선거 예비후보 민주 '풍년' vs 국힘 '가뭄'…결과는?",
+      "link": "https://www.kpinews.kr/newsView/1065588073695393",
+      "originallink": "https://www.kpinews.kr/newsView/1065588073695393",
+      "description": "[뉴시스] 경기도선거관리위원회에 따르면 지난 20일 제9회 전국동시지방선거 시장선거 예비후보 등록이... 자세한 내용은 중앙선거여론조사심의위원회 홈페이지를 참고하면 된다. 특히 국힘이 현역 단체장인 고양시...",
+      "pubDate": "2026-02-24T14:21:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "장제환 고양시장 출마… \"고양특례시 리셋, 글로벌 전진기지로 도약\"",
+      "link": "https://www.tournews21.com/news/articleView.html?idxno=130401",
+      "originallink": "https://www.tournews21.com/news/articleView.html?idxno=130401",
+      "description": "더불어민주당 소속 장제환 고양시장 예비후보가 '고양특례시 리셋'을 기치로 출마를 공식화했다. 슬로건은 단순하다.  \"고양특례시 리셋, 글로벌 전진기지로 도약\" 장 예비후보는 \"정체된 도시 구조를 과감히 재설계해...",
+      "pubDate": "2026-02-24T13:18:00+09:00",
+      "candidates_mentioned": [
+        "장제환"
+      ],
+      "keywords_matched": [
+        "장제환 고양"
+      ]
+    },
+    {
+      "title": "명재성 고양특례시장 예비후보, ‘사회복지연대’와 정책간담회 진행",
+      "link": "http://www.metroseoul.co.kr/article/20260224500148",
+      "originallink": "http://www.metroseoul.co.kr/article/20260224500148",
+      "description": "명재성 고양시장 예비후보가 23일 고양시 사회복지연대와 정책간담회를 개최했다고 24일 밝혔다. 이날 일산1동 사회복지연대 사무실에서 개최된 정책간담회는 고양시사회복지협의회 회장이자 고양시 길상사 주지 보산...",
+      "pubDate": "2026-02-24T12:58:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "106만 고양특례시 흔드는 '메가톤급 변수'… 최승원, 시장 출마 전격 선...",
+      "link": "http://www.breaknews.com/1187025",
+      "originallink": "http://www.breaknews.com/1187025",
+      "description": "한 지역 정가 관계자는 \"최 예비후보의 등장으로 고양시장 선거의 문법이 단순한 정치적 공방에서 정책과 실력 경쟁으로 옮겨가고 있다\"며 \"젊고 개혁적인 이미지에...",
+      "pubDate": "2026-02-24T12:42:00+09:00",
+      "candidates_mentioned": [
+        "최승원"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "명재성 고양시장 예비후보, 사회복지연대와 정책간담회… \"현장 중심 복...",
+      "link": "http://www.breaknews.com/1187027",
+      "originallink": "http://www.breaknews.com/1187027",
+      "description": "더불어민주당 명재성 경기 고양특례시장 예비후보가 지역 사회복지계와 머리를 맞대며 현장 중심의 복지 정책 마련에 나섰다. 명 예비후보는 지난 23일 일산1동...",
+      "pubDate": "2026-02-24T12:42:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "장제환 예비후보, 26일 고양특례시장 출마 공식 선언…\"고양시를 리셋하...",
+      "link": "http://www.breaknews.com/1187026",
+      "originallink": "http://www.breaknews.com/1187026",
+      "description": "더불어민주당 장제환 고양특례시장 예비후보가 오는 26일 오후 2시 고양특례시의회 영상회의실에서 기자회견을 열고 시장 출마를 공식 선언한다. 이번 회견에서 장...",
+      "pubDate": "2026-02-24T12:42:00+09:00",
+      "candidates_mentioned": [
+        "장제환"
+      ],
+      "keywords_matched": [
+        "장제환 고양"
+      ]
+    },
+    {
+      "title": "\"시민이 주인인 정상적인 도시로 되돌리겠다\"... 민경선, 고양시장 예비...",
+      "link": "https://www.ilyoseoul.co.kr/news/articleView.html?idxno=513444",
+      "originallink": "https://www.ilyoseoul.co.kr/news/articleView.html?idxno=513444",
+      "description": "민경선, 고양시장 예비후보 민경선 전 경기교통공사 사장이 23일 고양시 선거관리위원회를 방문해 제 9회 전국동시지방선거 고양시장 예비후보 등록을 마치고 본격적인 선거 행보에 나섰다. 민경선 예비후보는 후보 등록...",
+      "pubDate": "2026-02-24T12:04:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "명재성 예비후보, 사회복지연대와 정책간담회",
+      "link": "https://www.obsnews.co.kr/news/articleView.html?idxno=1515017",
+      "originallink": "https://www.obsnews.co.kr/news/articleView.html?idxno=1515017",
+      "description": "더불어민주당 명재성 고양특례시장 예비후보가 고양시 사회복지연대와 정책간담회를 열고 복지 현장의 의견을 청취했습니다. 간담회에서는 사회복지 종사자 처우 개선과 시설 운영 보장 등 2대 분야 4개 과제가 담긴 정책...",
+      "pubDate": "2026-02-24T11:42:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "최승원, 고양시장 출마 선언…“주거·교통부터 시민 삶 바꾸겠다”",
+      "link": "http://www.metroseoul.co.kr/article/20260224500138",
+      "originallink": "http://www.metroseoul.co.kr/article/20260224500138",
+      "description": "최 전 보좌관은 \"고양시장 선거의 문법을 정치 공방이 아니라 실력 경쟁으로 바꾸겠다\"며 \"산적한 지역 현안을 신속히 해결하고, 고양을 '이재명 정부 대표 성공도시'로 만들겠다\"고 거듭 강조했다.",
+      "pubDate": "2026-02-24T10:58:00+09:00",
+      "candidates_mentioned": [
+        "최승원"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "이경혜 경기도의원, 고양특례시장 출마 선언",
+      "link": "https://www.job-post.co.kr/news/articleView.html?idxno=208305",
+      "originallink": "https://www.job-post.co.kr/news/articleView.html?idxno=208305",
+      "description": "더불어민주당 이경혜 경기도의원(고양 제4선거구)이 23일 2026년 6·4 지방선거 고양특례시장 출마를 공식 선언했다. 이경혜 후보는 이날 기자회견에서 '고양 대전환 프로젝트'를 내걸며, 고양을 '전시하는 도시가...",
+      "pubDate": "2026-02-24T10:34:00+09:00",
+      "candidates_mentioned": [
+        "이경혜"
+      ],
+      "keywords_matched": [
+        "이경혜 고양"
+      ]
+    },
+    {
+      "title": "민경선, 고양시장 예비후보 등록…“행정 권력 아닌 시민주권 도시로”",
+      "link": "https://www.g-enews.com/view.php?ud=202602240011228152f0f3e23044_1",
+      "originallink": "https://www.g-enews.com/view.php?ud=202602240011228152f0f3e23044_1",
+      "description": "민경선 전 경기교통공사 사장이 지난 23일 고양시 선거관리위원회를 찾아 제9회 전국동시지방선거 고양시장 예비후보 등록을 마치고 본격적인 선거 행보에 돌입했다. 등록 직후 첫 공식 일정으로는 고양시 ‘김대중 대통령...",
+      "pubDate": "2026-02-24T07:22:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "고양시장 선거"
+      ]
+    },
+    {
+      "title": "<지방선거 D-100> 시장 예비후보 7명 중 민주당 6명, 당내 경쟁 치열",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87697",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87697",
+      "description": "따르면, 고양시장 예비후보로 등록한 인사는 총 7명이다. 소속 정당별로는 더불어민주당 6명, 국민의힘 1명으로 민주당 강세가 뚜렷하다. 민주당에서는 지난 20일 명재성(전 덕양구청장), 백수회(변호사), 윤종은...",
+      "pubDate": "2026-02-23T18:34:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "지방선거 D-100...여야, 후보자 ‘옥석 가리기’ 본격화 [6·3알고리즘]",
+      "link": "https://n.news.naver.com/mnews/article/666/0000097117?sid=100",
+      "originallink": "https://www.kyeonggi.com/article/20260223580525",
+      "description": "대표적으로 경기도의회에서 이용욱(파주3), 서현옥(평택3), 명재성(고양5) 도의원은 의원직을 사퇴하고 해당 지역 단체장 출마를 위해 예비후보자 자격심사를 받았다. 이들은 모두 적격 판정을 받았으며 서 전 의원과 명...",
+      "pubDate": "2026-02-23T18:21:00+09:00",
+      "candidates_mentioned": [
+        "명재성"
+      ],
+      "keywords_matched": [
+        "명재성 고양"
+      ]
+    },
+    {
+      "title": "경기도청 앞 근조화환 50개… K-컬처밸리 지체에 분노",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87691",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87691",
+      "description": "회원 970여 명의 단톡방인 '고양 아레나 살리기 고양시민 모임'은 23일 오전 9시 수원시 경기도청 신청사 앞에 경기도의 행정을 규탄하는 근조화환 50여 개를 설치했다. 화환에는 '고양시민 염원 일산아레나 건설 즉각...",
+      "pubDate": "2026-02-23T16:28:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "“다시 뛰는 고양, 실무형 일자리 시장 되겠다”... 정병춘, 고양시장 출...",
+      "link": "http://www.breaknews.com/1186713",
+      "originallink": "http://www.breaknews.com/1186713",
+      "description": "6·3 지방선거 예비후보 등록 첫날인 20일, 더불어민주당 정병춘 당대표 경제특보(전 정책위 부의장)가 경기도 고양시장 출마를 공식 선언하며 본격적인 선거전에...",
+      "pubDate": "2026-02-23T16:22:00+09:00",
+      "candidates_mentioned": [
+        "정병춘"
+      ],
+      "keywords_matched": [
+        "정병춘 고양"
+      ]
+    },
+    {
+      "title": "민경선 전 경기교통공사 사장, 고양시장 예비후보 등록…\"시민 주권 시...",
+      "link": "https://news.ifm.kr/news/articleView.html?idxno=465376",
+      "originallink": "https://news.ifm.kr/news/articleView.html?idxno=465376",
+      "description": "민경선 전 경기교통공사 사장이 오늘(23일) 경기 고양시 선거관리위원회를 찾아 제9회 전국동시지방선거 고양시장 예비후보 등록을 마치고 본격적인 선거 행보에 나섰습니다. 첫 공식 일정으로 고양시 '김대중 대통령 사저...",
+      "pubDate": "2026-02-23T16:22:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "\"다시 뛰는 고양, 일자리 시장 되겠다\" 정병춘 고양시장 예비후보, 6·3 ...",
+      "link": "https://www.kmaeil.com/news/articleView.html?idxno=630662",
+      "originallink": "https://www.kmaeil.com/news/articleView.html?idxno=630662",
+      "description": "지지자들은 \"준비된 공약에 믿음이 간다\"며 기대감을 표했다. 정병춘 예비후보는 \"고양의 위대한 자산을 현실로 만드는 실행력을 보여주겠다\"며 \"말이 아닌 결과로 증명하는 시장이 되겠다\"고 지지를 호소하며 회견을 마쳤다.",
+      "pubDate": "2026-02-23T16:02:00+09:00",
+      "candidates_mentioned": [
+        "정병춘"
+      ],
+      "keywords_matched": [
+        "정병춘 고양"
+      ]
+    },
+    {
+      "title": "민경선, 고양시장 예비후보 등록…“시민주권 행정 혁신”",
+      "link": "https://n.news.naver.com/mnews/article/005/0001833408?sid=100",
+      "originallink": "https://www.kmib.co.kr/article/view.asp?arcid=0029432203&code=61111711&cp=nv",
+      "description": "민경선 전 경기교통공사 사장이 23일 경기 고양시 선거관리위원회를 찾아 제9회 전국동시지방선거 고양시장 예비후보 등록을 마치고 본격적인 선거 행보에 돌입했다. 첫 공식 일정으로 고양시 ‘김대중 대통령 사저...",
+      "pubDate": "2026-02-23T15:55:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "“K-컬처밸리 사업 지지부진” 고양시민들 근조화환 시위",
+      "link": "https://n.news.naver.com/mnews/article/005/0001833409?sid=102",
+      "originallink": "https://www.kmib.co.kr/article/view.asp?arcid=0029432204&code=61122013&cp=nv",
+      "description": "‘고양 아레나 살리기 고양시민 모임’은 23일 경기도청 신청사 앞에 경기도의 소극 행정과 불투명한 사업 추진을 규탄하는 근조화환 시위를 진행했다고 밝혔다. 시민들은 이번 시위가 10년 넘게 기다려 온 지역 숙원...",
+      "pubDate": "2026-02-23T15:55:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "민경선 \"시민이 언제든 말하고 시장은 반드시 답하는 도시 만들겠다\"",
+      "link": "https://www.thereport.co.kr/news/articleView.html?idxno=84550",
+      "originallink": "https://www.thereport.co.kr/news/articleView.html?idxno=84550",
+      "description": "민경선 전 경기교통공사 사장이 23일 고양시 선거관리위원회를 방문해 제9회 전국동시지방선거 고양시장 예비후보 등록을 마치고 본격적인 선거 행보에 나섰다. 민경선 예비후보는 후보 등록 후 첫 공식 일정으로 고양시...",
+      "pubDate": "2026-02-23T15:52:00+09:00",
+      "candidates_mentioned": [
+        "민경선"
+      ],
+      "keywords_matched": [
+        "민경선 고양"
+      ]
+    },
+    {
+      "title": "고양시민들, K-컬처밸리 지지부진에 도청 앞 근조화환 설치 '항의'",
+      "link": "https://n.news.naver.com/mnews/article/421/0008787795?sid=102",
+      "originallink": "https://www.news1.kr/local/gyeonggi/6079852",
+      "description": "'고양 아레나 살리기 고양시민 모임'(이하 '시민 모임')은 23일 오전 경기도청 신청사 앞에 경기도의 'K-컬처밸리' 사업에 대한 소극 행정을 규탄하고 조속한 사업 추진을 요구하는 근조화환 50여 개를 설치했다고 이날...",
+      "pubDate": "2026-02-23T15:00:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "고양시민들, K-컬처밸리 지연에 경기도청 앞 근조화환 50여 개 설치",
+      "link": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1232785",
+      "originallink": "https://www.jeonmae.co.kr/news/articleView.html?idxno=1232785",
+      "description": "23일 '고양 아레나 살리기 고양시민 모임'은 경기도청 신청사 앞에 경기도의 사업 추진 지연에 대한 책임 있는 대응과 조속한 정상화를 요구하는 근조화환 50여 개를 설치했다. 이들은 이날 도청 앞에 놓인 근조화환이 10년...",
+      "pubDate": "2026-02-23T14:58:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "이재준 전 시장 \"미래부지는 다음 세대의 권리\"",
+      "link": "http://www.mygoyang.com/news/articleView.html?idxno=87689",
+      "originallink": "http://www.mygoyang.com/news/articleView.html?idxno=87689",
+      "description": "오는 6월 지방선거에서 고양시장 출마를 준비 중인 이재준 전 고양시장이 지난 21일 주엽동 한양문고에서 북콘서트를 열고 본격적인 정책 행보에 나섰다. 이날 행사는 단순한 출판기념회를 넘어, 민선 7기 당시 추진했던...",
+      "pubDate": "2026-02-23T14:36:00+09:00",
+      "candidates_mentioned": [
+        "이재준"
+      ],
+      "keywords_matched": [
+        "이재준 고양"
+      ]
+    },
+    {
+      "title": "고양시민들 “K-컬처밸리 정상화하라”…경기도청에 조화 50개 설치",
+      "link": "https://n.news.naver.com/mnews/article/081/0003619928?sid=102",
+      "originallink": "https://www.seoul.co.kr/news/society/2026/02/23/20260223500160?wlog_tag3=naver",
+      "description": "‘고양 아레나 살리기 고양시민 모임’은 23일 오전 9시 경기도청 신청사 앞에 근조화환 50여 개를 설치하고, K-컬처밸리 사업의 조속한 정상화를 촉구하는 시위를 벌였다. 도청 앞 인도와 광장 일대에는 “경기도 행정은...",
+      "pubDate": "2026-02-23T14:07:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "고양시민들 \"K컬처밸리 조속 추진하라\"…도청에 근조화환 50개 보내",
+      "link": "https://n.news.naver.com/mnews/article/018/0006222741?sid=100",
+      "originallink": "http://www.edaily.co.kr/news/newspath.asp?newsid=03486646645353472",
+      "description": "‘고양 아레나 살리기 고양시민 모임’은 23일 오전 9시 수원시 경기도청 신청사 앞에 K컬처밸리 관련 경기도의 소극 행정을 규탄하고 조속한 사업 추진을 촉구하는 근조화환 50여개를 설치했다. 고양시민들이 K컬처밸리...",
+      "pubDate": "2026-02-23T13:56:00+09:00",
+      "candidates_mentioned": [],
+      "keywords_matched": [
+        "고양 신청사"
+      ]
+    },
+    {
+      "title": "삼성 법인지방소득세 '제로' 맞은 수원시…체납 징수·채무 감축·기금...",
+      "link": "https://n.news.naver.com/mnews/article/015/0005253561?sid=102",
+      "originallink": "https://www.hankyung.com/article/202602237066h",
+      "description": "고양·용인·화성·성남 등 재정 규모가 비슷한 4개 지방자치단체의 평균 체납액은 1945억원(2024년 결산... 이재준 수원특례시장은 \"세입 구조 다변화는 여전히 과제지만 위기 대응 방향은 분명했다\"며 \"체납 징수...",
+      "pubDate": "2026-02-23T07:54:00+09:00",
+      "candidates_mentioned": [
+        "이재준"
+      ],
+      "keywords_matched": [
+        "이재준 고양"
+      ]
+    },
+    {
+      "title": "6·3지방선거, 이재명 정부 2년차 시험대…경기도가 답한다",
+      "link": "https://n.news.naver.com/mnews/article/421/0008786131?sid=102",
+      "originallink": "https://www.news1.kr/local/gyeonggi/6078275",
+      "description": "용인, 고양 등 '4대 특례시' 표심 향배도 이번 선거 승패를 가를 핵심 변수다. 현재 각 시장 소속 정당은 민주당 2곳, 국민의힘 2곳으로 팽팽히 맞서 있다. 수원시는 민주당 소속 이재준 시장(60)이 수성에 나서는 가운데...",
+      "pubDate": "2026-02-23T07:00:00+09:00",
+      "candidates_mentioned": [
+        "이재준"
+      ],
+      "keywords_matched": [
+        "이재준 고양"
+      ]
+    }
+  ]
 }

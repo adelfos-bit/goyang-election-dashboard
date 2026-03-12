@@ -50,6 +50,10 @@ POSITIVE_WORDS = {
     # 강한 긍정 (가중치 2)
     "성과": 2, "성공": 2, "혁신": 2, "도약": 2, "선두": 2, "압승": 2,
     "돌파": 2, "쾌거": 2, "약진": 2, "호평": 2, "찬사": 2,
+    # 정책/공약 긍정 (가중치 1) — 정책 발표·제안 패턴 인식
+    "발표": 1, "제안": 1, "도입": 1, "절감": 1, "전환": 1, "승부수": 1,
+    "매니페스토": 1, "정책": 1, "시민": 1, "해법": 1, "구상": 1,
+    "무상": 1, "감면": 1, "인하": 1, "혜택": 1, "복원": 1,
     # 일반 긍정 (가중치 1)
     "확대": 1, "지원": 1, "개선": 1, "추진": 1, "발전": 1, "강화": 1,
     "협력": 1, "합의": 1, "기대": 1, "약속": 1, "비전": 1, "공약": 1,
@@ -62,7 +66,7 @@ POSITIVE_WORDS = {
 NEGATIVE_WORDS = {
     # 강한 부정 (가중치 2)
     "비리": 2, "기소": 2, "구속": 2, "파문": 2, "폭로": 2, "규탄": 2,
-    "부정": 2, "위법": 2, "탄핵": 2, "사퇴": 2, "파행": 2,
+    "부정": 2, "위법": 2, "탄핵": 2, "파행": 2,
     # 일반 부정 (가중치 1)
     "논란": 1, "비판": 1, "실패": 1, "갈등": 1, "반발": 1, "의혹": 1,
     "문제": 1, "위기": 1, "우려": 1, "지적": 1, "반대": 1, "거부": 1,
@@ -75,14 +79,14 @@ CONTEXT_WINDOW = 80  # 후보명 주변 문맥 감성 분석 범위 (글자 수)
 
 # 이슈 카테고리 매핑
 ISSUE_CATEGORIES = {
-    "교통/경기패스": ["경기패스", "교통", "BRT", "트램", "고양패스", "버스", "지하철"],
-    "신청사 이전": ["신청사", "청사", "원당", "백석"],
-    "경제자유구역": ["경제자유구역", "경자구", "킨텍스", "MICE"],
-    "1기 신도시 재건축": ["재건축", "재개발", "노후화", "일산", "신도시"],
-    "교육 인프라": ["교육", "학교", "학원", "입시"],
-    "환경/기후": ["환경", "기후", "탄소", "녹색", "생태"],
-    "복지/돌봄": ["복지", "돌봄", "보육", "어린이", "노인", "장애"],
-    "일자리/경제": ["일자리", "경제", "창업", "고용", "기업"]
+    "교통/경기패스": ["경기패스", "교통비", "BRT", "트램", "고양패스", "버스노선", "지하철", "GTX", "경의중앙선"],
+    "신청사 이전": ["신청사", "청사 이전", "원당 청사", "백석 청사"],
+    "경제자유구역": ["경제자유구역", "경자구", "킨텍스", "MICE", "K컬처밸리"],
+    "1기 신도시 재건축": ["재건축", "재개발", "노후화", "1기 신도시", "리모델링"],
+    "교육 인프라": ["교육", "학교 신설", "학원", "입시", "돌봄교실"],
+    "환경/기후": ["기후변화", "탄소중립", "녹색전환", "장항습지", "에너지전환"],
+    "복지/돌봄": ["복지", "돌봄", "보육", "어린이집", "노인복지", "장애인"],
+    "일자리/경제": ["일자리", "경제활성화", "창업지원", "고용", "기업유치", "경마공원"]
 }
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -163,7 +167,20 @@ def collect_articles(client_id, client_secret, keywords, period_start, period_en
             desc_clean = strip_html(item.get("description", ""))
             text = title_clean + " " + desc_clean
 
+            # 노이즈 필터: 고양/선거 관련성 검증 (엄격)
             mentioned = [name for name in CANDIDATE_NAMES if name in text]
+            # 고양 지역 핵심 키워드 (이것만으로 관련성 인정)
+            LOCAL_KEYWORDS = [
+                "고양", "일산", "덕양", "킨텍스", "경기패스", "고양패스",
+                "고양특례시", "고양시장",
+            ]
+            # 선거 키워드는 지역 키워드와 함께 있어야만 관련성 인정
+            has_relevance = (
+                len(mentioned) > 0
+                or any(lk in text for lk in LOCAL_KEYWORDS)
+            )
+            if not has_relevance:
+                continue
 
             articles.append({
                 "title": title_clean,
@@ -181,10 +198,56 @@ def collect_articles(client_id, client_secret, keywords, period_start, period_en
     return articles
 
 
-def analyze_sentiment(text):
+def _is_resignation_to_run(text):
+    """'사퇴/사직'이 출마를 위한 사직인지 판별 (출마 문맥이면 True → 부정 아님)"""
+    RUN_CONTEXT = ["출마", "도전", "선거", "후보", "경선", "의원직"]
+    if "사퇴" in text or "사직" in text:
+        return any(kw in text for kw in RUN_CONTEXT)
+    return False
+
+
+# 범용 부정어 — 후보와 직접 관련이 아닐 수 있어 근접도 체크 필요
+AMBIGUOUS_NEGATIVES = {"논란", "반발", "의혹", "문제", "우려", "지적", "비판", "위기", "갈등"}
+PROXIMITY_WINDOW = 30  # 범용 부정어 근접도 체크 범위 (글자 수)
+
+
+def _count_neg_with_proximity(text, candidate_name=None):
+    """부정 점수 계산 — 범용 부정어는 후보명 근접 시에만 카운트"""
+    neg_score = 0
+    for word, weight in NEGATIVE_WORDS.items():
+        if word not in text:
+            continue
+        if candidate_name and word in AMBIGUOUS_NEGATIVES:
+            # 후보명과의 근접도 체크
+            word_idx = 0
+            word_near_candidate = False
+            while True:
+                pos = text.find(word, word_idx)
+                if pos == -1:
+                    break
+                # 후보명이 부정어 근처에 있는지 확인
+                check_start = max(0, pos - PROXIMITY_WINDOW)
+                check_end = min(len(text), pos + len(word) + PROXIMITY_WINDOW)
+                if candidate_name in text[check_start:check_end]:
+                    word_near_candidate = True
+                    break
+                word_idx = pos + 1
+            if word_near_candidate:
+                neg_score += weight
+        else:
+            neg_score += weight
+    return neg_score
+
+
+def analyze_sentiment(text, candidate_name=None):
     """가중치 키워드 기반 감성분석 — 긍정/부정/중립 점수 반환"""
     pos_score = sum(weight for word, weight in POSITIVE_WORDS.items() if word in text)
-    neg_score = sum(weight for word, weight in NEGATIVE_WORDS.items() if word in text)
+    neg_score = _count_neg_with_proximity(text, candidate_name)
+
+    # 문맥 보정: 출마를 위한 사퇴/사직은 부정에서 제외
+    if _is_resignation_to_run(text):
+        pass  # 이미 사전에서 제거했으므로 추가 처리 불필요
+
     total = pos_score + neg_score
     if total == 0:
         return {"positive": 0, "negative": 0, "neutral": 1, "score": 0}
@@ -210,10 +273,10 @@ def analyze_sentiment_context(text, candidate_name):
         idx = pos + 1
 
     if not contexts:
-        return analyze_sentiment(text)
+        return analyze_sentiment(text, candidate_name)
 
     combined = " ".join(contexts)
-    return analyze_sentiment(combined)
+    return analyze_sentiment(combined, candidate_name)
 
 
 def analyze_articles(articles):
@@ -258,16 +321,22 @@ def analyze_articles(articles):
             daily_sentiment[pub_date]["neg"] += article_sent["negative"]
             daily_sentiment[pub_date]["total"] += 1
 
-        # 기사별 감성 저장 (최근 20건만)
-        if len(article_sentiments) < 20:
-            label = "긍정" if article_sent["score"] > 0 else ("부정" if article_sent["score"] < 0 else "중립")
-            article_sentiments.append({
-                "title": article["title"][:60],
-                "date": pub_date,
-                "sentiment": label,
-                "score": article_sent["score"],
-                "candidates": article["candidates_mentioned"][:3]
-            })
+        # 기사별 감성 저장 (후보 언급 기사 우선, 최대 20건)
+        label = "긍정" if article_sent["score"] > 0 else ("부정" if article_sent["score"] < 0 else "중립")
+        entry = {
+            "title": article["title"][:60],
+            "date": pub_date,
+            "sentiment": label,
+            "score": article_sent["score"],
+            "candidates": article["candidates_mentioned"][:3]
+        }
+        if article["candidates_mentioned"]:
+            # 후보 언급 기사는 우선 삽입
+            article_sentiments.insert(0, entry)
+            if len(article_sentiments) > 20:
+                article_sentiments.pop()
+        elif len(article_sentiments) < 20:
+            article_sentiments.append(entry)
 
         # 키워드 카운팅
         for kw in ["경기패스", "신청사", "GTX", "교통", "일산", "킨텍스",
@@ -496,13 +565,21 @@ def update_dashboard_data(analysis, date_str):
             pos_pct = round(s["pos"] / s["total"] * 100)
             neg_pct = round(s["neg"] / s["total"] * 100)
             details = dashboard["sentiment_details"].get(name, {})
+            # 신뢰도 등급: 기사 수 기반
+            if s["total"] >= 30:
+                reliability = "high"
+            elif s["total"] >= 15:
+                reliability = "medium"
+            else:
+                reliability = "low"
             details.update({
                 "positive": pos_pct,
                 "neutral": max(0, 100 - pos_pct - neg_pct),
                 "negative": neg_pct,
                 "score": pos_pct - neg_pct,
                 "article_count": s["total"],
-                "weighted_score": pos_pct - neg_pct
+                "weighted_score": pos_pct - neg_pct,
+                "reliability": reliability
             })
             # sample_positive/negative는 기존 값 유지 (수동 관리)
             if "sample_positive" not in details:
