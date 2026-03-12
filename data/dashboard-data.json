@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-12T09:40:42.804117",
+    "social_last_success": "2026-03-12T10:37:00.634286",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-12T09:40:34.591337",
+    "news_last_run": "2026-03-12T10:36:52.208033",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -943,25 +943,25 @@
             "title": "[이경혜 고양시장 예비후보정책 다섯번째] 고양시 상권 살릴 &#39;치트키&#39; 공개합니다 #정책공약",
             "date": "2026-03-12",
             "url": "https://www.youtube.com/watch?v=gmsFRff21mw",
-            "views": 291
+            "views": 327
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 네번째] 고양시민이 꼭! 알아야 할 #경제자유구역",
             "date": "2026-03-11",
             "url": "https://www.youtube.com/watch?v=0vQaH8Jbkp8",
-            "views": 828
+            "views": 827
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 세번째] &#39;과천 경마공원 유치&#39; #정책공약",
             "date": "2026-03-11",
             "url": "https://www.youtube.com/watch?v=FrmXVuGSLDM",
-            "views": 1010
+            "views": 1019
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 두번째] 고양시 K-의료벨트 구축! 의료벤처타운 &amp; 공공의료대학 유치",
             "date": "2026-03-10",
             "url": "https://www.youtube.com/watch?v=arhkZbXD59s",
-            "views": 1196
+            "views": 1195
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 첫번째] 고양시 교통비 50% 절감! &#39;고양이패스&#39;와 BRT 도입, 가능합니다!",
@@ -971,14 +971,14 @@
           }
         ],
         "score": 82,
-        "total_views": 29679,
+        "total_views": 26220,
         "source": "api"
       },
       "facebook": {
         "status": "활성",
-        "followers": 6119,
-        "likes": 6119,
-        "talking_about": 670,
+        "followers": 6120,
+        "likes": 6120,
+        "talking_about": 695,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -1085,7 +1085,7 @@
         "date": "2026-03-12",
         "url": "https://www.youtube.com/watch?v=gmsFRff21mw",
         "metrics": {
-          "views": 291
+          "views": 327
         }
       },
       {
@@ -1101,7 +1101,7 @@
         "date": "2026-03-11",
         "url": "https://www.youtube.com/watch?v=0vQaH8Jbkp8",
         "metrics": {
-          "views": 828
+          "views": 827
         }
       },
       {
@@ -1110,7 +1110,7 @@
         "date": "2026-03-11",
         "url": "https://www.youtube.com/watch?v=FrmXVuGSLDM",
         "metrics": {
-          "views": 1010
+          "views": 1019
         }
       },
       {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-12T09:40:42.803632"
+    "collected_at": "2026-03-12T10:37:00.633794"
   },
   "sentiment_trend": {
     "2026-03-03": {
