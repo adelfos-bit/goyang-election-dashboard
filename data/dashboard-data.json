@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-13T09:37:27.496177",
+    "social_last_success": "2026-03-13T10:34:56.772823",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-13T09:37:19.490228",
+    "news_last_run": "2026-03-13T10:34:46.501401",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -943,25 +943,25 @@
             "title": "댕댕이 자만추",
             "date": "2026-03-13",
             "url": "https://www.youtube.com/watch?v=Trjl-XOdA9M",
-            "views": 4063
+            "views": 4170
           },
           {
             "title": "경기도의회 시절부터 이어진 투쟁, &#39;아레나 살리기&#39;에 진심 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-13",
             "url": "https://www.youtube.com/watch?v=E9l4ak9u4h8",
-            "views": 18
+            "views": 21
           },
           {
             "title": "&quot;표를 위한 쇼가 아닙니다.&quot; 2022년부터 이어온 아레나 살리기 대장정 / 고양특례시장 예비후보 이경혜 [긴급 기자회견]",
             "date": "2026-03-13",
             "url": "https://www.youtube.com/watch?v=2plBr2scb3k",
-            "views": 50
+            "views": 36
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 다섯번째] 고양시 상권 살릴 &#39;치트키&#39; 공개합니다 #정책공약",
             "date": "2026-03-12",
             "url": "https://www.youtube.com/watch?v=gmsFRff21mw",
-            "views": 1200
+            "views": 1197
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 네번째] 고양시민이 꼭! 알아야 할 #경제자유구역",
@@ -978,7 +978,7 @@
         "status": "활성",
         "followers": 6123,
         "likes": 6123,
-        "talking_about": 627,
+        "talking_about": 628,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -1085,7 +1085,7 @@
         "date": "2026-03-13",
         "url": "https://www.youtube.com/watch?v=Trjl-XOdA9M",
         "metrics": {
-          "views": 4063
+          "views": 4170
         }
       },
       {
@@ -1094,7 +1094,7 @@
         "date": "2026-03-13",
         "url": "https://www.youtube.com/watch?v=E9l4ak9u4h8",
         "metrics": {
-          "views": 18
+          "views": 21
         }
       },
       {
@@ -1103,7 +1103,7 @@
         "date": "2026-03-13",
         "url": "https://www.youtube.com/watch?v=2plBr2scb3k",
         "metrics": {
-          "views": 50
+          "views": 36
         }
       },
       {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-13T09:37:27.495692"
+    "collected_at": "2026-03-13T10:34:56.772328"
   },
   "sentiment_trend": {
     "2026-03-03": {
