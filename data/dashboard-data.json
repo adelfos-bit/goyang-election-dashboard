@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-13T04:12:30.225000",
+    "social_last_success": "2026-03-13T05:47:11.026539",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,14 +928,14 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-13T04:12:22.925277",
+    "news_last_run": "2026-03-13T05:47:03.314632",
     "news_status": "no_articles"
   },
   "social_media": {
     "platforms": {
       "youtube": {
         "status": "활성",
-        "subscribers": 121,
+        "subscribers": 122,
         "videos": 32,
         "last_upload": "2026-03-13",
         "recent_videos": [
@@ -943,25 +943,25 @@
             "title": "&quot;표를 위한 쇼가 아닙니다.&quot; 2022년부터 이어온 아레나 살리기 대장정 / 고양특례시장 예비후보 이경혜 [긴급 기자회견]",
             "date": "2026-03-13",
             "url": "https://www.youtube.com/watch?v=2plBr2scb3k",
-            "views": 4
+            "views": 27
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 다섯번째] 고양시 상권 살릴 &#39;치트키&#39; 공개합니다 #정책공약",
             "date": "2026-03-12",
             "url": "https://www.youtube.com/watch?v=gmsFRff21mw",
-            "views": 1183
+            "views": 1193
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 네번째] 고양시민이 꼭! 알아야 할 #경제자유구역",
             "date": "2026-03-11",
             "url": "https://www.youtube.com/watch?v=0vQaH8Jbkp8",
-            "views": 853
+            "views": 854
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 세번째] &#39;과천 경마공원 유치&#39; #정책공약",
             "date": "2026-03-11",
             "url": "https://www.youtube.com/watch?v=FrmXVuGSLDM",
-            "views": 1028
+            "views": 1030
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 두번째] 고양시 K-의료벨트 구축! 의료벤처타운 &amp; 공공의료대학 유치",
@@ -1085,7 +1085,7 @@
         "date": "2026-03-13",
         "url": "https://www.youtube.com/watch?v=2plBr2scb3k",
         "metrics": {
-          "views": 4
+          "views": 27
         }
       },
       {
@@ -1094,7 +1094,7 @@
         "date": "2026-03-12",
         "url": "https://www.youtube.com/watch?v=gmsFRff21mw",
         "metrics": {
-          "views": 1183
+          "views": 1193
         }
       },
       {
@@ -1110,7 +1110,7 @@
         "date": "2026-03-11",
         "url": "https://www.youtube.com/watch?v=0vQaH8Jbkp8",
         "metrics": {
-          "views": 853
+          "views": 854
         }
       },
       {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-13T04:12:30.224475"
+    "collected_at": "2026-03-13T05:47:11.026030"
   },
   "sentiment_trend": {
     "2026-03-03": {
