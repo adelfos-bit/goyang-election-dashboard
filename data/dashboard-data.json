@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-14T18:35:58.908631",
+    "social_last_success": "2026-03-14T19:25:31.589883",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-14T18:35:51.506755",
+    "news_last_run": "2026-03-14T19:25:24.589970",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -949,13 +949,13 @@
             "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
-            "views": 786
+            "views": 782
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 여섯번째] 고양시 예술인들을 위한 전용 공간 #고양아트센터",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=E4DDQsnhdq0",
-            "views": 1123
+            "views": 1131
           },
           {
             "title": "&quot;미술인 여러분 화이팅!&quot; 고양 미술인들을 응원합니다!🧑🏻‍🎨🎨 / 고양특례시장 예비후보 이경혜",
@@ -978,7 +978,7 @@
         "status": "활성",
         "followers": 6122,
         "likes": 6122,
-        "talking_about": 624,
+        "talking_about": 631,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -1094,7 +1094,7 @@
         "date": "2026-03-14",
         "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
         "metrics": {
-          "views": 786
+          "views": 782
         }
       },
       {
@@ -1103,7 +1103,7 @@
         "date": "2026-03-14",
         "url": "https://www.youtube.com/watch?v=E4DDQsnhdq0",
         "metrics": {
-          "views": 1123
+          "views": 1131
         }
       },
       {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-14T18:35:58.908136"
+    "collected_at": "2026-03-14T19:25:31.589346"
   },
   "sentiment_trend": {
     "2026-03-03": {
