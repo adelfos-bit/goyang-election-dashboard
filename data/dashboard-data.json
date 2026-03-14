@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-14T04:09:49.566571",
+    "social_last_success": "2026-03-14T05:43:56.511345",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-14T04:09:42.280241",
+    "news_last_run": "2026-03-14T05:43:47.603390",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -943,13 +943,13 @@
             "title": "&quot;미술인 여러분 화이팅!&quot; 고양 미술인들을 응원합니다!🧑🏻‍🎨🎨 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-13",
             "url": "https://www.youtube.com/watch?v=hojcrjNegCI",
-            "views": 996
+            "views": 1001
           },
           {
             "title": "&quot;시장님, 미팅 한 번 안 하셨잖아요.&quot; 주민들 앞에서 폭발 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-13",
             "url": "https://www.youtube.com/watch?v=ONjSxRz4hxk",
-            "views": 95
+            "views": 100
           },
           {
             "title": "댕댕이 자만추",
@@ -967,7 +967,7 @@
             "title": "&quot;표를 위한 쇼가 아닙니다.&quot; 2022년부터 이어온 아레나 살리기 대장정 / 고양특례시장 예비후보 이경혜 [긴급 기자회견]",
             "date": "2026-03-13",
             "url": "https://www.youtube.com/watch?v=2plBr2scb3k",
-            "views": 86
+            "views": 85
           }
         ],
         "score": 82,
@@ -976,9 +976,9 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6121,
-        "likes": 6121,
-        "talking_about": 679,
+        "followers": 6122,
+        "likes": 6122,
+        "talking_about": 625,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -1085,7 +1085,7 @@
         "date": "2026-03-13",
         "url": "https://www.youtube.com/watch?v=hojcrjNegCI",
         "metrics": {
-          "views": 996
+          "views": 1001
         }
       },
       {
@@ -1094,7 +1094,7 @@
         "date": "2026-03-13",
         "url": "https://www.youtube.com/watch?v=ONjSxRz4hxk",
         "metrics": {
-          "views": 95
+          "views": 100
         }
       },
       {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-14T04:09:49.566085"
+    "collected_at": "2026-03-14T05:43:56.510873"
   },
   "sentiment_trend": {
     "2026-03-03": {
