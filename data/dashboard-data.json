@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-03-14",
+  "last_updated": "2026-03-15",
   "election_date": "2026-06-03",
   "header": {
-    "update_date": "2026.03.14",
-    "d_day": 81,
+    "update_date": "2026.03.15",
+    "d_day": 80,
     "voters": "~89만 명"
   },
   "party_support": {
@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-14T14:27:24.153114",
+    "social_last_success": "2026-03-14T15:26:28.518214",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-14T14:27:16.250546",
+    "news_last_run": "2026-03-14T15:26:19.592174",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -943,7 +943,7 @@
             "title": "한 글자 한 글자 염원을 담아",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
-            "views": 584
+            "views": 592
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
@@ -955,7 +955,7 @@
             "title": "[이경혜 고양시장 예비후보정책 여섯번째] 고양시 예술인들을 위한 전용 공간 #고양아트센터",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=E4DDQsnhdq0",
-            "views": 475
+            "views": 576
           },
           {
             "title": "&quot;미술인 여러분 화이팅!&quot; 고양 미술인들을 응원합니다!🧑🏻‍🎨🎨 / 고양특례시장 예비후보 이경혜",
@@ -971,14 +971,14 @@
           }
         ],
         "score": 82,
-        "total_views": 37970,
+        "total_views": 37891,
         "source": "api"
       },
       "facebook": {
         "status": "활성",
         "followers": 6122,
         "likes": 6122,
-        "talking_about": 593,
+        "talking_about": 610,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -1085,7 +1085,7 @@
         "date": "2026-03-14",
         "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
         "metrics": {
-          "views": 584
+          "views": 592
         }
       },
       {
@@ -1103,7 +1103,7 @@
         "date": "2026-03-14",
         "url": "https://www.youtube.com/watch?v=E4DDQsnhdq0",
         "metrics": {
-          "views": 475
+          "views": 576
         }
       },
       {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-14T14:27:24.152630"
+    "collected_at": "2026-03-14T15:26:28.517729"
   },
   "sentiment_trend": {
     "2026-03-03": {
