@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-15T12:50:23.399567",
+    "social_last_success": "2026-03-15T13:45:33.343024",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-15T12:50:14.191598",
+    "news_last_run": "2026-03-15T13:45:24.951647",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -943,7 +943,7 @@
             "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-15",
             "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
-            "views": 822
+            "views": 838
           },
           {
             "title": "한 글자 한 글자 염원을 담아",
@@ -967,7 +967,7 @@
             "title": "&quot;미술인 여러분 화이팅!&quot; 고양 미술인들을 응원합니다!🧑🏻‍🎨🎨 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-13",
             "url": "https://www.youtube.com/watch?v=hojcrjNegCI",
-            "views": 1040
+            "views": 1042
           }
         ],
         "score": 83,
@@ -976,8 +976,8 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6121,
-        "likes": 6121,
+        "followers": 6122,
+        "likes": 6122,
         "talking_about": 610,
         "recent_posts": [],
         "score": 70,
@@ -1011,8 +1011,20 @@
       "blog": {
         "status": "활성",
         "posts": 50,
-        "last_post": "2026-03-12",
+        "last_post": "2026-03-15",
         "recent_posts": [
+          {
+            "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
+            "date": "2026-03-15",
+            "url": "https://blog.naver.com/lee1065/224217517096?fromRss=true&trackingCode=rss",
+            "summary": "1. 교통비 절반 도시 – “고양이 패스” GTX·지하철·버스를 하나로 묶는 월 5~6만원 정액 교통카드를 도입해 고양 시민의 교통비를 절반으로 줄이겠습니다. BRT 즉시 도입과 "
+          },
+          {
+            "title": "이경혜 고양특례시장 예비후보 3대 핵심공약",
+            "date": "2026-03-15",
+            "url": "https://blog.naver.com/lee1065/224217506692?fromRss=true&trackingCode=rss",
+            "summary": "① 교통혁명 – 교통비 절반, 고양 이동혁명 고양 시민의 가장 큰 불편은 교통입니다. 서울로 출퇴근하는 시민들이 매달 10만~15만 원의 교통비를 부담하고 있습니다. 저는 **“고"
+          },
           {
             "title": "김동연 지사님, 왜그러시나요?",
             "date": "2026-03-12",
@@ -1060,21 +1072,9 @@
             "date": "2026-03-10",
             "url": "https://blog.naver.com/lee1065/224211821277?fromRss=true&trackingCode=rss",
             "summary": "[공약 ⑤] 전시하는 도시에서, 세계가 머무는 도시로 지금 고양은 중요한 기회의 문 앞에 서 있습니다. 킨텍스 제3전시장, K-컬처밸리, 일산테크노밸리, 방송영상밸리, K-스튜디오"
-          },
-          {
-            "title": "4.“연 2,500억 세수”… 과천 경마공원 이전, 답은 고양입니다",
-            "date": "2026-03-10",
-            "url": "https://blog.naver.com/lee1065/224211804913?fromRss=true&trackingCode=rss",
-            "summary": "[공약 ⑥] 과천 경마공원 이전, 고양이 가장 준비된 도시입니다 지금 정부는 과천 경마공원을 경기도 내로 이전하는 방안을 추진하고 있습니다. 이미 전국 10여 개 지자체가 유치 경"
-          },
-          {
-            "title": "1. 행정 정상화 + 행정구역 대개편                                             — 멈춘 시계를 돌리고, 구청을 가깝게",
-            "date": "2026-03-10",
-            "url": "https://blog.naver.com/lee1065/224211793342?fromRss=true&trackingCode=rss",
-            "summary": "[공약 ①] 멈춘 행정을 다시 움직이겠습니다 — 행정 정상화와 행정구역 개편 행정이 멀면 시민은 불편합니다. 갈등과 지연이 길어질수록 피해는 결국 시민에게 돌아갑니다. 저 이경혜는"
           }
         ],
-        "score": 95,
+        "score": 100,
         "source": "rss"
       }
     },
@@ -1085,8 +1085,22 @@
         "date": "2026-03-15",
         "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
         "metrics": {
-          "views": 822
+          "views": 838
         }
+      },
+      {
+        "platform": "blog",
+        "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
+        "date": "2026-03-15",
+        "url": "https://blog.naver.com/lee1065/224217517096?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
+      {
+        "platform": "blog",
+        "title": "이경혜 고양특례시장 예비후보 3대 핵심공약",
+        "date": "2026-03-15",
+        "url": "https://blog.naver.com/lee1065/224217506692?fromRss=true&trackingCode=rss",
+        "metrics": {}
       },
       {
         "platform": "youtube",
@@ -1112,20 +1126,6 @@
         "date": "2026-03-12",
         "url": "https://blog.naver.com/lee1065/224213758692?fromRss=true&trackingCode=rss",
         "metrics": {}
-      },
-      {
-        "platform": "blog",
-        "title": "고양시민이 직접 그리는 고양 새로고침 !",
-        "date": "2026-03-11",
-        "url": "https://blog.naver.com/lee1065/224211949030?fromRss=true&trackingCode=rss",
-        "metrics": {}
-      },
-      {
-        "platform": "blog",
-        "title": "10. 호수공원 2.0 — 일산호수공원을 다시 만들겠습니다",
-        "date": "2026-03-11",
-        "url": "https://blog.naver.com/lee1065/224211941908?fromRss=true&trackingCode=rss",
-        "metrics": {}
       }
     ],
     "sentiment": {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-15T12:50:23.399074"
+    "collected_at": "2026-03-15T13:45:33.342544"
   },
   "sentiment_trend": {
     "2026-03-03": {
