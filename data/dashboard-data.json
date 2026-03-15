@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-15T11:24:25.753037",
+    "social_last_success": "2026-03-15T12:50:23.399567",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,34 +928,46 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-15T11:24:19.058743",
+    "news_last_run": "2026-03-15T12:50:14.191598",
     "news_status": "no_articles"
   },
   "social_media": {
     "platforms": {
       "youtube": {
         "status": "활성",
-        "subscribers": 130,
+        "subscribers": 131,
         "videos": 40,
-        "last_upload": "2026-03-13",
+        "last_upload": "2026-03-15",
         "recent_videos": [
           {
-            "title": "&quot;시장님, 미팅 한 번 안 하셨잖아요.&quot; 주민들 앞에서 폭발 / 고양특례시장 예비후보 이경혜",
-            "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=ONjSxRz4hxk",
-            "views": 144
+            "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
+            "date": "2026-03-15",
+            "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
+            "views": 822
           },
           {
-            "title": "경기도의회 시절부터 이어진 투쟁, &#39;아레나 살리기&#39;에 진심 / 고양특례시장 예비후보 이경혜",
-            "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=E9l4ak9u4h8",
-            "views": 81
+            "title": "한 글자 한 글자 염원을 담아",
+            "date": "2026-03-14",
+            "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
+            "views": 1043
           },
           {
-            "title": "&quot;표를 위한 쇼가 아닙니다.&quot; 2022년부터 이어온 아레나 살리기 대장정 / 고양특례시장 예비후보 이경혜 [긴급 기자회견]",
+            "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
+            "date": "2026-03-14",
+            "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
+            "views": 832
+          },
+          {
+            "title": "[이경혜 고양시장 예비후보정책 여섯번째] 고양시 예술인들을 위한 전용 공간 #고양아트센터",
+            "date": "2026-03-14",
+            "url": "https://www.youtube.com/watch?v=E4DDQsnhdq0",
+            "views": 1153
+          },
+          {
+            "title": "&quot;미술인 여러분 화이팅!&quot; 고양 미술인들을 응원합니다!🧑🏻‍🎨🎨 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=2plBr2scb3k",
-            "views": 95
+            "url": "https://www.youtube.com/watch?v=hojcrjNegCI",
+            "views": 1040
           }
         ],
         "score": 83,
@@ -966,7 +978,7 @@
         "status": "활성",
         "followers": 6121,
         "likes": 6121,
-        "talking_about": 607,
+        "talking_about": 610,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -1002,16 +1014,16 @@
         "last_post": "2026-03-12",
         "recent_posts": [
           {
-            "title": "K-컬쳐밸리 아레나 지연 문제, 긴급 기자회견을 열었습니다",
+            "title": "김동연 지사님, 왜그러시나요?",
             "date": "2026-03-12",
             "url": "https://blog.naver.com/lee1065/224213758692?fromRss=true&trackingCode=rss",
-            "summary": "오늘 저는 K-컬쳐밸리 아레나 사업 지연 문제와 관련해 긴급 기자회견을 열었습니다. 고양시민이 20년 넘게 기다려온 숙원사업이기 때문입니다. 최근 경기도는 K-컬쳐밸리 아레나 기본"
+            "summary": "K-컬쳐밸리 아레나 지연 문제, 긴급 기자회견을 열었습니다 오늘 저는 K-컬쳐밸리 아레나 사업 지연 문제와 관련해 긴급 기자회견을 열었습니다. 고양시민이 20년 넘게 기다려온 숙원"
           },
           {
-            "title": "분야별·대상별·지역별 정책을 준비하고 있습니다",
+            "title": "고양시민이 직접 그리는 고양 새로고침 !",
             "date": "2026-03-11",
             "url": "https://blog.naver.com/lee1065/224211949030?fromRss=true&trackingCode=rss",
-            "summary": "기타 공약 — 앞서 발표한 10대 핵심 공약과 함께 시민의 삶을 더욱 세밀하게 바꾸는 추가 정책들도 준비하고 있습니다. 도시 정책은 몇 가지 큰 공약만으로 완성되지 않습니다. 시민"
+            "summary": "분야별·대상별·지역별 정책 시민들과 함께 만들겠습니다 기타 공약 — 앞서 발표한 10대 핵심 공약과 함께 시민의 삶을 더욱 세밀하게 바꾸는 추가 정책들도 준비하고 있습니다. 도시 "
           },
           {
             "title": "10. 호수공원 2.0 — 일산호수공원을 다시 만들겠습니다",
@@ -1069,41 +1081,41 @@
     "recent_posts": [
       {
         "platform": "youtube",
-        "title": "&quot;시장님, 미팅 한 번 안 하셨잖아요.&quot; 주민들 앞에서 폭발 / 고양특례시장 예비후보 이경혜",
-        "date": "2026-03-13",
-        "url": "https://www.youtube.com/watch?v=ONjSxRz4hxk",
+        "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
+        "date": "2026-03-15",
+        "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
         "metrics": {
-          "views": 144
+          "views": 822
         }
       },
       {
         "platform": "youtube",
-        "title": "경기도의회 시절부터 이어진 투쟁, &#39;아레나 살리기&#39;에 진심 / 고양특례시장 예비후보 이경혜",
-        "date": "2026-03-13",
-        "url": "https://www.youtube.com/watch?v=E9l4ak9u4h8",
+        "title": "한 글자 한 글자 염원을 담아",
+        "date": "2026-03-14",
+        "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
         "metrics": {
-          "views": 81
+          "views": 1043
         }
       },
       {
         "platform": "youtube",
-        "title": "&quot;표를 위한 쇼가 아닙니다.&quot; 2022년부터 이어온 아레나 살리기 대장정 / 고양특례시장 예비후보 이경혜 [긴급 기자회견]",
-        "date": "2026-03-13",
-        "url": "https://www.youtube.com/watch?v=2plBr2scb3k",
+        "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
+        "date": "2026-03-14",
+        "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
         "metrics": {
-          "views": 95
+          "views": 832
         }
       },
       {
         "platform": "blog",
-        "title": "K-컬쳐밸리 아레나 지연 문제, 긴급 기자회견을 열었습니다",
+        "title": "김동연 지사님, 왜그러시나요?",
         "date": "2026-03-12",
         "url": "https://blog.naver.com/lee1065/224213758692?fromRss=true&trackingCode=rss",
         "metrics": {}
       },
       {
         "platform": "blog",
-        "title": "분야별·대상별·지역별 정책을 준비하고 있습니다",
+        "title": "고양시민이 직접 그리는 고양 새로고침 !",
         "date": "2026-03-11",
         "url": "https://blog.naver.com/lee1065/224211949030?fromRss=true&trackingCode=rss",
         "metrics": {}
@@ -1121,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-15T11:24:25.752461"
+    "collected_at": "2026-03-15T12:50:23.399074"
   },
   "sentiment_trend": {
     "2026-03-03": {
