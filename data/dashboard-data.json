@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-15T21:26:56.304063",
+    "social_last_success": "2026-03-15T22:25:55.373882",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-15T21:26:48.867521",
+    "news_last_run": "2026-03-15T22:25:46.574935",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -937,25 +937,37 @@
         "status": "활성",
         "subscribers": 131,
         "videos": 40,
-        "last_upload": "2026-03-13",
+        "last_upload": "2026-03-15",
         "recent_videos": [
           {
-            "title": "&quot;시장님, 미팅 한 번 안 하셨잖아요.&quot; 주민들 앞에서 폭발 / 고양특례시장 예비후보 이경혜",
-            "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=ONjSxRz4hxk",
-            "views": 153
+            "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
+            "date": "2026-03-15",
+            "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
+            "views": 886
           },
           {
-            "title": "경기도의회 시절부터 이어진 투쟁, &#39;아레나 살리기&#39;에 진심 / 고양특례시장 예비후보 이경혜",
-            "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=E9l4ak9u4h8",
-            "views": 84
+            "title": "한 글자 한 글자 염원을 담아",
+            "date": "2026-03-14",
+            "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
+            "views": 1232
           },
           {
-            "title": "&quot;표를 위한 쇼가 아닙니다.&quot; 2022년부터 이어온 아레나 살리기 대장정 / 고양특례시장 예비후보 이경혜 [긴급 기자회견]",
+            "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
+            "date": "2026-03-14",
+            "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
+            "views": 856
+          },
+          {
+            "title": "[이경혜 고양시장 예비후보정책 여섯번째] 고양시 예술인들을 위한 전용 공간 #고양아트센터",
+            "date": "2026-03-14",
+            "url": "https://www.youtube.com/watch?v=E4DDQsnhdq0",
+            "views": 1159
+          },
+          {
+            "title": "&quot;미술인 여러분 화이팅!&quot; 고양 미술인들을 응원합니다!🧑🏻‍🎨🎨 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=2plBr2scb3k",
-            "views": 98
+            "url": "https://www.youtube.com/watch?v=hojcrjNegCI",
+            "views": 1056
           }
         ],
         "score": 83,
@@ -966,7 +978,7 @@
         "status": "활성",
         "followers": 6125,
         "likes": 6125,
-        "talking_about": 624,
+        "talking_about": 625,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -1068,6 +1080,15 @@
     },
     "recent_posts": [
       {
+        "platform": "youtube",
+        "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
+        "date": "2026-03-15",
+        "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
+        "metrics": {
+          "views": 886
+        }
+      },
+      {
         "platform": "blog",
         "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
         "date": "2026-03-15",
@@ -1083,29 +1104,20 @@
       },
       {
         "platform": "youtube",
-        "title": "&quot;시장님, 미팅 한 번 안 하셨잖아요.&quot; 주민들 앞에서 폭발 / 고양특례시장 예비후보 이경혜",
-        "date": "2026-03-13",
-        "url": "https://www.youtube.com/watch?v=ONjSxRz4hxk",
+        "title": "한 글자 한 글자 염원을 담아",
+        "date": "2026-03-14",
+        "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
         "metrics": {
-          "views": 153
+          "views": 1232
         }
       },
       {
         "platform": "youtube",
-        "title": "경기도의회 시절부터 이어진 투쟁, &#39;아레나 살리기&#39;에 진심 / 고양특례시장 예비후보 이경혜",
-        "date": "2026-03-13",
-        "url": "https://www.youtube.com/watch?v=E9l4ak9u4h8",
+        "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
+        "date": "2026-03-14",
+        "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
         "metrics": {
-          "views": 84
-        }
-      },
-      {
-        "platform": "youtube",
-        "title": "&quot;표를 위한 쇼가 아닙니다.&quot; 2022년부터 이어온 아레나 살리기 대장정 / 고양특례시장 예비후보 이경혜 [긴급 기자회견]",
-        "date": "2026-03-13",
-        "url": "https://www.youtube.com/watch?v=2plBr2scb3k",
-        "metrics": {
-          "views": 98
+          "views": 856
         }
       },
       {
@@ -1121,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-15T21:26:56.303558"
+    "collected_at": "2026-03-15T22:25:55.373359"
   },
   "sentiment_trend": {
     "2026-03-03": {
