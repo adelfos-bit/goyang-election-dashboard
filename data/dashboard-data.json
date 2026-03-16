@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-16T22:31:14.295752",
+    "social_last_success": "2026-03-16T23:29:56.503246",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-16T22:31:03.610972",
+    "news_last_run": "2026-03-16T23:29:49.168872",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -943,13 +943,13 @@
             "title": "[이경혜 고양시장 예비후보정책 여덟번째] 봄, 여름, 가을, 겨울. 사계절이 뚜렷한 #호수공원",
             "date": "2026-03-16",
             "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
-            "views": 884
+            "views": 891
           },
           {
             "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-15",
             "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
-            "views": 938
+            "views": 941
           },
           {
             "title": "한 글자 한 글자 염원을 담아",
@@ -1085,7 +1085,7 @@
         "date": "2026-03-16",
         "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
         "metrics": {
-          "views": 884
+          "views": 891
         }
       },
       {
@@ -1108,7 +1108,7 @@
         "date": "2026-03-15",
         "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
         "metrics": {
-          "views": 938
+          "views": 941
         }
       },
       {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-16T22:31:14.295231"
+    "collected_at": "2026-03-16T23:29:56.502784"
   },
   "sentiment_trend": {
     "2026-03-03": {
