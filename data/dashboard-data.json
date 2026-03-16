@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-16T21:37:27.978898",
+    "social_last_success": "2026-03-16T22:31:14.295752",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-16T21:37:16.721742",
+    "news_last_run": "2026-03-16T22:31:03.610972",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -943,19 +943,19 @@
             "title": "[이경혜 고양시장 예비후보정책 여덟번째] 봄, 여름, 가을, 겨울. 사계절이 뚜렷한 #호수공원",
             "date": "2026-03-16",
             "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
-            "views": 875
+            "views": 884
           },
           {
             "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-15",
             "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
-            "views": 940
+            "views": 938
           },
           {
             "title": "한 글자 한 글자 염원을 담아",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
-            "views": 1298
+            "views": 1300
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
@@ -968,126 +968,6 @@
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=E4DDQsnhdq0",
             "views": 1172
-          },
-          {
-            "title": "&quot;미술인 여러분 화이팅!&quot; 고양 미술인들을 응원합니다!🧑🏻‍🎨🎨 / 고양특례시장 예비후보 이경혜",
-            "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=hojcrjNegCI",
-            "views": 1065
-          },
-          {
-            "title": "&quot;시장님, 미팅 한 번 안 하셨잖아요.&quot; 주민들 앞에서 폭발 / 고양특례시장 예비후보 이경혜",
-            "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=ONjSxRz4hxk",
-            "views": 169
-          },
-          {
-            "title": "댕댕이 자만추",
-            "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=Trjl-XOdA9M",
-            "views": 5435
-          },
-          {
-            "title": "경기도의회 시절부터 이어진 투쟁, &#39;아레나 살리기&#39;에 진심 / 고양특례시장 예비후보 이경혜",
-            "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=E9l4ak9u4h8",
-            "views": 87
-          },
-          {
-            "title": "&quot;표를 위한 쇼가 아닙니다.&quot; 2022년부터 이어온 아레나 살리기 대장정 / 고양특례시장 예비후보 이경혜 [긴급 기자회견]",
-            "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=2plBr2scb3k",
-            "views": 100
-          },
-          {
-            "title": "[이경혜 고양시장 예비후보정책 다섯번째] 고양시 상권 살릴 &#39;치트키&#39; 공개합니다 #정책공약",
-            "date": "2026-03-12",
-            "url": "https://www.youtube.com/watch?v=gmsFRff21mw",
-            "views": 1276
-          },
-          {
-            "title": "[이경혜 고양시장 예비후보정책 네번째] 고양시민이 꼭! 알아야 할 #경제자유구역",
-            "date": "2026-03-11",
-            "url": "https://www.youtube.com/watch?v=0vQaH8Jbkp8",
-            "views": 897
-          },
-          {
-            "title": "[이경혜 고양시장 예비후보정책 세번째] &#39;과천 경마공원 유치&#39; #정책공약",
-            "date": "2026-03-11",
-            "url": "https://www.youtube.com/watch?v=FrmXVuGSLDM",
-            "views": 1048
-          },
-          {
-            "title": "[이경혜 고양시장 예비후보정책 두번째] 고양시 K-의료벨트 구축! 의료벤처타운 &amp; 공공의료대학 유치",
-            "date": "2026-03-10",
-            "url": "https://www.youtube.com/watch?v=arhkZbXD59s",
-            "views": 1215
-          },
-          {
-            "title": "[이경혜 고양시장 예비후보정책 첫번째] 고양시 교통비 50% 절감! &#39;고양이패스&#39;와 BRT 도입, 가능합니다!",
-            "date": "2026-03-10",
-            "url": "https://www.youtube.com/watch?v=7EE6FKivWcs",
-            "views": 1701
-          },
-          {
-            "title": "고양특례시장 예비후보 이경혜의 고양 금륜사 방문 현장 #shorts #이경혜 #고양시장 #예비후보 #금륜사 #고양금륜사",
-            "date": "2026-03-09",
-            "url": "https://www.youtube.com/watch?v=qj8msSA-ikI",
-            "views": 1043
-          },
-          {
-            "title": "고양 하프마라톤 폼 미쳤다!🏃🏻‍♀️🏃🏻‍♂️뜨거운 출발 현장과 봉사자들의 손길까지!",
-            "date": "2026-03-08",
-            "url": "https://www.youtube.com/watch?v=IbDZCzdPWus",
-            "views": 1087
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 민주평화통일자문회의 1차 정기회의 현장",
-            "date": "2026-03-08",
-            "url": "https://www.youtube.com/watch?v=eNqHINia8zA",
-            "views": 1202
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 경기1자동차매매사업조합 지부장 이·취임식 현장",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=dwfpdZB-28o",
-            "views": 1037
-          },
-          {
-            "title": "레알 급작 이경혜 삼행시",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=7BszmGc12ZI",
-            "views": 2059
-          },
-          {
-            "title": "고양시 생선구이 맛집!🐟 겉바속촉 비주얼 대박",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=BEUp4MDzEK4",
-            "views": 2100
-          },
-          {
-            "title": "삼성스토어에는 무슨 일로~?😯이경혜 후보의 내돈내산!💳",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=HNHf821Ngnc",
-            "views": 1092
-          },
-          {
-            "title": "[북콘서트 축하 영상] 김성회 의원이 말하는 &#39;이경혜의 시간, 그리고 꿈&#39;📖",
-            "date": "2026-03-07",
-            "url": "https://www.youtube.com/watch?v=pnVkJ3ngbLk",
-            "views": 68
-          },
-          {
-            "title": "[이경혜가 간다🏃🏻‍♀️] 고양시 아레나 살리기, K-컬처밸리의 미래를 위한 고민의 시간..",
-            "date": "2026-03-06",
-            "url": "https://www.youtube.com/watch?v=_Cl6i_pn7z4",
-            "views": 2244
-          },
-          {
-            "title": "&quot;고양시 교통비 절반, 이경혜가 약속합니다!&quot;",
-            "date": "2026-03-06",
-            "url": "https://www.youtube.com/watch?v=2eYOxqY2SRA",
-            "views": 1394
           }
         ],
         "score": 83,
@@ -1098,9 +978,9 @@
         "status": "활성",
         "followers": 6138,
         "likes": 6138,
-        "talking_about": 631,
+        "talking_about": 582,
         "recent_posts": [],
-        "score": 70,
+        "score": 69,
         "source": "scrape"
       },
       "instagram": {
@@ -1205,7 +1085,7 @@
         "date": "2026-03-16",
         "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
         "metrics": {
-          "views": 875
+          "views": 884
         }
       },
       {
@@ -1228,7 +1108,7 @@
         "date": "2026-03-15",
         "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
         "metrics": {
-          "views": 940
+          "views": 938
         }
       },
       {
@@ -1244,7 +1124,7 @@
         "date": "2026-03-14",
         "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
         "metrics": {
-          "views": 1298
+          "views": 1300
         }
       }
     ],
@@ -1253,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-16T21:37:27.978434"
+    "collected_at": "2026-03-16T22:31:14.295231"
   },
   "sentiment_trend": {
     "2026-03-03": {
