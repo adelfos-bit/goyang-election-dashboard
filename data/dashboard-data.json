@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-16T10:05:04.031020",
+    "social_last_success": "2026-03-16T11:44:46.633707",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-16T10:04:56.793232",
+    "news_last_run": "2026-03-16T11:44:37.853517",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -949,13 +949,13 @@
             "title": "한 글자 한 글자 염원을 담아",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
-            "views": 1281
+            "views": 1283
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
-            "views": 869
+            "views": 870
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 여섯번째] 고양시 예술인들을 위한 전용 공간 #고양아트센터",
@@ -967,7 +967,7 @@
             "title": "&quot;미술인 여러분 화이팅!&quot; 고양 미술인들을 응원합니다!🧑🏻‍🎨🎨 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-13",
             "url": "https://www.youtube.com/watch?v=hojcrjNegCI",
-            "views": 1061
+            "views": 1063
           }
         ],
         "score": 83,
@@ -976,8 +976,8 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6131,
-        "likes": 6131,
+        "followers": 6132,
+        "likes": 6132,
         "talking_about": 653,
         "recent_posts": [],
         "score": 70,
@@ -1017,7 +1017,7 @@
             "title": "고양 시민께 묻습니다",
             "date": "2026-03-16",
             "url": "https://blog.naver.com/lee1065/224218533462?fromRss=true&trackingCode=rss",
-            "summary": "고양 시민께 묻습니다 이경혜(고양시장 예비후보)는 시민과 함께 정책의 우선순위를 정하기 위해 **「고양시민 1000명 의견 프로젝트」**를 시작합니다. 고양의 변화를 위해 준비한 "
+            "summary": "안녕하세요. 이경혜 고양시장 예비후보입니다. 도시의 변화는 행정이 아니라 시민의 목소리에서 시작된다고 믿습니다. 그래서 고양 시민 여러분과 함께 정책의 우선순위를 정해보는 「고양시"
           },
           {
             "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
@@ -1115,7 +1115,7 @@
         "date": "2026-03-14",
         "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
         "metrics": {
-          "views": 1281
+          "views": 1283
         }
       },
       {
@@ -1124,7 +1124,7 @@
         "date": "2026-03-14",
         "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
         "metrics": {
-          "views": 869
+          "views": 870
         }
       }
     ],
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-16T10:05:04.030533"
+    "collected_at": "2026-03-16T11:44:46.633217"
   },
   "sentiment_trend": {
     "2026-03-03": {
