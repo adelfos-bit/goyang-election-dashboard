@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-16T11:44:46.633707",
+    "social_last_success": "2026-03-16T13:07:55.186376",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-16T11:44:37.853517",
+    "news_last_run": "2026-03-16T13:07:47.205090",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -936,9 +936,15 @@
       "youtube": {
         "status": "활성",
         "subscribers": 131,
-        "videos": 40,
-        "last_upload": "2026-03-15",
+        "videos": 41,
+        "last_upload": "2026-03-16",
         "recent_videos": [
+          {
+            "title": "[이경혜 고양시장 예비후보정책 여덟번째] 봄, 여름, 가을, 겨울. 사계절이 뚜렷한 #호수공원",
+            "date": "2026-03-16",
+            "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
+            "views": 319
+          },
           {
             "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-15",
@@ -962,12 +968,6 @@
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=E4DDQsnhdq0",
             "views": 1170
-          },
-          {
-            "title": "&quot;미술인 여러분 화이팅!&quot; 고양 미술인들을 응원합니다!🧑🏻‍🎨🎨 / 고양특례시장 예비후보 이경혜",
-            "date": "2026-03-13",
-            "url": "https://www.youtube.com/watch?v=hojcrjNegCI",
-            "views": 1063
           }
         ],
         "score": 83,
@@ -976,8 +976,8 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6132,
-        "likes": 6132,
+        "followers": 6133,
+        "likes": 6133,
         "talking_about": 653,
         "recent_posts": [],
         "score": 70,
@@ -1013,6 +1013,12 @@
         "posts": 50,
         "last_post": "2026-03-16",
         "recent_posts": [
+          {
+            "title": "고양 시민 운동회, 지금 시작합니다!",
+            "date": "2026-03-16",
+            "url": "https://blog.naver.com/lee1065/224218772191?fromRss=true&trackingCode=rss",
+            "summary": "안녕하세요. 고양시장 예비후보 이경혜입니다. 오늘은 정책 설명 대신 조금 특별한 시민 운동회를 열어보려고 합니다. 이름하여 「고양 바꾸기 운동회」 규칙은 아주 간단합니다. 지금부터"
+          },
           {
             "title": "고양 시민께 묻습니다",
             "date": "2026-03-16",
@@ -1066,12 +1072,6 @@
             "date": "2026-03-11",
             "url": "https://blog.naver.com/lee1065/224211929119?fromRss=true&trackingCode=rss",
             "summary": "[공약 ⑦] K-의료도시 고양 — 치료의 도시를 넘어 의료 혁신의 도시로 고양을 치료만 받으러 오는 도시가 아니라 의료 혁신이 만들어지는 도시로 바꾸겠습니다. 고양에는 이미 전국 "
-          },
-          {
-            "title": "6. K-스튜디오 고양 + 고양 아트센터 — 문화 자산을 산업으로 연결하겠습니다",
-            "date": "2026-03-11",
-            "url": "https://blog.naver.com/lee1065/224211925328?fromRss=true&trackingCode=rss",
-            "summary": "[공약 ⑥] K-스튜디오 고양 + 고양 아트센터 — 문화 자산을 산업으로 연결하겠습니다 고양에는 이미 많은 문화 자산이 있습니다. 하지만 아직 하나의 산업으로 연결되지는 못했습니다"
           }
         ],
         "score": 100,
@@ -1079,6 +1079,22 @@
       }
     },
     "recent_posts": [
+      {
+        "platform": "youtube",
+        "title": "[이경혜 고양시장 예비후보정책 여덟번째] 봄, 여름, 가을, 겨울. 사계절이 뚜렷한 #호수공원",
+        "date": "2026-03-16",
+        "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
+        "metrics": {
+          "views": 319
+        }
+      },
+      {
+        "platform": "blog",
+        "title": "고양 시민 운동회, 지금 시작합니다!",
+        "date": "2026-03-16",
+        "url": "https://blog.naver.com/lee1065/224218772191?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
       {
         "platform": "blog",
         "title": "고양 시민께 묻습니다",
@@ -1103,28 +1119,12 @@
         "metrics": {}
       },
       {
-        "platform": "blog",
-        "title": "이경혜 고양특례시장 예비후보 3대 핵심공약",
-        "date": "2026-03-15",
-        "url": "https://blog.naver.com/lee1065/224217506692?fromRss=true&trackingCode=rss",
-        "metrics": {}
-      },
-      {
         "platform": "youtube",
         "title": "한 글자 한 글자 염원을 담아",
         "date": "2026-03-14",
         "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
         "metrics": {
           "views": 1283
-        }
-      },
-      {
-        "platform": "youtube",
-        "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
-        "date": "2026-03-14",
-        "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
-        "metrics": {
-          "views": 870
         }
       }
     ],
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-16T11:44:46.633217"
+    "collected_at": "2026-03-16T13:07:55.185884"
   },
   "sentiment_trend": {
     "2026-03-03": {
