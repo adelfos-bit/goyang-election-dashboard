@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-16T07:14:14.725092",
+    "social_last_success": "2026-03-16T08:54:45.047992",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-16T07:14:07.460116",
+    "news_last_run": "2026-03-16T08:54:37.514555",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -943,13 +943,13 @@
             "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-15",
             "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
-            "views": 917
+            "views": 923
           },
           {
             "title": "한 글자 한 글자 염원을 담아",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
-            "views": 1263
+            "views": 1265
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
@@ -961,13 +961,13 @@
             "title": "[이경혜 고양시장 예비후보정책 여섯번째] 고양시 예술인들을 위한 전용 공간 #고양아트센터",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=E4DDQsnhdq0",
-            "views": 1161
+            "views": 1170
           },
           {
             "title": "&quot;미술인 여러분 화이팅!&quot; 고양 미술인들을 응원합니다!🧑🏻‍🎨🎨 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-13",
             "url": "https://www.youtube.com/watch?v=hojcrjNegCI",
-            "views": 1060
+            "views": 1061
           }
         ],
         "score": 83,
@@ -976,9 +976,9 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6130,
-        "likes": 6130,
-        "talking_about": 619,
+        "followers": 6132,
+        "likes": 6132,
+        "talking_about": 653,
         "recent_posts": [],
         "score": 70,
         "source": "scrape"
@@ -1011,8 +1011,14 @@
       "blog": {
         "status": "활성",
         "posts": 50,
-        "last_post": "2026-03-15",
+        "last_post": "2026-03-16",
         "recent_posts": [
+          {
+            "title": "고양 시민께 묻습니다",
+            "date": "2026-03-16",
+            "url": "https://blog.naver.com/lee1065/224218533462?fromRss=true&trackingCode=rss",
+            "summary": "고양 시민께 묻습니다 이경혜(고양시장 예비후보)는 시민과 함께 정책의 우선순위를 정하기 위해 **「고양시민 1000명 의견 프로젝트」**를 시작합니다. 고양의 변화를 위해 준비한 "
+          },
           {
             "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
             "date": "2026-03-15",
@@ -1066,12 +1072,6 @@
             "date": "2026-03-11",
             "url": "https://blog.naver.com/lee1065/224211925328?fromRss=true&trackingCode=rss",
             "summary": "[공약 ⑥] K-스튜디오 고양 + 고양 아트센터 — 문화 자산을 산업으로 연결하겠습니다 고양에는 이미 많은 문화 자산이 있습니다. 하지만 아직 하나의 산업으로 연결되지는 못했습니다"
-          },
-          {
-            "title": "5. 산업벨트 재정렬 — 글로벌 전시·콘텐츠 허브",
-            "date": "2026-03-10",
-            "url": "https://blog.naver.com/lee1065/224211821277?fromRss=true&trackingCode=rss",
-            "summary": "[공약 ⑤] 전시하는 도시에서, 세계가 머무는 도시로 지금 고양은 중요한 기회의 문 앞에 서 있습니다. 킨텍스 제3전시장, K-컬처밸리, 일산테크노밸리, 방송영상밸리, K-스튜디오"
           }
         ],
         "score": 100,
@@ -1080,12 +1080,19 @@
     },
     "recent_posts": [
       {
+        "platform": "blog",
+        "title": "고양 시민께 묻습니다",
+        "date": "2026-03-16",
+        "url": "https://blog.naver.com/lee1065/224218533462?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
+      {
         "platform": "youtube",
         "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
         "date": "2026-03-15",
         "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
         "metrics": {
-          "views": 917
+          "views": 923
         }
       },
       {
@@ -1108,7 +1115,7 @@
         "date": "2026-03-14",
         "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
         "metrics": {
-          "views": 1263
+          "views": 1265
         }
       },
       {
@@ -1119,13 +1126,6 @@
         "metrics": {
           "views": 866
         }
-      },
-      {
-        "platform": "blog",
-        "title": "김동연 지사님, 왜그러시나요?",
-        "date": "2026-03-12",
-        "url": "https://blog.naver.com/lee1065/224213758692?fromRss=true&trackingCode=rss",
-        "metrics": {}
       }
     ],
     "sentiment": {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-16T07:14:14.724523"
+    "collected_at": "2026-03-16T08:54:45.047532"
   },
   "sentiment_trend": {
     "2026-03-03": {
