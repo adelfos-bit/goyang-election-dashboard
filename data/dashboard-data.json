@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-16T23:29:56.503246",
+    "social_last_success": "2026-03-17T01:58:53.043757",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,14 +928,14 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-16T23:29:49.168872",
+    "news_last_run": "2026-03-17T01:58:41.890629",
     "news_status": "no_articles"
   },
   "social_media": {
     "platforms": {
       "youtube": {
         "status": "활성",
-        "subscribers": 131,
+        "subscribers": 132,
         "videos": 41,
         "last_upload": "2026-03-16",
         "recent_videos": [
@@ -943,25 +943,25 @@
             "title": "[이경혜 고양시장 예비후보정책 여덟번째] 봄, 여름, 가을, 겨울. 사계절이 뚜렷한 #호수공원",
             "date": "2026-03-16",
             "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
-            "views": 891
+            "views": 938
           },
           {
             "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-15",
             "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
-            "views": 941
+            "views": 942
           },
           {
             "title": "한 글자 한 글자 염원을 담아",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
-            "views": 1300
+            "views": 1301
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
-            "views": 874
+            "views": 875
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 여섯번째] 고양시 예술인들을 위한 전용 공간 #고양아트센터",
@@ -976,11 +976,11 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6138,
-        "likes": 6138,
-        "talking_about": 582,
+        "followers": 6140,
+        "likes": 6140,
+        "talking_about": 586,
         "recent_posts": [],
-        "score": 69,
+        "score": 70,
         "source": "scrape"
       },
       "instagram": {
@@ -1085,7 +1085,7 @@
         "date": "2026-03-16",
         "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
         "metrics": {
-          "views": 891
+          "views": 938
         }
       },
       {
@@ -1108,7 +1108,7 @@
         "date": "2026-03-15",
         "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
         "metrics": {
-          "views": 941
+          "views": 942
         }
       },
       {
@@ -1124,7 +1124,7 @@
         "date": "2026-03-14",
         "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
         "metrics": {
-          "views": 1300
+          "views": 1301
         }
       }
     ],
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-16T23:29:56.502784"
+    "collected_at": "2026-03-17T01:58:53.043267"
   },
   "sentiment_trend": {
     "2026-03-03": {
