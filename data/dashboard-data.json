@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-17T07:13:05.506070",
+    "social_last_success": "2026-03-17T08:52:05.213074",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,50 +928,50 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-17T07:12:57.331157",
+    "news_last_run": "2026-03-17T08:51:58.006637",
     "news_status": "no_articles"
   },
   "social_media": {
     "platforms": {
       "youtube": {
         "status": "활성",
-        "subscribers": 133,
-        "videos": 42,
+        "subscribers": 134,
+        "videos": 43,
         "last_upload": "2026-03-17",
         "recent_videos": [
+          {
+            "title": "[이경혜 고양시장 예비후보정책 아홉번째] 누구도 소외되지 않는 도시 #정책공약",
+            "date": "2026-03-17",
+            "url": "https://www.youtube.com/watch?v=7maPB3cAyPo",
+            "views": 210
+          },
           {
             "title": "따뜻함 치사량 초과... 원당시장에서 힐링하고 왔습니다 💙 /고양특례시장 예비후보 이경혜",
             "date": "2026-03-17",
             "url": "https://www.youtube.com/watch?v=kXtidSt9Ioc",
-            "views": 590
+            "views": 803
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 여덟번째] 봄, 여름, 가을, 겨울. 사계절이 뚜렷한 #호수공원",
             "date": "2026-03-16",
             "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
-            "views": 999
+            "views": 1023
           },
           {
             "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-15",
             "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
-            "views": 947
+            "views": 949
           },
           {
             "title": "한 글자 한 글자 염원을 담아",
             "date": "2026-03-14",
             "url": "https://www.youtube.com/watch?v=1xvQzsMpnjY",
             "views": 1304
-          },
-          {
-            "title": "[이경혜 고양시장 예비후보정책 일곱번째] 노을이 촤아악~~~펼쳐진 한강뷰 전망대를 상상해보세요 #정책공약",
-            "date": "2026-03-14",
-            "url": "https://www.youtube.com/watch?v=hSl8p3XQHWs",
-            "views": 884
           }
         ],
         "score": 83,
-        "total_views": 42558,
+        "total_views": 43639,
         "source": "api"
       },
       "facebook": {
@@ -1081,11 +1081,20 @@
     "recent_posts": [
       {
         "platform": "youtube",
+        "title": "[이경혜 고양시장 예비후보정책 아홉번째] 누구도 소외되지 않는 도시 #정책공약",
+        "date": "2026-03-17",
+        "url": "https://www.youtube.com/watch?v=7maPB3cAyPo",
+        "metrics": {
+          "views": 210
+        }
+      },
+      {
+        "platform": "youtube",
         "title": "따뜻함 치사량 초과... 원당시장에서 힐링하고 왔습니다 💙 /고양특례시장 예비후보 이경혜",
         "date": "2026-03-17",
         "url": "https://www.youtube.com/watch?v=kXtidSt9Ioc",
         "metrics": {
-          "views": 590
+          "views": 803
         }
       },
       {
@@ -1094,7 +1103,7 @@
         "date": "2026-03-16",
         "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
         "metrics": {
-          "views": 999
+          "views": 1023
         }
       },
       {
@@ -1112,15 +1121,6 @@
         "metrics": {}
       },
       {
-        "platform": "youtube",
-        "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
-        "date": "2026-03-15",
-        "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
-        "metrics": {
-          "views": 947
-        }
-      },
-      {
         "platform": "blog",
         "title": "이경혜 고양특례시장 예비후보 10대 공약 (핵심 요약)",
         "date": "2026-03-15",
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-17T07:13:05.505588"
+    "collected_at": "2026-03-17T08:52:05.212568"
   },
   "sentiment_trend": {
     "2026-03-03": {
