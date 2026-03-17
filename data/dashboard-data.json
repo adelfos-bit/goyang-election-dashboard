@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-17T19:05:45.442259",
+    "social_last_success": "2026-03-17T20:37:16.036567",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-17T19:05:38.068285",
+    "news_last_run": "2026-03-17T20:37:05.445245",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -949,38 +949,38 @@
             "title": "[이경혜 고양시장 예비후보정책 아홉번째] 누구도 소외되지 않는 도시 #정책공약",
             "date": "2026-03-17",
             "url": "https://www.youtube.com/watch?v=7maPB3cAyPo",
-            "views": 514
+            "views": 582
           },
           {
             "title": "따뜻함 치사량 초과... 원당시장에서 힐링하고 왔습니다 💙 /고양특례시장 예비후보 이경혜",
             "date": "2026-03-17",
             "url": "https://www.youtube.com/watch?v=kXtidSt9Ioc",
-            "views": 871
+            "views": 873
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 여덟번째] 봄, 여름, 가을, 겨울. 사계절이 뚜렷한 #호수공원",
             "date": "2026-03-16",
             "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
-            "views": 1043
+            "views": 1052
           },
           {
             "title": "가좌, 성라 배드민턴클럽 회장 이·취임식 현장🏸 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-15",
             "url": "https://www.youtube.com/watch?v=l-w6qN4WTic",
-            "views": 955
+            "views": 956
           }
         ],
         "score": 83,
-        "total_views": 43639,
+        "total_views": 43849,
         "source": "api"
       },
       "facebook": {
         "status": "활성",
-        "followers": 6141,
-        "likes": 6141,
-        "talking_about": 445,
+        "followers": 6143,
+        "likes": 6143,
+        "talking_about": 447,
         "recent_posts": [],
-        "score": 62,
+        "score": 63,
         "source": "scrape"
       },
       "instagram": {
@@ -1094,7 +1094,7 @@
         "date": "2026-03-17",
         "url": "https://www.youtube.com/watch?v=7maPB3cAyPo",
         "metrics": {
-          "views": 514
+          "views": 582
         }
       },
       {
@@ -1103,7 +1103,7 @@
         "date": "2026-03-17",
         "url": "https://www.youtube.com/watch?v=kXtidSt9Ioc",
         "metrics": {
-          "views": 871
+          "views": 873
         }
       },
       {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-17T19:05:45.441753"
+    "collected_at": "2026-03-17T20:37:16.036071"
   },
   "sentiment_trend": {
     "2026-03-03": {
