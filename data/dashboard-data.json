@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-18T04:54:28.235001",
+    "social_last_success": "2026-03-18T06:01:54.418030",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-18T04:54:20.470522",
+    "news_last_run": "2026-03-18T06:01:46.769284",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -943,7 +943,7 @@
             "title": "[이경혜 고양시장 예비후보정책 열번째] 예산 낭비 멈춰! 고양시 행정 개편 #정책공약",
             "date": "2026-03-18",
             "url": "https://www.youtube.com/watch?v=iWmK7yc829I",
-            "views": 793
+            "views": 927
           },
           {
             "title": "이경혜 고양특례시장 출마 기자회견 / 고양특례시장 예비후보 이경혜",
@@ -955,19 +955,19 @@
             "title": "[이경혜 고양시장 예비후보정책 아홉번째] 누구도 소외되지 않는 도시 #정책공약",
             "date": "2026-03-17",
             "url": "https://www.youtube.com/watch?v=7maPB3cAyPo",
-            "views": 596
+            "views": 593
           },
           {
             "title": "따뜻함 치사량 초과... 원당시장에서 힐링하고 왔습니다 💙 /고양특례시장 예비후보 이경혜",
             "date": "2026-03-17",
             "url": "https://www.youtube.com/watch?v=kXtidSt9Ioc",
-            "views": 882
+            "views": 884
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 여덟번째] 봄, 여름, 가을, 겨울. 사계절이 뚜렷한 #호수공원",
             "date": "2026-03-16",
             "url": "https://www.youtube.com/watch?v=zAf68PvC04s",
-            "views": 1069
+            "views": 1065
           }
         ],
         "score": 83,
@@ -976,8 +976,8 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6145,
-        "likes": 6145,
+        "followers": 6144,
+        "likes": 6144,
         "talking_about": 490,
         "recent_posts": [],
         "score": 65,
@@ -1085,7 +1085,7 @@
         "date": "2026-03-18",
         "url": "https://www.youtube.com/watch?v=iWmK7yc829I",
         "metrics": {
-          "views": 793
+          "views": 927
         }
       },
       {
@@ -1103,7 +1103,7 @@
         "date": "2026-03-17",
         "url": "https://www.youtube.com/watch?v=7maPB3cAyPo",
         "metrics": {
-          "views": 596
+          "views": 593
         }
       },
       {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-18T04:54:28.234542"
+    "collected_at": "2026-03-18T06:01:54.417563"
   },
   "sentiment_trend": {
     "2026-03-03": {
