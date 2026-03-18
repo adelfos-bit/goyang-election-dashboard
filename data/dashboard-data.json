@@ -917,70 +917,38 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-18T21:32:15.055315",
+    "social_last_success": "2026-03-18T22:30:25.989831",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
-      "youtube": "api",
+      "youtube": "scrape",
       "facebook": "scrape",
       "instagram": "scrape",
       "tiktok": "scrape",
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-18T21:32:07.614346",
+    "news_last_run": "2026-03-18T22:30:17.262793",
     "news_status": "no_articles"
   },
   "social_media": {
     "platforms": {
       "youtube": {
-        "status": "활성",
-        "subscribers": 140,
-        "videos": 47,
-        "last_upload": "2026-03-18",
-        "recent_videos": [
-          {
-            "title": "시민이 심판이다! 당신의 원픽(One Pick)을 골라주세요! / 고양특례시장 예비후보 이경혜",
-            "date": "2026-03-18",
-            "url": "https://www.youtube.com/watch?v=-6jNsSFT8Cg",
-            "views": 570
-          },
-          {
-            "title": "[이경혜 고양시장 예비후보정책 열한번째] 철도 도시 고양 #정책공약",
-            "date": "2026-03-18",
-            "url": "https://www.youtube.com/watch?v=m2OIe1Y1IXE",
-            "views": 937
-          },
-          {
-            "title": "[이경혜 고양시장 예비후보정책 열번째] 예산 낭비 멈춰! 고양시 행정 개편 #정책공약",
-            "date": "2026-03-18",
-            "url": "https://www.youtube.com/watch?v=iWmK7yc829I",
-            "views": 1110
-          },
-          {
-            "title": "이경혜 고양특례시장 출마 기자회견 / 고양특례시장 예비후보 이경혜",
-            "date": "2026-03-17",
-            "url": "https://www.youtube.com/watch?v=C_5KEIWmsmI",
-            "views": 89
-          },
-          {
-            "title": "[이경혜 고양시장 예비후보정책 아홉번째] 누구도 소외되지 않는 도시 #정책공약",
-            "date": "2026-03-17",
-            "url": "https://www.youtube.com/watch?v=7maPB3cAyPo",
-            "views": 1062
-          }
-        ],
-        "score": 84,
-        "total_views": 45488,
-        "source": "api"
+        "status": "개설완료",
+        "subscribers": 0,
+        "videos": 0,
+        "last_upload": null,
+        "recent_videos": [],
+        "score": 5,
+        "source": "scrape"
       },
       "facebook": {
         "status": "활성",
-        "followers": 6153,
-        "likes": 6153,
-        "talking_about": 445,
+        "followers": 6154,
+        "likes": 6154,
+        "talking_about": 490,
         "recent_posts": [],
-        "score": 63,
+        "score": 65,
         "source": "scrape"
       },
       "instagram": {
@@ -1080,33 +1048,6 @@
     },
     "recent_posts": [
       {
-        "platform": "youtube",
-        "title": "시민이 심판이다! 당신의 원픽(One Pick)을 골라주세요! / 고양특례시장 예비후보 이경혜",
-        "date": "2026-03-18",
-        "url": "https://www.youtube.com/watch?v=-6jNsSFT8Cg",
-        "metrics": {
-          "views": 570
-        }
-      },
-      {
-        "platform": "youtube",
-        "title": "[이경혜 고양시장 예비후보정책 열한번째] 철도 도시 고양 #정책공약",
-        "date": "2026-03-18",
-        "url": "https://www.youtube.com/watch?v=m2OIe1Y1IXE",
-        "metrics": {
-          "views": 937
-        }
-      },
-      {
-        "platform": "youtube",
-        "title": "[이경혜 고양시장 예비후보정책 열번째] 예산 낭비 멈춰! 고양시 행정 개편 #정책공약",
-        "date": "2026-03-18",
-        "url": "https://www.youtube.com/watch?v=iWmK7yc829I",
-        "metrics": {
-          "views": 1110
-        }
-      },
-      {
         "platform": "blog",
         "title": "고양 시민 운동회, 지금 시작합니다!",
         "date": "2026-03-16",
@@ -1133,7 +1074,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-18T21:32:15.054801"
+    "collected_at": "2026-03-18T22:30:25.989315"
   },
   "sentiment_trend": {
     "2026-03-03": {
