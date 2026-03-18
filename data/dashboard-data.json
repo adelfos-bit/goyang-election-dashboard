@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-18T11:43:52.157279",
+    "social_last_success": "2026-03-18T13:07:51.999802",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,46 +928,46 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-18T11:43:43.325225",
+    "news_last_run": "2026-03-18T13:07:44.900171",
     "news_status": "no_articles"
   },
   "social_media": {
     "platforms": {
       "youtube": {
         "status": "활성",
-        "subscribers": 140,
-        "videos": 46,
+        "subscribers": 141,
+        "videos": 47,
         "last_upload": "2026-03-18",
         "recent_videos": [
+          {
+            "title": "시민이 심판이다! 당신의 원픽(One Pick)을 골라주세요! / 고양특례시장 예비후보 이경혜",
+            "date": "2026-03-18",
+            "url": "https://www.youtube.com/watch?v=-6jNsSFT8Cg",
+            "views": 414
+          },
           {
             "title": "[이경혜 고양시장 예비후보정책 열한번째] 철도 도시 고양 #정책공약",
             "date": "2026-03-18",
             "url": "https://www.youtube.com/watch?v=m2OIe1Y1IXE",
-            "views": 893
+            "views": 901
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 열번째] 예산 낭비 멈춰! 고양시 행정 개편 #정책공약",
             "date": "2026-03-18",
             "url": "https://www.youtube.com/watch?v=iWmK7yc829I",
-            "views": 1102
+            "views": 1103
           },
           {
             "title": "이경혜 고양특례시장 출마 기자회견 / 고양특례시장 예비후보 이경혜",
             "date": "2026-03-17",
             "url": "https://www.youtube.com/watch?v=C_5KEIWmsmI",
-            "views": 84
+            "views": 86
           },
           {
             "title": "[이경혜 고양시장 예비후보정책 아홉번째] 누구도 소외되지 않는 도시 #정책공약",
             "date": "2026-03-17",
             "url": "https://www.youtube.com/watch?v=7maPB3cAyPo",
-            "views": 815
-          },
-          {
-            "title": "따뜻함 치사량 초과... 원당시장에서 힐링하고 왔습니다 💙 /고양특례시장 예비후보 이경혜",
-            "date": "2026-03-17",
-            "url": "https://www.youtube.com/watch?v=kXtidSt9Ioc",
-            "views": 892
+            "views": 826
           }
         ],
         "score": 84,
@@ -976,11 +976,11 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6149,
-        "likes": 6149,
-        "talking_about": 490,
+        "followers": 6148,
+        "likes": 6148,
+        "talking_about": 422,
         "recent_posts": [],
-        "score": 65,
+        "score": 61,
         "source": "scrape"
       },
       "instagram": {
@@ -1081,11 +1081,20 @@
     "recent_posts": [
       {
         "platform": "youtube",
+        "title": "시민이 심판이다! 당신의 원픽(One Pick)을 골라주세요! / 고양특례시장 예비후보 이경혜",
+        "date": "2026-03-18",
+        "url": "https://www.youtube.com/watch?v=-6jNsSFT8Cg",
+        "metrics": {
+          "views": 414
+        }
+      },
+      {
+        "platform": "youtube",
         "title": "[이경혜 고양시장 예비후보정책 열한번째] 철도 도시 고양 #정책공약",
         "date": "2026-03-18",
         "url": "https://www.youtube.com/watch?v=m2OIe1Y1IXE",
         "metrics": {
-          "views": 893
+          "views": 901
         }
       },
       {
@@ -1094,16 +1103,7 @@
         "date": "2026-03-18",
         "url": "https://www.youtube.com/watch?v=iWmK7yc829I",
         "metrics": {
-          "views": 1102
-        }
-      },
-      {
-        "platform": "youtube",
-        "title": "이경혜 고양특례시장 출마 기자회견 / 고양특례시장 예비후보 이경혜",
-        "date": "2026-03-17",
-        "url": "https://www.youtube.com/watch?v=C_5KEIWmsmI",
-        "metrics": {
-          "views": 84
+          "views": 1103
         }
       },
       {
@@ -1133,7 +1133,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-18T11:43:52.156816"
+    "collected_at": "2026-03-18T13:07:51.999309"
   },
   "sentiment_trend": {
     "2026-03-03": {
