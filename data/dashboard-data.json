@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-24T07:13:30.914129",
+    "social_last_success": "2026-03-24T08:51:39.363674",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-24T07:13:24.815367",
+    "news_last_run": "2026-03-24T08:51:32.454630",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -944,8 +944,8 @@
       },
       "facebook": {
         "status": "활성",
-        "followers": 6178,
-        "likes": 6178,
+        "followers": 6179,
+        "likes": 6179,
         "talking_about": 364,
         "recent_posts": [],
         "score": 59,
@@ -979,8 +979,14 @@
       "blog": {
         "status": "활성",
         "posts": 50,
-        "last_post": "2026-03-16",
+        "last_post": "2026-03-24",
         "recent_posts": [
+          {
+            "title": "이경혜 후보면접 1분스피치(3/24, 경기도당 공심위에서)",
+            "date": "2026-03-24",
+            "url": "https://blog.naver.com/lee1065/224228059750?fromRss=true&trackingCode=rss",
+            "summary": "이번 고양시장 선거에서 승리할 사람, 이경혜입니다. 지난 4년 고양은, 국민의 힘의 무능한 행정 때문에 시간을 허비했습니다. 약속은 있었으나 결과는 없었습니다. 저는 그 시간을 되"
+          },
           {
             "title": "고양 시민 운동회, 지금 시작합니다!",
             "date": "2026-03-16",
@@ -1034,19 +1040,20 @@
             "date": "2026-03-11",
             "url": "https://blog.naver.com/lee1065/224211929119?fromRss=true&trackingCode=rss",
             "summary": "[공약 ⑦] K-의료도시 고양 — 치료의 도시를 넘어 의료 혁신의 도시로 고양을 치료만 받으러 오는 도시가 아니라 의료 혁신이 만들어지는 도시로 바꾸겠습니다. 고양에는 이미 전국 "
-          },
-          {
-            "title": "6. K-스튜디오 고양 + 고양 아트센터 — 문화 자산을 산업으로 연결하겠습니다",
-            "date": "2026-03-11",
-            "url": "https://blog.naver.com/lee1065/224211925328?fromRss=true&trackingCode=rss",
-            "summary": "[공약 ⑥] K-스튜디오 고양 + 고양 아트센터 — 문화 자산을 산업으로 연결하겠습니다 고양에는 이미 많은 문화 자산이 있습니다. 하지만 아직 하나의 산업으로 연결되지는 못했습니다"
           }
         ],
-        "score": 55,
+        "score": 85,
         "source": "rss"
       }
     },
     "recent_posts": [
+      {
+        "platform": "blog",
+        "title": "이경혜 후보면접 1분스피치(3/24, 경기도당 공심위에서)",
+        "date": "2026-03-24",
+        "url": "https://blog.naver.com/lee1065/224228059750?fromRss=true&trackingCode=rss",
+        "metrics": {}
+      },
       {
         "platform": "blog",
         "title": "고양 시민 운동회, 지금 시작합니다!",
@@ -1060,13 +1067,6 @@
         "date": "2026-03-15",
         "url": "https://blog.naver.com/lee1065/224217517096?fromRss=true&trackingCode=rss",
         "metrics": {}
-      },
-      {
-        "platform": "blog",
-        "title": "이경혜 고양특례시장 예비후보 3대 핵심공약",
-        "date": "2026-03-15",
-        "url": "https://blog.naver.com/lee1065/224217506692?fromRss=true&trackingCode=rss",
-        "metrics": {}
       }
     ],
     "sentiment": {
@@ -1074,7 +1074,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-24T07:13:30.913659"
+    "collected_at": "2026-03-24T08:51:39.363165"
   },
   "sentiment_trend": {
     "2026-03-03": {
