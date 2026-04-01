@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-03-31T23:32:25.498707",
+    "social_last_success": "2026-04-01T02:27:03.408932",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-03-31T23:32:16.196245",
+    "news_last_run": "2026-04-01T02:26:50.717763",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -946,7 +946,7 @@
         "status": "활성",
         "followers": 6208,
         "likes": 6208,
-        "talking_about": 409,
+        "talking_about": 404,
         "recent_posts": [],
         "score": 61,
         "source": "scrape"
@@ -1042,7 +1042,7 @@
             "summary": "[공약 ⑦] K-의료도시 고양 — 치료의 도시를 넘어 의료 혁신의 도시로 고양을 치료만 받으러 오는 도시가 아니라 의료 혁신이 만들어지는 도시로 바꾸겠습니다. 고양에는 이미 전국 "
           }
         ],
-        "score": 70,
+        "score": 55,
         "source": "rss"
       }
     },
@@ -1074,7 +1074,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-03-31T23:32:25.498220"
+    "collected_at": "2026-04-01T02:27:03.408455"
   },
   "sentiment_trend": {
     "2026-03-03": {
