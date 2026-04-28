@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-04-28",
+  "last_updated": "2026-04-29",
   "election_date": "2026-06-03",
   "header": {
-    "update_date": "2026.04.28",
-    "d_day": 36,
+    "update_date": "2026.04.29",
+    "d_day": 35,
     "voters": "~89만 명"
   },
   "party_support": {
@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-04-28T11:03:16.502105",
+    "social_last_success": "2026-04-28T16:49:39.876183",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-04-28T11:03:03.842762",
+    "news_last_run": "2026-04-28T16:49:30.900196",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -1074,7 +1074,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-04-28T11:03:16.501593"
+    "collected_at": "2026-04-28T16:49:39.875669"
   },
   "sentiment_trend": {
     "2026-03-03": {
