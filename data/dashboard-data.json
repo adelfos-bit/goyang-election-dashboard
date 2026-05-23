@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-05-23T17:59:19.548815",
+    "social_last_success": "2026-05-23T19:23:02.457212",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-05-23T17:59:09.239621",
+    "news_last_run": "2026-05-23T19:22:53.150254",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -946,7 +946,7 @@
         "status": "활성",
         "followers": 6309,
         "likes": 6309,
-        "talking_about": 11,
+        "talking_about": 12,
         "recent_posts": [],
         "score": 42,
         "source": "scrape"
@@ -1074,7 +1074,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-05-23T17:59:19.548296"
+    "collected_at": "2026-05-23T19:23:02.456742"
   },
   "sentiment_trend": {
     "2026-03-03": {
