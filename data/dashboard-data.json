@@ -917,7 +917,7 @@
   },
   "collection_status": {
     "news_last_success": "2026-03-12T10:06:13.985622",
-    "social_last_success": "2026-08-08T20:25:41.066982",
+    "social_last_success": "2026-08-08T21:26:59.195021",
     "news_articles_collected": 0,
     "errors": [],
     "social_sources": {
@@ -928,7 +928,7 @@
       "twitter": "scrape",
       "blog": "rss"
     },
-    "news_last_run": "2026-08-08T20:25:33.382338",
+    "news_last_run": "2026-08-08T21:26:53.031262",
     "news_status": "no_articles"
   },
   "social_media": {
@@ -1074,7 +1074,7 @@
       "neutral": 30,
       "negative": 15
     },
-    "collected_at": "2026-08-08T20:25:41.066606"
+    "collected_at": "2026-08-08T21:26:59.194577"
   },
   "sentiment_trend": {
     "2026-03-03": {
