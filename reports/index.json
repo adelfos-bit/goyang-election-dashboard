@@ -1,6 +1,12 @@
 {
-  "last_updated": "2026-08-24T01:07:02.629925",
+  "last_updated": "2026-09-01T01:37:17.886351",
   "reports": [
+    {
+      "type": "monthly",
+      "date": "2026-09-01",
+      "file": "monthly/2026-09-01.json",
+      "article_count": 0
+    },
     {
       "type": "weekly",
       "date": "2026-08-24",
